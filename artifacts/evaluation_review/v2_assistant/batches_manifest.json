@@ -1,0 +1,47 @@
+{
+  "source_packet": "data\\evaluation\\v2_review_01",
+  "source_snapshot_sha256": {
+    "judgments.csv": "f059920aeaebdd57ac4f224d8779fad39b3a49684c4aee6a20cc2364c78873b6",
+    "pool_manifest.json": "5f46129578e45f2ba849667fe092728dcf4b81b9b37007d6e0bec6b8f660a5bf",
+    "protocol.json": "52bd3578a642c40f93eb68ef4cfe80af01970f6c68aad90d2fefbb67a71090bf",
+    "queries_draft.json": "da5b91dab11a58cef51184728da378f9af7f680ebed543314051c6adce6190ed",
+    "questions.csv": "a38da24d2e1f38090faca91a37aabfe2baf32f94abd134e1e42b9ca5aca0648d"
+  },
+  "source_dataset_sha256": "da5b91dab11a58cef51184728da378f9af7f680ebed543314051c6adce6190ed",
+  "human_review_complete": false,
+  "aggregate_metrics_computed": false,
+  "batches": {
+    "01": {
+      "input": "artifacts\\evaluation_review\\v2_assistant\\batch_01_input.json",
+      "input_sha256": "919bcdaa883210fc6b30db06067821505d0d0b79d2fbe69083f7fc6babba0b50",
+      "questions": 35,
+      "candidate_pairs": 331,
+      "unique_passages": 143,
+      "output": "artifacts\\evaluation_review\\v2_assistant\\batch_01_decisions.json"
+    },
+    "02": {
+      "input": "artifacts\\evaluation_review\\v2_assistant\\batch_02_input.json",
+      "input_sha256": "9f852d4090a0152c00fad8321d785f73bf177eae3ec986b115019ba5fda19f3d",
+      "questions": 25,
+      "candidate_pairs": 211,
+      "unique_passages": 129,
+      "output": "artifacts\\evaluation_review\\v2_assistant\\batch_02_decisions.json"
+    },
+    "03": {
+      "input": "artifacts\\evaluation_review\\v2_assistant\\batch_03_input.json",
+      "input_sha256": "c352401bb93f515794510609a3c1ca109fc35dcd7be3d6f4fbedb515019b11a9",
+      "questions": 25,
+      "candidate_pairs": 223,
+      "unique_passages": 115,
+      "output": "artifacts\\evaluation_review\\v2_assistant\\batch_03_decisions.json"
+    },
+    "04": {
+      "input": "artifacts\\evaluation_review\\v2_assistant\\batch_04_input.json",
+      "input_sha256": "7a98e2c542b4045e7cd76541c78564b90f406c88b6fa090560af47b30fe4f26f",
+      "questions": 30,
+      "candidate_pairs": 274,
+      "unique_passages": 142,
+      "output": "artifacts\\evaluation_review\\v2_assistant\\batch_04_decisions.json"
+    }
+  }
+}

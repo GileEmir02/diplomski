@@ -1,0 +1,2238 @@
+{
+  "batch_id": "01",
+  "reviewer": "assistant",
+  "human_review_complete": false,
+  "queries": [
+    {
+      "query_id": "dev-001",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C168",
+          "decision": "relevant",
+          "evidence_quote": "The regularizer helps select reasonable parameters when the available training data fails to suﬃciently constrain the linear classiﬁer.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C172",
+          "decision": "relevant",
+          "evidence_quote": "Applying regularization is critical to prevent overfitting.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C214",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk daje L2 formulu i efekat na tezine, ali ne objasnjava zasto se regularizacija koristi."
+        },
+        {
+          "candidate_ref": "C173",
+          "decision": "uncertain",
+          "evidence_quote": "",
+          "reason": "Chunk identifikuje regularizacionu kaznu i stabilizaciju, ali se prekida pre objekta te tvrdnje."
+        },
+        {
+          "candidate_ref": "C037",
+          "decision": "relevant",
+          "evidence_quote": "Conversely, if the learning rate is high with respect to the regularization rate, the strong weights tend to produce an overfit model.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C197",
+          "decision": "relevant",
+          "evidence_quote": "Strengthens the influence of regularization, thereby reducing the chances of overfitting.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C175",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk samo uvodi L2 metriku i njenu formulu; svrha nije data."
+        },
+        {
+          "candidate_ref": "C085",
+          "decision": "relevant",
+          "evidence_quote": "The ideal regularization rate produces a model that generalizes well to new, previously unseen data.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C093",
+          "decision": "relevant",
+          "evidence_quote": "The regularization penalty is used to help stabilize the minimization",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C151",
+          "decision": "relevant",
+          "evidence_quote": "Although early stopping usually increases training loss, it can decrease test loss.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        }
+      ]
+    },
+    {
+      "query_id": "dev-002",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C168",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk govori o nedovoljno ogranicenim parametrima pri malo podataka, ali ne identifikuje overfitting."
+        },
+        {
+          "candidate_ref": "C210",
+          "decision": "relevant",
+          "evidence_quote": "if the noise variance is small, we could be over-ﬁtting the linear model.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C093",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk navodi stabilizaciju cilja i priorno znanje, ali ne imenuje trazeni fitting problem."
+        },
+        {
+          "candidate_ref": "C018",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk izvodi shrinkage procena, ali ne povezuje kaznu sa overfitting-om."
+        },
+        {
+          "candidate_ref": "C214",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk opisuje L2 tezine i cilj, ali ne navodi fitting problem koji kazna sprecava."
+        },
+        {
+          "candidate_ref": "C172",
+          "decision": "relevant",
+          "evidence_quote": "Applying regularization is critical to prevent overfitting.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C198",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi memorisanju trening primera i linearnim klasifikatorima, ali ne daje da je problem upravo overfitting."
+        },
+        {
+          "candidate_ref": "C057",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk vezuje kaznu za stabilnost i vecu marginu, ne za trazeni overfitting."
+        },
+        {
+          "candidate_ref": "C173",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk opisuje stabilizaciju i prior, ali ne navodi overfitting."
+        },
+        {
+          "candidate_ref": "C197",
+          "decision": "relevant",
+          "evidence_quote": "Strengthens the influence of regularization, thereby reducing the chances of overfitting.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C085",
+          "decision": "relevant",
+          "evidence_quote": "The ideal regularization rate produces a model that generalizes well to new, previously unseen data.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        }
+      ]
+    },
+    {
+      "query_id": "dev-003",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C168",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk kaze da regularizer bira razumne parametre uz malo podataka, ali ne opisuje posledicu modela bez kazne."
+        },
+        {
+          "candidate_ref": "C107",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi kvalitetu, kolicini i nepotpunosti podataka, ali ne daje posledicu izostanka kazne slozenosti."
+        },
+        {
+          "candidate_ref": "C216",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi metrikama klasifikacije, ali ne daje posledicu izostanka kazne slozenosti."
+        },
+        {
+          "candidate_ref": "C069",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi kvalitetu, kolicini i nepotpunosti podataka, ali ne daje posledicu izostanka kazne slozenosti."
+        },
+        {
+          "candidate_ref": "C214",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk opisuje L2 penalizaciju velikih tezina, bez posledice njenog izostanka."
+        },
+        {
+          "candidate_ref": "C172",
+          "decision": "relevant",
+          "evidence_quote": "Applying regularization is critical to prevent overfitting.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C005",
+          "decision": "relevant",
+          "evidence_quote": "The model is too complex.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C149",
+          "decision": "relevant",
+          "evidence_quote": "an overfit model makes excellent predictions on the training set but poor predictions on new data.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C197",
+          "decision": "relevant",
+          "evidence_quote": "Lowers the influence of regularization, thereby increasing the chances of overfitting.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C040",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se prekida posle tvrdnje da je model bio dobar na treningu; los rezultat na novim primerima nije prisutan."
+        },
+        {
+          "candidate_ref": "C098",
+          "decision": "relevant",
+          "evidence_quote": "A loss of 0 would mean that the model fits every data point exactly, which is usually a sign of overfitting",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C085",
+          "decision": "relevant",
+          "evidence_quote": "Setting the regularization rate to zero removes regularization completely. In this case, training focuses exclusively on minimizing loss, which poses the highest possible overfitting risk.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        }
+      ]
+    },
+    {
+      "query_id": "dev-004",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C006",
+          "decision": "relevant",
+          "evidence_quote": "Overfitting means creating a model that matches (memorizes) the training set so closely that the model fails to make correct predictions on new data.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C149",
+          "decision": "relevant",
+          "evidence_quote": "an overfit model makes excellent predictions on the training set but poor predictions on new data.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C069",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi kvalitetu, kolicini i nepotpunosti podataka, ali ne daje zasto test primeri moraju biti drugi."
+        },
+        {
+          "candidate_ref": "C166",
+          "decision": "relevant",
+          "evidence_quote": "testing on different examples is stronger proof of your model's fitness than testing on the same set of examples.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C131",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk nabraja osobine dobrog test skupa, ali ne objasnjava zasto je isti trening skup slab dokaz."
+        },
+        {
+          "candidate_ref": "C005",
+          "decision": "relevant",
+          "evidence_quote": "A model trains on a training set, but the real test of a model's worth is how well it makes predictions on new examples, particularly on real-world data.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C096",
+          "decision": "relevant",
+          "evidence_quote": "The only fair test of a model is against new examples, not duplicates.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C107",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi kvalitetu, kolicini i nepotpunosti podataka, ali ne daje zasto test primeri moraju biti drugi."
+        },
+        {
+          "candidate_ref": "C016",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk preporucuje druge primere, ali se prekida pre zavrsetka obrazlozenja zasto je dokaz jaci."
+        },
+        {
+          "candidate_ref": "C180",
+          "decision": "relevant",
+          "evidence_quote": "the training set is merely a helpful source of information to ﬁnd such a function.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C081",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi pragu klasifikacije i matrici konfuzije, ali ne daje zasto test primeri moraju biti drugi."
+        },
+        {
+          "candidate_ref": "C225",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi normalizaciji numerickih obelezja, ali ne daje zasto test primeri moraju biti drugi."
+        }
+      ]
+    },
+    {
+      "query_id": "dev-005",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C096",
+          "decision": "relevant",
+          "evidence_quote": "The only fair test of a model is against new examples, not duplicates.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C005",
+          "decision": "relevant",
+          "evidence_quote": "A model trains on a training set, but the real test of a model's worth is how well it makes predictions on new examples, particularly on real-world data.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C016",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se prekida pre poredjenja sa ponovnom upotrebom fitted slucajeva, pa obrazlozenje nije potpuno."
+        },
+        {
+          "candidate_ref": "C166",
+          "decision": "relevant",
+          "evidence_quote": "testing on different examples is stronger proof of your model's fitness than testing on the same set of examples.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C024",
+          "decision": "relevant",
+          "evidence_quote": "many of the examples in the test set are duplicates of examples in the training set.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C171",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi gubicima linearne regresije i autlajerima, ali ne daje zasto su nevidjeni slucajevi jaci test."
+        },
+        {
+          "candidate_ref": "C149",
+          "decision": "relevant",
+          "evidence_quote": "an overfit model makes excellent predictions on the training set but poor predictions on new data.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C180",
+          "decision": "relevant",
+          "evidence_quote": "the training set is merely a helpful source of information to ﬁnd such a function.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C006",
+          "decision": "relevant",
+          "evidence_quote": "Overfitting means creating a model that matches (memorizes) the training set so closely that the model fails to make correct predictions on new data.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C188",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi metrikama klasifikacije, ali ne daje zasto su nevidjeni slucajevi jaci test."
+        },
+        {
+          "candidate_ref": "C218",
+          "decision": "relevant",
+          "evidence_quote": "a model that generalizes well makes good predictions on new data.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C154",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi metrikama klasifikacije, ali ne daje zasto su nevidjeni slucajevi jaci test."
+        },
+        {
+          "candidate_ref": "C018",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi linearnoj regresiji, varijansi i proceni parametara, ali ne daje zasto su nevidjeni slucajevi jaci test."
+        }
+      ]
+    },
+    {
+      "query_id": "dev-006",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C149",
+          "decision": "relevant",
+          "evidence_quote": "an overfit model makes excellent predictions on the training set but poor predictions on new data.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C153",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi overfitting-u i generalizaciji, ali ne daje zasto su isti zapisi slab dokaz."
+        },
+        {
+          "candidate_ref": "C022",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk govori o istrosenosti validacionog/test skupa ponovnom upotrebom, ne o evaluaciji na zapisima za trening."
+        },
+        {
+          "candidate_ref": "C180",
+          "decision": "relevant",
+          "evidence_quote": "the training set is merely a helpful source of information to ﬁnd such a function.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C096",
+          "decision": "relevant",
+          "evidence_quote": "The only fair test of a model is against new examples, not duplicates.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C159",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi sigmoidnoj funkciji i verovatnocama, ali ne daje zasto su isti zapisi slab dokaz."
+        },
+        {
+          "candidate_ref": "C151",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi L2 regularizaciji i jacini regularizacije, ali ne daje zasto su isti zapisi slab dokaz."
+        },
+        {
+          "candidate_ref": "C204",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi metrikama klasifikacije, ali ne daje zasto su isti zapisi slab dokaz."
+        },
+        {
+          "candidate_ref": "C005",
+          "decision": "relevant",
+          "evidence_quote": "A model trains on a training set, but the real test of a model's worth is how well it makes predictions on new examples, particularly on real-world data.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C154",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi metrikama klasifikacije, ali ne daje zasto su isti zapisi slab dokaz."
+        },
+        {
+          "candidate_ref": "C188",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi metrikama klasifikacije, ali ne daje zasto su isti zapisi slab dokaz."
+        },
+        {
+          "candidate_ref": "C006",
+          "decision": "relevant",
+          "evidence_quote": "Overfitting means creating a model that matches (memorizes) the training set so closely that the model fails to make correct predictions on new data.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C131",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk zahteva da nema duplikata, ali sam ne obrazlaze slabost evaluacije na trening zapisima."
+        },
+        {
+          "candidate_ref": "C166",
+          "decision": "relevant",
+          "evidence_quote": "testing on different examples is stronger proof of your model's fitness than testing on the same set of examples.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        }
+      ]
+    },
+    {
+      "query_id": "dev-007",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C226",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi linearnoj regresiji, varijansi i proceni parametara, ali ne daje da regresija predvidja kontinuiran realan odgovor."
+        },
+        {
+          "candidate_ref": "C207",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi gubicima linearne regresije i autlajerima, ali ne daje da regresija predvidja kontinuiran realan odgovor."
+        },
+        {
+          "candidate_ref": "C163",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi SVM/logistickoj regularizaciji i optimizaciji, ali ne daje da regresija predvidja kontinuiran realan odgovor."
+        },
+        {
+          "candidate_ref": "C126",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi SVM/logistickoj regularizaciji i optimizaciji, ali ne daje da regresija predvidja kontinuiran realan odgovor."
+        },
+        {
+          "candidate_ref": "C201",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi SVM/logistickoj regularizaciji i optimizaciji, ali ne daje da regresija predvidja kontinuiran realan odgovor."
+        },
+        {
+          "candidate_ref": "C196",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi linearnoj regresiji, varijansi i proceni parametara, ali ne daje da regresija predvidja kontinuiran realan odgovor."
+        },
+        {
+          "candidate_ref": "C048",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi memorisanju trening primera i linearnim klasifikatorima, ali ne daje da regresija predvidja kontinuiran realan odgovor."
+        },
+        {
+          "candidate_ref": "C157",
+          "decision": "relevant",
+          "evidence_quote": "regression where the goal is to predict a continuous response yt ∈ R to each example vector.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C090",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi linearnoj regresiji, varijansi i proceni parametara, ali ne daje da regresija predvidja kontinuiran realan odgovor."
+        },
+        {
+          "candidate_ref": "C114",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi linearnoj regresiji, varijansi i proceni parametara, ali ne daje da regresija predvidja kontinuiran realan odgovor."
+        }
+      ]
+    },
+    {
+      "query_id": "dev-008",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C224",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi linearnoj regresiji, varijansi i proceni parametara, ali ne daje razliku kontinuiranog cilja od labela."
+        },
+        {
+          "candidate_ref": "C061",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi direktnim, proxy i ljudski zadatim labelama, ali ne daje razliku kontinuiranog cilja od labela."
+        },
+        {
+          "candidate_ref": "C138",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi gubicima linearne regresije i autlajerima, ali ne daje razliku kontinuiranog cilja od labela."
+        },
+        {
+          "candidate_ref": "C029",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi linearnoj regresiji, varijansi i proceni parametara, ali ne daje razliku kontinuiranog cilja od labela."
+        },
+        {
+          "candidate_ref": "C207",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi gubicima linearne regresije i autlajerima, ali ne daje razliku kontinuiranog cilja od labela."
+        },
+        {
+          "candidate_ref": "C139",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi SVM/logistickoj regularizaciji i optimizaciji, ali ne daje razliku kontinuiranog cilja od labela."
+        },
+        {
+          "candidate_ref": "C113",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi linearnoj regresiji, varijansi i proceni parametara, ali ne daje razliku kontinuiranog cilja od labela."
+        },
+        {
+          "candidate_ref": "C201",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi SVM/logistickoj regularizaciji i optimizaciji, ali ne daje razliku kontinuiranog cilja od labela."
+        },
+        {
+          "candidate_ref": "C159",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi sigmoidnoj funkciji i verovatnocama, ali ne daje razliku kontinuiranog cilja od labela."
+        },
+        {
+          "candidate_ref": "C123",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi gubicima linearne regresije i autlajerima, ali ne daje razliku kontinuiranog cilja od labela."
+        },
+        {
+          "candidate_ref": "C182",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi memorisanju trening primera i linearnim klasifikatorima, ali ne daje razliku kontinuiranog cilja od labela."
+        },
+        {
+          "candidate_ref": "C157",
+          "decision": "relevant",
+          "evidence_quote": "regression where the goal is to predict a continuous response yt ∈ R to each example vector.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        }
+      ]
+    },
+    {
+      "query_id": "dev-009",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C157",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi linearnoj regresiji, varijansi i proceni parametara, ali ne daje obe trazene razlike logisticke regresije."
+        },
+        {
+          "candidate_ref": "C168",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi SVM/logistickoj regularizaciji i optimizaciji, ali ne daje obe trazene razlike logisticke regresije."
+        },
+        {
+          "candidate_ref": "C193",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi SVM/logistickoj regularizaciji i optimizaciji, ali ne daje obe trazene razlike logisticke regresije."
+        },
+        {
+          "candidate_ref": "C159",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi sigmoidnoj funkciji i verovatnocama, ali ne daje obe trazene razlike logisticke regresije."
+        },
+        {
+          "candidate_ref": "C027",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi SVM/logistickoj regularizaciji i optimizaciji, ali ne daje obe trazene razlike logisticke regresije."
+        },
+        {
+          "candidate_ref": "C126",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi SVM/logistickoj regularizaciji i optimizaciji, ali ne daje obe trazene razlike logisticke regresije."
+        },
+        {
+          "candidate_ref": "C172",
+          "decision": "relevant",
+          "evidence_quote": "Logistic regression models use Log Loss as the loss function instead of squared loss. Applying regularization is critical to prevent overfitting.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C053",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi SVM/logistickoj regularizaciji i optimizaciji, ali ne daje obe trazene razlike logisticke regresije."
+        },
+        {
+          "candidate_ref": "C031",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi sigmoidnoj funkciji i verovatnocama, ali ne daje obe trazene razlike logisticke regresije."
+        },
+        {
+          "candidate_ref": "C097",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi sigmoidnoj funkciji i verovatnocama, ali ne daje obe trazene razlike logisticke regresije."
+        }
+      ]
+    },
+    {
+      "query_id": "dev-010",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C031",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi sigmoidnoj funkciji i verovatnocama, ali ne daje i Log Loss i regularizaciju."
+        },
+        {
+          "candidate_ref": "C129",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi logistickom Log Loss-u i numerickoj preciznosti, ali ne daje i Log Loss i regularizaciju."
+        },
+        {
+          "candidate_ref": "C157",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi linearnoj regresiji, varijansi i proceni parametara, ali ne daje i Log Loss i regularizaciju."
+        },
+        {
+          "candidate_ref": "C053",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi SVM/logistickoj regularizaciji i optimizaciji, ali ne daje i Log Loss i regularizaciju."
+        },
+        {
+          "candidate_ref": "C159",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi sigmoidnoj funkciji i verovatnocama, ali ne daje i Log Loss i regularizaciju."
+        },
+        {
+          "candidate_ref": "C172",
+          "decision": "relevant",
+          "evidence_quote": "Logistic regression models use Log Loss as the loss function instead of squared loss. Applying regularization is critical to prevent overfitting.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C097",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi sigmoidnoj funkciji i verovatnocama, ali ne daje i Log Loss i regularizaciju."
+        },
+        {
+          "candidate_ref": "C128",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi logistickom Log Loss-u i numerickoj preciznosti, ali ne daje i Log Loss i regularizaciju."
+        },
+        {
+          "candidate_ref": "C193",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi SVM/logistickoj regularizaciji i optimizaciji, ali ne daje i Log Loss i regularizaciju."
+        }
+      ]
+    },
+    {
+      "query_id": "test-001",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C172",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi logistickom Log Loss-u i numerickoj preciznosti, ali ne daje zasto se zanemaruje smer greske."
+        },
+        {
+          "candidate_ref": "C123",
+          "decision": "relevant",
+          "evidence_quote": "Loss focuses on the distance between the values, not the direction.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C218",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi overfitting-u i generalizaciji, ali ne daje zasto se zanemaruje smer greske."
+        },
+        {
+          "candidate_ref": "C207",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi gubicima linearne regresije i autlajerima, ali ne daje zasto se zanemaruje smer greske."
+        },
+        {
+          "candidate_ref": "C179",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi gubicima linearne regresije i autlajerima, ali ne daje zasto se zanemaruje smer greske."
+        },
+        {
+          "candidate_ref": "C128",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi logistickom Log Loss-u i numerickoj preciznosti, ali ne daje zasto se zanemaruje smer greske."
+        },
+        {
+          "candidate_ref": "C157",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi linearnoj regresiji, varijansi i proceni parametara, ali ne daje zasto se zanemaruje smer greske."
+        },
+        {
+          "candidate_ref": "C142",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi logistickom Log Loss-u i numerickoj preciznosti, ali ne daje zasto se zanemaruje smer greske."
+        }
+      ]
+    },
+    {
+      "query_id": "test-002",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C138",
+          "decision": "relevant",
+          "evidence_quote": "If your dataset has significant outliers that you don't want to overly influence the model. MAE is more robust.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C171",
+          "decision": "relevant",
+          "evidence_quote": "When the difference between the prediction and label is large, squaring makes the loss even larger.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C143",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi gubicima linearne regresije i autlajerima, ali ne daje poredjenje osetljivosti MSE i MAE na autlajere."
+        },
+        {
+          "candidate_ref": "C158",
+          "decision": "relevant",
+          "evidence_quote": "MSE moves the model more toward the outliers, while MAE doesn't.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C179",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi gubicima linearne regresije i autlajerima, ali ne daje poredjenje osetljivosti MSE i MAE na autlajere."
+        },
+        {
+          "candidate_ref": "C119",
+          "decision": "relevant",
+          "evidence_quote": "MSE. The model is closer to the outliers but further away from most of the other data points. MAE. The model is further away from the outliers",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        }
+      ]
+    },
+    {
+      "query_id": "test-003",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C124",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi gradijentnom spustu, konvergenciji i krivoj gubitka, ali ne daje ceo ponavljani postupak gradijentnog spusta."
+        },
+        {
+          "candidate_ref": "C021",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk navodi racunanje gubitka i smer, ali se prekida pre koraka pomeranja i ponavljanja."
+        },
+        {
+          "candidate_ref": "C176",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi gradijentnom spustu, konvergenciji i krivoj gubitka, ali ne daje ceo ponavljani postupak gradijentnog spusta."
+        },
+        {
+          "candidate_ref": "C102",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi stopi ucenja, epohama i velicini batch-a, ali ne daje ceo ponavljani postupak gradijentnog spusta."
+        },
+        {
+          "candidate_ref": "C156",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi stopi ucenja, epohama i velicini batch-a, ali ne daje ceo ponavljani postupak gradijentnog spusta."
+        },
+        {
+          "candidate_ref": "C146",
+          "decision": "relevant",
+          "evidence_quote": "Calculate the loss with the current weight and bias. Determine the direction to move the weights and bias that reduce loss. Move the weight and bias values a small amount in the direction that reduces loss.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C036",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi stopi ucenja, epohama i velicini batch-a, ali ne daje ceo ponavljani postupak gradijentnog spusta."
+        }
+      ]
+    },
+    {
+      "query_id": "test-004",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C176",
+          "decision": "relevant",
+          "evidence_quote": "a ball rolling down a hill, finally stopping at the point where there's no more downward slope.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C102",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi stopi ucenja, epohama i velicini batch-a, ali ne daje oblik krive koji oznacava konvergenciju."
+        },
+        {
+          "candidate_ref": "C125",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk tvrdi da je model konvergirao i dostigao nizak gubitak, ali ne opisuje trazeni oblik krive."
+        },
+        {
+          "candidate_ref": "C077",
+          "decision": "relevant",
+          "evidence_quote": "loss dramatically decreases during the first few iterations, then gradually decreases before flattening out around the 1,000th-iteration mark.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C071",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk poredi snimke modela tokom iteracija, ali ne daje trazeni oblik krive pri konvergenciji."
+        },
+        {
+          "candidate_ref": "C124",
+          "decision": "relevant",
+          "evidence_quote": "When a model converges, additional iterations don't reduce loss more because gradient descent has found the weights and bias that nearly minimize the loss.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C156",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk govori o izboru stope ucenja, ne o obliku stabilizovane krive gubitka."
+        }
+      ]
+    },
+    {
+      "query_id": "test-005",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C209",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi linearnoj regresiji, varijansi i proceni parametara, ali ne daje razliku izmedju hiperparametara i parametara."
+        },
+        {
+          "candidate_ref": "C095",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi direktnim, proxy i ljudski zadatim labelama, ali ne daje razliku izmedju hiperparametara i parametara."
+        },
+        {
+          "candidate_ref": "C066",
+          "decision": "relevant",
+          "evidence_quote": "hyperparameters are values that you control; parameters are values that the model calculates during training.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C065",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi memorisanju trening primera i linearnim klasifikatorima, ali ne daje razliku izmedju hiperparametara i parametara."
+        },
+        {
+          "candidate_ref": "C096",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi podeli na trening, validacioni i test skup, ali ne daje razliku izmedju hiperparametara i parametara."
+        },
+        {
+          "candidate_ref": "C009",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi kvalitetu, kolicini i nepotpunosti podataka, ali ne daje razliku izmedju hiperparametara i parametara."
+        },
+        {
+          "candidate_ref": "C189",
+          "decision": "relevant",
+          "evidence_quote": "hyperparameters are values that you control; parameters are values that the model calculates during training.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C207",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi gubicima linearne regresije i autlajerima, ali ne daje razliku izmedju hiperparametara i parametara."
+        },
+        {
+          "candidate_ref": "C003",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi stopi ucenja, epohama i velicini batch-a, ali ne daje razliku izmedju hiperparametara i parametara."
+        },
+        {
+          "candidate_ref": "C034",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi linearnoj regresiji, varijansi i proceni parametara, ali ne daje razliku izmedju hiperparametara i parametara."
+        }
+      ]
+    },
+    {
+      "query_id": "test-006",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C085",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi L2 regularizaciji i jacini regularizacije, ali ne daje ponasanje pri prevelikoj stopi ucenja."
+        },
+        {
+          "candidate_ref": "C028",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi memorisanju trening primera i linearnim klasifikatorima, ali ne daje ponasanje pri prevelikoj stopi ucenja."
+        },
+        {
+          "candidate_ref": "C148",
+          "decision": "relevant",
+          "evidence_quote": "A learning rate that's too large never converges because each iteration either causes the loss to bounce around or continually increase.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C189",
+          "decision": "relevant",
+          "evidence_quote": "if the learning rate is too high, the model never converges, but instead bounces around the weights and bias that minimize the loss.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C005",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi overfitting-u i generalizaciji, ali ne daje ponasanje pri prevelikoj stopi ucenja."
+        },
+        {
+          "candidate_ref": "C036",
+          "decision": "relevant",
+          "evidence_quote": "a learning rate that's too big, where the loss curve drastically increases in later iterations.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C107",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi kvalitetu, kolicini i nepotpunosti podataka, ali ne daje ponasanje pri prevelikoj stopi ucenja."
+        },
+        {
+          "candidate_ref": "C156",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi stopi ucenja, epohama i velicini batch-a, ali ne daje ponasanje pri prevelikoj stopi ucenja."
+        }
+      ]
+    },
+    {
+      "query_id": "test-007",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C138",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi gubicima linearne regresije i autlajerima, ali ne daje definiciju jedne epohe."
+        },
+        {
+          "candidate_ref": "C221",
+          "decision": "relevant",
+          "evidence_quote": "During training, an epoch means that the model has processed every example in the training set once.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C077",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi gradijentnom spustu, konvergenciji i krivoj gubitka, ali ne daje definiciju jedne epohe."
+        },
+        {
+          "candidate_ref": "C071",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi gradijentnom spustu, konvergenciji i krivoj gubitka, ali ne daje definiciju jedne epohe."
+        },
+        {
+          "candidate_ref": "C102",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi stopi ucenja, epohama i velicini batch-a, ali ne daje definiciju jedne epohe."
+        },
+        {
+          "candidate_ref": "C050",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi stopi ucenja, epohama i velicini batch-a, ali ne daje definiciju jedne epohe."
+        },
+        {
+          "candidate_ref": "C111",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi kvalitetu, kolicini i nepotpunosti podataka, ali ne daje definiciju jedne epohe."
+        },
+        {
+          "candidate_ref": "C029",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi linearnoj regresiji, varijansi i proceni parametara, ali ne daje definiciju jedne epohe."
+        },
+        {
+          "candidate_ref": "C003",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi stopi ucenja, epohama i velicini batch-a, ali ne daje definiciju jedne epohe."
+        },
+        {
+          "candidate_ref": "C005",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi overfitting-u i generalizaciji, ali ne daje definiciju jedne epohe."
+        }
+      ]
+    },
+    {
+      "query_id": "test-008",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C097",
+          "decision": "relevant",
+          "evidence_quote": "the output of the sigmoid function, y', is always between 0 and 1, exclusive.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C035",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi kvalitetu, kolicini i nepotpunosti podataka, ali ne daje da se granice 0 i 1 samo priblizavaju."
+        },
+        {
+          "candidate_ref": "C114",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi linearnoj regresiji, varijansi i proceni parametara, ali ne daje da se granice 0 i 1 samo priblizavaju."
+        },
+        {
+          "candidate_ref": "C070",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi linearnoj regresiji, varijansi i proceni parametara, ali ne daje da se granice 0 i 1 samo priblizavaju."
+        },
+        {
+          "candidate_ref": "C136",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi linearnoj regresiji, varijansi i proceni parametara, ali ne daje da se granice 0 i 1 samo priblizavaju."
+        },
+        {
+          "candidate_ref": "C100",
+          "decision": "relevant",
+          "evidence_quote": "no matter how large or how small the input value, the output will always be greater than 0 and less than 1.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C159",
+          "decision": "relevant",
+          "evidence_quote": "To obtain the logistic regression prediction, the z value is then passed to the sigmoid function, yielding a value (a probability) between 0 and 1:",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C129",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk govori o preciznosti blizu krajeva sigmoidne funkcije, ali ne tvrdi da li se 0 i 1 dostizu."
+        },
+        {
+          "candidate_ref": "C065",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi memorisanju trening primera i linearnim klasifikatorima, ali ne daje da se granice 0 i 1 samo priblizavaju."
+        },
+        {
+          "candidate_ref": "C223",
+          "decision": "relevant",
+          "evidence_quote": "As the input, x, increases, the output of the sigmoid function approaches but never reaches 1. Similarly, as the input decreases, the sigmoid function's output approaches but never reaches 0.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        }
+      ]
+    },
+    {
+      "query_id": "test-009",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C216",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi metrikama klasifikacije, ali ne daje problem memorije/preciznosti kvadratnog gubitka."
+        },
+        {
+          "candidate_ref": "C159",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi sigmoidnoj funkciji i verovatnocama, ali ne daje problem memorije/preciznosti kvadratnog gubitka."
+        },
+        {
+          "candidate_ref": "C117",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi metrikama klasifikacije, ali ne daje problem memorije/preciznosti kvadratnog gubitka."
+        },
+        {
+          "candidate_ref": "C129",
+          "decision": "relevant",
+          "evidence_quote": "If you used squared loss to calculate errors for the sigmoid function, as the output got closer and closer to 0 and 1, you would need more memory to preserve the precision needed to track these values.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C128",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi logistickom Log Loss-u i numerickoj preciznosti, ali ne daje problem memorije/preciznosti kvadratnog gubitka."
+        },
+        {
+          "candidate_ref": "C100",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi sigmoidnoj funkciji i verovatnocama, ali ne daje problem memorije/preciznosti kvadratnog gubitka."
+        },
+        {
+          "candidate_ref": "C068",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi metrikama klasifikacije, ali ne daje problem memorije/preciznosti kvadratnog gubitka."
+        },
+        {
+          "candidate_ref": "C223",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi sigmoidnoj funkciji i verovatnocama, ali ne daje problem memorije/preciznosti kvadratnog gubitka."
+        },
+        {
+          "candidate_ref": "C212",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi vektorima obelezja i feature engineering-u, ali ne daje problem memorije/preciznosti kvadratnog gubitka."
+        },
+        {
+          "candidate_ref": "C031",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi sigmoidnoj funkciji i verovatnocama, ali ne daje problem memorije/preciznosti kvadratnog gubitka."
+        }
+      ]
+    },
+    {
+      "query_id": "test-010",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C206",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi metrikama klasifikacije, ali ne daje pravilo dodele klase iznad i ispod praga."
+        },
+        {
+          "candidate_ref": "C132",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi ROC/AUC evaluaciji, ali ne daje pravilo dodele klase iznad i ispod praga."
+        },
+        {
+          "candidate_ref": "C060",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk daje primere rezultata iznad praga i poseban slucaj jednakosti, ali ne daje oba trazena pravila iznad/ispod."
+        },
+        {
+          "candidate_ref": "C150",
+          "decision": "relevant",
+          "evidence_quote": "Examples with a probability above the threshold value are then assigned to the positive class, the class you are testing for (here, spam). Examples with a lower probability are assigned to the negative class",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C055",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi pragu klasifikacije i matrici konfuzije, ali ne daje pravilo dodele klase iznad i ispod praga."
+        },
+        {
+          "candidate_ref": "C081",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi pragu klasifikacije i matrici konfuzije, ali ne daje pravilo dodele klase iznad i ispod praga."
+        },
+        {
+          "candidate_ref": "C027",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi SVM/logistickoj regularizaciji i optimizaciji, ali ne daje pravilo dodele klase iznad i ispod praga."
+        },
+        {
+          "candidate_ref": "C028",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi memorisanju trening primera i linearnim klasifikatorima, ali ne daje pravilo dodele klase iznad i ispod praga."
+        }
+      ]
+    },
+    {
+      "query_id": "test-011",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C132",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi ROC/AUC evaluaciji, ali ne daje razlog zasto prag 0.5 nije uvek dobar."
+        },
+        {
+          "candidate_ref": "C043",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi memorisanju trening primera i linearnim klasifikatorima, ali ne daje razlog zasto prag 0.5 nije uvek dobar."
+        },
+        {
+          "candidate_ref": "C055",
+          "decision": "relevant",
+          "evidence_quote": "While 0.5 might seem like an intuitive threshold, it's not a good idea if the cost of one type of wrong classification is greater than the other, or if the classes are imbalanced.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C180",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi memorisanju trening primera i linearnim klasifikatorima, ali ne daje razlog zasto prag 0.5 nije uvek dobar."
+        },
+        {
+          "candidate_ref": "C081",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi pragu klasifikacije i matrici konfuzije, ali ne daje razlog zasto prag 0.5 nije uvek dobar."
+        },
+        {
+          "candidate_ref": "C190",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi metrikama klasifikacije, ali ne daje razlog zasto prag 0.5 nije uvek dobar."
+        },
+        {
+          "candidate_ref": "C044",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi ROC/AUC evaluaciji, ali ne daje razlog zasto prag 0.5 nije uvek dobar."
+        },
+        {
+          "candidate_ref": "C163",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi SVM/logistickoj regularizaciji i optimizaciji, ali ne daje razlog zasto prag 0.5 nije uvek dobar."
+        }
+      ]
+    },
+    {
+      "query_id": "test-012",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C219",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi pragu klasifikacije i matrici konfuzije, ali ne daje mehanizam varljive tacnosti kod neuravnotezenih klasa."
+        },
+        {
+          "candidate_ref": "C206",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi metrikama klasifikacije, ali ne daje mehanizam varljive tacnosti kod neuravnotezenih klasa."
+        },
+        {
+          "candidate_ref": "C190",
+          "decision": "relevant",
+          "evidence_quote": "a model that predicts negative 100% of the time would score 99% on accuracy, despite being useless.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C186",
+          "decision": "relevant",
+          "evidence_quote": "a model that predicts negative 100% of the time would score 99% on accuracy, despite being useless.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C204",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi metrikama klasifikacije, ali ne daje mehanizam varljive tacnosti kod neuravnotezenih klasa."
+        },
+        {
+          "candidate_ref": "C117",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi metrikama klasifikacije, ali ne daje mehanizam varljive tacnosti kod neuravnotezenih klasa."
+        },
+        {
+          "candidate_ref": "C188",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk objasnjava zasto je recall korisniji pri malo pozitivnih, ali ne pokazuje kako accuracy moze ostati visoka."
+        },
+        {
+          "candidate_ref": "C104",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi metrikama klasifikacije, ali ne daje mehanizam varljive tacnosti kod neuravnotezenih klasa."
+        }
+      ]
+    },
+    {
+      "query_id": "test-013",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C201",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi SVM/logistickoj regularizaciji i optimizaciji, ali ne daje kako stalno negativan model dobija 99%."
+        },
+        {
+          "candidate_ref": "C132",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi ROC/AUC evaluaciji, ali ne daje kako stalno negativan model dobija 99%."
+        },
+        {
+          "candidate_ref": "C186",
+          "decision": "relevant",
+          "evidence_quote": "a model that predicts negative 100% of the time would score 99% on accuracy, despite being useless.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C145",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi SVM/logistickoj regularizaciji i optimizaciji, ali ne daje kako stalno negativan model dobija 99%."
+        },
+        {
+          "candidate_ref": "C055",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi pragu klasifikacije i matrici konfuzije, ali ne daje kako stalno negativan model dobija 99%."
+        },
+        {
+          "candidate_ref": "C015",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi normalizaciji numerickih obelezja, ali ne daje kako stalno negativan model dobija 99%."
+        },
+        {
+          "candidate_ref": "C104",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk daje opstu definiciju accuracy, ali ne daje premisu o 1% pozitivnih niti objasnjava rezultat od 99%."
+        },
+        {
+          "candidate_ref": "C190",
+          "decision": "relevant",
+          "evidence_quote": "a model that predicts negative 100% of the time would score 99% on accuracy, despite being useless.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C100",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi sigmoidnoj funkciji i verovatnocama, ali ne daje kako stalno negativan model dobija 99%."
+        },
+        {
+          "candidate_ref": "C044",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi ROC/AUC evaluaciji, ali ne daje kako stalno negativan model dobija 99%."
+        }
+      ]
+    },
+    {
+      "query_id": "test-014",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C188",
+          "decision": "relevant",
+          "evidence_quote": "recall measures the fraction of spam emails that were correctly classified as spam.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C038",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi sigmoidnoj funkciji i verovatnocama, ali ne daje definiciju recall/sensitivity."
+        },
+        {
+          "candidate_ref": "C206",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi metrikama klasifikacije, ali ne daje definiciju recall/sensitivity."
+        },
+        {
+          "candidate_ref": "C147",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk pocinje fragmentom o identifikovanju pozitivnih, ali ne imenuje recall/sensitivity niti daje njegov udeo."
+        },
+        {
+          "candidate_ref": "C216",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi metrikama klasifikacije, ali ne daje definiciju recall/sensitivity."
+        },
+        {
+          "candidate_ref": "C068",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi metrikama klasifikacije, ali ne daje definiciju recall/sensitivity."
+        },
+        {
+          "candidate_ref": "C044",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi ROC/AUC evaluaciji, ali ne daje definiciju recall/sensitivity."
+        },
+        {
+          "candidate_ref": "C186",
+          "decision": "relevant",
+          "evidence_quote": "The true positive rate (TPR), or the proportion of all actual positives that were classified correctly as positives, is also known as recall.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        }
+      ]
+    },
+    {
+      "query_id": "test-015",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C048",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi memorisanju trening primera i linearnim klasifikatorima, ali ne daje definiciju precision."
+        },
+        {
+          "candidate_ref": "C204",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se prekida odmah nakon naslova Precision i ne daje definiciju."
+        },
+        {
+          "candidate_ref": "C068",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi metrikama klasifikacije, ali ne daje definiciju precision."
+        },
+        {
+          "candidate_ref": "C104",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi metrikama klasifikacije, ali ne daje definiciju precision."
+        },
+        {
+          "candidate_ref": "C154",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi metrikama klasifikacije, ali ne daje definiciju precision."
+        },
+        {
+          "candidate_ref": "C117",
+          "decision": "relevant",
+          "evidence_quote": "Precision is the proportion of all the model's positive classifications that are actually positive.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C206",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi metrikama klasifikacije, ali ne daje definiciju precision."
+        },
+        {
+          "candidate_ref": "C190",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi metrikama klasifikacije, ali ne daje definiciju precision."
+        },
+        {
+          "candidate_ref": "C044",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi ROC/AUC evaluaciji, ali ne daje definiciju precision."
+        },
+        {
+          "candidate_ref": "C216",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi metrikama klasifikacije, ali ne daje definiciju precision."
+        }
+      ]
+    },
+    {
+      "query_id": "test-016",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C068",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi metrikama klasifikacije, ali ne daje vezu viseg praga sa FP, FN, precision i recall."
+        },
+        {
+          "candidate_ref": "C186",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi metrikama klasifikacije, ali ne daje vezu viseg praga sa FP, FN, precision i recall."
+        },
+        {
+          "candidate_ref": "C204",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi metrikama klasifikacije, ali ne daje vezu viseg praga sa FP, FN, precision i recall."
+        },
+        {
+          "candidate_ref": "C154",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi metrikama klasifikacije, ali ne daje vezu viseg praga sa FP, FN, precision i recall."
+        },
+        {
+          "candidate_ref": "C216",
+          "decision": "relevant",
+          "evidence_quote": "increasing the classification threshold tends to decrease the number of false positives and increase the number of false negatives",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C188",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi metrikama klasifikacije, ali ne daje vezu viseg praga sa FP, FN, precision i recall."
+        },
+        {
+          "candidate_ref": "C211",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi metrikama klasifikacije, ali ne daje vezu viseg praga sa FP, FN, precision i recall."
+        },
+        {
+          "candidate_ref": "C117",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk povezuje precision sa manjim FP, ali ne povezuje podizanje praga sa istovremenim padom recall-a."
+        },
+        {
+          "candidate_ref": "C044",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi ROC/AUC evaluaciji, ali ne daje vezu viseg praga sa FP, FN, precision i recall."
+        }
+      ]
+    },
+    {
+      "query_id": "test-017",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C127",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk kaze da ROC pokriva sve pragove, ali ne navodi da se crta TPR prema FPR."
+        },
+        {
+          "candidate_ref": "C044",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi ROC/AUC evaluaciji, ali ne daje konstrukciju ROC krive iz TPR i FPR."
+        },
+        {
+          "candidate_ref": "C194",
+          "decision": "relevant",
+          "evidence_quote": "The ROC curve is drawn by calculating the true positive rate (TPR) and false positive rate (FPR) at every possible threshold (in practice, at selected intervals), then graphing TPR over FPR.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C075",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi dijagnostici krive gubitka, ali ne daje konstrukciju ROC krive iz TPR i FPR."
+        },
+        {
+          "candidate_ref": "C076",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi ROC/AUC evaluaciji, ali ne daje konstrukciju ROC krive iz TPR i FPR."
+        },
+        {
+          "candidate_ref": "C091",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi ROC/AUC evaluaciji, ali ne daje konstrukciju ROC krive iz TPR i FPR."
+        }
+      ]
+    },
+    {
+      "query_id": "test-018",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C194",
+          "decision": "relevant",
+          "evidence_quote": "The area under the ROC curve (AUC) represents the probability that the model, if given a randomly chosen positive and negative example, will rank the positive higher than the negative.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C127",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi ROC/AUC evaluaciji, ali ne daje parovsko verovatnosno znacenje AUC."
+        },
+        {
+          "candidate_ref": "C188",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi metrikama klasifikacije, ali ne daje parovsko verovatnosno znacenje AUC."
+        },
+        {
+          "candidate_ref": "C150",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi pragu klasifikacije i matrici konfuzije, ali ne daje parovsko verovatnosno znacenje AUC."
+        },
+        {
+          "candidate_ref": "C132",
+          "decision": "relevant",
+          "evidence_quote": "AUC gives the probability that the model will place a randomly chosen square to the right of a randomly chosen circle, independent of where the threshold is set.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C044",
+          "decision": "relevant",
+          "evidence_quote": "The AUC is 0.5, representing a 50% probability of correctly ranking a random positive and negative example.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C081",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi pragu klasifikacije i matrici konfuzije, ali ne daje parovsko verovatnosno znacenje AUC."
+        }
+      ]
+    },
+    {
+      "query_id": "test-019",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C155",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi normalizaciji numerickih obelezja, ali ne daje parovsko rangiranje koje AUC meri."
+        },
+        {
+          "candidate_ref": "C076",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi ROC/AUC evaluaciji, ali ne daje parovsko rangiranje koje AUC meri."
+        },
+        {
+          "candidate_ref": "C194",
+          "decision": "relevant",
+          "evidence_quote": "The area under the ROC curve (AUC) represents the probability that the model, if given a randomly chosen positive and negative example, will rank the positive higher than the negative.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C132",
+          "decision": "relevant",
+          "evidence_quote": "AUC gives the probability that the model will place a randomly chosen square to the right of a randomly chosen circle, independent of where the threshold is set.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C221",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi stopi ucenja, epohama i velicini batch-a, ali ne daje parovsko rangiranje koje AUC meri."
+        },
+        {
+          "candidate_ref": "C179",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi gubicima linearne regresije i autlajerima, ali ne daje parovsko rangiranje koje AUC meri."
+        },
+        {
+          "candidate_ref": "C004",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi normalizaciji numerickih obelezja, ali ne daje parovsko rangiranje koje AUC meri."
+        },
+        {
+          "candidate_ref": "C127",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi ROC/AUC evaluaciji, ali ne daje parovsko rangiranje koje AUC meri."
+        },
+        {
+          "candidate_ref": "C044",
+          "decision": "relevant",
+          "evidence_quote": "The AUC is 0.5, representing a 50% probability of correctly ranking a random positive and negative example.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C091",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi ROC/AUC evaluaciji, ali ne daje parovsko rangiranje koje AUC meri."
+        },
+        {
+          "candidate_ref": "C015",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi normalizaciji numerickih obelezja, ali ne daje parovsko rangiranje koje AUC meri."
+        }
+      ]
+    },
+    {
+      "query_id": "test-020",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C069",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi kvalitetu, kolicini i nepotpunosti podataka, ali ne daje numericku reprezentaciju jednog primera."
+        },
+        {
+          "candidate_ref": "C181",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi kvalitetu, kolicini i nepotpunosti podataka, ali ne daje numericku reprezentaciju jednog primera."
+        },
+        {
+          "candidate_ref": "C184",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi one-hot i retkoj reprezentaciji kategorija, ali ne daje numericku reprezentaciju jednog primera."
+        },
+        {
+          "candidate_ref": "C010",
+          "decision": "relevant",
+          "evidence_quote": "We assume that each image (grayscale) is represented as a column vector x of dimension d.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C150",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi pragu klasifikacije i matrici konfuzije, ali ne daje numericku reprezentaciju jednog primera."
+        },
+        {
+          "candidate_ref": "C049",
+          "decision": "relevant",
+          "evidence_quote": "the model actually ingests an array of floating-point values called a feature vector.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C144",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi one-hot i retkoj reprezentaciji kategorija, ali ne daje numericku reprezentaciju jednog primera."
+        },
+        {
+          "candidate_ref": "C212",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk samo uvodi pitanje kako model unosi podatke i prekida se pre definicije reprezentacije."
+        },
+        {
+          "candidate_ref": "C073",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi vektorima obelezja i feature engineering-u, ali ne daje numericku reprezentaciju jednog primera."
+        },
+        {
+          "candidate_ref": "C185",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi normalizaciji numerickih obelezja, ali ne daje numericku reprezentaciju jednog primera."
+        },
+        {
+          "candidate_ref": "C099",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi one-hot i retkoj reprezentaciji kategorija, ali ne daje numericku reprezentaciju jednog primera."
+        },
+        {
+          "candidate_ref": "C192",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi vektorima obelezja i feature engineering-u, ali ne daje numericku reprezentaciju jednog primera."
+        }
+      ]
+    },
+    {
+      "query_id": "test-021",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C048",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi memorisanju trening primera i linearnim klasifikatorima, ali ne daje definiciju feature engineering-a."
+        },
+        {
+          "candidate_ref": "C049",
+          "decision": "relevant",
+          "evidence_quote": "You must determine the best way to represent raw dataset values as trainable values in the feature vector. This process is called feature engineering",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C046",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi normalizaciji numerickih obelezja, ali ne daje definiciju feature engineering-a."
+        },
+        {
+          "candidate_ref": "C212",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi vektorima obelezja i feature engineering-u, ali ne daje definiciju feature engineering-a."
+        },
+        {
+          "candidate_ref": "C177",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi normalizaciji numerickih obelezja, ali ne daje definiciju feature engineering-a."
+        },
+        {
+          "candidate_ref": "C073",
+          "decision": "relevant",
+          "evidence_quote": "You must determine the best way to represent raw dataset values as trainable values in the feature vector. This process is called feature engineering",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C202",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi normalizaciji numerickih obelezja, ali ne daje definiciju feature engineering-a."
+        },
+        {
+          "candidate_ref": "C192",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk pominje reprezentovanje nenumerickih vrednosti, ali ne daje punu definiciju feature engineering-a."
+        }
+      ]
+    },
+    {
+      "query_id": "test-022",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C202",
+          "decision": "relevant",
+          "evidence_quote": "When different features have different ranges, gradient descent can \"bounce\" and slow convergence.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C046",
+          "decision": "relevant",
+          "evidence_quote": "At the start of training, the model assumes that Feature B is ten times more \"important\" than Feature A.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C192",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi vektorima obelezja i feature engineering-u, ali ne daje zasto skalirati veoma razlicite opsege."
+        },
+        {
+          "candidate_ref": "C177",
+          "decision": "relevant",
+          "evidence_quote": "Without feature scaling, the model pays too much attention to features with wide ranges and not enough attention to features with narrow ranges.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C225",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi normalizaciji numerickih obelezja, ali ne daje zasto skalirati veoma razlicite opsege."
+        },
+        {
+          "candidate_ref": "C212",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi vektorima obelezja i feature engineering-u, ali ne daje zasto skalirati veoma razlicite opsege."
+        },
+        {
+          "candidate_ref": "C073",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi vektorima obelezja i feature engineering-u, ali ne daje zasto skalirati veoma razlicite opsege."
+        },
+        {
+          "candidate_ref": "C092",
+          "decision": "relevant",
+          "evidence_quote": "If you don't normalize Feature C and Feature D, your model will likely be suboptimal. Furthermore, training will take much longer to converge or even fail to converge entirely!",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C185",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk navodi cilj dovodjenja obelezja na slicnu skalu, ali se prekida pre razloga i posledica razlicitih opsega."
+        }
+      ]
+    },
+    {
+      "query_id": "test-023",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C177",
+          "decision": "relevant",
+          "evidence_quote": "Without feature scaling, the model pays too much attention to features with wide ranges and not enough attention to features with narrow ranges.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C202",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk navodi sporiju konvergenciju i losije predikcije, ali ne objasnjava pocetnu prividnu vaznost sireg opsega."
+        },
+        {
+          "candidate_ref": "C015",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi normalizaciji numerickih obelezja, ali ne daje zasto siri opseg deluje vaznije."
+        },
+        {
+          "candidate_ref": "C058",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi linearnoj regresiji, varijansi i proceni parametara, ali ne daje zasto siri opseg deluje vaznije."
+        },
+        {
+          "candidate_ref": "C223",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi sigmoidnoj funkciji i verovatnocama, ali ne daje zasto siri opseg deluje vaznije."
+        },
+        {
+          "candidate_ref": "C086",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi normalizaciji numerickih obelezja, ali ne daje zasto siri opseg deluje vaznije."
+        },
+        {
+          "candidate_ref": "C158",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi gubicima linearne regresije i autlajerima, ali ne daje zasto siri opseg deluje vaznije."
+        },
+        {
+          "candidate_ref": "C046",
+          "decision": "relevant",
+          "evidence_quote": "At the start of training, the model assumes that Feature B is ten times more \"important\" than Feature A.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C070",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi linearnoj regresiji, varijansi i proceni parametara, ali ne daje zasto siri opseg deluje vaznije."
+        },
+        {
+          "candidate_ref": "C136",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi linearnoj regresiji, varijansi i proceni parametara, ali ne daje zasto siri opseg deluje vaznije."
+        },
+        {
+          "candidate_ref": "C226",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi linearnoj regresiji, varijansi i proceni parametara, ali ne daje zasto siri opseg deluje vaznije."
+        },
+        {
+          "candidate_ref": "C100",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi sigmoidnoj funkciji i verovatnocama, ali ne daje zasto siri opseg deluje vaznije."
+        }
+      ]
+    },
+    {
+      "query_id": "test-024",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C152",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi normalizaciji numerickih obelezja, ali ne daje uslov za izbor Z-score skaliranja."
+        },
+        {
+          "candidate_ref": "C225",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk definise Z-score kao broj standardnih devijacija, ali ne navodi tip raspodele za njegov izbor."
+        },
+        {
+          "candidate_ref": "C072",
+          "decision": "uncertain",
+          "evidence_quote": "",
+          "reason": "Proza povezuje score scaling sa normalnom raspodelom, ali je pocetak odsecen pa naziv Z-score nije citljiv u chunk-u."
+        },
+        {
+          "candidate_ref": "C004",
+          "decision": "relevant",
+          "evidence_quote": "Z-score scaling is also a good choice for data like that shown in the following figure, which has only a vaguely normal distribution.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C086",
+          "decision": "relevant",
+          "evidence_quote": "Z-score scaling would be a good normalization technique for height because this feature conforms to a normal distribution.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C015",
+          "decision": "relevant",
+          "evidence_quote": "Z-score is a good choice when the data follows a normal distribution or a distribution somewhat like a normal distribution.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C130",
+          "decision": "relevant",
+          "evidence_quote": "When the feature is normally distributed (peak close to mean).",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        }
+      ]
+    },
+    {
+      "query_id": "test-025",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i najmanje jedan kandidat ga samostalno podrzava.",
+      "judgments": [
+        {
+          "candidate_ref": "C023",
+          "decision": "relevant",
+          "evidence_quote": "book sales conform to a power law distribution",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C052",
+          "decision": "relevant",
+          "evidence_quote": "Log scaling is helpful when the data conforms to a power law distribution.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C130",
+          "decision": "relevant",
+          "evidence_quote": "When the feature distribution is heavy skewed on at least either side of tail.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C152",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi normalizaciji numerickih obelezja, ali ne daje tip raspodele pogodan za log skaliranje."
+        },
+        {
+          "candidate_ref": "C072",
+          "decision": "relevant",
+          "evidence_quote": "Log scaling is helpful when the data conforms to a power law distribution.",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "candidate_ref": "C122",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi normalizaciji numerickih obelezja, ali ne daje tip raspodele pogodan za log skaliranje."
+        },
+        {
+          "candidate_ref": "C086",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi normalizaciji numerickih obelezja, ali ne daje tip raspodele pogodan za log skaliranje."
+        },
+        {
+          "candidate_ref": "C004",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk se bavi normalizaciji numerickih obelezja, ali ne daje tip raspodele pogodan za log skaliranje."
+        },
+        {
+          "candidate_ref": "C092",
+          "decision": "not_relevant",
+          "evidence_quote": "",
+          "reason": "Chunk samo nabraja log skaliranje medju metodama, bez uslova kada se koristi."
+        }
+      ]
+    }
+  ]
+}

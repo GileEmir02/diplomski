@@ -1,0 +1,405 @@
+{
+  "batch_id": "03",
+  "reviewer": "assistant",
+  "human_review_complete": false,
+  "queries": [
+    {
+      "query_id": "test-051",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i izvori direktno objasnjavaju slabljenje pouzdanosti ponovo koriscenih skupova.",
+      "judgments": [
+        {"candidate_ref":"C022","decision":"relevant","evidence_quote":"the more you use the same data to make decisions about hyperparameter settings or other model improvements, the less confidence that the model will make good predictions on new data.","reason":"Direktno navodi da ponovna upotreba za odluke smanjuje poverenje u generalizaciju."},
+        {"candidate_ref":"C131","decision":"not_relevant","evidence_quote":"","reason":"Navodi uslove reprezentativnog test skupa i odsustvo duplikata, ali ne objasnjava istrosenost ponovnom upotrebom."},
+        {"candidate_ref":"C009","decision":"not_relevant","evidence_quote":"","reason":"Definise kvalitet i pouzdanost podataka kroz greske i sum, ne kroz ponovljeno konsultovanje holdout skupa."},
+        {"candidate_ref":"C177","decision":"not_relevant","evidence_quote":"","reason":"Govori o normalizaciji i numerickim opsezima, ne o gubitku poverenja u evaluacione skupove."},
+        {"candidate_ref":"C096","decision":"relevant","evidence_quote":"the more you use the same data to make decisions about hyperparameter settings or other model improvements, the less confidence that the model will make good predictions on new data.","reason":"Samostalno daje trazeni uzrok: adaptiranje odluka istim podacima slabi dokaz za nove podatke."},
+        {"candidate_ref":"C005","decision":"not_relevant","evidence_quote":"","reason":"Opisuje overfitting i uslove generalizacije, ali ne objasnjava zasto se validacioni i test skup trose ponavljanjem."},
+        {"candidate_ref":"C166","decision":"not_relevant","evidence_quote":"","reason":"Opisuje podelu na trening, validaciju i test, ali je odsecen pre objasnjenja istrosenosti."},
+        {"candidate_ref":"C024","decision":"not_relevant","evidence_quote":"","reason":"Opisuje duplikate izmedju treninga i testa, sto je drugi problem evaluacije."}
+      ]
+    },
+    {
+      "query_id": "test-052",
+      "decision": "accepted",
+      "reason": "Pitanje je precizno; jedan kandidat izricito nabraja sva mesta primene transformacije.",
+      "judgments": [
+        {"candidate_ref":"C221","decision":"not_relevant","evidence_quote":"","reason":"Objasnjava epohe i broj iteracija, ne doslednu primenu transformacije."},
+        {"candidate_ref":"C071","decision":"not_relevant","evidence_quote":"","reason":"Opisuje krivu gubitka i konvergenciju, bez feature transformacija."},
+        {"candidate_ref":"C022","decision":"relevant","evidence_quote":"When you transform a feature in your training set, you must make the same transformation in the validation set, test set, and real-world dataset.","reason":"Izricito navodi validacioni, test i realni skup."},
+        {"candidate_ref":"C202","decision":"not_relevant","evidence_quote":"","reason":"Navodi koristi normalizacije, ali ne kaze gde se trening transformacija mora ponoviti."},
+        {"candidate_ref":"C186","decision":"not_relevant","evidence_quote":"","reason":"Definise recall; nema veze sa transformacijom feature-a."},
+        {"candidate_ref":"C177","decision":"not_relevant","evidence_quote":"","reason":"Kaze da normalizaciju treba koristiti pri predikciji, ali ne daje trazeni puni odgovor za validaciju, test i realne podatke."},
+        {"candidate_ref":"C049","decision":"not_relevant","evidence_quote":"","reason":"Objasnjava feature engineering i feature vektore, ali ne doslednost kroz skupove."},
+        {"candidate_ref":"C180","decision":"not_relevant","evidence_quote":"","reason":"Govori o generalizaciji klasifikatora na nove slike, ne o primeni iste transformacije."},
+        {"candidate_ref":"C073","decision":"not_relevant","evidence_quote":"","reason":"Nabraja tehnike feature engineeringa bez pravila primene na ostale skupove."},
+        {"candidate_ref":"C185","decision":"not_relevant","evidence_quote":"","reason":"Uvod u normalizaciju opisuje cilj i opsege, ali ne gde se transformacija ponavlja."},
+        {"candidate_ref":"C046","decision":"not_relevant","evidence_quote":"","reason":"Objasnjava posledice razlicitih skala i preporucuje normalizaciju, ne trazene skupove primene."}
+      ]
+    },
+    {
+      "query_id": "test-053",
+      "decision": "accepted",
+      "reason": "Pitanje trazi konkretnu radnju, a jedan izvor je navodi bez nedostajucih premisa.",
+      "judgments": [
+        {"candidate_ref":"C029","decision":"not_relevant","evidence_quote":"","reason":"Ostecena matematika o varijansi i MSE ne razmatra duplikate izmedju skupova."},
+        {"candidate_ref":"C201","decision":"not_relevant","evidence_quote":"","reason":"Opisuje likelihood tacnih oznaka, ne ciscenje holdout primera."},
+        {"candidate_ref":"C160","decision":"not_relevant","evidence_quote":"","reason":"Govori o izboru ulaza i linearnom modelu, ne o duplikatima."},
+        {"candidate_ref":"C081","decision":"not_relevant","evidence_quote":"","reason":"Opisuje uticaj praga na klasifikacione ishode, bez duplikata podataka."},
+        {"candidate_ref":"C110","decision":"not_relevant","evidence_quote":"","reason":"Prepoznaje duplikate kao uzrok nepouzdanih podataka, ali ne kaze sta uraditi sa duplikatima preko splitova."},
+        {"candidate_ref":"C131","decision":"not_relevant","evidence_quote":"","reason":"Kaze da dobar holdout ima nula duplikata iz treninga, ali ne navodi trazenu radnju uklanjanja."},
+        {"candidate_ref":"C096","decision":"relevant","evidence_quote":"delete any examples in the validation set or test set that are duplicates of examples in the training set.","reason":"Direktno nalaze brisanje takvih primera iz validacionog i test skupa."},
+        {"candidate_ref":"C047","decision":"not_relevant","evidence_quote":"","reason":"Objasnjava mini-batch SGD, ne curenje duplikata iz treninga."},
+        {"candidate_ref":"C107","decision":"not_relevant","evidence_quote":"","reason":"Govori o kolicini i kvalitetu podataka, bez akcije za cross-split duplikate."},
+        {"candidate_ref":"C166","decision":"not_relevant","evidence_quote":"","reason":"Objasnjava svrhu odvojenih splitova, ali ne govori kako ukloniti vec prisutne duplikate."},
+        {"candidate_ref":"C048","decision":"not_relevant","evidence_quote":"","reason":"Primer savrsenog pamcenja trening slika nije uputstvo za uklanjanje duplikata iz holdout skupa."}
+      ]
+    },
+    {
+      "query_id": "test-054",
+      "decision": "accepted",
+      "reason": "Pitanje je valjano i pokriveno objasnjenjem jedinica/skale greske.",
+      "judgments": [
+        {"candidate_ref":"C179","decision":"not_relevant","evidence_quote":"","reason":"Opisuje outliere i izbor MAE/MSE, ali ne objasnjava interpretabilnost jedinica MAE i RMSE."},
+        {"candidate_ref":"C119","decision":"not_relevant","evidence_quote":"","reason":"Za RMSE navodi iste jedinice kao labela, ali ne daje zajednicko objasnjenje za MAE i RMSE."},
+        {"candidate_ref":"C158","decision":"not_relevant","evidence_quote":"","reason":"Poredi uticaj MSE i MAE na outliere, sto nije razlog lakse ljudske interpretacije."},
+        {"candidate_ref":"C143","decision":"relevant","evidence_quote":"they tend to be more human-interpretable, as they measure error using the same scale as the model's predicted value.","reason":"Direktno povezuje interpretabilnost sa istom skalom kao predvidjena vrednost."},
+        {"candidate_ref":"C171","decision":"not_relevant","evidence_quote":"","reason":"Relevantna zavrsna recenica je odsecena bas pre objekta poredjenja skale, a odlomak ne pokriva MAE dovoljno."},
+        {"candidate_ref":"C138","decision":"relevant","evidence_quote":"Root Mean Squared Error (RMSE) is often used to get the error back into the same units as the label.","reason":"Uz navod da je MAE direktno interpretabilan kao prosecna velicina greske, odlomak samostalno objasnjava obe mere."}
+      ]
+    },
+    {
+      "query_id": "test-055",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i izvor izricito propisuje agregaciju gubitaka.",
+      "judgments": [
+        {"candidate_ref":"C036","decision":"not_relevant","evidence_quote":"","reason":"Definise batch size i trenutak azuriranja parametara, ne agregaciju per-example loss vrednosti."},
+        {"candidate_ref":"C047","decision":"not_relevant","evidence_quote":"","reason":"Govori o proseku gradijenata u mini-batch SGD, sto nije isto sto i trazeni prosek loss vrednosti za MAE/MSE."},
+        {"candidate_ref":"C158","decision":"not_relevant","evidence_quote":"","reason":"Poredi osetljivost MAE i MSE na outliere, bez batch agregacije."},
+        {"candidate_ref":"C119","decision":"not_relevant","evidence_quote":"","reason":"Daje smernice za izbor mere i RMSE jedinice, ne pravilo kombinovanja primera."},
+        {"candidate_ref":"C171","decision":"not_relevant","evidence_quote":"","reason":"Definise MSE kao prosek L2 gubitaka, ali ne daje trazeno pravilo koje obuhvata i MAE."},
+        {"candidate_ref":"C179","decision":"not_relevant","evidence_quote":"","reason":"Bavi se pojedinacnim L2 primerom i outlierima, ne agregacijom batch-a."},
+        {"candidate_ref":"C025","decision":"not_relevant","evidence_quote":"","reason":"Prikazuje jedan numericki MSE prosek, ali ne daje opste pravilo za MAE ili MSE."},
+        {"candidate_ref":"C143","decision":"relevant","evidence_quote":"When processing multiple examples at once, we recommend averaging the losses across all the examples, whether using MAE, MSE, or RMSE.","reason":"Izricito kaze da se per-example gubici prosece preko svih primera."}
+      ]
+    },
+    {
+      "query_id": "test-056",
+      "decision": "accepted",
+      "reason": "Pitanje je jednoznacno i dva preklapajuca odlomka navode istu optimizacionu korist.",
+      "judgments": [
+        {"candidate_ref":"C119","decision":"relevant","evidence_quote":"The mathematical properties of MSE often make optimization smoother.","reason":"Direktno navodi da MSE cini optimizaciju glatkom."},
+        {"candidate_ref":"C025","decision":"not_relevant","evidence_quote":"","reason":"Prikazuje racunanje MSE na skupu, bez poredjenja optimizacionog ponasanja."},
+        {"candidate_ref":"C171","decision":"not_relevant","evidence_quote":"","reason":"Definise MSE/RMSE i efekat kvadriranja, ali ne navodi optimizacionu korist."},
+        {"candidate_ref":"C029","decision":"not_relevant","evidence_quote":"","reason":"Razmatra statisticku brzinu opadanja MSE sa brojem primera, ne glatkocu optimizacije."},
+        {"candidate_ref":"C173","decision":"not_relevant","evidence_quote":"","reason":"Bavi se SVM regularizacijom, ne prednoscu MSE."},
+        {"candidate_ref":"C113","decision":"not_relevant","evidence_quote":"","reason":"Izvodi procenu varijanse suma iz prosecne kvadratne greske, bez trazene optimizacione koristi."},
+        {"candidate_ref":"C158","decision":"not_relevant","evidence_quote":"","reason":"Navodi da MSE jace vuce ka outlierima, ne da optimizaciju cini glatkom."},
+        {"candidate_ref":"C203","decision":"not_relevant","evidence_quote":"","reason":"Postavlja MSE i njegov izvod, ali ne iznosi lekcijinu tvrdnju o koristi."},
+        {"candidate_ref":"C196","decision":"not_relevant","evidence_quote":"","reason":"Opisuje normalni model suma oko linearne sredine, ne optimizaciju MSE."},
+        {"candidate_ref":"C138","decision":"relevant","evidence_quote":"MSE often make optimization smoother.","reason":"Iako pocinje nastavkom prethodne recenice, izricito prenosi trazenu korist MSE."}
+      ]
+    },
+    {
+      "query_id": "test-057",
+      "decision": "accepted",
+      "reason": "Pitanje jasno odvaja stanje posle konvergencije i jedan kandidat ga direktno opisuje.",
+      "judgments": [
+        {"candidate_ref":"C124","decision":"relevant","evidence_quote":"If the model continues to train past convergence, loss begins to fluctuate in small amounts as the model continually updates the parameters around their lowest values.","reason":"Direktno opisuje male oscilacije gubitka oko minimuma."},
+        {"candidate_ref":"C149","decision":"not_relevant","evidence_quote":"","reason":"Poredi overfit i underfit modele, ne dinamiku gubitka posle konvergencije."},
+        {"candidate_ref":"C135","decision":"not_relevant","evidence_quote":"","reason":"Navodi model sa najnizim gubitkom, ali ne nastavak treninga nakon konvergencije."},
+        {"candidate_ref":"C125","decision":"not_relevant","evidence_quote":"","reason":"Kaze da konvergencija nalazi najnizi gubitak na konveksnoj povrsini, bez ponasanja nakon nje."},
+        {"candidate_ref":"C145","decision":"not_relevant","evidence_quote":"","reason":"Fragment o nultom logistickom gubitku nije o postkonvergencionim iteracijama."},
+        {"candidate_ref":"C029","decision":"not_relevant","evidence_quote":"","reason":"Osteceni statisticki izvod ne razmatra konvergenciju treninga."},
+        {"candidate_ref":"C071","decision":"not_relevant","evidence_quote":"","reason":"Opisuje snimke modela do konvergencije, ali je odsecen pre odgovora o nastavku."},
+        {"candidate_ref":"C148","decision":"not_relevant","evidence_quote":"","reason":"Opisuje learning rate koji nikad ne konvergira, a pitanje pretpostavlja da je konvergencija vec dostignuta."},
+        {"candidate_ref":"C077","decision":"not_relevant","evidence_quote":"","reason":"Opisuje ravnanje krive kao znak konvergencije, ali ne male fluktuacije pri daljem treningu."}
+      ]
+    },
+    {
+      "query_id": "test-058",
+      "decision": "accepted",
+      "reason": "Geometrijska osobina je jasno trazena i direktno je navedena kao konveksnost.",
+      "judgments": [
+        {"candidate_ref":"C215","decision":"not_relevant","evidence_quote":"","reason":"Nabraja formule L1, MAE, L2 i MSE, ali ne opisuje geometriju loss povrsine."},
+        {"candidate_ref":"C123","decision":"not_relevant","evidence_quote":"","reason":"Objasnjava loss kao rastojanje i uklanjanje znaka, ne konveksnost."},
+        {"candidate_ref":"C057","decision":"not_relevant","evidence_quote":"","reason":"Govori o hinge loss-u i geometrijskoj margini SVM-a, ne geometriji loss funkcija linearnih modela."},
+        {"candidate_ref":"C033","decision":"not_relevant","evidence_quote":"","reason":"Osteceni matricni izvod najmanjih kvadrata ne navodi geometrijsku osobinu."},
+        {"candidate_ref":"C028","decision":"not_relevant","evidence_quote":"","reason":"Razmatra velicinu klase funkcija i generalizaciju, ne loss povrsinu."},
+        {"candidate_ref":"C125","decision":"relevant","evidence_quote":"The loss functions for linear models always produce a convex surface.","reason":"Tacno i direktno navodi konveksnu povrsinu."},
+        {"candidate_ref":"C141","decision":"not_relevant","evidence_quote":"","reason":"Bavi se log-likelihoodom logisticke regresije, ne trazenom geometrijom."},
+        {"candidate_ref":"C207","decision":"not_relevant","evidence_quote":"","reason":"Definise loss i cilj minimizacije, bez konveksnosti."},
+        {"candidate_ref":"C095","decision":"not_relevant","evidence_quote":"","reason":"Govori o proveri ljudskih ocenjivaca i podacima, ne loss funkcijama."},
+        {"candidate_ref":"C176","decision":"relevant","evidence_quote":"Figure 16. Loss surface that shows its convex shape.","reason":"Odlomak identifikuje konveksan oblik loss povrsine i odmah ga vezuje za linearni model."},
+        {"candidate_ref":"C169","decision":"not_relevant","evidence_quote":"","reason":"Navodi statisticka svojstva maximum-likelihood procene, ne oblik loss povrsine."},
+        {"candidate_ref":"C172","decision":"not_relevant","evidence_quote":"","reason":"Poredi loss funkcije logisticke i linearne regresije, ali ne geometrijsku osobinu."},
+        {"candidate_ref":"C056","decision":"not_relevant","evidence_quote":"","reason":"Definise linearnu klasu klasifikatora, bez opisa loss funkcije."}
+      ]
+    },
+    {
+      "query_id": "test-059",
+      "decision": "accepted",
+      "reason": "Pitanje je valjano; kandidat direktno povezuje nulti trening gubitak sa overfittingom.",
+      "judgments": [
+        {"candidate_ref":"C102","decision":"not_relevant","evidence_quote":"","reason":"Opisuje sum SGD krive, ne znacenje nultog trening gubitka."},
+        {"candidate_ref":"C122","decision":"not_relevant","evidence_quote":"","reason":"Bavi se clippingom ekstremnih feature vrednosti."},
+        {"candidate_ref":"C207","decision":"not_relevant","evidence_quote":"","reason":"Kaze da je cilj minimizovati loss, ali ne upozorava na nulti trening loss."},
+        {"candidate_ref":"C151","decision":"not_relevant","evidence_quote":"","reason":"Objasnjava early stopping i odnos trening/test gubitka, ali ne nulti gubitak."},
+        {"candidate_ref":"C204","decision":"not_relevant","evidence_quote":"","reason":"Nulti FPR savrsenog modela nije nulti trening loss niti upozorenje na overfitting."},
+        {"candidate_ref":"C098","decision":"relevant","evidence_quote":"A loss of 0 would mean that the model fits every data point exactly, which is usually a sign of overfitting (i.e., the model is too complex/powerful).","reason":"Direktno objasnjava da savrseno uklapanje obicno signalizira prekomerno slozen model."},
+        {"candidate_ref":"C085","decision":"not_relevant","evidence_quote":"","reason":"Nulta regularizacija povecava rizik overfittinga, ali to nije tvrdnja da je sam trening loss nula."},
+        {"candidate_ref":"C153","decision":"not_relevant","evidence_quote":"","reason":"Opisuje feedback loop uprkos niskom validacionom/test gubitku, ne nulti trening loss."},
+        {"candidate_ref":"C142","decision":"not_relevant","evidence_quote":"","reason":"Daje formulu Log Loss-a bez tumacenja nulte trening vrednosti."},
+        {"candidate_ref":"C123","decision":"not_relevant","evidence_quote":"","reason":"Definise rastojanje gubitka, ali ne overfitting pri nuli."},
+        {"candidate_ref":"C145","decision":"not_relevant","evidence_quote":"","reason":"Fragment kaze da verovatnoce jedan nisu realne, ali je odsecen pre potrebnog obrazlozenja zasto je nulti loss upozorenje."},
+        {"candidate_ref":"C182","decision":"not_relevant","evidence_quote":"","reason":"Definise zero-one loss i trening gresku, ne problem nultog ukupnog trening gubitka."}
+      ]
+    },
+    {
+      "query_id": "test-060",
+      "decision": "accepted",
+      "reason": "Pitanje ima jasan referent: batch size broji primere do azuriranja parametara.",
+      "judgments": [
+        {"candidate_ref":"C029","decision":"not_relevant","evidence_quote":"","reason":"Matematicki odlomak o MSE i broju trening primera nema batch update dogadjaj."},
+        {"candidate_ref":"C221","decision":"not_relevant","evidence_quote":"","reason":"Definise epohu i broj iteracija, ali ne sam dogadjaj do kog batch size broji primere."},
+        {"candidate_ref":"C102","decision":"not_relevant","evidence_quote":"","reason":"Opisuje jednoprimerni SGD i sum, ali ne daje opstu definiciju batch size-a."},
+        {"candidate_ref":"C050","decision":"relevant","evidence_quote":"The following table describes how batch size and epochs relate to the number of times a model updates its parameters.","reason":"Tabela zatim izricito vezuje obradu primera u batch-u za azuriranje weights i bias."},
+        {"candidate_ref":"C047","decision":"relevant","evidence_quote":"The model chooses the examples included in each batch at random, averages their gradients, and then updates the weights and bias once per iteration.","reason":"Redosled jasno pokazuje da broj primera ide do jednog azuriranja parametara."},
+        {"candidate_ref":"C036","decision":"relevant","evidence_quote":"Batch size is a hyperparameter that refers to the number of examples the model processes before updating its weights and bias.","reason":"Ovo je direktna definicija trazenog dogadjaja."},
+        {"candidate_ref":"C003","decision":"relevant","evidence_quote":"After the model looks at the examples in each batch.","reason":"Naslov mini-batch SGD i naredni primer azuriranja daju dogadjaj: posle obrade primera batch-a."}
+      ]
+    },
+    {
+      "query_id": "test-061",
+      "decision": "accepted",
+      "reason": "Pitanje trazi broj primera i posledicu, a jedan odlomak daje oba.",
+      "judgments": [
+        {"candidate_ref":"C050","decision":"not_relevant","evidence_quote":"","reason":"Kaze da SGD gleda jedan primer, ali ne navodi da je trening zbog toga veoma sumovit."},
+        {"candidate_ref":"C047","decision":"not_relevant","evidence_quote":"","reason":"Opisuje mini-batch SGD i poredi velicine batch-a, ne kompletan odgovor za jednoprimerni SGD."},
+        {"candidate_ref":"C221","decision":"not_relevant","evidence_quote":"","reason":"Objasnjava epohe i mini-batch primer, bez karakteristike SGD suma."},
+        {"candidate_ref":"C003","decision":"not_relevant","evidence_quote":"","reason":"Fragment tabele daje ucestalost SGD azuriranja, ali ne sumovitost."},
+        {"candidate_ref":"C102","decision":"relevant","evidence_quote":"Stochastic gradient descent uses only a single example (a batch size of one) per iteration. Given enough iterations, SGD works but is very noisy.","reason":"Samostalno odgovara: jedan primer po iteraciji i vrlo sumovit trening."},
+        {"candidate_ref":"C077","decision":"not_relevant","evidence_quote":"","reason":"Opisuje tipicnu glatku krivu konvergencije, ne SGD batch velicinu i sum."},
+        {"candidate_ref":"C029","decision":"not_relevant","evidence_quote":"","reason":"Bavi se statistickim MSE, ne SGD iteracijama."},
+        {"candidate_ref":"C095","decision":"not_relevant","evidence_quote":"","reason":"Govori o ljudskom labeliranju i kontroli kvaliteta, ne SGD."}
+      ]
+    },
+    {
+      "query_id": "test-062",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno; jedan kandidat opisuje izbor, agregaciju i azuriranje.",
+      "judgments": [
+        {"candidate_ref":"C036","decision":"not_relevant","evidence_quote":"","reason":"Definise batch size, ali je odsecen pre postupka kojim mini-batch formira gradient update."},
+        {"candidate_ref":"C050","decision":"not_relevant","evidence_quote":"","reason":"Kaze samo da se update desava posle batch-a, bez nasumicnog izbora i prosecavanja gradijenata."},
+        {"candidate_ref":"C102","decision":"not_relevant","evidence_quote":"","reason":"Opisuje SGD sa jednim primerom i tek uvodi mini-batch, bez njegovog postupka."},
+        {"candidate_ref":"C003","decision":"not_relevant","evidence_quote":"","reason":"Daje broj update-a iz velicine batch-a, ne kako se racuna jedan update."},
+        {"candidate_ref":"C047","decision":"relevant","evidence_quote":"The model chooses the examples included in each batch at random, averages their gradients, and then updates the weights and bias once per iteration.","reason":"Potpuno opisuje formiranje jednog update-a iz nasumicnog batch-a i prosecnog gradijenta."}
+      ]
+    },
+    {
+      "query_id": "test-063",
+      "decision": "accepted",
+      "reason": "Numericka interpretacija izlaza je jasno trazena i dostupna direktno ili prostim skaliranjem.",
+      "judgments": [
+        {"candidate_ref":"C038","decision":"relevant","evidence_quote":"if a spam-prediction model takes an email as input and outputs a value of 0.932, this implies a 93.2% probability that the email is spam.","reason":"Direktno tumaci upravo vrednost 0.932."},
+        {"candidate_ref":"C055","decision":"not_relevant","evidence_quote":"","reason":"Govori o threshold-u, ground truth-u i confusion matrix, ne o znacenju izlaza 0.932."},
+        {"candidate_ref":"C219","decision":"not_relevant","evidence_quote":"","reason":"Objasnjava redove confusion matrix i imbalance, ne logisticku verovatnocu 0.932."},
+        {"candidate_ref":"C159","decision":"not_relevant","evidence_quote":"","reason":"Daje sigmoid transformaciju i opseg, ali ne tumaci konkretni spam skor."},
+        {"candidate_ref":"C150","decision":"relevant","evidence_quote":"a prediction of 0.75 signifies a 75% likelihood that the email is spam, and so on.","reason":"Daje opste pravilo za spam skor; direktno skaliranje 0.932 daje 93.2%."},
+        {"candidate_ref":"C094","decision":"not_relevant","evidence_quote":"","reason":"Definise TP, FP, FN i TN za spam, ne znacenje verovatnosnog skora."},
+        {"candidate_ref":"C031","decision":"not_relevant","evidence_quote":"","reason":"Relevantna recenica je odsecena na '93.' i ne sadrzi potpunu trazenu vrednost."},
+        {"candidate_ref":"C054","decision":"not_relevant","evidence_quote":"","reason":"Objasnjava log-odds formulu, ne semantiku konkretnog spam izlaza."}
+      ]
+    },
+    {
+      "query_id": "test-064",
+      "decision": "accepted",
+      "reason": "Pitanje je precizno i kandidati jasno opisuju sigmoidnu transformaciju linearnog skora.",
+      "judgments": [
+        {"candidate_ref":"C193","decision":"not_relevant","evidence_quote":"","reason":"Fragment raspravlja modelovanje log-odds linearnom funkcijom, ali ne daje postupak pretvaranja skora u verovatnocu."},
+        {"candidate_ref":"C159","decision":"relevant","evidence_quote":"the z value is then passed to the sigmoid function, yielding a value (a probability) between 0 and 1","reason":"Direktno navodi sigmoid i daje njegovu formulu u istom odlomku."},
+        {"candidate_ref":"C097","decision":"relevant","evidence_quote":"a linear equation becomes input to the sigmoid function, which bends the straight line into an s-shape.","reason":"Samostalno opisuje da se linearni izlaz prosledjuje sigmoid funkciji."},
+        {"candidate_ref":"C031","decision":"not_relevant","evidence_quote":"","reason":"Uvod kaze da logisticka regresija racuna verovatnoce, ali je odsecen pre sigmoid postupka."},
+        {"candidate_ref":"C004","decision":"not_relevant","evidence_quote":"","reason":"Formula je za Z-score normalizaciju, ne logisticku verovatnocu."},
+        {"candidate_ref":"C172","decision":"not_relevant","evidence_quote":"","reason":"Govori o Log Loss-u i regularizaciji, ne pretvaranju linearnog skora."},
+        {"candidate_ref":"C038","decision":"not_relevant","evidence_quote":"","reason":"Uvodi sigmoid, ali je neophodna formula odsecena i ne vezuje eksplicitno linearni z za transformaciju."}
+      ]
+    },
+    {
+      "query_id": "test-065",
+      "decision": "accepted",
+      "reason": "Pitanje je dobro definisano i dva citljiva izvora daju odnos y prema 1-y.",
+      "judgments": [
+        {"candidate_ref":"C193","decision":"not_relevant","evidence_quote":"","reason":"Pocinje samo ostatkom imenitelja ranije jednacine; nedostaje citljiv ceo odnos verovatnoca."},
+        {"candidate_ref":"C054","decision":"relevant","evidence_quote":"z = \\ln\\left(\\frac{y}{1-y}\\right)","reason":"Formula direktno pokazuje da se logaritmuje odnos y/(1-y)."},
+        {"candidate_ref":"C141","decision":"not_relevant","evidence_quote":"","reason":"Logaritmuje likelihood preko trening primera, sto nije definicija log-odds odnosa."},
+        {"candidate_ref":"C052","decision":"not_relevant","evidence_quote":"","reason":"Opisuje log scaling power-law podataka, ne log-odds."},
+        {"candidate_ref":"C142","decision":"not_relevant","evidence_quote":"","reason":"Daje binary Log Loss formulu, ne odnos za log-odds z."},
+        {"candidate_ref":"C159","decision":"not_relevant","evidence_quote":"","reason":"Daje sigmoid y' iz z, ali ne invertovani odnos koji se logaritmuje."},
+        {"candidate_ref":"C129","decision":"not_relevant","evidence_quote":"","reason":"Govori o osetljivosti sigmoida i Log Loss-u, ne definiciji log-odds."},
+        {"candidate_ref":"C017","decision":"not_relevant","evidence_quote":"","reason":"Sadrzi primer sigmoidnog racunanja bez formule log-odds odnosa."},
+        {"candidate_ref":"C042","decision":"uncertain","evidence_quote":"","reason":"Ocigledno cilja odnos P(y=1|x) i P(y=-1|x), ali je raspored PDF formule ostecen tako da odnos nije pouzdano citljiv."},
+        {"candidate_ref":"C097","decision":"relevant","evidence_quote":"z is defined as the natural logarithm of the ratio of the probabilities of the two possible outcomes: y and 1 – y.","reason":"Prozom jasno navodi odnos verovatnoca y prema 1-y."}
+      ]
+    },
+    {
+      "query_id": "test-066",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i citljiva formula neposredno daje oba label-weighted clana.",
+      "judgments": [
+        {"candidate_ref":"C215","decision":"not_relevant","evidence_quote":"","reason":"Nabraja linearne L1/L2 mere, ne binarni Log Loss."},
+        {"candidate_ref":"C145","decision":"not_relevant","evidence_quote":"","reason":"Fragment o nultom loss-u ne sadrzi formulu koja kombinuje y i p."},
+        {"candidate_ref":"C042","decision":"not_relevant","evidence_quote":"","reason":"Daje logisticku funkciju i log-odds, ne binary cross-entropy kombinaciju."},
+        {"candidate_ref":"C142","decision":"relevant","evidence_quote":"Log Loss} = -\\frac{1}{N}\\sum_{i=1}^{N} [y_i\\log(y_i') + (1 - y_i)\\log(1 - y_i')]","reason":"Formula direktno pokazuje y log(p) plus (1-y) log(1-p), sa negativnim prosekom."},
+        {"candidate_ref":"C220","decision":"not_relevant","evidence_quote":"","reason":"Daje alternativni loss za oznake -1/+1 i marginu, ne trazenu y/p binarnu formulu."},
+        {"candidate_ref":"C094","decision":"not_relevant","evidence_quote":"","reason":"Confusion matrix ne definise Log Loss."},
+        {"candidate_ref":"C038","decision":"not_relevant","evidence_quote":"","reason":"Opisuje sigmoid i spam verovatnocu, bez label-weighted Log Loss izraza."},
+        {"candidate_ref":"C061","decision":"not_relevant","evidence_quote":"","reason":"Razlikuje direktne i proxy labele, ne spaja y i p u loss-u."},
+        {"candidate_ref":"C137","decision":"not_relevant","evidence_quote":"","reason":"Prikazuje greske kalibracije/procene, ne binary Log Loss formulu."},
+        {"candidate_ref":"C193","decision":"not_relevant","evidence_quote":"","reason":"Fragment o log-odds ne sadrzi trazena dva clana."},
+        {"candidate_ref":"C164","decision":"not_relevant","evidence_quote":"","reason":"Opisuje ortogonalnost mistake probabilities, ne cross-entropy kombinaciju."}
+      ]
+    },
+    {
+      "query_id": "test-067",
+      "decision": "accepted",
+      "reason": "Pitanje o lokalnoj osetljivosti je jasno i izvor eksplicitno poredi oblast oko nule sa ekstremima.",
+      "judgments": [
+        {"candidate_ref":"C128","decision":"relevant","evidence_quote":"When the log-odds ($z$) value is closer to 0, small increases in $z$ result in much larger changes to $y$ than when $z$ is a large positive or negative number.","reason":"Direktno identifikuje oblast oko z=0 kao najosetljiviju."},
+        {"candidate_ref":"C100","decision":"not_relevant","evidence_quote":"","reason":"Tabela daje sigmoid vrednosti, ali odlomak ne identifikuje ulaz kao log-odds niti izricito formulise maksimum osetljivosti."},
+        {"candidate_ref":"C017","decision":"not_relevant","evidence_quote":"","reason":"Sadrzi konkretan logisticki primer i mapiranje z=-10, ne poredi osetljivost po oblastima."},
+        {"candidate_ref":"C223","decision":"not_relevant","evidence_quote":"","reason":"Daje sigmoid formulu i asimptote, ali bez tvrdnje gde mala promena log-odds najvise menja odgovor."},
+        {"candidate_ref":"C129","decision":"not_relevant","evidence_quote":"","reason":"Pocinje nastavkom poredjenja bez podatka da je trazena oblast blizu nule."},
+        {"candidate_ref":"C159","decision":"not_relevant","evidence_quote":"","reason":"Definise linearni z i sigmoid, ali ne osetljivost izvoda."},
+        {"candidate_ref":"C054","decision":"not_relevant","evidence_quote":"","reason":"Daje vezu sigmoida i log-odds, ne mesto najvece osetljivosti."},
+        {"candidate_ref":"C042","decision":"not_relevant","evidence_quote":"","reason":"Daje logisticku funkciju i odluku pri jednakim verovatnocama, ali ne promenu odziva oko z=0."}
+      ]
+    },
+    {
+      "query_id": "test-068",
+      "decision": "accepted",
+      "reason": "Pitanje je smisleno jer tretman jednakosti zaista zavisi od implementacije, sto izvor direktno navodi.",
+      "judgments": [
+        {"candidate_ref":"C178","decision":"not_relevant","evidence_quote":"","reason":"Threshold se odnosi na clipping normalizovanih feature vrednosti, ne na klasifikacionu odluku."},
+        {"candidate_ref":"C060","decision":"relevant","evidence_quote":"Handling for this case depends on the particular implementation chosen for the classification model.","reason":"Direktno odgovara da jednak skor nije univerzalno dodeljen istoj klasi i daje Keras kao primer."},
+        {"candidate_ref":"C028","decision":"not_relevant","evidence_quote":"","reason":"Govori o izboru klase funkcija i generalizaciji, ne jednakosti skora i praga."},
+        {"candidate_ref":"C104","decision":"not_relevant","evidence_quote":"","reason":"Govori da se metrike menjaju sa pragom, ne kako se tretira tacna jednakost."},
+        {"candidate_ref":"C206","decision":"not_relevant","evidence_quote":"","reason":"Takodje govori samo o metrikama pri fiksnom pragu."},
+        {"candidate_ref":"C055","decision":"not_relevant","evidence_quote":"","reason":"Primer 'at least 50%' implicira jednu konvenciju, ali ne odgovara da li je ona ista u svim implementacijama."},
+        {"candidate_ref":"C132","decision":"not_relevant","evidence_quote":"","reason":"Navodi da klasifikacija zavisi od izabranog praga, ne od pravila za jednakost."},
+        {"candidate_ref":"C004","decision":"not_relevant","evidence_quote":"","reason":"Bavi se Z-score skaliranjem."},
+        {"candidate_ref":"C150","decision":"not_relevant","evidence_quote":"","reason":"Postavlja pitanje o jednakosti, ali je odsecen pre odgovora."},
+        {"candidate_ref":"C081","decision":"not_relevant","evidence_quote":"","reason":"Opisuje kako razliciti pragovi menjaju TP/FP/FN/TN, ne edge case jednakosti."}
+      ]
+    },
+    {
+      "query_id": "test-069",
+      "decision": "accepted",
+      "reason": "Pitanje je nedvosmisleno uz orijentaciju matrice i jedan kandidat daje oba zbira.",
+      "judgments": [
+        {"candidate_ref":"C094","decision":"not_relevant","evidence_quote":"","reason":"Navodi confusion matrix i pocinje odgovor za redove, ali je odsecen pre ukupnih predicted negatives."},
+        {"candidate_ref":"C091","decision":"not_relevant","evidence_quote":"","reason":"Govori o ROC pragu i izboru modela, ne rednim totalima confusion matrix."},
+        {"candidate_ref":"C104","decision":"not_relevant","evidence_quote":"","reason":"Definise accuracy iz sva cetiri ishoda, ne znacenje svakog reda."},
+        {"candidate_ref":"C034","decision":"not_relevant","evidence_quote":"","reason":"Matricni izvod MSE nema veze sa confusion matrix."},
+        {"candidate_ref":"C089","decision":"not_relevant","evidence_quote":"","reason":"Kratak fragment linearne algebre ne govori o klasifikacionim redovima."},
+        {"candidate_ref":"C164","decision":"not_relevant","evidence_quote":"","reason":"Opisuje ortogonalnost gresaka logistickog modela, ne TP/FP/FN/TN redove."},
+        {"candidate_ref":"C219","decision":"relevant","evidence_quote":"the total in each row gives all predicted positives (TP + FP) and all predicted negatives (FN + TN), regardless of validity.","reason":"Direktno tumaci oba reda kao ukupne predvidjene pozitivne i negativne."},
+        {"candidate_ref":"C055","decision":"not_relevant","evidence_quote":"","reason":"Uvodi confusion matrix i ishode, ali ne daje redne totale."},
+        {"candidate_ref":"C167","decision":"not_relevant","evidence_quote":"","reason":"Bavi se bias/variance linearnog modela, ne confusion matrix."},
+        {"candidate_ref":"C029","decision":"not_relevant","evidence_quote":"","reason":"Osteceni MSE izvod nije klasifikaciona matrica."}
+      ]
+    },
+    {
+      "query_id": "test-070",
+      "decision": "accepted",
+      "reason": "Pitanje valjano razlikuje predvidjeni skor od ground truth-a; relevantan izvor to izricito kaze.",
+      "judgments": [
+        {"candidate_ref":"C086","decision":"not_relevant","evidence_quote":"","reason":"Razmatra Z-score i outliere, ne klasifikacione verovatnoce."},
+        {"candidate_ref":"C132","decision":"not_relevant","evidence_quote":"","reason":"Kaze da predvidjena klasa zavisi od praga, ali ne objasnjava razliku izmedju skora i stvarnog ishoda."},
+        {"candidate_ref":"C186","decision":"not_relevant","evidence_quote":"","reason":"Definise recall i problem accuracy na imbalance podacima."},
+        {"candidate_ref":"C060","decision":"not_relevant","evidence_quote":"","reason":"Opisuje implementation-specific jednakost pragu, ne zasto predvidjena verovatnoca nije ground truth."},
+        {"candidate_ref":"C225","decision":"not_relevant","evidence_quote":"","reason":"Bavi se izborom normalizacije za net worth."},
+        {"candidate_ref":"C190","decision":"not_relevant","evidence_quote":"","reason":"Upozorava na accuracy kod imbalance skupa, ne na status probability skora."},
+        {"candidate_ref":"C163","decision":"not_relevant","evidence_quote":"","reason":"Upozorava da verovatnoce mogu biti nekalibrisane, ali ne razdvaja predikciju od realizovanog ground-truth ishoda."},
+        {"candidate_ref":"C055","decision":"relevant","evidence_quote":"The probability score is not reality, or ground truth. There are four possible outcomes for each output from a binary classifier.","reason":"Direktno razdvaja skor od stvarnosti i upucuje na moguce tacne/pogresne ishode."},
+        {"candidate_ref":"C004","decision":"not_relevant","evidence_quote":"","reason":"Formula za Z-score nije relevantna za klasifikacioni ishod."},
+        {"candidate_ref":"C044","decision":"not_relevant","evidence_quote":"","reason":"Opisuje ROC/AUC slucaj nasumicnog rangiranja, ne razliku skora i ground truth-a."}
+      ]
+    },
+    {
+      "query_id": "test-071",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i dva preklapajuca kandidata izricito kazu da metrike nisu fiksne.",
+      "judgments": [
+        {"candidate_ref":"C186","decision":"not_relevant","evidence_quote":"","reason":"Definise recall, ali ne govori o promeni praga niti sve tri metrike."},
+        {"candidate_ref":"C044","decision":"not_relevant","evidence_quote":"","reason":"Pominje threshold u kontekstu ROC/AUC, bez tvrdnje o accuracy, recall i precision."},
+        {"candidate_ref":"C216","decision":"not_relevant","evidence_quote":"","reason":"Objasnjava kako threshold menja precision i recall, ali ne pokriva accuracy trazen u pitanju."},
+        {"candidate_ref":"C104","decision":"relevant","evidence_quote":"All of the metrics in this section are calculated at a single fixed threshold, and change when the threshold changes.","reason":"Sekcija obuhvata accuracy, recall i precision; recenica direktno kaze da se menjaju."},
+        {"candidate_ref":"C068","decision":"not_relevant","evidence_quote":"","reason":"Opisuje F1 odnos prema precision i recall, ne promenu usled praga."},
+        {"candidate_ref":"C154","decision":"not_relevant","evidence_quote":"","reason":"Govori o NaN i izboru prioriteta metrika, ne njihovoj promeni sa pragom."},
+        {"candidate_ref":"C211","decision":"not_relevant","evidence_quote":"","reason":"Daje smernice za izbor metrika i F1 formulu, bez threshold dinamike."},
+        {"candidate_ref":"C206","decision":"relevant","evidence_quote":"All of the metrics in this section are calculated at a single fixed threshold, and change when the threshold changes","reason":"Direktno odgovara da metrike ne ostaju fiksne."}
+      ]
+    },
+    {
+      "query_id": "test-072",
+      "decision": "accepted",
+      "reason": "Pitanje je precizna definicija i izvori daju opsti razlomak i konkretan spam ekvivalent.",
+      "judgments": [
+        {"candidate_ref":"C037","decision":"not_relevant","evidence_quote":"","reason":"Govori o balansu learning i regularization rate, ne false-alarm rate."},
+        {"candidate_ref":"C147","decision":"relevant","evidence_quote":"the proportion of all actual negatives that were classified incorrectly as positives, also known as the probability of false alarm.","reason":"Ovo je direktna definicija false-alarm/FPR razlomka."},
+        {"candidate_ref":"C188","decision":"not_relevant","evidence_quote":"","reason":"Definise recall kao detekciju actual positives, ne lazne alarme medju actual negatives."},
+        {"candidate_ref":"C211","decision":"not_relevant","evidence_quote":"","reason":"Kaze kada koristiti FPR, ali ne sta njegov razlomak meri."},
+        {"candidate_ref":"C189","decision":"not_relevant","evidence_quote":"","reason":"Definise learning rate, ne stopu laznih alarma."},
+        {"candidate_ref":"C068","decision":"not_relevant","evidence_quote":"","reason":"Opisuje F1, ne FPR."},
+        {"candidate_ref":"C216","decision":"not_relevant","evidence_quote":"","reason":"Opisuje precision/recall tradeoff i NaN, ne definiciju FPR."},
+        {"candidate_ref":"C204","decision":"relevant","evidence_quote":"FPR measures the fraction of legitimate emails that were incorrectly classified as spam, or the model's rate of false alarms.","reason":"Konkretan spam primer samostalno daje isti razlomak: lazno alarmirani medju legitimnim."},
+        {"candidate_ref":"C117","decision":"not_relevant","evidence_quote":"","reason":"Definise precision sa imeniteljem svih pozitivnih predikcija, sto je drugi razlomak."}
+      ]
+    },
+    {
+      "query_id": "test-073",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno; dva odlomka objasnjavaju nulti imenilac i daju precision primer.",
+      "judgments": [
+        {"candidate_ref":"C154","decision":"relevant","evidence_quote":"the formula for precision has 0 in the denominator, resulting in NaN.","reason":"Direktno navodi deljenje nulom kao uzrok i objasnjava primer bez pozitivnih predikcija."},
+        {"candidate_ref":"C127","decision":"not_relevant","evidence_quote":"","reason":"Uvod u ROC/AUC ne govori o NaN metrici."},
+        {"candidate_ref":"C219","decision":"not_relevant","evidence_quote":"","reason":"Objasnjava totale confusion matrix i imbalance, ne deljenje nulom."},
+        {"candidate_ref":"C060","decision":"not_relevant","evidence_quote":"","reason":"Bavi se jednakoscu skora i threshold-a."},
+        {"candidate_ref":"C117","decision":"not_relevant","evidence_quote":"","reason":"Daje precision formulu, ali ne navodi situaciju nultog imenitelja niti NaN."},
+        {"candidate_ref":"C204","decision":"not_relevant","evidence_quote":"","reason":"Opisuje volatilnost FPR-a kada je malo negativa, ne NaN zbog nultog imenitelja."},
+        {"candidate_ref":"C188","decision":"not_relevant","evidence_quote":"","reason":"Definise recall, bez NaN slucaja."},
+        {"candidate_ref":"C190","decision":"not_relevant","evidence_quote":"","reason":"Govori o nepouzdanosti accuracy na imbalance podacima, ne neodredjenom racunu."},
+        {"candidate_ref":"C216","decision":"relevant","evidence_quote":"NaN, or \"not a number,\" appears when dividing by 0, which can happen with any of these metrics.","reason":"Daje opsti uzrok NaN i zatim precision primer TP=FP=0."},
+        {"candidate_ref":"C086","decision":"not_relevant","evidence_quote":"","reason":"Opisuje normalizaciju i outliere, ne klasifikacione metrike."}
+      ]
+    },
+    {
+      "query_id": "test-074",
+      "decision": "accepted",
+      "reason": "Pitanje je valjano; odgovor je eksplicitan, a moze se dobiti i iz date formule harmonijske sredine.",
+      "judgments": [
+        {"candidate_ref":"C068","decision":"relevant","evidence_quote":"When precision and recall are far apart, F1 will be similar to whichever metric is worse.","reason":"Direktno kaze da F1 lici na losiju, odnosno manju meru."},
+        {"candidate_ref":"C044","decision":"not_relevant","evidence_quote":"","reason":"Govori o ROC/AUC nasumicnog klasifikatora, ne F1."},
+        {"candidate_ref":"C211","decision":"relevant","evidence_quote":"The F1 score is the harmonic mean (a kind of average) of precision and recall.","reason":"Uz kompletnu formulu u odlomku, jednostavna algebra pokazuje da je rezultat blizi manjoj/losijoj meri."},
+        {"candidate_ref":"C117","decision":"not_relevant","evidence_quote":"","reason":"Definise samo precision."},
+        {"candidate_ref":"C188","decision":"not_relevant","evidence_quote":"","reason":"Definise samo recall."},
+        {"candidate_ref":"C204","decision":"not_relevant","evidence_quote":"","reason":"Definise FPR i njegovu stabilnost, ne F1."},
+        {"candidate_ref":"C216","decision":"not_relevant","evidence_quote":"","reason":"Opisuje inverzni odnos precision i recall, ali ne govori kojoj meri F1 prilazi."},
+        {"candidate_ref":"C186","decision":"not_relevant","evidence_quote":"","reason":"Definise recall i upozorava na accuracy, bez F1 odnosa."}
+      ]
+    },
+    {
+      "query_id": "test-075",
+      "decision": "accepted",
+      "reason": "Pitanje je precizno i jedan kandidat daje i oblik ROC krive i numericku AUC vrednost.",
+      "judgments": [
+        {"candidate_ref":"C044","decision":"relevant","evidence_quote":"a model that does exactly as well as random guesses or coin flips has a ROC that is a diagonal line from (0,0) to (1,1). The AUC is 0.5","reason":"Direktno daje dijagonalu od (0,0) do (1,1) i AUC 0.5."},
+        {"candidate_ref":"C132","decision":"not_relevant","evidence_quote":"","reason":"Pocinje tvrdnju o dijagonalnom ROC-u, ali je odsecen pre krajeva dijagonale i AUC vrednosti."},
+        {"candidate_ref":"C127","decision":"not_relevant","evidence_quote":"","reason":"Samo uvodi ROC kao prikaz performansi kroz pragove."},
+        {"candidate_ref":"C194","decision":"not_relevant","evidence_quote":"","reason":"Definise ROC i AUC i opisuje savrsen model, ne coin-flip slucaj."},
+        {"candidate_ref":"C091","decision":"not_relevant","evidence_quote":"","reason":"Daje smernice za izbor praga sa ROC-a, bez oblika i AUC nasumicnog modela."},
+        {"candidate_ref":"C076","decision":"not_relevant","evidence_quote":"","reason":"Poredi tacke praga prema trosku FP/FN, ne coin-flip ROC."}
+      ]
+    }
+  ]
+}

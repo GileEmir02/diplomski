@@ -1,0 +1,17 @@
+{
+  "applied_at_utc": "2026-09-20T19:35:41.302237+00:00",
+  "review_source": "assistant",
+  "human_review_complete": false,
+  "decisions": "artifacts\\evaluation_review\\v2_assistant\\adjudication_resolved.json",
+  "decisions_sha256": "0fa964ed9c3127da920fc14bd345f2fa0c0fb0f90908e29ca97560a5ec3e9fbc",
+  "question_count": 115,
+  "candidate_pairs": 1039,
+  "decision_counts": {
+    "relevant": 210,
+    "not_relevant": 829
+  },
+  "csv_sha256": {
+    "questions.csv": "19eb6d3dcd9b67329fbe0618141f9b62b4fdedeefb0411cc1ce0df5c1a55d3ac",
+    "judgments.csv": "296965277f4d12bafad98ace597107c405f8fa79877b6d8ae34ab71dd640a1d1"
+  }
+}

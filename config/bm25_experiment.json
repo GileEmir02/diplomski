@@ -1,0 +1,33 @@
+{
+  "fixed_on": "2026-09-18",
+  "purpose": "User-approved third retrieval method, added after the original two-method experiment.",
+  "methods": ["tfidf", "bm25", "semantic"],
+  "bm25_parameters": {
+    "variant": "positive-idf-bm25",
+    "k1": 1.5,
+    "b": 0.75,
+    "idf": "log1p((N-df+0.5)/(df+0.5))",
+    "query_tf": "binary",
+    "tokenization": "same-as-tfidf",
+    "dtype": "float32"
+  },
+  "formula": "score(q,d) = sum over distinct query terms t: log(1+(N-df(t)+0.5)/(df(t)+0.5)) * tf(t,d)*(k1+1)/(tf(t,d)+k1*(1-b+b*len(d)/avglen))",
+  "formula_reference": "https://lucene.apache.org/core/9_12_3/core/org/apache/lucene/search/similarities/BM25Similarity.html",
+  "reference_note": "Uses the positive log1p IDF convention. This is not a claim of byte-identical Lucene scoring or Lucene's default k1.",
+  "dataset": "data\\evaluation\\queries_ai_reviewed.json",
+  "dataset_sha256": "699a9b4a79461b280d391a735e74b2f5ba09e58f3661ddf3cce39be1d40c15b2",
+  "parameters_selected_before_bm25_test_results": true,
+  "parameters_optimized_on_test": false,
+  "human_review_complete": false,
+  "chunking_and_semantic_model_unchanged": true,
+  "quality_queries": 40,
+  "separate_no_answer_queries": 5,
+  "warmup": 3,
+  "repeats": 10,
+  "seed": 42,
+  "limitations": [
+    "An extension on an already-used test collection, not a newly collected independent test.",
+    "AI-reviewed relevance labels remain unchanged and are not human-validated.",
+    "No claim that BM25 must outperform TF-IDF or semantic search."
+  ]
+}

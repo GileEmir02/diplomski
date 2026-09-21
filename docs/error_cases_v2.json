@@ -1,0 +1,243 @@
+{
+  "schema_version": 1,
+  "dataset_sha256": "5c312d014a988e1396518d95546ca486e919d9a4ddc3b4b4150b9a24bbd243bf",
+  "experiment_run": "artifacts\\experiments\\test_three_methods_v2",
+  "human_review_complete": false,
+  "selection_policy": "Namerni kontrastni uzorak iz zamrznutih sirovih rang-lista: po jedan jasan primer semantičke i leksičke prednosti, razlike BM25–TF-IDF, neuspeha svih metoda, tematskog lažnog pogotka i iste prve relevantne pozicije uz različit Precision@5. Izabrana su tri prvobitna pitanja (test-002, test-010, test-037) i tri nova (test-044, test-066, test-087). Kategorije nisu izmišljene niti su oznake menjane; test-037 ujedno daje najbliži odbranjiv primer uticaja granice odlomka.",
+  "cases": [
+    {
+      "case_id": "semantika-pogadja-formulu-log-loss",
+      "query_id": "test-066",
+      "title": "Semantička metoda nalazi traženu formulu",
+      "category": "Semantički uspeh uz neuspeh obe leksičke metode",
+      "query": "How are true labels y and predicted probabilities p combined in the binary Log Loss formula?",
+      "expected_answer": "Binarni Log Loss je negativna srednja vrednost izraza y·log(p) + (1-y)·log(1-p), odnosno srednji negativni logaritam verovatnoće tačne klase.",
+      "methods": {
+        "tfidf": {
+          "first_relevant_rank": null,
+          "precision_at_5": 0.0,
+          "top_chunk_id": "chunk_b214e3db854c99136687901190f9191225d0ea02050b1230d623a65696bc4ac0",
+          "top_excerpt": "Another way of understanding this is that the vector of mistake probabilities is orthogonal to the vector of labels."
+        },
+        "bm25": {
+          "first_relevant_rank": null,
+          "precision_at_5": 0.0,
+          "top_chunk_id": "chunk_9285c868f049149e7172839bd8270366adfaaf531598b8d599da256ad559c820",
+          "top_excerpt": "Taken together, these orthogonality conditions ensure that there’s no further linearly available information in the examples to improve the predicted probabilities (or mistake probabilities)."
+        },
+        "semantic": {
+          "first_relevant_rank": 1,
+          "precision_at_5": 0.2,
+          "top_chunk_id": "chunk_9849655d44bf98e076491f6eeb641773d32eff4a668d5dc5ed7205b84955c629",
+          "top_excerpt": "Log Loss is calculated as follows: $\\text{Log Loss} = -\\frac{1}{N}\\sum_{i=1}^{N} [y_i\\log(y_i') + (1 - y_i)\\log(1 - y_i')]$"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "chunk_9849655d44bf98e076491f6eeb641773d32eff4a668d5dc5ed7205b84955c629",
+          "file_name": "09_google_logistic_loss.txt",
+          "page": null,
+          "quote": "Log Loss is calculated as follows: $\\text{Log Loss} = -\\frac{1}{N}\\sum_{i=1}^{N} [y_i\\log(y_i') + (1 - y_i)\\log(1 - y_i')]$"
+        }
+      ],
+      "observation": "Semantička metoda stavlja jedini označeni relevantni odlomak na prvo mesto i ima P@5=0,2. TF-IDF i BM25 nemaju relevantan rezultat među prvih pet. Njihovi prvi odlomci govore o oznakama i predviđenim verovatnoćama, ali o uslovima optimalnosti, ne o traženoj formuli. Provera zajedničkog analizatora pokazuje da oni dele više opštih reči upita, dok relevantni odlomak deli pre svega „log“ i „loss“.",
+      "hypothesis": "Moguće objašnjenje je da su česte reči „labels“, „predicted“ i „probabilities“ dale jak leksički signal pogrešnim odlomcima, dok su jednokarakterske oznake y i p neupotrebljive kao samostalni tokeni u ovom analizatoru. Semantički rezultat je saglasan sa prepoznavanjem celog informacionog zahteva, ali rang-lista sama ne dokazuje uzrok u vektorima.",
+      "limitation": "Primer pokazuje prednost semantičke metode za matematički iskaz, ali samo na jednom pitanju i uz oznake koje nisu ljudski potvrđene."
+    },
+    {
+      "case_id": "leksika-pogadja-prag-klasifikacije",
+      "query_id": "test-010",
+      "title": "Leksičke metode nalaze tačno pravilo praga",
+      "category": "Leksički uspeh uz neuspeh semantičke metode",
+      "query": "For scores strictly above or below a binary classification threshold, which class is assigned?",
+      "expected_answer": "Rezultat strogo iznad praga dodeljuje se pozitivnoj klasi, a rezultat strogo ispod praga negativnoj; slučaj jednakosti zavisi od implementacije.",
+      "methods": {
+        "tfidf": {
+          "first_relevant_rank": 1,
+          "precision_at_5": 0.2,
+          "top_chunk_id": "chunk_a1c7ea375a38affdb65586c90341cf7d118f47b5ce92a624716ff0301a1a715b",
+          "top_excerpt": "Examples with a probability above the threshold value are then assigned to the positive class, the class you are testing for (here, spam)."
+        },
+        "bm25": {
+          "first_relevant_rank": 1,
+          "precision_at_5": 0.2,
+          "top_chunk_id": "chunk_a1c7ea375a38affdb65586c90341cf7d118f47b5ce92a624716ff0301a1a715b",
+          "top_excerpt": "Examples with a lower probability are assigned to the negative class, the alternative class (here, not spam)."
+        },
+        "semantic": {
+          "first_relevant_rank": null,
+          "precision_at_5": 0.0,
+          "top_chunk_id": "chunk_33cb1e7efc46062ce3f0573c9e5fb407dbe56de46701899faa9d496d6e71fb6d",
+          "top_excerpt": "While 0.5 might seem like an intuitive threshold, it's not a good idea if the cost of one type of wrong classification is greater than the other, or if the classes are imbalanced."
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "chunk_a1c7ea375a38affdb65586c90341cf7d118f47b5ce92a624716ff0301a1a715b",
+          "file_name": "10_google_thresholds.txt",
+          "page": null,
+          "quote": "Examples with a probability above the threshold value are then assigned to the positive class, the class you are testing for (here, spam). Examples with a lower probability are assigned to the negative class, the alternative class (here, not spam)."
+        }
+      ],
+      "observation": "TF-IDF i BM25 vraćaju isti relevantni odlomak na prvom mestu; obe metode imaju P@5=0,2. Semantička metoda nema relevantan odlomak u prvih pet. Njen prvi kandidat jeste o pragu, ali objašnjava zašto 0,5 nije uvek dobar izbor, umesto koja se klasa dodeljuje iznad i ispod praga. Leksički analizator je u relevantnom odlomku potvrdio poklapanja „above“, „assigned“, „class“, „classification“ i „threshold“.",
+      "hypothesis": "Moguće je da je precizno ponavljanje reči koje opisuju relaciju praga i klase izdvojilo tačan odlomak kod obe leksičke metode. Semantičko rangiranje je ostalo u ispravnoj temi, ali je među srodnim odlomcima dalo prednost drugom pitanju o izboru praga; iz rang-liste se ne može tvrditi koji je deo vektorske reprezentacije to izazvao.",
+      "limitation": "Semantički promašaj nije potpuno nevezan rezultat, već tematski blizak odlomak. Primer zato pokazuje problem izbora tačne informacije unutar odgovarajuće oblasti, ne potpuno nepovezanu temu."
+    },
+    {
+      "case_id": "bm25-ispred-tfidf-raspodela-tezina",
+      "query_id": "test-037",
+      "title": "BM25 bolje razdvaja oblik raspodele od opšte regularizacije",
+      "category": "Značajna razlika BM25–TF-IDF i granica odlomka",
+      "query": "What distribution shape and mean does the lesson associate with model weights under a high regularization rate?",
+      "expected_answer": "Lekcija visoku stopu regularizacije povezuje sa približno normalnom raspodelom težina čija je srednja vrednost nula, bez tvrdnje da je to bezuslovno pravilo.",
+      "methods": {
+        "tfidf": {
+          "first_relevant_rank": 4,
+          "precision_at_5": 0.2,
+          "top_chunk_id": "chunk_1dda40c9d013b002ecdc20f69011760226b039ca8ee4a83521fdf13f09413c14",
+          "top_excerpt": "a high regularization rate pushes weights towards zero."
+        },
+        "bm25": {
+          "first_relevant_rank": 1,
+          "precision_at_5": 0.2,
+          "top_chunk_id": "chunk_d6619e1e92d48eb34b864bca280c7977846841b812dc381bdb333be2f8819613",
+          "top_excerpt": "A high regularization rate: Strengthens the influence of regularization, thereby reducing the chances of overfitting."
+        },
+        "semantic": {
+          "first_relevant_rank": 1,
+          "precision_at_5": 0.2,
+          "top_chunk_id": "chunk_d6619e1e92d48eb34b864bca280c7977846841b812dc381bdb333be2f8819613",
+          "top_excerpt": "Tends to produce a histogram of model weights having the following characteristics: a normal distribution a mean weight of 0."
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "chunk_d6619e1e92d48eb34b864bca280c7977846841b812dc381bdb333be2f8819613",
+          "file_name": "19_google_l2_regularization.txt",
+          "page": null,
+          "quote": "A high regularization rate: Strengthens the influence of regularization, thereby reducing the chances of overfitting. Tends to produce a histogram of model weights having the following characteristics: a normal distribution a mean weight of 0."
+        }
+      ],
+      "observation": "BM25 i semantička metoda nalaze potpuni odgovor na prvom mestu, dok je kod TF-IDF prvi relevantni rang 4; svima je P@5=0,2. TF-IDF na vrh stavlja odlomak o potiskivanju težina ka nuli, bez oblika raspodele. Njegov drugi kandidat počinje isečenim nastavkom „distribution a mean weight of 0“ i nema samostalan kontekst. Analizator potvrđuje da relevantni odlomak sadrži i „distribution“ i „mean“, a TF-IDF vrh ne.",
+      "hypothesis": "Moguće je da su ponovljeni opšti termini „regularization“ i „rate“ pojačali TF-IDF kandidat, dok su BM25 zasićenje frekvencije termina i normalizacija dužine ublažili tu prednost. To je objašnjenje saglasno parametrima i preklapanju tokena, ne rezultat posebne ablacije.",
+      "limitation": "Granica odlomka ovde otežava ocenjivanje fragmenta: informacija postoji u susednom isečku, ali on po zamrznutom pravilu nije samostalno dovoljan odgovor."
+    },
+    {
+      "case_id": "sve-metode-promasuju-izbor-c",
+      "query_id": "test-044",
+      "title": "Sve tri metode promašuju način izbora parametra C",
+      "category": "Neuspeh svih metoda",
+      "query": "How can the SVM tradeoff parameter C be selected in the MIT notes?",
+      "expected_answer": "Parametar C bira se minimizovanjem greške leave-one-out unakrsne validacije.",
+      "methods": {
+        "tfidf": {
+          "first_relevant_rank": null,
+          "precision_at_5": 0.0,
+          "top_chunk_id": "chunk_78886397f59ef79dd4a85a71f57683ddc4c907a832f1438b7287c0e031df6b85",
+          "top_excerpt": "The noise variance can be subsequently set to account for the remaining prediction errors."
+        },
+        "bm25": {
+          "first_relevant_rank": null,
+          "precision_at_5": 0.0,
+          "top_chunk_id": "chunk_b478988d44e3306a06e7b339b1450c73fe4b63c53a98238b189ee17b06f5b07d",
+          "top_excerpt": "By maximizing this conditional likelihood with respect to θ and θ0 we obtain maximum likelihood estimates"
+        },
+        "semantic": {
+          "first_relevant_rank": null,
+          "precision_at_5": 0.0,
+          "top_chunk_id": "chunk_b4743bee460818e0c733d286aad33c3f076a0417a92d72d6f977345ed388b73f",
+          "top_excerpt": "The regularizer helps select reasonable parameters"
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "chunk_baf408b3e1651fa0b1b79fa4b127f753d8b585462d5d3ba30be0e7ea047e9e62",
+          "file_name": "02_mit_regularization_logistic_regression.pdf",
+          "page": 1,
+          "quote": "where the remaining parameter C could be set by cross-validation, i.e., by minimizing the leave-one-out cross-validation error."
+        }
+      ],
+      "observation": "Nijedna metoda nema relevantan rezultat među prvih pet, pa su sva tri P@5 jednaka nuli. TF-IDF vrh govori o proceni varijanse šuma u linearnoj regresiji, BM25 o maksimalnoj verodostojnosti, a semantički vrh o regularizaciji kada je uzorak mali. Relevantni odlomak na prvoj strani MIT beleški izričito navodi leave-one-out unakrsnu validaciju. Ovo je jedan od samo dva potpuna promašaja u test skupu.",
+      "hypothesis": "Provereni analizator odbacuje jednokaraktersko „C“. Upit koristi skraćenicu „SVM“, a relevantni odlomak puni naziv „Support Vector Machine“; izrazi „leave-one-out“ i „cross-validation“ nisu u upitu. Moguće je da je zato leksički trag prema pravom odlomku slab. Prvi semantički kandidat ostaje blizu SVM-a i regularizacije, ali ne izdvaja rečenicu o izboru C; uzrok se ne može zaključiti bez dodatnog eksperimenta.",
+      "limitation": "PDF sadrži oštećene matematičke znakove, ali citirana odgovarajuća rečenica je čitljiva. Zaključak se odnosi na zamrznuti top-5, ne na rangove izvan njega."
+    },
+    {
+      "case_id": "tematski-pogoci-mali-skup-podataka",
+      "query_id": "test-087",
+      "title": "Opšte reči vode leksičke metode ka tematskim susedima",
+      "category": "Tematski, ali nedovoljan leksički pogodak",
+      "query": "When can a small dataset still produce good results through model adaptation?",
+      "expected_answer": "Mali skup može dati dobre rezultate kada se prilagođava postojeći model prethodno obučen na mnogo podataka iste šeme.",
+      "methods": {
+        "tfidf": {
+          "first_relevant_rank": null,
+          "precision_at_5": 0.0,
+          "top_chunk_id": "chunk_90094b94000a8505bea76cd9803a189a9537fc84c68a5b42aea502ed02b50a91",
+          "top_excerpt": "This would be the best model for this dataset because no other weight and bias values produce a model with lower loss."
+        },
+        "bm25": {
+          "first_relevant_rank": 4,
+          "precision_at_5": 0.2,
+          "top_chunk_id": "chunk_0fce079f0abb0fc23389df726b27e39e68749638eb1d3c752b9258e83c9f5558",
+          "top_excerpt": "After repeated use of the validation set suggests that your model is making good predictions, use the test set to double-check your model."
+        },
+        "semantic": {
+          "first_relevant_rank": 1,
+          "precision_at_5": 0.2,
+          "top_chunk_id": "chunk_6faf16839929d637c54fd4de1acdc7deb8dfbcf654b63810f3d55a314f49f1f2",
+          "top_excerpt": "It's possible to get good results from a small dataset if you are adapting an existing model already trained on large quantities of data from the same schema."
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "chunk_6faf16839929d637c54fd4de1acdc7deb8dfbcf654b63810f3d55a314f49f1f2",
+          "file_name": "16_google_data_characteristics.txt",
+          "page": null,
+          "quote": "It's possible to get good results from a small dataset if you are adapting an existing model already trained on large quantities of data from the same schema."
+        }
+      ],
+      "observation": "Semantička metoda vraća tačnu rečenicu na prvom mestu, BM25 tek na četvrtom, a TF-IDF je bez relevantnog rezultata u prvih pet. TF-IDF vrh govori o najboljem modelu za konkretan skup i gradijentnom spustu; BM25 vrh o dobrom predviđanju i validacionom skupu. Dakle, oba prva kandidata dele temu modela i podataka, ali ne uslov prilagođavanja već obučenog modela.",
+      "hypothesis": "Analizator potvrđuje da TF-IDF vrh deli „dataset“, „model“ i „produce“, a BM25 vrh još „good“ i „results“. Relevantni izvor koristi „adapting“, dok upit ima „adaptation“, bez svođenja na isti koren. Moguće je da su opšte podudarnosti potisnule pravi odlomak kod leksičkih metoda; semantički ishod je saglasan sa povezivanjem tih oblika, ali ne dokazuje mehanizam modela.",
+      "limitation": "BM25 ipak nalazi odgovor unutar top-5, pa ovo nije neuspeh celog leksičkog pristupa, već primer lošeg prvog izbora i morfološke osetljivosti."
+    },
+    {
+      "case_id": "isti-prvi-rang-razlicit-pet",
+      "query_id": "test-002",
+      "title": "Isti prvi pogodak ne znači jednaku preciznost liste",
+      "category": "Isti Hit i prvi relevantni rang, različit Precision@5",
+      "query": "How do MSE and MAE differ in their sensitivity to outliers?",
+      "expected_answer": "MSE kvadrira greške i zato jače povlači model ka netipičnim vrednostima, dok je MAE otporniji na njih.",
+      "methods": {
+        "tfidf": {
+          "first_relevant_rank": 1,
+          "precision_at_5": 0.8,
+          "top_chunk_id": "chunk_8355f409107e8ee27e7ea1ec3beeb26e8c2bcc29fe13b62fcde2cc620974734d",
+          "top_excerpt": "The outliers are closer to the model trained with MSE than to the model trained with MAE."
+        },
+        "bm25": {
+          "first_relevant_rank": 1,
+          "precision_at_5": 0.8,
+          "top_chunk_id": "chunk_aca818a22340aa35f440b5c0d6a44ad6af930ced476ac670195633441b0986f7",
+          "top_excerpt": "For instance, MSE moves the model more toward the outliers, while MAE doesn't. L2 loss incurs a much higher penalty for an outlier than L1 loss."
+        },
+        "semantic": {
+          "first_relevant_rank": 1,
+          "precision_at_5": 0.6,
+          "top_chunk_id": "chunk_8355f409107e8ee27e7ea1ec3beeb26e8c2bcc29fe13b62fcde2cc620974734d",
+          "top_excerpt": "MSE loss moves the model closer to the outliers. Figure 10. MAE loss keeps the model farther from the outliers."
+        }
+      },
+      "evidence": [
+        {
+          "chunk_id": "chunk_8355f409107e8ee27e7ea1ec3beeb26e8c2bcc29fe13b62fcde2cc620974734d",
+          "file_name": "05_google_linear_loss.txt",
+          "page": null,
+          "quote": "MSE. The model is closer to the outliers but further away from most of the other data points. MAE. The model is further away from the outliers but closer to most of the other data points."
+        }
+      ],
+      "observation": "Sve tri metode imaju Hit@5 i prvi relevantni rang 1. Razlika se vidi tek u širini korisne liste: TF-IDF i BM25 imaju po četiri označena relevantna odlomka u prvih pet, odnosno P@5=0,8, a semantička metoda tri, odnosno 0,6. Njena dva nerelevantna kandidata govore o funkcijama gubitka, ali po zamrznutim oznakama ne daju samostalan odgovor o različitoj osetljivosti MSE i MAE na netipične vrednosti.",
+      "hypothesis": "Upit i relevantni odlomci doslovno ponavljaju „MSE“, „MAE“ i „outliers“, što je potvrđeno istim analizatorom. Moguće je da ta koncentracija termina pomaže leksičkim metodama da zadrže više preklapajućih, ali samostalno dovoljnih odlomaka. To ne znači da su njihovi odgovori sadržajno četiri puta bolji.",
+      "limitation": "Precision@5 ovde nagrađuje više preklapajućih odlomaka iz istog dokumenta. Zato metrika meri relevantne jedinice rangiranja, a ne broj različitih činjenica niti kvalitet konačno sastavljenog odgovora."
+    }
+  ]
+}

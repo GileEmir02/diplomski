@@ -1,0 +1,46 @@
+{
+  "protocol_id": "ml-basics-evaluation-v2",
+  "schema_version": 1,
+  "declared_on": "2026-09-20",
+  "status": "declared_before_expanded_test_results",
+  "parent_dataset": "data\\evaluation\\queries_v1.json",
+  "parent_dataset_sha256": "699a9b4a79461b280d391a735e74b2f5ba09e58f3661ddf3cce39be1d40c15b2",
+  "corpus_fingerprint": "c676ae09b8169b86669afed1e881714cae78d5fd0f95a676c51ec0ae525c4dfa",
+  "config_fingerprint": "367370a1f551ff4533e171c4f512550296d6991c54ac5eaba5f61c5a14956b17",
+  "expected_splits": {"dev": 10, "test": 100, "no_answer": 5},
+  "new_test_questions": 60,
+  "methods": ["tfidf", "bm25", "semantic"],
+  "k": 5,
+  "metrics": ["hit_at_5", "mrr_at_5", "precision_at_5"],
+  "precision_denominator": 5,
+  "averaging": "macro: every query contributes once, including zero-hit queries",
+  "short_rankings": "Missing positions contribute zero; the denominator remains five.",
+  "relevance": {
+    "unit": "one indexed chunk",
+    "positive": "The chunk independently contains enough correct source information to answer the specific question.",
+    "negative": "The chunk only mentions the topic, answers a different question, lacks necessary context, or relies on unreadable/missing material.",
+    "multiple_positives": "Every independently sufficient chunk may be positive, including overlapping chunks.",
+    "unjudged": "Not a negative label. Final scoring requires explicit judgments for every returned top-five candidate.",
+    "no_answer": "Kept separate from all three quality metrics; no artificial positive label is assigned."
+  },
+  "review": {
+    "pool_depth": 5,
+    "pool": "Union of all three methods' top-five candidates plus source-proposed positive chunks, deduplicated per query.",
+    "blind_packet": "Reviewer sees query, chunk and source, but no method, rank, score or suggested relevance label.",
+    "query_review": "All 115 queries must be accepted after checking wording, answerability, evidence and information-need separation.",
+    "decisions": ["relevant", "not_relevant", "uncertain"],
+    "freeze_rule": "No missing or uncertain judgments; every answerable query has a supported positive; all no-answer judgments are negative.",
+    "provenance": "Record reviewer identity and kind. Assistant review never sets human_review_complete=true.",
+    "limit": "Pooled judgments cover these fixed methods, not every possible query-chunk pair or future retriever."
+  },
+  "timing": {"warmup": 3, "repeats": 10, "seed": 42},
+  "unchanged": ["corpus", "chunking_200_40", "model_and_revision", "tfidf_parameters", "bm25_k1_1.5_b_0.75"],
+  "reporting": {
+    "test_cohorts": ["all_100", "original_40", "new_60"],
+    "by_query_type": true,
+    "report_distinct_information_needs": true,
+    "preserve_original_runs": true,
+    "no_tuning_on_test_results": true,
+    "interpretation": "A source-grounded expansion of an already-used, small collection, not an independent external benchmark."
+  }
+}

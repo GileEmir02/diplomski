@@ -1,0 +1,123 @@
+{
+  "reviewed_at_utc": "2026-09-17T11:18:23.286352+00:00",
+  "reviewer": "assistant",
+  "human_review_complete": false,
+  "criterion": "A positive chunk must independently supply enough context to answer the question; topic-only or truncated partial answers are insufficient.",
+  "queries_reviewed": 55,
+  "changed_query_ids": [
+    "dev-001",
+    "dev-002",
+    "dev-003",
+    "dev-004",
+    "dev-005",
+    "dev-006",
+    "dev-009",
+    "dev-010",
+    "test-002",
+    "test-003",
+    "test-008",
+    "test-009",
+    "test-010",
+    "test-014",
+    "test-017",
+    "test-020",
+    "test-022",
+    "test-023",
+    "test-027",
+    "test-028",
+    "test-032",
+    "test-036",
+    "test-037",
+    "test-039",
+    "test-040"
+  ],
+  "changes": {
+    "dev-001": [
+      "Generalized the wording to match both generic and logistic-regression evidence."
+    ],
+    "dev-002": [
+      "Generalized the wording to match both generic and logistic-regression evidence."
+    ],
+    "dev-003": [
+      "Generalized the wording to match both generic and logistic-regression evidence."
+    ],
+    "dev-004": [
+      "Removed an introductory passage whose explanatory comparison is cut at the boundary."
+    ],
+    "dev-005": [
+      "Removed an introductory passage whose explanatory comparison is cut at the boundary."
+    ],
+    "dev-006": [
+      "Removed an introductory passage whose explanatory comparison is cut at the boundary."
+    ],
+    "dev-009": [
+      "Qualified the lesson's comparison; linear regression can also be regularized."
+    ],
+    "dev-010": [
+      "Qualified the lesson's comparison; linear regression can also be regularized."
+    ],
+    "test-002": [
+      "Removed a passage describing MAE robustness without independently explaining MSE outlier sensitivity.",
+      "The question explicitly names both loss metrics, so its type is direct."
+    ],
+    "test-003": [
+      "Removed the introductory chunk because its list of gradient-descent steps is incomplete."
+    ],
+    "test-008": [
+      "Restricted the claim to exact mathematics and finite inputs, not floating-point saturation."
+    ],
+    "test-009": [
+      "Made the question explicitly source-specific rather than presenting the lesson's precision explanation as the only general reason."
+    ],
+    "test-010": [
+      "Excluded equality at the threshold, which the source says is implementation-dependent."
+    ],
+    "test-014": [
+      "Specified binary-classification recall and used its standard sensitivity synonym."
+    ],
+    "test-017": [
+      "Removed the introduction: it names ROC but does not explain its TPR/FPR construction."
+    ],
+    "test-020": [
+      "Broadened the answer representation to include the independently supported MIT column-vector example."
+    ],
+    "test-022": [
+      "Scoped the scaling claim to the lesson's training example, not all possible model families."
+    ],
+    "test-023": [
+      "Scoped the importance claim to the described learner rather than a universal property of all models."
+    ],
+    "test-027": [
+      "Removed a chunk that gives vector length but not the full one-hot value pattern.",
+      "Removed an example/pattern chunk without the general N-category length rule."
+    ],
+    "test-028": [
+      "Removed length-only evidence that does not identify the active category marker."
+    ],
+    "test-032": [
+      "Preserved the source's rough-rule qualification rather than treating it as a universal sample-size law."
+    ],
+    "test-036": [
+      "Removed a passage whose real-world representativeness criterion is truncated.",
+      "Kept the complete passage explicitly relating all four distributions instead of an incomplete cross-chunk list."
+    ],
+    "test-037": [
+      "Replaced a question too close to the development regularization-purpose need with a distinct, fully supported weight-distribution question."
+    ],
+    "test-039": [
+      "Distinguished a stopping condition from a guarantee of convergence on nonseparable data."
+    ],
+    "test-040": [
+      "Distinguished a stopping condition from a guarantee of convergence on nonseparable data."
+    ]
+  },
+  "source_draft_sha256": "9388f0df76e2214abf2cb6a8dc4bc6a8dbbdbe9fe14eb4d8e8e1647bdaaa2c3b",
+  "reviewed_dataset_sha256": "699a9b4a79461b280d391a735e74b2f5ba09e58f3661ddf3cce39be1d40c15b2",
+  "test_rankings_consulted": false,
+  "retrieval_configuration_changed": false,
+  "limitations": [
+    "AI-assisted relevance judgments remain subjective and are not a substitute for independent expert assessment.",
+    "Additional relevant passages may still be missed despite source review.",
+    "The small corpus, repeated information needs and known PDF glyph errors limit generalization."
+  ]
+}

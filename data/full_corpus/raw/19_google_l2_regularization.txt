@@ -1,0 +1,135 @@
+Overfitting: L2 regularization
+Author: Google for Developers / Machine Learning Crash Course
+Source: https://developers.google.com/machine-learning/crash-course/overfitting/regularization
+License: CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/)
+Changes: HTML lesson converted to UTF-8 TXT; navigation, multiple-choice quizzes, figures, captions, code blocks and generated key takeaways omitted; attribution header added.
+
+L2 regularization
+is a popular regularization metric, which uses the following formula:
+
+$$L_2\text{ regularization } = {w_1^2 + w_2^2 + ... + w_n^2}$$
+
+For example, the following table shows the calculation of L2
+regularization for a model with six weights:
+
+Value Squared value
+w1 0.2 0.04
+w2 -0.5 0.25
+w3 5.0 25.0
+w4 -1.2 1.44
+w5 0.3 0.09
+w6 -0.1 0.01
+26.83 = total
+
+Notice that weights close to zero don't affect L2 regularization
+much, but large weights can have a huge impact. For example, in the
+preceding calculation:
+
+A single weight (w3) contributes about 93% of the
+total complexity.
+
+The other five weights collectively contribute only about 7% of the
+total complexity.
+
+L2 regularization encourages weights toward 0, but never pushes
+weights all the way to zero.
+
+Regularization rate (lambda)
+
+As noted, training attempts to minimize some combination of loss and complexity:
+
+$$\text{minimize(loss} + \text{ complexity)}$$
+
+Model developers tune the overall impact of complexity on model training
+by multiplying its value by a scalar called the
+regularization rate.
+The Greek character lambda typically symbolizes the regularization rate.
+
+That is, model developers aim to do the following:
+
+$$\text{minimize(loss} + \lambda \text{ complexity)}$$
+
+A high regularization rate:
+
+Strengthens the influence of regularization, thereby reducing the chances of
+overfitting.
+
+Tends to produce a histogram of model weights having the following
+characteristics:
+
+a normal distribution
+
+a mean weight of 0.
+
+A low regularization rate:
+
+Lowers the influence of regularization, thereby increasing the chances of
+overfitting.
+
+Tends to produce a histogram of model weights with a flat distribution.
+
+For example, the histogram of model weights for a high regularization rate
+might look as shown in Figure 18.
+
+In contrast, a low regularization rate tends to yield a flatter histogram, as
+shown in Figure 19.
+
+Note: Setting the regularization rate to zero removes regularization completely.
+In this case, training focuses exclusively on minimizing loss, which
+poses the highest possible overfitting risk.
+
+Picking the regularization rate
+
+The ideal regularization rate produces a model that generalizes well to
+new, previously unseen data.
+Unfortunately, that ideal value is data-dependent,
+so you must do some
+
+tuning.
+
+Early stopping: an alternative to complexity-based regularization
+
+Early stopping is a
+regularization method that doesn't involve a calculation of complexity.
+Instead, early stopping simply means ending training before the model
+fully converges. For example, you end training when the loss curve
+for the validation set starts to increase (slope becomes positive).
+
+Although early stopping usually increases training loss, it can decrease
+test loss.
+
+Early stopping is a quick, but rarely optimal, form of regularization.
+The resulting model is very unlikely to be as good as a model trained
+thoroughly on the ideal regularization rate.
+
+Finding equilibrium between learning rate and regularization rate
+
+Learning rate and
+regularization rate tend to move weights in opposite
+directions. A high learning rate often pulls weights away from zero;
+a high regularization rate pushes weights towards zero.
+
+If the regularization rate is high with respect to the learning rate,
+the weak weights tend to produce a model that makes poor predictions.
+Conversely, if the learning rate is high with respect to the regularization
+rate, the strong weights tend to produce an overfit model.
+
+Your goal is to find the equilibrium between learning rate and
+regularization rate. This can be challenging. Worst of all, once you find
+that elusive balance, you may have to ultimately change the learning rate.
+And, when you change the learning rate, you'll again have to find the ideal
+regularization rate.
+
+Key terms:
+
+Early stopping
+
+L1 regularization
+
+L2 regularization
+
+Learning rate
+
+Regularization
+
+Regularization rate

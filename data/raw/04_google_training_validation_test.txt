@@ -1,0 +1,93 @@
+Datasets: Dividing the original dataset
+Author: Google for Developers / Machine Learning Crash Course
+Source: https://developers.google.com/machine-learning/crash-course/overfitting/dividing-datasets
+License: CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/)
+Changes: HTML article converted to UTF-8 TXT; navigation, quiz blocks, exercise headings, figures, captions, code blocks and generated key takeaways omitted; attribution header added.
+
+All good software engineering projects devote considerable energy to
+testing their apps. Similarly, we strongly recommend testing your
+ML model to determine the correctness of its predictions.
+
+Training, validation, and test sets
+
+You should test a model against a different set of examples than those
+used to train the model. As you'll learn
+a little later, testing
+on different examples is stronger proof of your model's fitness than testing
+on the same set of examples.
+Where do you get those different examples? Traditionally in machine learning,
+you get those different examples by splitting the original dataset. You might
+assume, therefore, that you should split the original dataset into two subsets:
+
+A training set
+that the model trains on.
+
+A test set for evaluation of the
+trained model.
+
+Dividing the dataset into two sets is a decent idea, but
+a better approach is to divide the dataset into three subsets.
+In addition to the training set and the test set, the third subset is:
+
+A validation set
+performs the initial testing on the model as it is being trained.
+
+Use the validation set to evaluate results from the training set.
+After repeated use of the validation set suggests that your model is
+making good predictions, use the test set to double-check your model.
+
+The following figure suggests this workflow.
+In the figure, "Tweak model" means adjusting anything about the model
+—from changing the learning rate, to adding or removing
+features, to designing a completely new model from scratch.
+
+Note: When you transform a feature in your training set, you must make the
+same transformation in the validation set, test set, and real-world dataset.
+
+The workflow shown in Figure 10 is optimal, but even with that workflow,
+test sets and validation sets still "wear out" with repeated use.
+That is, the more you use the same data to make decisions about
+hyperparameter settings or other model improvements, the less confidence
+that the model will make good predictions on new data.
+For this reason, it's a good idea to collect more data to "refresh" the test
+set and validation set. Starting anew is a great reset.
+
+Additional problems with test sets
+
+As the previous question illustrates, duplicate examples can affect model evaluation.
+After splitting a dataset into training, validation, and test sets,
+delete any examples in the validation set or test set that are duplicates of
+examples in the training set. The only fair test of a model is against
+new examples, not duplicates.
+
+For example, consider a model that predicts whether an email is spam, using
+the subject line, email body, and sender's email address as features.
+Suppose you divide the data into training and test sets, with an 80-20 split.
+After training, the model achieves 99% precision on both the training set and
+the test set. You'd probably expect a lower precision on the test set, so you
+take another look at the data and discover that many of the examples in the test
+set are duplicates of examples in the training set. The problem is that you
+neglected to scrub duplicate entries for the same spam email from your input
+database before splitting the data. You've inadvertently trained on some of
+your test data.
+
+In summary, a good test set or validation set meets all of the
+following criteria:
+
+Large enough to yield statistically significant testing results.
+
+Representative of the dataset as a whole. In other words, don't pick
+a test set with different characteristics than the training set.
+
+Representative of the real-world data that the model will encounter
+as part of its business purpose.
+
+Zero examples duplicated in the training set.
+
+Key terms:
+
+Test set
+
+Training set
+
+Validation set

@@ -1,0 +1,21 @@
+.venv
+__pycache__
+.cache
+*.py[cod]
+.env
+.env.*
+.streamlit/secrets.toml
+*.pem
+*.key
+*.pfx
+.pytest_cache
+# Runtime snapshots contain copies of uploaded documents.
+artifacts/indexes/
+# Versioned release candidates are assembled from an explicit allowlist.
+artifacts/releases/
+# Personal thesis drafts, supplied examples and editor-local settings.
+rad/
+PRIMERI_DIPLOMSKOG/
+PREZENTACIJA/
+artifacts/thesis/
+.vscode/

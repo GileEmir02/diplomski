@@ -1,0 +1,225 @@
+{
+  "checked_at_utc": "2026-09-20T19:48:01.627098+00:00",
+  "parent_dataset_sha256": "699a9b4a79461b280d391a735e74b2f5ba09e58f3661ddf3cce39be1d40c15b2",
+  "dataset_v2_sha256": "5c312d014a988e1396518d95546ca486e919d9a4ddc3b4b4150b9a24bbd243bf",
+  "original_question_text_and_split_unchanged": true,
+  "ranking_comparison": {
+    "tfidf": {
+      "positions": 200,
+      "identical": 200,
+      "changed": 0
+    },
+    "bm25": {
+      "positions": 200,
+      "identical": 200,
+      "changed": 0
+    },
+    "semantic": {
+      "positions": 200,
+      "identical": 200,
+      "changed": 0
+    }
+  },
+  "queries_with_rejudged_positive_sets": 15,
+  "test_queries_with_rejudged_positive_sets": 11,
+  "label_changes": [
+    {
+      "query_id": "dev-001",
+      "split": "dev",
+      "added": [
+        {
+          "chunk_id": "chunk_1dda40c9d013b002ecdc20f69011760226b039ca8ee4a83521fdf13f09413c14",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "chunk_id": "chunk_5d22b00eb80ca3acf11eb80186ee1ad9a85383947626b8c9f9455a298991a0c4",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "chunk_id": "chunk_a1cf4f8238513884a5cff1ff27a9e9ca836a9eb850638391c4d8c29f14f07d35",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "chunk_id": "chunk_b4743bee460818e0c733d286aad33c3f076a0417a92d72d6f977345ed388b73f",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        }
+      ],
+      "removed": []
+    },
+    {
+      "query_id": "dev-002",
+      "split": "dev",
+      "added": [
+        {
+          "chunk_id": "chunk_ee887acea73e5ede934dd13f2bf9c61e94aaf7766be1658c6576d1e75072c58b",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        }
+      ],
+      "removed": []
+    },
+    {
+      "query_id": "dev-003",
+      "split": "dev",
+      "added": [
+        {
+          "chunk_id": "chunk_0510ccd37a2f34f95215513381b6ceee70895f0036170fa60bbdd8af23aff56a",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "chunk_id": "chunk_632726b4b87e67437b4c147fbe9cc8993e31bdf023a0e8bd01404fb0f461bf5c",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "chunk_id": "chunk_a0671c2caf352c84c0eeff1622a030b46aae1e83b96a29939124d44583089047",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        }
+      ],
+      "removed": []
+    },
+    {
+      "query_id": "dev-005",
+      "split": "dev",
+      "added": [
+        {
+          "chunk_id": "chunk_12c02df9402829a13c1c0bfbb829b9b26c8accf4271c7b24db5f9ab7d93134cd",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "chunk_id": "chunk_f3bde971557eb7c3c851183b4c5b26e65785e07dd17ab938e3bc0f97e472a231",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        }
+      ],
+      "removed": []
+    },
+    {
+      "query_id": "test-002",
+      "split": "test",
+      "added": [
+        {
+          "chunk_id": "chunk_947456c139904499e88e7db78eb82d01dea8340327714d4a55a04ffbc52cdd59",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        }
+      ],
+      "removed": []
+    },
+    {
+      "query_id": "test-004",
+      "split": "test",
+      "added": [
+        {
+          "chunk_id": "chunk_bb8f5528383d229993139c0db3e47aacf2d4c0c43ad44689ecd5821e890150df",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        }
+      ],
+      "removed": []
+    },
+    {
+      "query_id": "test-008",
+      "split": "test",
+      "added": [
+        {
+          "chunk_id": "chunk_ad8b706929f62b3ad744d26efaeccaa6ed3abd44a5af5946f9f27db6a2106ba5",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        }
+      ],
+      "removed": []
+    },
+    {
+      "query_id": "test-010",
+      "split": "test",
+      "added": [],
+      "removed": [
+        {
+          "chunk_id": "chunk_39fab453d03c2abfea6495873d74fd790fa76b9e7a6307cbbf4196ee210e47ed",
+          "reason": "Chunk daje primere rezultata iznad praga i poseban slucaj jednakosti, ali ne daje oba trazena pravila iznad/ispod."
+        }
+      ]
+    },
+    {
+      "query_id": "test-018",
+      "split": "test",
+      "added": [
+        {
+          "chunk_id": "chunk_27518ec2adadbe0c059a44fe327e5d363e07930f32f2d5d9fc5e83e7ff40a93f",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        }
+      ],
+      "removed": []
+    },
+    {
+      "query_id": "test-019",
+      "split": "test",
+      "added": [
+        {
+          "chunk_id": "chunk_27518ec2adadbe0c059a44fe327e5d363e07930f32f2d5d9fc5e83e7ff40a93f",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        }
+      ],
+      "removed": []
+    },
+    {
+      "query_id": "test-022",
+      "split": "test",
+      "added": [
+        {
+          "chunk_id": "chunk_5cf1e0b4465d77643291ad4f1024f9a19f9333d8a208bcc9f9c5bcefb4d50cba",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        },
+        {
+          "chunk_id": "chunk_e05fe5da61708e8f30c6b41d06306d9d47cb963a2ac400ba323e75c7f2748f2a",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        }
+      ],
+      "removed": []
+    },
+    {
+      "query_id": "test-024",
+      "split": "test",
+      "added": [
+        {
+          "chunk_id": "chunk_45066ee44dbab8ed9ad46654563fbd8604c52a2a2a06bd45d891951abff8a37d",
+          "reason": "Primer visina eksplicitno navodi normalnu raspodelu kao razlog izbora, a ista celina pominje Z-scores i identifikuje metod. Odseceno pocetno slovo ne uklanja trazeni uslov primene."
+        },
+        {
+          "chunk_id": "chunk_56d87d6448da7b6af67c4b20ae760346aee6bc6d29bbf8f96bb16f1f91008003",
+          "reason": "Chunk samostalno daje trazenu informaciju."
+        }
+      ],
+      "removed": []
+    },
+    {
+      "query_id": "test-036",
+      "split": "test",
+      "added": [
+        {
+          "chunk_id": "chunk_12c02df9402829a13c1c0bfbb829b9b26c8accf4271c7b24db5f9ab7d93134cd",
+          "reason": "Navodi da validation/test primeri moraju predstavljati trening distribuciju i realni svet."
+        }
+      ],
+      "removed": []
+    },
+    {
+      "query_id": "test-039",
+      "split": "test",
+      "added": [
+        {
+          "chunk_id": "chunk_2a85f44956c50d207266e883b79b3ceab48239b95c3d6ecb00b53f5e95c94763",
+          "reason": "Pravilo neposredno implicira da nema daljih azuriranja kada vise nema gresaka u prolasku kroz trening primere."
+        }
+      ],
+      "removed": []
+    },
+    {
+      "query_id": "test-040",
+      "split": "test",
+      "added": [
+        {
+          "chunk_id": "chunk_2a85f44956c50d207266e883b79b3ceab48239b95c3d6ecb00b53f5e95c94763",
+          "reason": "Iz pravila sledi da se niz azuriranja zavrsava kada nema vise pogresnih klasifikacija."
+        }
+      ],
+      "removed": []
+    }
+  ],
+  "interpretation": "Same original questions and retrieval settings; changed original-cohort quality can reflect re-adjudicated relevance, not improved algorithms. New-cohort quality has a different question population."
+}

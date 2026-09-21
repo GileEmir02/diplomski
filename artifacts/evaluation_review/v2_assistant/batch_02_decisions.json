@@ -1,0 +1,393 @@
+{
+  "batch_id": "02",
+  "reviewer": "assistant",
+  "human_review_complete": false,
+  "queries": [
+    {
+      "query_id": "test-026",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno; vise odlomaka samostalno objasnjava mehanizam odsecanja ekstremnih vrednosti.",
+      "judgments": [
+        {"candidate_ref": "C073", "decision": "not_relevant", "evidence_quote": "", "reason": "Navodi normalizaciju i binning, ali ne opisuje clipping."},
+        {"candidate_ref": "C122", "decision": "relevant", "evidence_quote": "all values that were greater than 4.0 now become 4.0.", "reason": "Konkretno objasnjava zamenu vrednosti iznad granice samom granicom."},
+        {"candidate_ref": "C130", "decision": "relevant", "evidence_quote": "If $x > max$, set $x' = max$ If $x < min$, set $x' = min$", "reason": "Daje oba pravila odsecanja, za gornju i donju granicu."},
+        {"candidate_ref": "C178", "decision": "relevant", "evidence_quote": "Clip Z-scores greater than 3 to become exactly 3. Clip Z-scores less than -3 to become exactly -3.", "reason": "Pokazuje kako se ekstremi svode na zadate granicne vrednosti."},
+        {"candidate_ref": "C092", "decision": "not_relevant", "evidence_quote": "", "reason": "Samo tvrdi da clipping ukrocuje numericke karakteristike; ne daje mehanizam."},
+        {"candidate_ref": "C192", "decision": "not_relevant", "evidence_quote": "", "reason": "Spisak termina o feature engineeringu ne objasnjava clipping."},
+        {"candidate_ref": "C108", "decision": "relevant", "evidence_quote": "clipping usually caps (reduces) the value of outliers to a specific maximum value.", "reason": "Direktno opisuje ogranicavanje ekstremnih vrednosti maksimalnom vrednoscu."}
+      ]
+    },
+    {
+      "query_id": "test-027",
+      "decision": "accepted",
+      "reason": "Pitanje precizno trazi i duzinu i obrazac vrednosti; jedan odlomak daje oba podatka.",
+      "judgments": [
+        {"candidate_ref": "C200", "decision": "not_relevant", "evidence_quote": "", "reason": "Govori o OOV kategoriji i velikoj kardinalnosti, ne o strukturi one-hot vektora."},
+        {"candidate_ref": "C184", "decision": "not_relevant", "evidence_quote": "", "reason": "Daje jedan osmoelementni primer i sparse zapis, ali ne opste pravilo za N i sve vrednosti."},
+        {"candidate_ref": "C011", "decision": "not_relevant", "evidence_quote": "", "reason": "Definise dimenziju i navodi broj kategorija, ali ne obrazac one-hot vrednosti."},
+        {"candidate_ref": "C183", "decision": "not_relevant", "evidence_quote": "", "reason": "Navodi da vektor ima N elemenata, ali ne kaze da je jedan 1.0 a ostali 0.0."},
+        {"candidate_ref": "C012", "decision": "relevant", "evidence_quote": "vector (array) of N elements, where N is the number of categories. For example, if car_color has eight possible categories, then the one-hot vector representing will have eight elements. Exactly one of the elements in a one-hot vector has the value 1.0; all the remaining elements have the value 0.0.", "reason": "Samostalno daje trazenu duzinu N i potpuni obrazac vrednosti."},
+        {"candidate_ref": "C099", "decision": "not_relevant", "evidence_quote": "", "reason": "Kaze da je tacno jedan element 1.0, ali ne daje opstu duzinu N niti eksplicitno vrednosti svih ostalih elemenata."}
+      ]
+    },
+    {
+      "query_id": "test-028",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno i podrzano direktnim definicijama i konkretnim primerom indikatorskog niza.",
+      "judgments": [
+        {"candidate_ref": "C050", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje batch size i azuriranje parametara, bez kategorickih indikatora."},
+        {"candidate_ref": "C099", "decision": "relevant", "evidence_quote": "In a true one-hot encoding, only one element has the value 1.0.", "reason": "Direktno navodi da jednu kategoriju oznacava jedini element vrednosti 1.0."},
+        {"candidate_ref": "C038", "decision": "not_relevant", "evidence_quote": "", "reason": "Bavi se sigmoid funkcijom i binarnim izlazom, ne one-hot indikatorom."},
+        {"candidate_ref": "C011", "decision": "not_relevant", "evidence_quote": "", "reason": "Navodi dimenzije kategorickih karakteristika, ali ne kako se kategorija oznacava u nizu."},
+        {"candidate_ref": "C183", "decision": "not_relevant", "evidence_quote": "", "reason": "Objasnjava prelaz sa indeksa na N-elemenata, ali izostavlja vrednost indikatora."},
+        {"candidate_ref": "C012", "decision": "relevant", "evidence_quote": "Exactly one of the elements in a one-hot vector has the value 1.0; all the remaining elements have the value 0.0.", "reason": "Potpuno opisuje kako je jedna kategorija oznacena u nizu."},
+        {"candidate_ref": "C080", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje vocabulary encoding i posebne tezine, ne raspored 1 i 0 u indikatoru."},
+        {"candidate_ref": "C200", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje OOV bucket i veliku kardinalnost, ne oznacavanje jedne kategorije."}
+      ]
+    },
+    {
+      "query_id": "test-029",
+      "decision": "accepted",
+      "reason": "Pitanje je nedvosmisleno; jedan odlomak direktno objasnjava lazni numericki odnos.",
+      "judgments": [
+        {"candidate_ref": "C219", "decision": "not_relevant", "evidence_quote": "", "reason": "Govori o pragovima i neuravnotezenim klasama, ne kategorickim indeksima."},
+        {"candidate_ref": "C212", "decision": "not_relevant", "evidence_quote": "", "reason": "Uvod u feature vectors ne objasnjava problem direktnog unosa indeksa."},
+        {"candidate_ref": "C144", "decision": "not_relevant", "evidence_quote": "", "reason": "Zavrsava opis hashiranja i samo nabraja termine."},
+        {"candidate_ref": "C109", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje hashing kategorija u bucket indekse, ali ne objasnjava zasto su sirovi indeksi obmanjujuci."},
+        {"candidate_ref": "C038", "decision": "not_relevant", "evidence_quote": "", "reason": "Sigmoid i verovatnoce nisu odgovor na problem kategorickih indeksa."},
+        {"candidate_ref": "C183", "decision": "relevant", "evidence_quote": "the model would treat the indexed values as continuous floating-point numbers. The model would then consider \"purple\" six times more likely than \"orange.\"", "reason": "Direktno pokazuje da indeksi stvaraju besmislen kontinuirani numericki odnos."},
+        {"candidate_ref": "C080", "decision": "not_relevant", "evidence_quote": "", "reason": "Navodi da se string pretvara u jedinstveni indeks, ali ne daje razlog zasto indeks ne sme direktno u model."},
+        {"candidate_ref": "C099", "decision": "not_relevant", "evidence_quote": "", "reason": "Kaze da se modelu prosledjuje one-hot vektor, ali ne objasnjava obmanjujuci efekat indeksa."},
+        {"candidate_ref": "C115", "decision": "not_relevant", "evidence_quote": "", "reason": "Bavi se embeddings i hashingom za veliku kardinalnost, ne laznim redosledom indeksa."}
+      ]
+    },
+    {
+      "query_id": "test-030",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno; jedan odlomak potpuno opisuje grupisanje retkih vrednosti u OOV bucket.",
+      "judgments": [
+        {"candidate_ref": "C144", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje zavrsetak hashing postupka, ne OOV grupisanje retkih kategorija."},
+        {"candidate_ref": "C015", "decision": "not_relevant", "evidence_quote": "", "reason": "Govori o retkim numerickim Z-score vrednostima, ne retkim kategorijama i OOV bucketu."},
+        {"candidate_ref": "C049", "decision": "not_relevant", "evidence_quote": "", "reason": "Opsti opis feature engineeringa ne daje OOV postupak."},
+        {"candidate_ref": "C080", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje vocabulary encoding za mali broj kategorija, ne tretman retkih vrednosti."},
+        {"candidate_ref": "C184", "decision": "not_relevant", "evidence_quote": "", "reason": "Pominje retke boje, ali se odlomak prekida pre OOV resenja."},
+        {"candidate_ref": "C200", "decision": "relevant", "evidence_quote": "Rather than giving each of these outlier colors a separate category, you can lump them into a single \"catch-all\" category called out-of-vocabulary (OOV).", "reason": "Direktno opisuje zajednicku OOV kategoriju za retke vrednosti."},
+        {"candidate_ref": "C109", "decision": "not_relevant", "evidence_quote": "", "reason": "Hashiranje u ogranicen broj bucket-a nije opis posebnog OOV catch-all bucket-a."},
+        {"candidate_ref": "C179", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje numericke outliere i funkcije gubitka, ne kategoricke OOV vrednosti."},
+        {"candidate_ref": "C011", "decision": "not_relevant", "evidence_quote": "", "reason": "Uvod u dimenzije kategorija ne govori o retkim vrednostima."}
+      ]
+    },
+    {
+      "query_id": "test-031",
+      "decision": "accepted",
+      "reason": "Pitanje jasno trazi alternativu i razlog; jedan odlomak daje oba.",
+      "judgments": [
+        {"candidate_ref": "C011", "decision": "not_relevant", "evidence_quote": "", "reason": "Navodi samo primere niskodimenzionalnih kategorickih karakteristika."},
+        {"candidate_ref": "C184", "decision": "not_relevant", "evidence_quote": "", "reason": "Poredi gust i sparse zapis malog one-hot vektora, ne preporucuje resenje za stotine hiljada kategorija."},
+        {"candidate_ref": "C183", "decision": "not_relevant", "evidence_quote": "", "reason": "Objasnjava one-hot kodiranje, ali ne alternativu za veliku kardinalnost."},
+        {"candidate_ref": "C144", "decision": "not_relevant", "evidence_quote": "", "reason": "Samo zavrsava postupak hashiranja i nema trazenu preporuku ni razlog."},
+        {"candidate_ref": "C012", "decision": "not_relevant", "evidence_quote": "", "reason": "Definise one-hot obrazac, ne izbor za veoma veliki broj kategorija."},
+        {"candidate_ref": "C099", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje one-hot i sparse reprezentaciju, bez preporuke embeddings za veliku kardinalnost."},
+        {"candidate_ref": "C115", "decision": "relevant", "evidence_quote": "Embeddings substantially reduce the number of dimensions, which benefits models in two important ways: The model typically trains faster. The built model typically infers predictions more quickly.", "reason": "Navodi embeddings kao bolji izbor i objasnjava manju dimenzionalnost, brzi trening i inferenciju."}
+      ]
+    },
+    {
+      "query_id": "test-032",
+      "decision": "accepted",
+      "reason": "Pitanje trazi grubo pravilo, a dva preklapajuca odlomka ga izricito navode.",
+      "judgments": [
+        {"candidate_ref": "C051", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje perceptron azuriranja, ne odnos broja primera i parametara."},
+        {"candidate_ref": "C182", "decision": "not_relevant", "evidence_quote": "", "reason": "Definise trening gresku i uvodi perceptron, bez pravila o kolicini podataka."},
+        {"candidate_ref": "C168", "decision": "not_relevant", "evidence_quote": "", "reason": "Kaze da regularizacija pomaze kada je primera malo, ali ne daje trazeni red velicine."},
+        {"candidate_ref": "C107", "decision": "relevant", "evidence_quote": "your model should train on at least an order of magnitude (or two) more examples than trainable parameters.", "reason": "Direktno daje trazeno grubo pravilo jednog ili dva reda velicine."},
+        {"candidate_ref": "C149", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje overfitting i generalizaciju, ne kvantitativan odnos primera i parametara."},
+        {"candidate_ref": "C189", "decision": "not_relevant", "evidence_quote": "", "reason": "Razlikuje hiperparametre i parametre i opisuje learning rate, bez pravila o broju primera."},
+        {"candidate_ref": "C069", "decision": "relevant", "evidence_quote": "your model should train on at least an order of magnitude (or two) more examples than trainable parameters.", "reason": "Sadrzi isto eksplicitno pravilo o broju primera naspram parametara."},
+        {"candidate_ref": "C005", "decision": "not_relevant", "evidence_quote": "", "reason": "Govori o uslovima generalizacije, ne o odnosu kolicine podataka i parametara."},
+        {"candidate_ref": "C066", "decision": "not_relevant", "evidence_quote": "", "reason": "Definise parametre i hiperparametre, ali ne navodi potrebnu kolicinu trening primera."}
+      ]
+    },
+    {
+      "query_id": "test-033",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno; dva odlomka samostalno navode brisanje i imputaciju.",
+      "judgments": [
+        {"candidate_ref": "C111", "decision": "not_relevant", "evidence_quote": "", "reason": "Detaljno opisuje imputaciju, ali ne navodi alternativu uklanjanja nepotpunih primera."},
+        {"candidate_ref": "C165", "decision": "not_relevant", "evidence_quote": "", "reason": "Uvod u nepotpune primere se prekida pre nacina njihovog resavanja."},
+        {"candidate_ref": "C046", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje potrebu za normalizacijom numerickih raspona."},
+        {"candidate_ref": "C035", "decision": "relevant", "evidence_quote": "Delete incomplete examples. Impute missing values; that is, convert the incomplete example to a complete example by providing well-reasoned guesses for the missing values.", "reason": "Izricito navodi obe glavne opcije i objasnjava imputaciju."},
+        {"candidate_ref": "C107", "decision": "not_relevant", "evidence_quote": "", "reason": "Bavi se kolicinom podataka i kvalitetom, ne nedostajucim vrednostima."},
+        {"candidate_ref": "C049", "decision": "not_relevant", "evidence_quote": "", "reason": "Opsti feature engineering ne navodi dve opcije za nepotpune primere."},
+        {"candidate_ref": "C064", "decision": "relevant", "evidence_quote": "consider building two datasets: one formed by deleting incomplete examples and the other by imputing.", "reason": "Samostalno identifikuje brisanje i imputaciju kao dve mogucnosti."},
+        {"candidate_ref": "C103", "decision": "not_relevant", "evidence_quote": "", "reason": "Daje konkretan nacin imputacije, ali ne i alternativu uklanjanja primera."}
+      ]
+    },
+    {
+      "query_id": "test-034",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno; jedan odlomak direktno objasnjava ogranicenje proxy ciljeva.",
+      "judgments": [
+        {"candidate_ref": "C158", "decision": "not_relevant", "evidence_quote": "", "reason": "Poredi MAE i MSE tretman numerickih outliera."},
+        {"candidate_ref": "C081", "decision": "not_relevant", "evidence_quote": "", "reason": "Bavi se klasifikacionim pragovima, ne direktnim i proxy ciljevima."},
+        {"candidate_ref": "C134", "decision": "not_relevant", "evidence_quote": "", "reason": "Fragment pominje vezu proxy oznake i predikcije i kada se proxy koristi, ali ne daje samostalno razlog opste inferiornosti."},
+        {"candidate_ref": "C225", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje skaliranje i Z-score, ne ciljne oznake."},
+        {"candidate_ref": "C195", "decision": "relevant", "evidence_quote": "Proxy labels are always a compromise—an imperfect approximation of a direct label. However, some proxy labels are close enough approximations to be useful.", "reason": "Direktno objasnjava da je proxy samo nesavrsena aproksimacija direktne oznake."},
+        {"candidate_ref": "C061", "decision": "not_relevant", "evidence_quote": "", "reason": "Definise direktnu oznaku, ali se prekida pre objasnjenja nedostatka proxy oznake."},
+        {"candidate_ref": "C226", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje active learning i cenu oznacavanja, ne proxy ciljeve."}
+      ]
+    },
+    {
+      "query_id": "test-035",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno; dva odlomka direktno opisuju divergenciju trening i validacionog gubitka.",
+      "judgments": [
+        {"candidate_ref": "C218", "decision": "relevant", "evidence_quote": "loss declines or holds steady (converges) for the training set, but increases for the validation set. This suggests overfitting.", "reason": "Direktno navodi trazeni obrazac i njegovo tumacenje."},
+        {"candidate_ref": "C006", "decision": "not_relevant", "evidence_quote": "", "reason": "Definise overfitting, ali ne opisuje obrazac dve krive gubitka."},
+        {"candidate_ref": "C075", "decision": "not_relevant", "evidence_quote": "", "reason": "Samo navodi teme vezbi o loss curves."},
+        {"candidate_ref": "C166", "decision": "not_relevant", "evidence_quote": "", "reason": "Objasnjava podelu podataka i ulogu validacionog skupa, ne signal overfittinga u gubicima."},
+        {"candidate_ref": "C041", "decision": "not_relevant", "evidence_quote": "", "reason": "Uvod u tumacenje krivih samo nabraja vezbe bez trazenog obrasca."},
+        {"candidate_ref": "C022", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje validation/test workflow, ne divergenciju gubitaka."},
+        {"candidate_ref": "C145", "decision": "not_relevant", "evidence_quote": "", "reason": "Ostecen fragment o verovatnocama nema trening-validacija obrazac."},
+        {"candidate_ref": "C149", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje razliku ucinka na trening i test skupu, ali ne trazeni tok trening i validacionog gubitka."},
+        {"candidate_ref": "C005", "decision": "relevant", "evidence_quote": "declines or holds steady (converges) for the training set, but increases for the validation set. This suggests overfitting.", "reason": "Sadrzi izricit signal overfittinga kroz suprotno kretanje gubitaka."}
+      ]
+    },
+    {
+      "query_id": "test-036",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno; kandidati navode jednaku distribuciju odnosno reprezentativnost evaluacionih skupova.",
+      "judgments": [
+        {"candidate_ref": "C149", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje generalizaciju i overfitting, ali ne statisticki odnos svih skupova."},
+        {"candidate_ref": "C005", "decision": "not_relevant", "evidence_quote": "", "reason": "Pocinje uslove generalizacije, ali se prekida pre uslova jednake distribucije particija."},
+        {"candidate_ref": "C218", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje krive gubitka, ne distribucionu uskladjenost skupova."},
+        {"candidate_ref": "C121", "decision": "relevant", "evidence_quote": "The dataset partitions have the same distribution. That is, the examples in the training set are statistically similar to the examples in the validation set, test set, and real-world data.", "reason": "Potpuno i direktno daje trazeni statisticki odnos svih skupova."},
+        {"candidate_ref": "C131", "decision": "not_relevant", "evidence_quote": "", "reason": "Fragment kriterijuma pominje reprezentativnost, ali bez jasnog subjekta i bez odnosa svih skupova."},
+        {"candidate_ref": "C024", "decision": "relevant", "evidence_quote": "Representative of the dataset as a whole. In other words, don't pick a test set with different characteristics than the training set. Representative of the real-world data that the model will encounter", "reason": "Navodi da validation/test primeri moraju predstavljati trening distribuciju i realni svet."},
+        {"candidate_ref": "C166", "decision": "not_relevant", "evidence_quote": "", "reason": "Objasnjava namenu tri skupa, ali ne zahteva njihovu statisticku slicnost."},
+        {"candidate_ref": "C107", "decision": "not_relevant", "evidence_quote": "", "reason": "Bavi se kolicinom podataka, ne distribucijama particija."},
+        {"candidate_ref": "C096", "decision": "not_relevant", "evidence_quote": "", "reason": "Govori o duplikatima i istrosenosti skupova, ne njihovoj statistickoj uskladjenosti."},
+        {"candidate_ref": "C022", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje workflow i iste transformacije, ali ne istu distribuciju primera."}
+      ]
+    },
+    {
+      "query_id": "test-037",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno; jedan odlomak izricito daje oblik raspodele i srednju vrednost.",
+      "judgments": [
+        {"candidate_ref": "C197", "decision": "relevant", "evidence_quote": "Tends to produce a histogram of model weights having the following characteristics: a normal distribution a mean weight of 0.", "reason": "Direktno navodi normalnu raspodelu tezina sa sredinom nula pri visokoj regularizaciji."},
+        {"candidate_ref": "C175", "decision": "not_relevant", "evidence_quote": "", "reason": "Definise L2 regularizaciju i daje primer, bez raspodele tezina pri visokoj stopi."},
+        {"candidate_ref": "C214", "decision": "not_relevant", "evidence_quote": "", "reason": "Kaze da L2 vuce tezine ka nuli, ali ne daje oblik raspodele ni njenu sredinu."},
+        {"candidate_ref": "C189", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje learning rate, ne raspodelu tezina pod regularizacijom."},
+        {"candidate_ref": "C085", "decision": "not_relevant", "evidence_quote": "", "reason": "Fragment sadrzi kraj prethodne liste i opis niske stope, ali samostalno ne vezuje normalnu raspodelu i sredinu nula za visoku stopu."},
+        {"candidate_ref": "C196", "decision": "not_relevant", "evidence_quote": "", "reason": "Normalna raspodela ovde opisuje regresione odzive, ne model weights."},
+        {"candidate_ref": "C151", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje early stopping i ravnotezu stopa, bez trazenog histograma tezina."},
+        {"candidate_ref": "C037", "decision": "not_relevant", "evidence_quote": "", "reason": "Govori o odnosu learning i regularization rate, ne o obliku i sredini raspodele."}
+      ]
+    },
+    {
+      "query_id": "test-038",
+      "decision": "accepted",
+      "reason": "Pitanje trazi definiciju i okidac; jedan odlomak sadrzi oba.",
+      "judgments": [
+        {"candidate_ref": "C124", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje konvergenciju i stabilizaciju trening gubitka, ne early stopping po validacionom gubitku."},
+        {"candidate_ref": "C176", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje minimum loss povrsine i konvergenciju."},
+        {"candidate_ref": "C037", "decision": "not_relevant", "evidence_quote": "", "reason": "Samo navodi early stopping medju terminima, bez definicije."},
+        {"candidate_ref": "C098", "decision": "not_relevant", "evidence_quote": "", "reason": "Objasnjava minimum trening gubitka i overfitting, bez trazenog postupka."},
+        {"candidate_ref": "C077", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje flattening loss curve kao konvergenciju, ne rast validacionog gubitka kao okidac."},
+        {"candidate_ref": "C085", "decision": "not_relevant", "evidence_quote": "", "reason": "Uvodi early stopping kao alternativu, ali se prekida pre definicije i signala."},
+        {"candidate_ref": "C005", "decision": "not_relevant", "evidence_quote": "", "reason": "Rast validacionog gubitka oznacava overfitting, ali odlomak ne definise early stopping."},
+        {"candidate_ref": "C151", "decision": "relevant", "evidence_quote": "early stopping simply means ending training before the model fully converges. For example, you end training when the loss curve for the validation set starts to increase", "reason": "Daje i definiciju ranog zaustavljanja i konkretan validacioni signal."}
+      ]
+    },
+    {
+      "query_id": "test-039",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno; eksplicitni odgovor i pravilo azuriranja podrzavaju isti uslov.",
+      "judgments": [
+        {"candidate_ref": "C182", "decision": "not_relevant", "evidence_quote": "", "reason": "Uvodi perceptron, ali se prekida pre pravila azuriranja i uslova prestanka."},
+        {"candidate_ref": "C198", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje cilj minimizovanja gresaka, ne uslov kada azuriranja prestaju."},
+        {"candidate_ref": "C030", "decision": "not_relevant", "evidence_quote": "", "reason": "Kaze da konvergencija nije ocigledna, ali ne navodi uslov prestanka."},
+        {"candidate_ref": "C036", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje batch size i SGD, ne perceptronov uslov zaustavljanja."},
+        {"candidate_ref": "C199", "decision": "relevant", "evidence_quote": "The perceptron algorithm ceases to update the parameters only when all the training images are classiﬁed correctly (no mistakes, no updates).", "reason": "Izricito odgovara da prestaje kada su svi trening primeri ispravno klasifikovani."},
+        {"candidate_ref": "C139", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje gradirana logistic-regression azuriranja i optimalnost, ne perceptronov prestanak."},
+        {"candidate_ref": "C063", "decision": "not_relevant", "evidence_quote": "", "reason": "Pokazuje korekciju jednog pogresno klasifikovanog primera, ali ne globalni uslov prestanka."},
+        {"candidate_ref": "C051", "decision": "relevant", "evidence_quote": "the parameters (classiﬁer) is changed only if we make a mistake.", "reason": "Pravilo neposredno implicira da nema daljih azuriranja kada vise nema gresaka u prolasku kroz trening primere."}
+      ]
+    },
+    {
+      "query_id": "test-040",
+      "decision": "accepted",
+      "reason": "Pitanje je jasna parafraza uslova prestanka perceptrona.",
+      "judgments": [
+        {"candidate_ref": "C164", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje optimalnost logisticke regresije kroz ortogonalnost, ne perceptron."},
+        {"candidate_ref": "C007", "decision": "not_relevant", "evidence_quote": "", "reason": "Nulti gradijent logisticke regresije nije uslov kraja perceptronovih mistake-driven azuriranja."},
+        {"candidate_ref": "C051", "decision": "relevant", "evidence_quote": "the parameters (classiﬁer) is changed only if we make a mistake.", "reason": "Iz pravila sledi da se niz azuriranja zavrsava kada nema vise pogresnih klasifikacija."},
+        {"candidate_ref": "C063", "decision": "not_relevant", "evidence_quote": "", "reason": "Objasnjava efekat pojedinacnog azuriranja, ali ne uslov zavrsetka celog niza."},
+        {"candidate_ref": "C199", "decision": "relevant", "evidence_quote": "The perceptron algorithm ceases to update the parameters only when all the training images are classiﬁed correctly (no mistakes, no updates).", "reason": "Direktno navodi trazeni krajnji uslov."},
+        {"candidate_ref": "C139", "decision": "not_relevant", "evidence_quote": "", "reason": "Poredi logistic SGD sa perceptronom, ali daje uslov gradijenta za drugi algoritam."}
+      ]
+    },
+    {
+      "query_id": "test-041",
+      "decision": "accepted",
+      "reason": "Pitanje jasno trazi domen i kodomen; dva odlomka daju vektor slike i binarne oznake.",
+      "judgments": [
+        {"candidate_ref": "C161", "decision": "not_relevant", "evidence_quote": "", "reason": "Bavi se nepristrasnoscu regresionih procena, ne klasifikatorom slika."},
+        {"candidate_ref": "C087", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje zadatak pristupa i pozitivne/negativne slike, ali ne formalizuje ulaz kao realni vektor i izlaz kao ±1."},
+        {"candidate_ref": "C043", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje trivijalno pravilo za pojedinacni piksel i generalizaciju, ne trazeni domen i kodomen."},
+        {"candidate_ref": "C074", "decision": "relevant", "evidence_quote": "Our classiﬁer is a binary valued function f : Rd → {−1, 1}", "reason": "Direktno definise vektorski ulaz iz piksela i izlaz u skupu {-1,1}."},
+        {"candidate_ref": "C001", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje izgubljenu prostornu informaciju linearnog klasifikatora, ne njegov domen i izlaze."},
+        {"candidate_ref": "C114", "decision": "not_relevant", "evidence_quote": "", "reason": "Govori o varijansi parametara linearne regresije."},
+        {"candidate_ref": "C044", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje ROC/AUC binarnog klasifikatora, ne ulaze i izlaze face-image klasifikatora."},
+        {"candidate_ref": "C056", "decision": "not_relevant", "evidence_quote": "", "reason": "Daje oblik linearne funkcije slike ka oznaci, ali ne samostalno puni domen realnog vektora i eksplicitni skup izlaza."},
+        {"candidate_ref": "C010", "decision": "relevant", "evidence_quote": "a function – a classiﬁer – that maps pixel images to binary (±1) labels.", "reason": "Samostalno odredjuje vektorizovanu sivu sliku kao ulaz i binarnu ±1 oznaku kao izlaz."}
+      ]
+    },
+    {
+      "query_id": "test-042",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno; dva preklapajuca odlomka daju redosled spljostavanja i dimenziju.",
+      "judgments": [
+        {"candidate_ref": "C043", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje piksel-pravilo i memorisanje trening slika, ne pretvaranje 100x100 slike."},
+        {"candidate_ref": "C001", "decision": "not_relevant", "evidence_quote": "", "reason": "Govori o gubitku susedstva piksela, ne postupku vektorizacije i dimenziji."},
+        {"candidate_ref": "C065", "decision": "not_relevant", "evidence_quote": "", "reason": "Definise parametarski vektor i geometriju klasifikatora, ne spljostavanje slike."},
+        {"candidate_ref": "C089", "decision": "not_relevant", "evidence_quote": "", "reason": "Fragment matrice linearne regresije nije o pikselima."},
+        {"candidate_ref": "C048", "decision": "not_relevant", "evidence_quote": "", "reason": "Navodi 128x128 slike i jedan piksel, ali ne trazenu 100x100 vektorizaciju."},
+        {"candidate_ref": "C051", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje perceptron azuriranje."},
+        {"candidate_ref": "C034", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje MSE procenu linearne regresije."},
+        {"candidate_ref": "C063", "decision": "not_relevant", "evidence_quote": "", "reason": "Analizira efekat perceptron azuriranja."},
+        {"candidate_ref": "C010", "decision": "relevant", "evidence_quote": "the pixel intensity values in the image, column by column, are concatenated into a single column vector. If the image has 100 by 100 pixels, then d = 10000", "reason": "Daje tacno spljostavanje po kolonama i rezultat od 10.000 dimenzija."},
+        {"candidate_ref": "C074", "decision": "relevant", "evidence_quote": "the pixel intensity values in the image, column by column, are concatenated into a single column vector. If the image has 100 by 100 pixels, then d = 10000.", "reason": "Potpuno odgovara na nacin formiranja vektora i njegovu dimenziju."}
+      ]
+    },
+    {
+      "query_id": "test-043",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno; jedan odlomak eksplicitno identifikuje izgubljenu prostornu blizinu piksela.",
+      "judgments": [
+        {"candidate_ref": "C074", "decision": "not_relevant", "evidence_quote": "", "reason": "Kaze da klasifikator nema znanje o slikama, ali ne imenuje odbaceni prostorni signal."},
+        {"candidate_ref": "C014", "decision": "not_relevant", "evidence_quote": "", "reason": "Najavljuje izgubljena svojstva, ali se prekida pre njihovog opisa."},
+        {"candidate_ref": "C043", "decision": "not_relevant", "evidence_quote": "", "reason": "Bavi se memorisanjem pojedinacnog piksela i promenama osvetljenja/orijentacije, ne izgubljenim susedstvom."},
+        {"candidate_ref": "C199", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje prestanak perceptron azuriranja."},
+        {"candidate_ref": "C132", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje AUC i rangiranje klasa."},
+        {"candidate_ref": "C079", "decision": "not_relevant", "evidence_quote": "", "reason": "Izdvojeni fragment pominje bliske piksele, ali bez tvrdnje koji model tu informaciju odbacuje."},
+        {"candidate_ref": "C051", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje perceptron pravilo azuriranja."},
+        {"candidate_ref": "C044", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje ROC/AUC i nema prostorni sadrzaj slike."},
+        {"candidate_ref": "C001", "decision": "relevant", "evidence_quote": "Consider, for example, how nearby pixels in face images relate to each other (e.g., continuity of skin). This information is completely lost.", "reason": "Direktno identifikuje susedstvo piksela, ukljucujuci kontinuitet koze, kao izgubljeni signal."}
+      ]
+    },
+    {
+      "query_id": "test-044",
+      "decision": "accepted",
+      "reason": "Pitanje je specificno za MIT beleske; jedan odlomak eksplicitno daje izbor C pomocu leave-one-out validacije.",
+      "judgments": [
+        {"candidate_ref": "C084", "decision": "not_relevant", "evidence_quote": "", "reason": "Ostecen i prekratak fragment ne sadrzi izbor parametra C."},
+        {"candidate_ref": "C169", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje svojstva maximum-likelihood procene logisticke regresije."},
+        {"candidate_ref": "C173", "decision": "relevant", "evidence_quote": "the remaining parameter C could be set by cross-validation, i.e., by minimizing the leave-one-out cross-validation error.", "reason": "Direktno navodi trazeni postupak izbora C."},
+        {"candidate_ref": "C136", "decision": "not_relevant", "evidence_quote": "", "reason": "Govori o izboru ulaza u eksperimentu, ne SVM parametru C."},
+        {"candidate_ref": "C168", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje ulogu C kao tradeoff u regularizovanoj logistickoj regresiji, ali ne kako se bira."},
+        {"candidate_ref": "C116", "decision": "not_relevant", "evidence_quote": "", "reason": "Izvodi hinge-loss formulaciju, bez cross-validation izbora C."},
+        {"candidate_ref": "C093", "decision": "not_relevant", "evidence_quote": "", "reason": "Opsti opis regularizacione kazne ne daje izbor C."},
+        {"candidate_ref": "C126", "decision": "not_relevant", "evidence_quote": "", "reason": "Bavi se treniranjem logisticke regresije."},
+        {"candidate_ref": "C163", "decision": "not_relevant", "evidence_quote": "", "reason": "Govori o kalibraciji verovatnoca, ne SVM tradeoff parametru."},
+        {"candidate_ref": "C222", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje ridge regularizaciju pri malom broju primera."},
+        {"candidate_ref": "C193", "decision": "not_relevant", "evidence_quote": "", "reason": "Poredi logisticku funkciju i SVM hinge loss, bez nacina izbora C."},
+        {"candidate_ref": "C114", "decision": "not_relevant", "evidence_quote": "", "reason": "Bavi se bias-variance analizom regresije."},
+        {"candidate_ref": "C220", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje log-loss logisticke regresije."},
+        {"candidate_ref": "C113", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje procenu varijanse suma u linearnoj regresiji."}
+      ]
+    },
+    {
+      "query_id": "test-045",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno; dva preklapajuca odlomka navode izbor najvece geometrijske margine.",
+      "judgments": [
+        {"candidate_ref": "C057", "decision": "relevant", "evidence_quote": "when no margin constraints are violated (zero loss), the regularization penalty helps us select the solution with the largest geometric margin.", "reason": "Potpuno i direktno odgovara na uslov i favorizovano resenje."},
+        {"candidate_ref": "C093", "decision": "not_relevant", "evidence_quote": "", "reason": "Govori samo o opstoj svrsi regularizacione kazne."},
+        {"candidate_ref": "C168", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje stabilizaciju parametara i tradeoff, ne izbor najvece margine pri nultom hinge loss-u."},
+        {"candidate_ref": "C112", "decision": "not_relevant", "evidence_quote": "", "reason": "Objasnjava alternativno zapisivanje jacine regularizacije, ne SVM resenje."},
+        {"candidate_ref": "C173", "decision": "not_relevant", "evidence_quote": "", "reason": "Daje SVM optimizacioni problem i izbor C, ali ne izvodi koje zero-loss resenje kazna bira."},
+        {"candidate_ref": "C053", "decision": "relevant", "evidence_quote": "the regularization penalty helps us select the solution with the largest geometric margin.", "reason": "Iako pocinje krajem uslovne recenice o zero loss-u, jasno daje favorizovano resenje pod uslovom iz pitanja."}
+      ]
+    },
+    {
+      "query_id": "test-046",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno; jedan odlomak direktno povezuje predikciju 0.5 sa polovinom pozitivnih oznaka.",
+      "judgments": [
+        {"candidate_ref": "C147", "decision": "not_relevant", "evidence_quote": "", "reason": "Definise false-positive rate, ne kalibraciju verovatnoca."},
+        {"candidate_ref": "C117", "decision": "not_relevant", "evidence_quote": "", "reason": "Definise precision, koji nije isto sto i kalibracija predikcije 0.5."},
+        {"candidate_ref": "C032", "decision": "relevant", "evidence_quote": "if we group together all the examples for which we predict positive label with probability 0.5, then roughly half of them should be labeled +1.", "reason": "Tacno navodi trazenu posmatranu ucestalost za kalibrisane predikcije 0.5."},
+        {"candidate_ref": "C163", "decision": "not_relevant", "evidence_quote": "", "reason": "Recenica o definiciji kalibracije je prekinuta pre veze sa posmatranim frekvencijama."},
+        {"candidate_ref": "C194", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje ROC/AUC kao verovatnocu rangiranja, ne kalibraciju."},
+        {"candidate_ref": "C186", "decision": "not_relevant", "evidence_quote": "", "reason": "Definise recall, ne posmatranu frekvenciju medju predikcijama 0.5."},
+        {"candidate_ref": "C081", "decision": "not_relevant", "evidence_quote": "", "reason": "Bavi se klasifikacionim pragom i igrackim skupovima podataka."},
+        {"candidate_ref": "C188", "decision": "not_relevant", "evidence_quote": "", "reason": "Objasnjava recall i detection rate, ne probability calibration."},
+        {"candidate_ref": "C145", "decision": "not_relevant", "evidence_quote": "", "reason": "Ostecen fragment tvrdi da verovatnoce nisu tacne, ali ne daje frekvenciju za 0.5."}
+      ]
+    },
+    {
+      "query_id": "test-047",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno; jedan odlomak eksplicitno odgovara, a drugi daje isti homoskedasticki model u formuli.",
+      "judgments": [
+        {"candidate_ref": "C196", "decision": "relevant", "evidence_quote": "P (y|x, θ, θ0) = N (y; θT x + θ0, σ2)", "reason": "Formula stavlja zavisnost od x samo u sredinu, dok je varijansa fiksna σ2."},
+        {"candidate_ref": "C159", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje sigmoid transformaciju logisticke regresije."},
+        {"candidate_ref": "C008", "decision": "not_relevant", "evidence_quote": "", "reason": "Izvodi kovarijansu procena parametara; ne navodi da li varijansa izlaznog suma zavisi od ulaza."},
+        {"candidate_ref": "C045", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje vezivanje prior i noise varijanse u penalizovanoj proceni, ne homoskedasticku pretpostavku."},
+        {"candidate_ref": "C058", "decision": "relevant", "evidence_quote": "the noise variance σ2 in the model does not depend on the input x.", "reason": "Eksplicitno odgovara da izlazna varijansa suma ne zavisi od ulaza."},
+        {"candidate_ref": "C097", "decision": "not_relevant", "evidence_quote": "", "reason": "Bavi se log-odds i sigmoid izlazom."},
+        {"candidate_ref": "C114", "decision": "not_relevant", "evidence_quote": "", "reason": "Govori kako noise utice na varijansu procena parametara, ne o varijansi odziva uslovno na x."},
+        {"candidate_ref": "C210", "decision": "not_relevant", "evidence_quote": "", "reason": "Razmatra velicinu noise varijanse i regularizacionu kaznu, bez odgovora o zavisnosti od x."},
+        {"candidate_ref": "C100", "decision": "not_relevant", "evidence_quote": "", "reason": "Tabela sigmoid izlaza nema veze sa varijansom suma u linearnoj regresiji."}
+      ]
+    },
+    {
+      "query_id": "test-048",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno; prozni i jednacinski odlomak oba podrzavaju minimizaciju kvadratne greske.",
+      "judgments": [
+        {"candidate_ref": "C141", "decision": "not_relevant", "evidence_quote": "", "reason": "Izvodi log-loss za logisticku regresiju, ne Gaussian linear regression MSE."},
+        {"candidate_ref": "C138", "decision": "not_relevant", "evidence_quote": "", "reason": "Poredi kada birati MAE ili MSE, bez veze sa maximum likelihood procenom."},
+        {"candidate_ref": "C057", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje SVM hinge loss i maksimalnu marginu."},
+        {"candidate_ref": "C159", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje logisticku sigmoid transformaciju."},
+        {"candidate_ref": "C210", "decision": "not_relevant", "evidence_quote": "", "reason": "Daje penalizovani log-likelihood sa priorom, ne nepenalizovani ML cilj za tezine i intercept."},
+        {"candidate_ref": "C169", "decision": "not_relevant", "evidence_quote": "", "reason": "Govori o ML svojstvima logisticke regresije, ne kvadratnoj gresci Gaussian regresije."},
+        {"candidate_ref": "C113", "decision": "not_relevant", "evidence_quote": "", "reason": "Daje ML procenu same noise varijanse nakon fitovanja, ne cilj za θ i θ0."},
+        {"candidate_ref": "C173", "decision": "not_relevant", "evidence_quote": "", "reason": "SVM optimizacioni problem nije Gaussian linear regression."},
+        {"candidate_ref": "C053", "decision": "not_relevant", "evidence_quote": "", "reason": "Fragment prelazi sa SVM na logisticku regresiju, bez trazenog MSE rezultata."},
+        {"candidate_ref": "C020", "decision": "not_relevant", "evidence_quote": "", "reason": "Analizira MSE parametara i ridge uvod, ne ML cilj za weights/intercept."},
+        {"candidate_ref": "C213", "decision": "relevant", "evidence_quote": "= const. − n 2 log σ2 − 1 2σ2 n� (yt − θT xt − θ0)2", "reason": "Gaussian log-likelihood je konstanta minus skalirana suma kvadrata, pa njeno maksimizovanje direktno zahteva minimizaciju kvadratne greske."},
+        {"candidate_ref": "C034", "decision": "relevant", "evidence_quote": "we can ﬁnd the maximizing θˆ and θˆ0 by simply minimizing the mean squared error", "reason": "Izricito identifikuje MSE kao cilj koji daje ML tezine i intercept."},
+        {"candidate_ref": "C021", "decision": "not_relevant", "evidence_quote": "", "reason": "Opsti opis gradient descent-a i najnizeg loss-a ne uspostavlja Gaussian ML–MSE ekvivalenciju."}
+      ]
+    },
+    {
+      "query_id": "test-049",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno; jedan odlomak eksplicitno formulise cilj efikasnosti aktivnog dizajna.",
+      "judgments": [
+        {"candidate_ref": "C070", "decision": "not_relevant", "evidence_quote": "", "reason": "Kaze da se ulazi biraju radi smanjenja estimation error-a, ali ne daje cilj minimalnog broja odziva uz ocuvanu tacnost."},
+        {"candidate_ref": "C029", "decision": "not_relevant", "evidence_quote": "", "reason": "Izvodi zavisnost MSE od broja primera, ne cilj aktivnog izbora ulaza."},
+        {"candidate_ref": "C161", "decision": "not_relevant", "evidence_quote": "", "reason": "Analizira nepristrasnost i kovarijansu procena pri fiksnim ulazima."},
+        {"candidate_ref": "C136", "decision": "not_relevant", "evidence_quote": "", "reason": "Pominje minimizaciju kriterijuma i ogranicenje linearnosti, ali ne cilj broja odziva."},
+        {"candidate_ref": "C226", "decision": "relevant", "evidence_quote": "The goal is to get by with as few responses as possible without sacriﬁcing the estimation accuracy.", "reason": "Direktno daje efikasnosni cilj aktivnog eksperimentalnog dizajna."},
+        {"candidate_ref": "C160", "decision": "not_relevant", "evidence_quote": "", "reason": "Pominje manje troska i izbor ulaza po trace kriterijumu, ali fragment izostavlja uslov ocuvanja estimation accuracy."},
+        {"candidate_ref": "C157", "decision": "not_relevant", "evidence_quote": "", "reason": "Uvod u linearnu regresiju ne opisuje efikasnost active design-a."}
+      ]
+    },
+    {
+      "query_id": "test-050",
+      "decision": "accepted",
+      "reason": "Pitanje je jasno; dva odlomka objasnjavaju pocetnu evaluaciju tokom razvoja pre test provere.",
+      "judgments": [
+        {"candidate_ref": "C131", "decision": "not_relevant", "evidence_quote": "", "reason": "Navodi kriterijume reprezentativnosti skupova, ne workflow ulogu validation seta."},
+        {"candidate_ref": "C022", "decision": "relevant", "evidence_quote": "Use the validation set to evaluate results from the training set. After repeated use of the validation set suggests that your model is making good predictions, use the test set to double-check your model.", "reason": "Direktno opisuje ponovljenu razvojnu evaluaciju pre zavrsne test provere."},
+        {"candidate_ref": "C024", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje kvalitet validation/test skupova, ne njihovu sekvencijalnu namenu."},
+        {"candidate_ref": "C005", "decision": "not_relevant", "evidence_quote": "", "reason": "Opisuje overfitting i uslove generalizacije, ne ulogu validation seta pre testa."},
+        {"candidate_ref": "C166", "decision": "relevant", "evidence_quote": "A validation set performs the initial testing on the model as it is being trained. Use the validation set to evaluate results from the training set.", "reason": "Navodi da validation set sluzi za pocetno testiranje i evaluaciju tokom treninga."},
+        {"candidate_ref": "C096", "decision": "not_relevant", "evidence_quote": "", "reason": "Govori o osvezavanju i duplikatima u skupovima, ne osnovnoj ulozi validacije."}
+      ]
+    }
+  ]
+}

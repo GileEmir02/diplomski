@@ -1,0 +1,46 @@
+Overfitting: Interpreting loss curves
+Author: Google for Developers / Machine Learning Crash Course
+Source: https://developers.google.com/machine-learning/crash-course/overfitting/interpreting-loss-curves
+License: CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/)
+Changes: HTML lesson converted to UTF-8 TXT; navigation, multiple-choice quizzes, figures, captions, code blocks and generated key takeaways omitted; attribution header added.
+
+Machine learning would be much simpler if all your
+loss curves
+looked like this the first time you trained your model:
+
+Unfortunately, loss curves are often challenging to interpret. Use your
+intuition about loss curves to solve the exercises on this page.
+
+Exercise 1: Oscillating loss curve
+
+Exercise 2. Loss curve with a sharp jump
+
+Exercise 3. Test loss diverges from training loss
+
+Exercise 4. Loss curve gets stuck
+
+Key terms:
+
+Batch
+
+Example
+
+Feature
+
+Learning rate
+
+Loss curve
+
+Outliers
+
+Overfitting
+
+Regularization
+
+Regularization rate
+
+Test set
+
+Training set
+
+Validation set

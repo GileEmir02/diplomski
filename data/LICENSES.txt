@@ -1,0 +1,67 @@
+SOURCE MATERIAL NOTICES - ml-basics-v1
+=====================================
+
+These materials are for a non-commercial educational diploma project.
+They are third-party source documents, not original work by the student.
+No endorsement by MIT, the named lecturer, Google, or their affiliates is implied.
+
+MIT OpenCourseWare
+-----------------
+Author: Prof. Tommi Jaakkola.
+Course: 6.867 Machine Learning, Fall 2006.
+Materials: lectures 1, 4 and 5.
+License shown on each resource page: CC BY-NC-SA 4.0.
+https://creativecommons.org/licenses/by-nc-sa/4.0/
+Terms: https://ocw.mit.edu/pages/privacy-and-terms-of-use/
+
+Sources:
+https://ocw.mit.edu/courses/6-867-machine-learning-fall-2006/resources/lec1/
+https://ocw.mit.edu/courses/6-867-machine-learning-fall-2006/resources/lec4/
+https://ocw.mit.edu/courses/6-867-machine-learning-fall-2006/resources/lec5/
+
+The PDF contents are retained unchanged; only local filenames are descriptive.
+Retain attribution and existing notices. Redistribution must comply with the
+non-commercial and ShareAlike conditions, and any separately marked exceptions.
+Do not assume that these PDFs may be used in a commercial product.
+The source course is graduate-level and includes equations; these early lectures
+cover foundational topics but require extraction-quality review before indexing.
+
+Google for Developers
+--------------------
+Course: Machine Learning Crash Course.
+Materials: 17 text-only adaptations, including Datasets: Dividing the original
+dataset and the additional lessons listed in full_corpus_manifest.csv.
+https://developers.google.com/machine-learning/crash-course/overfitting/dividing-datasets
+
+The lesson footer licenses page content under CC BY 4.0 unless otherwise noted.
+https://creativecommons.org/licenses/by/4.0/
+https://developers.google.com/site-policies
+
+The local TXT is an adapted text-only version, not a newly authored lesson.
+Navigation, multiple-choice exercises, exercise headings, figures, captions,
+code blocks and generated key takeaways are omitted. An attribution header
+is added. Fetched HTML is preserved in the development workspace under
+data\sources and data\full_corpus\sources for provenance. Those HTML snapshots
+are not needed for runtime indexing and are not included in the clean release.
+They must not be indexed as duplicates of the TXT. Code samples, if used separately,
+have their own Apache 2.0 terms; this preparation excludes code blocks.
+
+Manifest and scope
+------------------
+data\full_corpus_manifest.csv records all 20 indexed materials: source URLs,
+authors, licenses, transformations and SHA-256 hashes. The raw PDF/TXT files
+are the frozen corpus inputs. License notices and project documentation are
+not corpus documents. The original four-item manifest is historical only.
+
+Evaluation questions, relevance judgments and explanations were prepared for
+this project. Their quoted evidence comes from the materials identified above;
+the underlying excerpts retain the applicable source license and attribution.
+Assistant review is explicitly recorded and is not independent human validation.
+
+These notices do not assign a license to the application's original code.
+Choose a code license separately before public redistribution. Do not apply
+that license to third-party documents or excerpts as if they were original code.
+
+Model weights are not part of the release. The license of the pinned model
+checkpoint was not explicitly verified; the license of the Sentence Transformers
+library must not be assumed to cover every model. See config\model_provenance.json.

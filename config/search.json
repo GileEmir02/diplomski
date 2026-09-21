@@ -1,0 +1,9 @@
+{
+    "schema_version": 1,
+    "model_name": "sentence-transformers/multi-qa-MiniLM-L6-cos-v1",
+    "model_revision": "b207367332321f8e44f96e224ef15bc607f4dbf0",
+    "device": "cpu",
+    "chunk_tokens": 200,
+    "overlap_tokens": 40,
+    "top_k": 5
+}

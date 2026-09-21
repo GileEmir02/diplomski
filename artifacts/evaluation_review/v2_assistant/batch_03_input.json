@@ -1,0 +1,1148 @@
+{
+  "batch_id": "03",
+  "criterion": "A chunk is relevant only if it independently provides enough correct source information to answer this specific question. Mere topic overlap, missing context and unreadable essential formulas are insufficient.",
+  "source_method_rank_score_and_initial_labels_hidden": true,
+  "answer_summaries_are_provisional": true,
+  "questions": [
+    {
+      "query_id": "test-051",
+      "query": "Why do repeatedly consulted validation and test sets eventually become less trustworthy?",
+      "split": "test",
+      "intent_group": "v2-holdout-set-wearout",
+      "proposed_answer": "Repeatedly using the same held-out data to make model decisions reduces confidence that performance will transfer to new data.",
+      "candidate_refs": [
+        "C022",
+        "C131",
+        "C009",
+        "C177",
+        "C096",
+        "C005",
+        "C166",
+        "C024"
+      ]
+    },
+    {
+      "query_id": "test-052",
+      "query": "Where must a training-time feature transform also be applied?",
+      "split": "test",
+      "intent_group": "v2-consistent-feature-transform-across-splits",
+      "proposed_answer": "The same transform must be used for validation, test, and real-world data.",
+      "candidate_refs": [
+        "C221",
+        "C071",
+        "C022",
+        "C202",
+        "C186",
+        "C177",
+        "C049",
+        "C180",
+        "C073",
+        "C185",
+        "C046"
+      ]
+    },
+    {
+      "query_id": "test-053",
+      "query": "What should be done when held-out examples duplicate training examples?",
+      "split": "test",
+      "intent_group": "v2-remove-cross-split-duplicates",
+      "proposed_answer": "Delete duplicates from validation and test sets so evaluation uses genuinely new examples.",
+      "candidate_refs": [
+        "C029",
+        "C201",
+        "C160",
+        "C081",
+        "C110",
+        "C131",
+        "C096",
+        "C047",
+        "C107",
+        "C166",
+        "C048"
+      ]
+    },
+    {
+      "query_id": "test-054",
+      "query": "Why are MAE and RMSE often easier for people to interpret than MSE or total L2 loss?",
+      "split": "test",
+      "intent_group": "v2-loss-unit-interpretability",
+      "proposed_answer": "MAE and RMSE express error on the same scale as the predicted value.",
+      "candidate_refs": [
+        "C179",
+        "C119",
+        "C158",
+        "C143",
+        "C171",
+        "C138"
+      ]
+    },
+    {
+      "query_id": "test-055",
+      "query": "How should per-example losses be combined for a batch when using MAE or MSE?",
+      "split": "test",
+      "intent_group": "v2-average-batch-losses",
+      "proposed_answer": "Take the mean of the individual-example losses across the batch rather than their sum.",
+      "candidate_refs": [
+        "C036",
+        "C047",
+        "C158",
+        "C119",
+        "C171",
+        "C179",
+        "C025",
+        "C143"
+      ]
+    },
+    {
+      "query_id": "test-056",
+      "query": "What optimization benefit does the lesson associate with MSE?",
+      "split": "test",
+      "intent_group": "v2-mse-smooth-rmse-units",
+      "proposed_answer": "The lesson notes that MSE's mathematical properties often make optimization smoother.",
+      "candidate_refs": [
+        "C119",
+        "C025",
+        "C171",
+        "C029",
+        "C173",
+        "C113",
+        "C158",
+        "C203",
+        "C196",
+        "C138"
+      ]
+    },
+    {
+      "query_id": "test-057",
+      "query": "What happens to loss when training continues after convergence?",
+      "split": "test",
+      "intent_group": "v2-post-convergence-loss-fluctuation",
+      "proposed_answer": "Loss fluctuates slightly as parameter updates move around their lowest values.",
+      "candidate_refs": [
+        "C124",
+        "C149",
+        "C135",
+        "C125",
+        "C145",
+        "C029",
+        "C071",
+        "C148",
+        "C077"
+      ]
+    },
+    {
+      "query_id": "test-058",
+      "query": "What geometric property do loss functions for linear models have?",
+      "split": "test",
+      "intent_group": "v2-convex-loss-global-minimum",
+      "proposed_answer": "Loss functions for linear models produce a convex surface.",
+      "candidate_refs": [
+        "C215",
+        "C123",
+        "C057",
+        "C033",
+        "C028",
+        "C125",
+        "C141",
+        "C207",
+        "C095",
+        "C176",
+        "C169",
+        "C172",
+        "C056"
+      ]
+    },
+    {
+      "query_id": "test-059",
+      "query": "Why can zero training loss be a warning sign rather than an ideal outcome?",
+      "split": "test",
+      "intent_group": "v2-zero-loss-overfitting-warning",
+      "proposed_answer": "Zero loss means every data point is fit exactly, which commonly indicates an overly complex model.",
+      "candidate_refs": [
+        "C102",
+        "C122",
+        "C207",
+        "C151",
+        "C204",
+        "C098",
+        "C085",
+        "C153",
+        "C142",
+        "C123",
+        "C145",
+        "C182"
+      ]
+    },
+    {
+      "query_id": "test-060",
+      "query": "What event does batch size count examples up to?",
+      "split": "test",
+      "intent_group": "v2-batch-size-update-boundary",
+      "proposed_answer": "Batch size is the number of examples processed before weights and bias are updated.",
+      "candidate_refs": [
+        "C029",
+        "C221",
+        "C102",
+        "C050",
+        "C047",
+        "C036",
+        "C003"
+      ]
+    },
+    {
+      "query_id": "test-061",
+      "query": "How many examples does SGD use per iteration, and what training characteristic results?",
+      "split": "test",
+      "intent_group": "v2-sgd-random-singleton-noise",
+      "proposed_answer": "Each SGD iteration uses one example, producing noisy training.",
+      "candidate_refs": [
+        "C050",
+        "C047",
+        "C221",
+        "C003",
+        "C102",
+        "C077",
+        "C029",
+        "C095"
+      ]
+    },
+    {
+      "query_id": "test-062",
+      "query": "How does mini-batch SGD form one parameter update?",
+      "split": "test",
+      "intent_group": "v2-mini-batch-random-gradient-average",
+      "proposed_answer": "It randomly selects a batch, averages the examples' gradients, and updates weights and bias once.",
+      "candidate_refs": [
+        "C036",
+        "C050",
+        "C102",
+        "C003",
+        "C047"
+      ]
+    },
+    {
+      "query_id": "test-063",
+      "query": "What does a spam model's logistic output of 0.932 mean?",
+      "split": "test",
+      "intent_group": "v2-logistic-output-probability-interpretation",
+      "proposed_answer": "It represents a 93.2 percent probability that the email is spam.",
+      "candidate_refs": [
+        "C038",
+        "C055",
+        "C219",
+        "C159",
+        "C150",
+        "C094",
+        "C031",
+        "C054"
+      ]
+    },
+    {
+      "query_id": "test-064",
+      "query": "How is a linear score converted into a logistic-regression probability?",
+      "split": "test",
+      "intent_group": "v2-linear-score-sigmoid-transform",
+      "proposed_answer": "The linear output z is passed through the sigmoid function to produce a probability between zero and one.",
+      "candidate_refs": [
+        "C193",
+        "C159",
+        "C097",
+        "C031",
+        "C004",
+        "C172",
+        "C038"
+      ]
+    },
+    {
+      "query_id": "test-065",
+      "query": "What ratio is logged to define the log-odds z?",
+      "split": "test",
+      "intent_group": "v2-log-odds-definition",
+      "proposed_answer": "z is the natural logarithm of the ratio between outcome probabilities y and one minus y.",
+      "candidate_refs": [
+        "C193",
+        "C054",
+        "C141",
+        "C052",
+        "C142",
+        "C159",
+        "C129",
+        "C017",
+        "C042",
+        "C097"
+      ]
+    },
+    {
+      "query_id": "test-066",
+      "query": "How are true labels y and predicted probabilities p combined in the binary Log Loss formula?",
+      "split": "test",
+      "intent_group": "v2-binary-log-loss-formula",
+      "proposed_answer": "It is the negative mean of y*log(p) + (1-y)*log(1-p) over the labeled examples, equivalently the mean negative log probability of the correct class.",
+      "candidate_refs": [
+        "C215",
+        "C145",
+        "C042",
+        "C142",
+        "C220",
+        "C094",
+        "C038",
+        "C061",
+        "C137",
+        "C193",
+        "C164"
+      ]
+    },
+    {
+      "query_id": "test-067",
+      "query": "Where is the sigmoid response most sensitive to a small change in log-odds?",
+      "split": "test",
+      "intent_group": "v2-sigmoid-local-rate-of-change",
+      "proposed_answer": "Small changes in z have their largest output effect when z is near zero, not at large positive or negative values.",
+      "candidate_refs": [
+        "C128",
+        "C100",
+        "C017",
+        "C223",
+        "C129",
+        "C159",
+        "C054",
+        "C042"
+      ]
+    },
+    {
+      "query_id": "test-068",
+      "query": "Is a score exactly equal to the classification threshold always assigned the same class?",
+      "split": "test",
+      "intent_group": "v2-threshold-equality-implementation",
+      "proposed_answer": "No. Equality handling is implementation-dependent; Keras assigns the negative class.",
+      "candidate_refs": [
+        "C178",
+        "C060",
+        "C028",
+        "C104",
+        "C206",
+        "C055",
+        "C132",
+        "C004",
+        "C150",
+        "C081"
+      ]
+    },
+    {
+      "query_id": "test-069",
+      "query": "What does each row total represent in the lesson's confusion matrix?",
+      "split": "test",
+      "intent_group": "v2-confusion-matrix-row-totals",
+      "proposed_answer": "Each row totals a predicted class: either all predicted positives or all predicted negatives.",
+      "candidate_refs": [
+        "C094",
+        "C091",
+        "C104",
+        "C034",
+        "C089",
+        "C164",
+        "C219",
+        "C055",
+        "C167",
+        "C029"
+      ]
+    },
+    {
+      "query_id": "test-070",
+      "query": "Why can a classifier's probability score not be treated as the actual outcome?",
+      "split": "test",
+      "intent_group": "v2-score-versus-ground-truth",
+      "proposed_answer": "A score is a prediction, while ground truth can combine with the binary prediction to produce four possible outcomes.",
+      "candidate_refs": [
+        "C086",
+        "C132",
+        "C186",
+        "C060",
+        "C225",
+        "C190",
+        "C163",
+        "C055",
+        "C004",
+        "C044"
+      ]
+    },
+    {
+      "query_id": "test-071",
+      "query": "Do accuracy, recall, and precision stay fixed when the decision threshold changes?",
+      "split": "test",
+      "intent_group": "v2-metrics-threshold-dependence",
+      "proposed_answer": "No. These metrics are computed at a fixed threshold and change as the threshold changes.",
+      "candidate_refs": [
+        "C186",
+        "C044",
+        "C216",
+        "C104",
+        "C068",
+        "C154",
+        "C211",
+        "C206"
+      ]
+    },
+    {
+      "query_id": "test-072",
+      "query": "What fraction does the false-alarm rate measure?",
+      "split": "test",
+      "intent_group": "v2-false-positive-rate-definition",
+      "proposed_answer": "False positive rate is the fraction of actual negatives incorrectly classified as positive.",
+      "candidate_refs": [
+        "C037",
+        "C147",
+        "C188",
+        "C211",
+        "C189",
+        "C068",
+        "C216",
+        "C204",
+        "C117"
+      ]
+    },
+    {
+      "query_id": "test-073",
+      "query": "Why might a classification metric evaluate to not-a-number?",
+      "split": "test",
+      "intent_group": "v2-metric-nan-zero-denominator",
+      "proposed_answer": "A metric becomes NaN when its denominator is zero, such as precision when both true and false positives are zero.",
+      "candidate_refs": [
+        "C154",
+        "C127",
+        "C219",
+        "C060",
+        "C117",
+        "C204",
+        "C188",
+        "C190",
+        "C216",
+        "C086"
+      ]
+    },
+    {
+      "query_id": "test-074",
+      "query": "When precision and recall differ greatly, which one does F1 resemble?",
+      "split": "test",
+      "intent_group": "v2-f1-worse-metric-behavior",
+      "proposed_answer": "F1 is close to whichever of precision and recall is worse.",
+      "candidate_refs": [
+        "C068",
+        "C044",
+        "C211",
+        "C117",
+        "C188",
+        "C204",
+        "C216",
+        "C186"
+      ]
+    },
+    {
+      "query_id": "test-075",
+      "query": "What ROC shape and AUC characterize a binary classifier performing like coin flips?",
+      "split": "test",
+      "intent_group": "v2-random-classifier-roc-auc",
+      "proposed_answer": "Random performance produces a diagonal ROC from zero-zero to one-one and an AUC of 0.5.",
+      "candidate_refs": [
+        "C044",
+        "C132",
+        "C127",
+        "C194",
+        "C091",
+        "C076"
+      ]
+    }
+  ],
+  "chunks": {
+    "C003": {
+      "chunk_id": "chunk_04c639608a177cdc160189f4d07cc37211f52bfd30fb8c37631e12501fbb2864",
+      "file_name": "07_google_hyperparameters.txt",
+      "page": null,
+      "text": "the model updates the weights and bias 20,000 times.\n\nMini-batch stochastic gradient descent\n\nAfter the model looks at the examples in each batch. For instance,\nif a dataset contains 1,000 examples, and the batch size is 100, and\nthe model trains for 20 epochs, the model updates the weights and\nbias 200 times.\n\nKey terms:\n\nBatch size\n\nEpoch\n\nGeneralize\n\nHyperparameter\n\nIteration\n\nLearning rate\n\nMini-batch\n\nMini-batch stochastic gradient descent\n\nNeural network\n\nParameter\n\nStochastic gradient descent"
+    },
+    "C004": {
+      "chunk_id": "chunk_0509722044067df6c0e9a914fde2739a87f78f292287c48e1be9a9120e49d696",
+      "file_name": "14_google_normalization.txt",
+      "page": null,
+      "text": ", a value that is 2 standard deviations greater than the mean\nhas a Z-score of +2.0. A value that is 1.5 standard deviations less than\nthe mean has a Z-score of -1.5.\n\nRepresenting a feature with Z-score scaling means storing that feature's\nZ-score in the feature vector. For example, the following figure shows two\nhistograms:\n\nOn the left, a classic normal distribution.\n\nOn the right, the same distribution normalized by Z-score scaling.\n\nZ-score scaling is also a good choice for data like that shown in\nthe following figure, which has only a vaguely normal distribution.\n\nClick the icon to see the math.\n\nUse the following formula to normalize a value, $x$, to\nits Z-score:\n\n$$ x' = (x - \u03bc) / \u03c3 $$\n\nwhere:\n\n$x'$ is the Z-score.\n\n$x$ is the raw value; that is, "
+    },
+    "C005": {
+      "chunk_id": "chunk_0510ccd37a2f34f95215513381b6ceee70895f0036170fa60bbdd8af23aff56a",
+      "file_name": "18_google_overfitting.txt",
+      "page": null,
+      "text": "declines or\nholds steady (converges) for the training set, but increases\nfor the validation set. This suggests overfitting.\n\nIn contrast, a generalization curve for a well-fit model shows two loss curves\nthat have similar shapes.\n\nWhat causes overfitting?\n\nVery broadly speaking, overfitting is caused by one or both of the following\nproblems:\n\nThe training set doesn't adequately represent real life data (or the\nvalidation set or test set).\n\nThe model is too complex.\n\nGeneralization conditions\n\nA model trains on a training set, but the real test of a model's worth is how\nwell it makes predictions on new examples, particularly on real-world data.\nWhile developing a model, your test set serves as a proxy for real-world data.\nTraining a model that generalizes well implies the following dataset conditions:\n\nExamples must be\nindependently and identically distributed,\nwhich is a fancy way of saying that your\nexamples can't influence each other.\n\nThe dataset is\nstationary"
+    },
+    "C009": {
+      "chunk_id": "chunk_076e7c45fd831609bdd04e323d4a5ec90ad97af3aacfc212aa595ac641e24bdd",
+      "file_name": "16_google_data_characteristics.txt",
+      "page": null,
+      "text": "existing model already trained on large quantities of data from the\nsame schema.\n\nQuality and reliability of data\n\nEveryone prefers high quality to low quality, but quality is such a vague\nconcept that it could be defined many different ways. This course defines\nquality pragmatically:\n\nA high-quality dataset helps your model accomplish its goal.\nA low quality dataset inhibits your model from accomplishing its goal.\n\nA high-quality dataset is usually also reliable.\nReliability refers to the degree to which you can trust your data.\nA model trained on a reliable dataset is more likely to yield useful\npredictions than a model trained on unreliable data.\n\nIn measuring reliability, you must determine:\n\nHow common are label errors? For example, if your data is\nlabeled by humans, how often did your human raters make mistakes?\n\nAre your features noisy? That is, do the values in your features\ncontain errors? Be realistic\u2014you can't purge your dataset\nof all noise. Some noise is normal; "
+    },
+    "C017": {
+      "chunk_id": "chunk_0c17432b96e8baba917a01300b33d91e22ce5e21508dbd7fec7b01d36273ac4f",
+      "file_name": "08_google_sigmoid.txt",
+      "page": null,
+      "text": "sigmoid function in the\nright graph maps that \u201310 into a y' value of 0.00004.\n\nA logistic regression model with three features has the following bias and\nweights:\n\n\\[\\begin{align}\nb &= 1 \\\\\nw_1 &= 2 \\\\\nw_2 &= -1 \\\\\nw_3 &= 5\n\\end{align}\n\\]\n\nGiven the following input values:\n\n\\[\\begin{align}\nx_1 &= 0 \\\\\nx_2 &= 10 \\\\\nx_3 &= 2\n\\end{align}\n\\]\n\nAnswer the following two questions.\n\nKey terms:\n\nBinary classification\n\nLog odds\n\nLogistic regression\n\nSigmoid function"
+    },
+    "C022": {
+      "chunk_id": "chunk_0fce079f0abb0fc23389df726b27e39e68749638eb1d3c752b9258e83c9f5558",
+      "file_name": "04_google_training_validation_test.txt",
+      "page": null,
+      "text": "testing on the model as it is being trained.\n\nUse the validation set to evaluate results from the training set.\nAfter repeated use of the validation set suggests that your model is\nmaking good predictions, use the test set to double-check your model.\n\nThe following figure suggests this workflow.\nIn the figure, \"Tweak model\" means adjusting anything about the model\n\u2014from changing the learning rate, to adding or removing\nfeatures, to designing a completely new model from scratch.\n\nNote: When you transform a feature in your training set, you must make the\nsame transformation in the validation set, test set, and real-world dataset.\n\nThe workflow shown in Figure 10 is optimal, but even with that workflow,\ntest sets and validation sets still \"wear out\" with repeated use.\nThat is, the more you use the same data to make decisions about\nhyperparameter settings or other model improvements, the less confidence\nthat the model will make good predictions on new data.\nFor this reason, "
+    },
+    "C024": {
+      "chunk_id": "chunk_12c02df9402829a13c1c0bfbb829b9b26c8accf4271c7b24db5f9ab7d93134cd",
+      "file_name": "04_google_training_validation_test.txt",
+      "page": null,
+      "text": ", email body, and sender's email address as features.\nSuppose you divide the data into training and test sets, with an 80-20 split.\nAfter training, the model achieves 99% precision on both the training set and\nthe test set. You'd probably expect a lower precision on the test set, so you\ntake another look at the data and discover that many of the examples in the test\nset are duplicates of examples in the training set. The problem is that you\nneglected to scrub duplicate entries for the same spam email from your input\ndatabase before splitting the data. You've inadvertently trained on some of\nyour test data.\n\nIn summary, a good test set or validation set meets all of the\nfollowing criteria:\n\nLarge enough to yield statistically significant testing results.\n\nRepresentative of the dataset as a whole. In other words, don't pick\na test set with different characteristics than the training set.\n\nRepresentative of the real-world data that the model will encounter\nas part "
+    },
+    "C025": {
+      "chunk_id": "chunk_12e5622692dfbc1f494f04641c6c62c96cdda464d94eca7958490c64c3904f5e",
+      "file_name": "06_google_gradient_descent.txt",
+      "page": null,
+      "text": "following small fuel-efficiency dataset with seven examples,\nand\nMean Squared Error (MSE) as the loss metric:\n\nPounds in 1000s (feature)\nMiles per gallon (label)\n\n3.5\n18\n\n3.69\n15\n\n3.44\n18\n\n3.43\n16\n\n4.34\n15\n\n4.42\n14\n\n2.37\n24\n\nThe model starts training by setting the weight and bias to zero:\n\n$$ \\small{Weight:\\ 0} $$\n\n$$ \\small{Bias:\\ 0} $$\n\n$$ \\small{y = 0 + 0(x_1)} $$\n\nCalculate MSE loss with the current model parameters:\n\n$$ \\small{Loss = \\frac{(18-0)^2 + (15-0)^2 + (18-0)^2 + (16-0)^2 + (15-0)^2 + (14-0)^2 + (24-0)^2}{7}"
+    },
+    "C028": {
+      "chunk_id": "chunk_14c90313e3b017337dd31f922b7bfd298ad4816d1b3ad13bef1cda43f27880d6",
+      "file_name": "01_mit_introduction_classification.pdf",
+      "page": 2,
+      "text": "the set of\npossible binary functions we can entertain. In other words, we would like to \ufb01nd a class of\nbinary functions such that if a function in this class works well on the training set, it is also\nlikely to work well on the unseen images. The \u201cright\u201d class of functions to consider cannot\nbe too large in the sense of containing too many clearly di\ufb00erent functions. Otherwise we\nare likely to \ufb01nd rules similar to the trivial ones that are close to perfect on the training\nset but do not generalize well. The class of function should not be too small either or we\nrun the risk of not \ufb01nding any functions in the class that work well even on the training\nset. If they don\u2019t work well on the training set, how could we expect them to work well on\nthe new images? Finding the class of functions is a key problem in machine learning, also\nknown as the model selection problem.\nLinear classi\ufb01ers through origin\nLet\u2019s just \ufb01x the function class "
+    },
+    "C029": {
+      "chunk_id": "chunk_150817906fe78911c7ea740a4ce7235cfdb734ab93c40ba28a7fdd044896812e",
+      "file_name": "03_mit_linear_regression_bias_variance.pdf",
+      "page": 6,
+      "text": "\ufffd \ufffd\n\ufffd\n\ufffd\ufffd \ufffd \ufffd\n6.867 Machine learning, lecture 5 (Jaakkola) 6\nNow, adapting the result to our setting, we get\nvariance bias\n2\n=0\n\ufffd\ufffd\ufffd \ufffd \ufffd \ufffd\ufffd2 \ufffd \ufffd \ufffd \ufffd\ufffd\ufffd\ufffd \ufffd \ufffd\ufffd\ufffd \ufffd\ufffd \ufffd\ufffd \ufffd \ufffd\ufffd\ufffd \ufffd \ufffd\ufffd\ufffd\n2\nE \ufffd\ufffd\n\ufffd\n\u03b8\u02c6\n\u03b8\u02c6\n0\n\u2212 \u03b8\n\u03b8\n\u2217\n\u2217 \ufffd\ufffd\n\ufffd\n|X = T r Cov \u03b8\u02c6\n\u03b8\u02c6\n0\n|X + \ufffd\ufffd\n\ufffd\nE \u03b8\u02c6\n\u03b8\u02c6\n0\n|X \u2212 \u03b8\n\u03b8\n\u2217\n\u2217 \ufffd\ufffd\n\ufffd\n0 0\n= \u03c3\u22172 T r (XT X)\u22121 (37)\nLet\u2019s understand this result a bit further. How does it depend on n, the number of training\nexamples? In other words, how quickly does the mean squared error decrease as the number\nof training examples increases, assuming the input examples x are sampled independently\nfrom some underlying distribution P (x)? To answer this let\u2019s start by analyzing what\nhappens to the matrix XT X:\nn \ufffd \ufffd\nXT X = xt [x T\nt , 1] (38) 1\nt=1\nn \ufffd \ufffd 1 \ufffd xt T = n [xt , 1] (39) "
+    },
+    "C031": {
+      "chunk_id": "chunk_1aeb6202e7a317d4fd3d8727df9909765218f7b90db7df9233dadc764c7228cd",
+      "file_name": "08_google_sigmoid.txt",
+      "page": null,
+      "text": "Logistic regression: Calculating a probability with the sigmoid function\nAuthor: Google for Developers / Machine Learning Crash Course\nSource: https://developers.google.com/machine-learning/crash-course/logistic-regression/sigmoid-function\nLicense: CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/)\nChanges: HTML lesson converted to UTF-8 TXT; navigation, multiple-choice quizzes, figures, captions, code blocks and generated key takeaways omitted; attribution header added.\n\nMany problems require a probability estimate as output.\nLogistic regression is\nan extremely efficient mechanism for calculating probabilities. Practically\nspeaking, you can use the returned probability in either of the following\ntwo ways:\n\nApplied \"as is.\" For example, if a spam-prediction model takes an email as\ninput and outputs a value of 0.932, this implies a 93."
+    },
+    "C033": {
+      "chunk_id": "chunk_1c19973f27ef1626a8b90f520824f97a382e35f13caf9178b099df6cfa8d81cd",
+      "file_name": "03_mit_linear_regression_bias_variance.pdf",
+      "page": 3,
+      "text": "\ufffd \ufffd \ufffd \ufffd \ufffd \ufffd\n\ufffd\n\ufffd\n\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\n\ufffd\n\ufffd\n\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\n\ufffd\ufffd\ufffd\ufffd\n\ufffd\n\ufffd\n\ufffd\n\ufffd\ufffd\ufffd\ufffd\n\ufffd\n\ufffd\n\ufffd\n\ufffd\n\ufffd\n\ufffd\n6.867 Machine learning, lecture 5 (Jaakkola) 3\nbecomes\nn n\ufffdT \ufffd \ufffd\ufffd2 \ufffd\ufffd2\n\u03b8\n\u03b8\nxt T\nt , 1 (10)\nyt \u2212 \u03b80 1 = yt \u2212 x \u03b80 t=1 t=1\n2\u23a4\u23a1\u23a4\u23a1 y1 x1\nT , 1 \u03b8\n\u23a3\n\u00b7 \u00b7 \u00b7 \u2212 \u00b7 \u00b7 \u00b7 \u03b80 yn xn\nT , 1\n\u23a3\n\u23a6\n\u23a6\n(11)\n=\n2\ny \u2212 X\n\u03b8\n\u03b80\n(12)\n=\n\ufffdT \ufffdT\n= y T y \u2212 2 \u03b8 XT y + \u03b8 XT X \u03b8 (13) \u03b80 \u03b80 \u03b80\nwhere y = [y1, . . . , yn]T is a vector of training responses. Solving it yields\n\u03b8\u02c6\n\u03b8\u02c60\n= (XT X)\u22121XT y (14)\nNote that the optimal parameter values are linear functions of the observed responses y. We\nwill make use of this property later on. The dependence on the training inputs x1, . . . , "
+    },
+    "C034": {
+      "chunk_id": "chunk_1cb5dc24d4f11ace664a6038faeed5aefd7b532e2d851a0e9483e19cf9b5a08a",
+      "file_name": "03_mit_linear_regression_bias_variance.pdf",
+      "page": 2,
+      "text": ")\nt=1\n= const. \u2212 n\n2 log \u03c32 \u2212 1\n2\u03c32\nn\ufffd\n(yt \u2212 \u03b8T xt \u2212 \u03b80)2 (8)\nt=1\nwhere \u2019const.\u2019 absorbs terms that do not depend on the parameters. Now, the problem of\nestimating the parameters \u03b8 and \u03b80 is nicely decoupled from estimating \u03c32 . In other words,\nwe can \ufb01nd the maximizing \u03b8\u02c6 and \u03b8\u02c60 by simply minimizing the mean squared error\nn\n(yt \u2212 \u03b8T xt \u2212 \u03b80)2 (9)\nt=1\nIt is perhaps easiest to write the solution based on a bit of matrix calculation. Let X be\na matrix whose rows, indexed by training examples, are given by [xt\nT , 1] (xt turned into a\nrow vector and 1 added at the end). In terms of this matrix, the minimization problem\nCite as: Tommi Jaakkola, course "
+    },
+    "C036": {
+      "chunk_id": "chunk_1d053eec0678c682b4a5cd070add26b1f31e7b44a267b855212a98e4897da24f",
+      "file_name": "07_google_hyperparameters.txt",
+      "page": null,
+      "text": "wildly, going up and down as the\niterations increase.\n\nFigure 23. Loss graph showing a model trained with a learning rate that's\ntoo big, where the loss curve drastically increases in later iterations.\n\nBatch size\n\nBatch size is a hyperparameter that\nrefers to the number of examples\nthe model processes before updating its weights\nand bias. You might think that the model should calculate the loss for every\nexample in the dataset before updating the weights and bias. However, when a\ndataset contains hundreds of thousands or even millions of examples, using the\nfull batch isn't practical.\n\nTwo common techniques to get the right gradient on average without needing to\nlook at every example in the dataset before updating the weights and bias are\nstochastic gradient descent and\nmini-batch stochastic gradient\ndescent:\n\nStochastic gradient descent (SGD): Stochastic gradient descent uses only\na single example (a batch size of one) per iteration. Given enough\niterations, SGD "
+    },
+    "C037": {
+      "chunk_id": "chunk_1dda40c9d013b002ecdc20f69011760226b039ca8ee4a83521fdf13f09413c14",
+      "file_name": "19_google_l2_regularization.txt",
+      "page": null,
+      "text": ";\na high regularization rate pushes weights towards zero.\n\nIf the regularization rate is high with respect to the learning rate,\nthe weak weights tend to produce a model that makes poor predictions.\nConversely, if the learning rate is high with respect to the regularization\nrate, the strong weights tend to produce an overfit model.\n\nYour goal is to find the equilibrium between learning rate and\nregularization rate. This can be challenging. Worst of all, once you find\nthat elusive balance, you may have to ultimately change the learning rate.\nAnd, when you change the learning rate, you'll again have to find the ideal\nregularization rate.\n\nKey terms:\n\nEarly stopping\n\nL1 regularization\n\nL2 regularization\n\nLearning rate\n\nRegularization\n\nRegularization rate"
+    },
+    "C038": {
+      "chunk_id": "chunk_21627c3a502b8a7c442087f6996d6ef0febddcfda4b41281963962aa4ba2a1dd",
+      "file_name": "08_google_sigmoid.txt",
+      "page": null,
+      "text": "following\ntwo ways:\n\nApplied \"as is.\" For example, if a spam-prediction model takes an email as\ninput and outputs a value of 0.932, this implies a 93.2% probability that\nthe email is spam.\n\nConverted to a binary category\nsuch as True or False, Spam or Not Spam.\n\nThis module focuses on using logistic regression model output as-is. In the\nClassification module, you'll learn how to\nconvert this output into a binary category.\n\nSigmoid function\n\nYou might be wondering how a logistic regression model can ensure its output\nrepresents a probability, always outputting a value between 0 and 1. As it\nhappens, there's a family of functions called logistic functions\nwhose output has those same characteristics. The standard logistic function,\nalso known as the\nsigmoid function\n(sigmoid means \"s-shaped\"), has the\nformula:\n\n\\[f(x) = \\frac{1}{1 "
+    },
+    "C042": {
+      "chunk_id": "chunk_24ca0c5713af9220b4621db1ca5418f5a44432f7d6650cd6b7e6dd88c9f69834",
+      "file_name": "02_mit_regularization_logistic_regression.pdf",
+      "page": 3,
+      "text": "\ufffd \ufffd\n\ufffd \ufffd\n\ufffd \ufffd\n\ufffd\n3 6.867 Machine learning, lecture 4 (Jaakkola)\nprobability distribution over the two labels in such a way that the labels for examples\nfurther away from the decision boundary are more likely to be correct. More precisely, we\nsay that\nP (y = 1|x, \u03b8, \u03b80) = g \u03b8T x + \u03b80 (5)\nwhere g(z) = (1 + exp(\u2212z))\u22121 is known as the logistic function (Figure 2). One way to\nderive the form of the logistic function is to say that the log-odds of the predicted class\nprobabilities should be a linear function of the inputs:\nlog P (y = 1|x, \u03b8, \u03b80) = \u03b8T x + \u03b80 (6) P (y = \u22121|x, \u03b8, \u03b80)\nSo for example, when we predict the same probability (1/2) for both classes, the log-odds\n"
+    },
+    "C044": {
+      "chunk_id": "chunk_27518ec2adadbe0c059a44fe327e5d363e07930f32f2d5d9fc5e83e7ff40a93f",
+      "file_name": "12_google_roc_auc.txt",
+      "page": null,
+      "text": "of each\nemail depends on the threshold that you choose.\n\nFor a binary classifier, a model that does exactly as well as random guesses or\ncoin flips has a ROC that is a diagonal line from (0,0) to (1,1). The AUC is\n0.5, representing a 50% probability of correctly ranking a random positive and\nnegative example.\n\nIn the spam classifier example, a spam classifier with AUC of 0.5 assigns\na random spam email a higher probability of being spam than a random\nlegitimate email only half the time.\n\n(Optional, advanced) Precision-recall curve\n\nAUC and ROC work well for comparing models when the dataset is roughly\nbalanced between classes. When the dataset is imbalanced, precision-recall\ncurves (PRCs) and the area under those curves may offer a better comparative\nvisualization of model performance. Precision-recall curves are created by\nplotting precision on the y-axis and recall on the x"
+    },
+    "C046": {
+      "chunk_id": "chunk_27df03a77b14bc519cfb6af0ff8ba6b41983be49580841217b743245b435b8fc",
+      "file_name": "14_google_normalization.txt",
+      "page": null,
+      "text": "0.5 and highest is +0.5.\n\nFeature B's lowest value is -5.0 and highest is +5.0.\n\nFeature A and Feature B have relatively narrow spans. However, Feature B's\nspan is 10 times wider than Feature A's span. Therefore:\n\nAt the start of training, the model assumes that Feature B is ten times\nmore \"important\" than Feature A.\n\nTraining will take longer than it should.\n\nThe resulting model may be suboptimal.\n\nThe overall damage due to not normalizing will be relatively small; however,\nwe still recommend normalizing Feature A and Feature B to the same scale,\nperhaps -1.0 to +1.0.\n\nNow consider two features with a greater disparity of ranges:\n\nFeature C's lowest value is -1 and highest is +1.\n\nFeature D's lowest value is +5000 and highest is +1,000,000,000.\n\nIf you don't normalize Feature C "
+    },
+    "C047": {
+      "chunk_id": "chunk_28230cbe2027f9dc70631eb1b21eca66ded2b109add06f8f08bee16d05d84cd3",
+      "file_name": "07_google_hyperparameters.txt",
+      "page": null,
+      "text": "not just near convergence.\n\nMini-batch stochastic gradient descent (mini-batch SGD): Mini-batch\nstochastic gradient descent is a compromise between full-batch and SGD. For\n$ N $ number of data points, the batch size can be any number greater than 1\nand less than $ N $. The model chooses the examples included in each batch\nat random, averages their gradients, and then updates the weights and bias\nonce per iteration.\n\nDetermining the number of examples for each batch depends on the dataset and\nthe available compute resources. In general, small batch sizes behaves like\nSGD, and larger batch sizes behaves like full-batch gradient descent.\n\nFigure 25. Model trained with mini-batch SGD.\n\nWhen training a model, you might think that noise is an undesirable\ncharacteristic that should be eliminated. However, a certain amount of noise can\nbe a good thing. In later modules, you'll learn how noise can help a model\ngeneral"
+    },
+    "C048": {
+      "chunk_id": "chunk_284de21f7d77d8c8309015e47ce60a59e802fd3fc5c73134dda34d33aa52ef3c",
+      "file_name": "01_mit_introduction_classification.pdf",
+      "page": 1,
+      "text": "training vectors x1, . . . , xn with\nbinary \u00b11 labels y1, . . . , yn. This is the only information about the task that we can use to\nconstraint what the function f should be.\nWhat kind of solution would su\ufb03ce?\nSuppose now that we have n = 50 labeled pixel images that are 128 by 128, and the pixel\nintensities range from 0 to 255. It is therefore possible that we can \ufb01nd a single pixel,\nsay pixel i, such that each of our n images have a distinct value for that pixel. We could\nthen construct a simple binary function based on this single pixel that perfectly maps the\ntraining images to their labels. In other words, if xti refers to pixel i in the tth training\nCite as: Tommi Jaakkola, course materials for 6.867 Machine Learning, Fall 2006. MIT OpenCourseWare\n(http://ocw.mit.edu/), Massachusetts Institute "
+    },
+    "C049": {
+      "chunk_id": "chunk_28d4351d721e867d5aba2cb70c81ead8b011152cade1f13a6a8912c74bdf266b",
+      "file_name": "13_google_feature_vectors.txt",
+      "page": null,
+      "text": "set provides five columns, but only two of those\ncolumns (b and d) are features in the model. When processing\nthe example in row 3, does the model simply grab the contents of the\nhighlighted two cells (3b and 3d) as follows?\n\nIn fact, the model actually ingests an array of floating-point values called a\nfeature vector. You can think\nof a feature vector as the floating-point values comprising one example.\n\nHowever, feature vectors seldom use the dataset's raw values.\nInstead, you must typically process the dataset's values into representations\nthat your model can better learn from. So, a more realistic\nfeature vector might look something like this:\n\nWouldn't a model produce better predictions by training from the\nactual values in the dataset than from altered values?\nSurprisingly, the answer is no.\n\nYou must determine the best way to represent raw dataset values as trainable\nvalues in the feature vector.\nThis process is called\nfeature engineering,\nand it is a "
+    },
+    "C050": {
+      "chunk_id": "chunk_29ac44eda7262928fd247a88bfe44e5944b7f47544005db8d30378c1f82563fc",
+      "file_name": "07_google_hyperparameters.txt",
+      "page": null,
+      "text": "to experiment with how many epochs it takes\nfor the model to converge. In general, more epochs produces a better model, but\nalso takes more time to train.\n\nFigure 26. Full batch versus mini batch.\n\nThe following table describes how batch size and epochs relate to the number of\ntimes a model updates its parameters.\n\nBatch type\nWhen weights and bias updates occur\n\nFull batch\n\nAfter the model looks at all the examples in the dataset. For instance,\nif a dataset contains 1,000 examples and the model trains for 20 epochs,\nthe model updates the weights and bias 20 times, once per epoch.\n\nStochastic gradient descent\n\nAfter the model looks at a single example from the dataset.\nFor instance, if a dataset contains 1,000 examples and trains for\n20 epochs, the model updates the weights and bias 20,000 times.\n\nMini-batch stochastic gradient descent\n\nAfter the model looks at the examples in each batch. For instance,\nif a dataset contains 1"
+    },
+    "C052": {
+      "chunk_id": "chunk_2e209f062408bc65300dda82d1ffd768d76a5ced9d707ccabbdd867207c87df8",
+      "file_name": "14_google_normalization.txt",
+      "page": null,
+      "text": "= 54.598\n\nTherefore, the log of the original value is about 4.0:\n\nLog scaling is helpful when the data conforms to a power law distribution.\nCasually speaking, a power law distribution looks as follows:\n\nLow values of X have very high values of Y.\n\nAs the values of X increase, the values of Y quickly decrease.\nConsequently, high values of X have very low values of Y.\n\nMovie ratings are a good example of a power law distribution. In the following\nfigure, notice:\n\nA few movies have lots of user ratings. (Low values of X have high\nvalues of Y.)\n\nMost movies have very few user ratings. (High values of X have low\nvalues of Y.)\n\nLog scaling changes the distribution, which helps train a model that will\nmake better predictions.\n\nAs a second example, book sales conform to a power law distribution because:\n\nMost published books sell a tiny number of copies, maybe one or two hundred.\n\nSome books sell a moderate number of copies, "
+    },
+    "C054": {
+      "chunk_id": "chunk_333d797f4b9a20e244b84e69fb91b2d2878fa8e3f92fdde25bc00eeb90c9f21b",
+      "file_name": "08_google_sigmoid.txt",
+      "page": null,
+      "text": "}}\\]\n\nwhere:\n\ny' is the output of the logistic regression model.\n\ne is Euler's number:\na mathematical constant \u2248 2.71828.\n\nz is the linear output (as calculated in the preceding equation).\n\nClick here to learn more about\nlog-odds\n\nIn the equation $z = b + w_1x_1 + w_2x_2 + \\ldots + w_Nx_N$, z\nis referred to as the log-odds because if you start with the\nfollowing sigmoid function (where $y$ is the output of a logistic\nregression model, representing a probability):\n\n$$y = \\frac{1}{1 + e^{-z}}$$\n\nAnd then solve for z:\n\n$$ z = \\ln\\left(\\frac{y}{1-y}\\right) $$\n\nThen z is defined as the natural logarithm of the "
+    },
+    "C055": {
+      "chunk_id": "chunk_33cb1e7efc46062ce3f0573c9e5fb407dbe56de46701899faa9d496d6e71fb6d",
+      "file_name": "10_google_thresholds.txt",
+      "page": null,
+      "text": "you set the threshold to 0.95, only the email scoring 0.99 will\nbe classified as spam.\n\nWhile 0.5 might seem like an intuitive threshold, it's not a good idea if the\ncost of one type of wrong classification is greater than the other, or if the\nclasses are imbalanced. If only 0.01% of emails are spam, or if misfiling\nlegitimate emails is worse than letting spam into the inbox,\nlabeling anything the model considers at least 50% likely to be spam\nas spam produces undesirable results.\n\nConfusion matrix\n\nThe probability score is not reality, or\nground truth.\nThere are four possible outcomes for each output from a binary classifier.\nFor the spam classifier example, if you lay out the ground truth as columns\nand the model's prediction as rows, the following table, called a\nconfusion matrix, is the\nresult:\n\nActual positive\nActual negative\n\nPredicted positive\nTrue positive (TP): A spa"
+    },
+    "C056": {
+      "chunk_id": "chunk_3441c294711bb67dc3993a4364bf11e451e99c86c432fa9bc5f6b04e26826969",
+      "file_name": "01_mit_introduction_classification.pdf",
+      "page": 2,
+      "text": "new images? Finding the class of functions is a key problem in machine learning, also\nknown as the model selection problem.\nLinear classi\ufb01ers through origin\nLet\u2019s just \ufb01x the function class for now. Speci\ufb01cally, we will consider only a type of linear\nclassi\ufb01ers. These are thresholded linear mappings from images to labels. More formally,\nwe only consider functions of the form\nf (x; \u03b8) = sign \u03b81x1 + . . . + \u03b8dxd = sign \u03b8T x (2)\nCite as: Tommi Jaakkola, course materials for 6.867 Machine Learning, Fall 2006. MIT OpenCourseWare\n(http://ocw.mit.edu/), Massachusetts Institute of Technology. Downloaded on [DD Month YYYY]."
+    },
+    "C057": {
+      "chunk_id": "chunk_378a391fe260d83b647a503181b030d4427e701f85b4e45ac8fd603eda54ce31",
+      "file_name": "02_mit_regularization_logistic_regression.pdf",
+      "page": 2,
+      "text": "\ufffd \ufffd \ufffd+\n2 6.867 Machine learning, lecture 4 (Jaakkola)\nThe loss function we need for this purpose is based on the hinge loss Lossh(z) de\ufb01ned as\nthe positive part of 1 \u2212 z, written as (1 \u2212 z)+ (see Figure 1a). The relaxed optimization\nproblem can be written using the hinge loss as\n=\u03be\u02c6t\nn \ufffd \ufffd\ufffd \ufffd\nminimize 1\n2\ufffd\u03b8\ufffd2 + C\n\ufffd \ufffd\n1 \u2212 yt(\u03b8T xt + \u03b80)\n\ufffd+\n(3)\nt=1\nHere \ufffd\u03b8\ufffd2/2, the inverse squared geometric margin, is viewed as a regularization penalty\nthat helps stabilize the objective\nn\nC 1 \u2212 yt(\u03b8T xt + \u03b80) (4)\nt=1\nIn other words, when no margin constraints are violated (zero loss), the regularization\npenalty helps us select the solution with the largest geometric margin.\nLogistic regression, maximum likelihood estimation\n\u22123 \u22122 \u22121 0 1 2 3\n0\n0"
+    },
+    "C060": {
+      "chunk_id": "chunk_39fab453d03c2abfea6495873d74fd790fa76b9e7a6307cbbf4196ee210e47ed",
+      "file_name": "10_google_thresholds.txt",
+      "page": null,
+      "text": ").\n\nClick here for more details on the classification threshold.\n\nYou may be wondering: what happens if the predicted score is equal to\nthe classification threshold (for instance, a score of 0.5 where\nthe classification threshold is also 0.5)? Handling for this case\ndepends on the particular implementation chosen for the classification\nmodel. The Keras\nlibrary predicts the negative class if the score and threshold\nare equal, but other tools/frameworks may handle this case\ndifferently.\n\nSuppose the model scores one email as 0.99, predicting\nthat email has a 99% chance of being spam, and another email as\n0.51, predicting it has a 51% chance of being spam. If you set the\nclassification threshold to 0.5, the model will classify both emails as\nspam. If you set the threshold to 0.95, only the email scoring 0.99 will\nbe classified as spam.\n\nWhile 0.5 might seem like an intuitive threshold, it's not a good "
+    },
+    "C061": {
+      "chunk_id": "chunk_3a6d24c1a34f64d81d658340b29d34a6b152fa14a27bc154ad4ae11730b3816c",
+      "file_name": "17_google_labels.txt",
+      "page": null,
+      "text": "Datasets: Labels\nAuthor: Google for Developers / Machine Learning Crash Course\nSource: https://developers.google.com/machine-learning/crash-course/overfitting/labels\nLicense: CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/)\nChanges: HTML lesson converted to UTF-8 TXT; navigation, multiple-choice quizzes, figures, captions, code blocks and generated key takeaways omitted; attribution header added.\n\nThis section focuses on labels.\n\nDirect versus proxy labels\n\nConsider two different kinds of labels:\n\nDirect labels, which are labels identical to the prediction your model\nis trying to make. That is, the prediction your model is trying to make is\nexactly present as a column in your dataset.\nFor example, a column named bicycle owner would be a direct label for a\nbinary classification model that predicts whether or not a person owns\na bicycle.\n\nProxy labels, "
+    },
+    "C068": {
+      "chunk_id": "chunk_3f8cd8800fc9b74059098772d1033d3a9bedc4ee7f78698ace45e9e14cffd898",
+      "file_name": "11_google_classification_metrics.txt",
+      "page": null,
+      "text": "c{\\text{precision * recall}}{\\text{precision + recall}}\n= \\frac{2\\text{TP}}{2\\text{TP + FP + FN}}\\]\n\nThis metric balances the importance of precision and recall, and is\npreferable to accuracy for class-imbalanced datasets. When precision\nand recall both have perfect scores of 1.0, F1 will also have a perfect score\nof 1.0. More broadly, when precision and recall are close in value, F1 will\nbe close to their value. When precision and recall are far apart, F1 will\nbe similar to whichever metric is worse.\n\nKey terms:\n\nAccuracy\n\nFalse positive rate (FPR)\n\nPrecision\n\nRecall"
+    },
+    "C071": {
+      "chunk_id": "chunk_43e7f52541d50190c539bb6d8143e54471a93dba2e96af65a7f254ded3c954a0",
+      "file_name": "06_google_gradient_descent.txt",
+      "page": null,
+      "text": "the model's state\nat snapshots during the training process solidifies the link between updating\nthe weights and bias, reducing loss, and model convergence.\n\nIn the figures, we use the derived weights and bias at a particular iteration to\nrepresent the model. In the graph with the data points and the model snapshot,\nblue loss lines from the model to the data points show the amount of loss. The\nlonger the lines, the more loss there is.\n\nIn the following figure, we can see that around the second iteration the model\nwould not be good at making predictions because of the high amount of loss.\n\nFigure 13. Loss curve and snapshot of the model at the beginning of the\ntraining process.\n\nAt around the 400th-iteration, we can see that gradient descent has found the\nweight and bias that produce a better model.\n\nFigure 14. Loss curve and snapshot of model about midway through training.\n\nAnd at around the 1,000th-iteration, we can see that the model has "
+    },
+    "C073": {
+      "chunk_id": "chunk_4584c1a2d39e9d8688b6d47044e806c770cb481573ef53c164cbfc32eef7a144",
+      "file_name": "13_google_feature_vectors.txt",
+      "page": null,
+      "text": "?\nSurprisingly, the answer is no.\n\nYou must determine the best way to represent raw dataset values as trainable\nvalues in the feature vector.\nThis process is called\nfeature engineering,\nand it is a vital part of machine learning.\nThe most common feature engineering techniques are:\n\nNormalization: Converting\nnumerical values into a standard range.\n\nBinning (also referred to as\nbucketing): Converting numerical\nvalues into buckets of ranges.\n\nThis unit covers normalizing and binning. The next unit,\nWorking with categorical data,\ncovers other forms of\npreprocessing, such as\nconverting non-numerical data, like strings, to floating point values.\n\nEvery value in a feature vector must be a floating-point value. However, many\nfeatures are naturally strings or other non-numerical values. Consequently,\na large part of feature engineering is representing non-numerical values as\nnumerical values. You'll see a lot of this in later modules.\n\nKey terms:\n\nBinning\n\nBucketing\n\nFeature engineering\n\nFeature vector\n\nNormalization\n\n"
+    },
+    "C076": {
+      "chunk_id": "chunk_47d82b25ec1c9ff4445bd5a38200ffe4b8487d3f7d1094cfbe672e1715c21e5a",
+      "file_name": "12_google_roc_auc.txt",
+      "page": null,
+      "text": "points A, B, and C in the following\ndiagram, each representing a threshold:\n\nIf false positives (false alarms) are highly costly, it may make sense to\nchoose a threshold that gives a lower FPR, like the one at point A, even if TPR\nis reduced. Conversely, if false positives are cheap and false negatives\n(missed true positives) highly costly, the threshold for point C, which\nmaximizes TPR, may be preferable. If the costs are roughly equivalent, point B\nmay offer the best balance between TPR and FPR.\n\nHere is the ROC curve for the data we have seen before:\n\nKey terms:\n\nArea under the ROC curve (AUC)\n\nROC curve"
+    },
+    "C077": {
+      "chunk_id": "chunk_4ad4ebef6675c2a7eb7243b8f7d8a75db927c29bcdb845b5325fc42b3c660430",
+      "file_name": "06_google_gradient_descent.txt",
+      "page": null,
+      "text": "you'll often look at a loss\ncurve to determine if the model has\nconverged. The loss curve shows\nhow the loss changes as the model trains. The following is what a typical loss\ncurve looks like. Loss is on the y-axis and iterations are on the x-axis:\n\nFigure 12. Loss curve showing the model converging around the\n1,000th-iteration mark.\n\nYou can see that loss dramatically decreases during the first few iterations,\nthen gradually decreases before flattening out around the 1,000th-iteration\nmark. After 1,000 iterations, we can be mostly certain that the model has\nconverged.\n\nIn the following figures, we draw the model at three points during the training\nprocess: the beginning, the middle, and the end. Visualizing the model's state\nat snapshots during the training process solidifies the link between updating\nthe weights and bias, reducing loss, and model convergence.\n\nIn the figures, we use the derived "
+    },
+    "C081": {
+      "chunk_id": "chunk_4cd63856f136c48fd33573eeaf3c86d2817aac43e52a752ba4d7c15c899cd8c1",
+      "file_name": "10_google_thresholds.txt",
+      "page": null,
+      "text": "on true and false positives and negatives\n\nDifferent thresholds usually result in different numbers of true and false\npositives and true and false negatives. The following video explains why this is\nthe case.\n\nTry changing the threshold yourself.\n\nThis widget includes three toy datasets:\n\nSeparated, where positive examples and negative examples are generally\nwell differentiated, with most positive examples having higher scores than\nnegative examples.\n\nUnseparated, where many positive examples have lower scores than\nnegative examples, and many negative examples have higher scores than\npositive examples.\n\nImbalanced, containing only a few examples of the positive class.\n\nCheck your understanding\n\nKey terms:\n\nBinary classification\n\nClass-imbalanced dataset\n\nClassification threshold\n\nConfusion matrix\n\nGround truth\n\nNegative class\n\nPositive class"
+    },
+    "C085": {
+      "chunk_id": "chunk_556ec26fcd954f62cf0390ca4f906fbcb9e4a8baa4369537993e2486f554036d",
+      "file_name": "19_google_l2_regularization.txt",
+      "page": null,
+      "text": "distribution\n\na mean weight of 0.\n\nA low regularization rate:\n\nLowers the influence of regularization, thereby increasing the chances of\noverfitting.\n\nTends to produce a histogram of model weights with a flat distribution.\n\nFor example, the histogram of model weights for a high regularization rate\nmight look as shown in Figure 18.\n\nIn contrast, a low regularization rate tends to yield a flatter histogram, as\nshown in Figure 19.\n\nNote: Setting the regularization rate to zero removes regularization completely.\nIn this case, training focuses exclusively on minimizing loss, which\nposes the highest possible overfitting risk.\n\nPicking the regularization rate\n\nThe ideal regularization rate produces a model that generalizes well to\nnew, previously unseen data.\nUnfortunately, that ideal value is data-dependent,\nso you must do some\n\ntuning.\n\nEarly stopping: an alternative to complexity-based regularization\n\nEarly stopping is a\nregularization method that doesn't involve a calculation of complexity.\nInstead, "
+    },
+    "C086": {
+      "chunk_id": "chunk_56d87d6448da7b6af67c4b20ae760346aee6bc6d29bbf8f96bb16f1f91008003",
+      "file_name": "14_google_normalization.txt",
+      "page": null,
+      "text": "is a good choice when the data follows a normal distribution or\na distribution somewhat like a normal distribution.\n\nNote that some distributions might be normal within the bulk of their\nrange, but still contain extreme outliers. For example, nearly all of the\npoints in a net_worth feature might fit neatly into 3 standard deviations,\nbut a few examples of this feature could be hundreds of standard deviations\naway from the mean. In these situations, you can combine Z-score scaling with\nanother form of normalization (usually clipping) to handle this situation.\n\nSuppose your model trains on a feature named height that holds the adult\nheights of ten million women. Would Z-score scaling be a good normalization\ntechnique for height? Why or why not?\n\nClick the icon to see the answer.\n\nAnswer: Z-score scaling would be a good normalization technique\nfor height because this feature conforms to a normal distribution.\nTen million examples implies a lot of outliers\u2014probably enough outliers for\nthe "
+    },
+    "C089": {
+      "chunk_id": "chunk_5b4c5ed988f9875e4b9f4ecc5be21c0124630b1aa95547ee367022b971b67ad6",
+      "file_name": "03_mit_linear_regression_bias_variance.pdf",
+      "page": 2,
+      "text": "1] (xt turned into a\nrow vector and 1 added at the end). In terms of this matrix, the minimization problem\nCite as: Tommi Jaakkola, course materials for 6.867 Machine Learning, Fall 2006. MIT OpenCourseWare\n(http://ocw.mit.edu/), Massachusetts Institute of Technology. Downloaded on [DD Month YYYY]."
+    },
+    "C091": {
+      "chunk_id": "chunk_5ce61840091dc682652e99aa73bd639368f335ad47d02f27a5d5c8360c6fd72a",
+      "file_name": "12_google_roc_auc.txt",
+      "page": null,
+      "text": "(PRCs) and the area under those curves may offer a better comparative\nvisualization of model performance. Precision-recall curves are created by\nplotting precision on the y-axis and recall on the x-axis across all\nthresholds.\n\nAUC and ROC for choosing model and threshold\n\nAUC is a useful measure for comparing the performance of two different models,\nas long as the dataset is roughly balanced. The model with greater area under\nthe curve is generally the better one.\n\nThe points on a ROC curve closest to (0,1) represent a range of the\nbest-performing thresholds for the given model. As discussed in the\nThresholds,\nConfusion matrix\nand\nChoice of metric and tradeoffs\nsections, the threshold you choose depends on which metric is most important to\nthe specific use case. Consider the points A, B, and C in the following\ndiagram, each representing a threshold:\n\nIf false positives (false alarms) are highly costly, it may make sense to\nchoose a threshold that gives a "
+    },
+    "C094": {
+      "chunk_id": "chunk_5d683c58bd3d239875dcd923bc4d56da41f2f62c747dd7db3bb3904b2add5321",
+      "file_name": "10_google_thresholds.txt",
+      "page": null,
+      "text": "truth as columns\nand the model's prediction as rows, the following table, called a\nconfusion matrix, is the\nresult:\n\nActual positive\nActual negative\n\nPredicted positive\nTrue positive (TP): A spam\nemail correctly classified as a spam email. These are the spam messages\nautomatically sent to the spam folder.\n\nFalse positive (FP): A not-spam email misclassified as\nspam. These are the legitimate emails that\nwind up in the spam folder.\n\nPredicted negative\nFalse\nnegative (FN): A spam email misclassified as not-spam. These are spam\nemails that aren't\ncaught by the spam filter and make their way into the inbox.\nTrue negative (TN): A\nnot-spam email correctly classified as not-spam.\nThese are the legitimate emails that are sent\ndirectly to the inbox.\n\nNotice that the total in each row gives all predicted positives (TP + FP) and\nall predicted "
+    },
+    "C095": {
+      "chunk_id": "chunk_5f709d06b4d77b45e2845c99d5e7a4508cfbb01ffd991c7253464c68d4330bf8",
+      "file_name": "17_google_labels.txt",
+      "page": null,
+      "text": "to evaluate the\nsame data.\n\nThink through these questions to determine your needs:\n\nHow skilled must your raters be? (For example, must the raters\nknow a specific language? Do you need linguists for dialogue or NLP\napplications?)\n\nHow many labeled examples do you need? How soon do you need them?\n\nWhat's your budget?\n\nAlways double-check your human raters. For example, label 1000 examples\nyourself, and see how your results match other raters' results.\nIf discrepancies surface, don't assume your ratings are the correct ones,\nespecially if a value judgment is involved. If human raters have introduced\nerrors, consider adding instructions to help them and try again.\n\nClick the plus icon to learn more about human-generated data.\n\nLooking at your data by hand is a good exercise regardless of how you\nobtained your data. Andrej Karpathy did this on\nImageNet\nand wrote about the experience.\n\nModels can train on a mix of automated and human"
+    },
+    "C096": {
+      "chunk_id": "chunk_5fcb302fa078e3843bf453a098d7d5619c747ece7f44d82d3a9537a098af6dff",
+      "file_name": "04_google_training_validation_test.txt",
+      "page": null,
+      "text": "is, the more you use the same data to make decisions about\nhyperparameter settings or other model improvements, the less confidence\nthat the model will make good predictions on new data.\nFor this reason, it's a good idea to collect more data to \"refresh\" the test\nset and validation set. Starting anew is a great reset.\n\nAdditional problems with test sets\n\nAs the previous question illustrates, duplicate examples can affect model evaluation.\nAfter splitting a dataset into training, validation, and test sets,\ndelete any examples in the validation set or test set that are duplicates of\nexamples in the training set. The only fair test of a model is against\nnew examples, not duplicates.\n\nFor example, consider a model that predicts whether an email is spam, using\nthe subject line, email body, and sender's email address as features.\nSuppose you divide the data into training and test sets, with an 80-20 split.\nAfter training, the model achieves 99"
+    },
+    "C097": {
+      "chunk_id": "chunk_6285de3066e6b39dc64504f722776c2be0c5cbc9546889c006d192ecca4c67bf",
+      "file_name": "08_google_sigmoid.txt",
+      "page": null,
+      "text": ":\n\n$$ z = \\ln\\left(\\frac{y}{1-y}\\right) $$\n\nThen z is defined as the natural logarithm of the ratio of the\nprobabilities of the two possible outcomes: y and 1 \u2013 y.\n\nFigure 2 illustrates how linear output is transformed to logistic regression\noutput using these calculations.\n\nIn Figure 2, a linear equation becomes input to the sigmoid function,\nwhich bends the straight line into an s-shape. Notice that the linear equation\ncan output very big or very small values of z, but the output of the sigmoid\nfunction, y', is always between 0 and 1, exclusive. For example, the yellow\nsquare on the left graph has a z value of \u201310, but the sigmoid function in the\nright graph maps that \u201310 into a y' value of 0.00004.\n\nA logistic regression model with three features has the following bias and\nweights:\n\n\\"
+    },
+    "C098": {
+      "chunk_id": "chunk_632726b4b87e67437b4c147fbe9cc8993e31bdf023a0e8bd01404fb0f461bf5c",
+      "file_name": "06_google_gradient_descent.txt",
+      "page": null,
+      "text": "stopping at the lowest\npoint on the graph.\n\nNotice that the black loss points create the exact shape of the loss curve: a\nsteep decline before gradually sloping down until they've reached the lowest\npoint on the loss surface.\n\nNote: This point represents the minimum loss for the model,\nwhich is typically greater than 0. A loss of 0 would mean that the model fits\nevery data point exactly, which is usually a sign of overfitting (i.e., the\nmodel is too complex/powerful). Overfitting is discussed in more depth\nlater in the\ncourse.\n\nUsing the weight and bias values that produce the lowest loss\u2014in this case\na weight of -5.44 and a bias of 35.94\u2014we can graph the model to see how\nwell it fits the data:\n\nFigure 19. Model graphed using the weight and bias values that produce\nthe lowest loss.\n\nThis would be the best model for this dataset because no other weight and bias\nvalues produce a model with lower loss"
+    },
+    "C100": {
+      "chunk_id": "chunk_66b464583602b53b28bd66b250bc0547341c467fa10ecaa669cfacbe1c697777",
+      "file_name": "08_google_sigmoid.txt",
+      "page": null,
+      "text": "behind the sigmoid function\n\nThe table below shows the output values of the sigmoid function for\ninput values in the range \u20137 to 7. Note how quickly the sigmoid approaches\n0 for decreasing negative input values, and how quickly the sigmoid approaches\n1 for increasing positive input values.\n\nHowever, no matter how large or how small the input value, the output will\nalways be greater than 0 and less than 1.\n\nInput\nSigmoid output\n\n-7\n0.001\n\n-6\n0.002\n\n-5\n0.007\n\n-4\n0.018\n\n-3\n0.047\n\n-2\n0.119\n\n-1\n0.269\n\n0\n0.50\n\n1\n0.731\n\n2\n0.881\n\n3\n0.952\n\n4\n0.982\n\n5\n0.993\n\n6\n0.997\n\n7\n0.999\n\nTransforming linear output using the sigmoid function\n\nThe following equation represents the linear component of a logistic\nregression model:\n\n\\[z = b + w_1"
+    },
+    "C102": {
+      "chunk_id": "chunk_6c6c2b290150b79bb72539b4d56698396e37b72db17b6fd20d93ca467978d225",
+      "file_name": "07_google_hyperparameters.txt",
+      "page": null,
+      "text": "gradient\ndescent:\n\nStochastic gradient descent (SGD): Stochastic gradient descent uses only\na single example (a batch size of one) per iteration. Given enough\niterations, SGD works but is very noisy. \"Noise\" refers to variations during\ntraining that cause the loss to increase rather than decrease during an\niteration. The term \"stochastic\" indicates that the one example comprising\neach batch is chosen at random.\n\nNotice in the following image how loss slightly fluctuates as the model\nupdates its weights and bias using SGD, which can lead to noise in the loss\ngraph:\n\nFigure 24. Model trained with stochastic gradient descent (SGD) showing\nnoise in the loss curve.\n\nNote that using stochastic gradient descent can produce noise throughout the\nentire loss curve, not just near convergence.\n\nMini-batch stochastic gradient descent (mini-batch SGD): Mini-batch\nstochastic gradient descent is a compromise between full-batch and SGD. "
+    },
+    "C104": {
+      "chunk_id": "chunk_6e052659878019146ca2ce460c81def8c67f770e112670110a532319289c33fb",
+      "file_name": "11_google_classification_metrics.txt",
+      "page": null,
+      "text": "different misclassifications, and whether the dataset is balanced or\nimbalanced.\n\nAll of the metrics in this section are calculated at a single fixed threshold,\nand change when the threshold changes. Very often, the user tunes the\nthreshold to optimize one of these metrics.\n\nAccuracy\n\nAccuracy is the proportion of all\nclassifications that were correct, whether positive or negative. It is\nmathematically defined as:\n\n\\[\\text{Accuracy} =\n\\frac{\\text{correct classifications}}{\\text{total classifications}}\n= \\frac{TP+TN}{TP+TN+FP+FN}\\]\n\nIn the spam classification example, accuracy measures the fraction of all\nemails correctly classified.\n\nA perfect model would have zero false positives and zero false negatives, and\ntherefore an accuracy of 1.0, or 100%.\n\nBecause it incorporates all four outcomes from the\nconfusion matrix\n(TP, FP, TN, FN"
+    },
+    "C107": {
+      "chunk_id": "chunk_6faf16839929d637c54fd4de1acdc7deb8dfbcf654b63810f3d55a314f49f1f2",
+      "file_name": "16_google_data_characteristics.txt",
+      "page": null,
+      "text": ", which are\ncovered in a later unit\n\nQuantity of data\n\nAs a rough rule of thumb, your model should train on at least an order\nof magnitude (or two) more examples than trainable parameters. However, good\nmodels generally train on substantially more examples than that.\n\nModels trained on large datasets with few\nfeatures\ngenerally outperform models trained on small datasets with\na lot of features.\nGoogle has historically had great success training simple models on\nlarge datasets.\n\nDifferent datasets for different machine learning programs may require wildly\ndifferent amounts of examples to build a useful model. For some relatively\nsimple problems, a few dozen examples might be sufficient. For other problems,\na trillion examples might be insufficient.\n\nIt's possible to get good results from a small dataset if you are adapting\nan existing model already trained on large quantities of data from the\nsame schema.\n\nQuality and reliability of data\n\nEveryone prefers high quality to low quality, but quality is such a vague\nconcept that it could be defined "
+    },
+    "C110": {
+      "chunk_id": "chunk_741cbbd3974857ed3c2d00769aa5d8addb4cb1cb5be8313c7f9b66bd518b07ac",
+      "file_name": "16_google_data_characteristics.txt",
+      "page": null,
+      "text": "make mistakes?\n\nAre your features noisy? That is, do the values in your features\ncontain errors? Be realistic\u2014you can't purge your dataset\nof all noise. Some noise is normal; for example, GPS measurements of any\nlocation always fluctuate a little, week to week.\n\nIs the data properly filtered for your problem? For example,\nshould your dataset include search queries from bots? If you're\nbuilding a spam-detection system, then likely the answer is yes.\nHowever, if you're trying to improve search results for humans, then no.\n\nThe following are common causes of unreliable data in datasets:\n\nOmitted values. For example, a person forgot to enter a value for a\nhouse's age.\n\nDuplicate examples. For example, a server mistakenly uploaded the same\nlog entries twice.\n\nBad feature values. For example, someone typed an extra digit, or a\nthermometer was left out in the sun.\n\nBad labels. For example, a "
+    },
+    "C113": {
+      "chunk_id": "chunk_78886397f59ef79dd4a85a71f57683ddc4c907a832f1438b7287c0e031df6b85",
+      "file_name": "03_mit_linear_regression_bias_variance.pdf",
+      "page": 3,
+      "text": "14)\nNote that the optimal parameter values are linear functions of the observed responses y. We\nwill make use of this property later on. The dependence on the training inputs x1, . . . , xn\n(or the matrix X) is non-linear, however.\nThe noise variance can be subsequently set to account for the remaining prediction errors.\nIndeed, the the maximizing value of \u03c32 is given by\n\u03c3\u02c62 1\nn\n= n t=1\n(yt \u2212 \u03b8\u02c6T xt \u2212 \u03b8\u02c60)2 (15)\nwhich is the average squared prediction error. Note that we cannot compute \u02c6\u03c32 before\nknowing how well the linear model explains the responses.\nBias and variance of the parameter estimates\nWe can make use of the closed form parameter estimates in Eq.(14) to analyze how good\nthese estimates are. For this purpose let\u2019s make the strong assumption that the actual\nrelation between x and y follows a linear model of the same type that we are estimating\n(we just don\u2019t know "
+    },
+    "C117": {
+      "chunk_id": "chunk_7c3e4def6916eb437d2ae8b9fac9044b0d97007dd2657ac4716a2a86c36477d3",
+      "file_name": "11_google_classification_metrics.txt",
+      "page": null,
+      "text": "classification causes the FPR to jump to 50%. In cases like\nthis, precision (described next) may be a more stable metric for\nevaluating the effects of false positives.\n\nPrecision\n\nPrecision\nis the proportion of all the model's positive classifications\nthat are actually positive. It is mathematically defined as:\n\n\\[\\text{Precision} =\n\\frac{\\text{correctly classified actual positives}}\n{\\text{everything classified as positive}}\n= \\frac{TP}{TP+FP}\\]\n\nIn the spam classification example, precision measures the fraction of emails\nclassified as spam that were actually spam.\n\nA hypothetical perfect model would have zero false positives and therefore a\nprecision of 1.0.\n\nIn an imbalanced dataset where the number of actual positives is very, very\nlow, say 1-2 examples in total, precision is less meaningful and less useful\nas a metric.\n\nPrecision improves as false positives decrease, "
+    },
+    "C119": {
+      "chunk_id": "chunk_8355f409107e8ee27e7ea1ec3beeb26e8c2bcc29fe13b62fcde2cc620974734d",
+      "file_name": "05_google_linear_loss.txt",
+      "page": null,
+      "text": ". The outliers are closer to\nthe model trained with MSE than to the model trained with MAE.\n\nFigure 9. MSE loss moves the model closer to the outliers.\n\nFigure 10. MAE loss keeps the model farther from the outliers.\n\nNote the relationship between the model and the data:\n\nMSE. The model is closer to the outliers but further away from most of\nthe other data points.\n\nMAE. The model is further away from the outliers but closer to most of\nthe other data points.\n\nClick the icon for more guidelines on choosing a loss\nmetric\n\nChoose MSE:\n\nIf you want to heavily penalize large errors.\n\nIf you believe the outliers are important and indicative of true data\nvariance that the model should account for.\n\nNote: The mathematical properties of\nMSE often make optimization smoother. Root Mean Squared Error (RMSE) is\noften used to get the error back into the same units as the label.\n\nChoose MAE:\n\nIf your dataset "
+    },
+    "C122": {
+      "chunk_id": "chunk_84386418c9c67d31e1cb41b3f01daa9e88e3b7bc48d28275e244aabb0e09d8d9",
+      "file_name": "14_google_normalization.txt",
+      "page": null,
+      "text": "0.7). However, the feature contains\na few outliers, some of them extreme:\n\nHow can you minimize the influence of those extreme outliers? Well, the\nhistogram is not an even distribution, a normal distribution, or a power law\ndistribution. What if you simply cap or clip the maximum value of\nroomsPerPerson at an arbitrary value, say 4.0?\n\nClipping the feature value at 4.0 doesn't mean that your model ignores all\nvalues greater than 4.0. Rather, it means that all values that were greater\nthan 4.0 now become 4.0. This explains the peculiar hill at 4.0. Despite\nthat hill, the scaled feature set is now more useful than the original data.\n\nWait a second! Can you really reduce every outlier value to some arbitrary upper\nthreshold? When training a model, yes.\n\nYou can also clip values after applying other forms of normalization.\nFor example, suppose you use Z-score scaling"
+    },
+    "C123": {
+      "chunk_id": "chunk_860036e32ff6c774cb1fc728dae0a2dac36278ffa207baa17e661be140db05d0",
+      "file_name": "05_google_linear_loss.txt",
+      "page": null,
+      "text": ".\n\nIn the following image, you can visualize loss as arrows drawn from the data\npoints to the model. The arrows show how far the model's predictions are from\nthe actual values.\n\nFigure 8. Loss is measured from the actual value to the predicted value.\n\nDistance of loss\n\nIn statistics and machine learning, loss measures the difference between the\npredicted and actual values. Loss focuses on the distance between the values,\nnot the direction. For example, if a model predicts 2, but the actual value is\n5, we don't care that the loss is negative (2 \u2013 5= \u20133). Instead, we care that\nthe distance between the values is 3. Thus, all methods for calculating loss\nremove the sign.\n\nThe two most common methods to remove the sign are the following:\n\nTake the absolute value of the difference between the actual value and the\nprediction.\n\nSquare the difference between the actual value and the prediction.\n\nTypes of loss\n\nIn linear regression, there are five main types of loss, "
+    },
+    "C124": {
+      "chunk_id": "chunk_883e3b22d36fe047d0832a6e26e0e7d3cd866b475b9d8b1637ed0268bae7154f",
+      "file_name": "06_google_gradient_descent.txt",
+      "page": null,
+      "text": "09\n0.91\n51.13\n\n6\n3.40\n1.01\n42.17\n\nYou can see that the loss gets lower with each updated weight and bias.\nIn this example, we stopped after six iterations. In practice, a model\ntrains until it\nconverges.\nWhen a model converges, additional iterations don't reduce loss more\nbecause gradient descent has found the weights and bias that nearly\nminimize the loss.\n\nIf the model continues to train past convergence, loss begins to\nfluctuate in small amounts as the model continually updates the\nparameters around their lowest values. This can make it hard to\nverify that the model has actually converged. To confirm the model\nhas converged, you'll want to continue training until the loss has\nstabilized.\n\nModel convergence and loss curves\n\nWhen training a model, you'll often look at a loss\ncurve to determine if the model has\nconverged. The loss curve shows\nhow the loss changes as the model trains. The following is what a typical loss\ncurve looks "
+    },
+    "C125": {
+      "chunk_id": "chunk_8b3853ab63eca670b5d971780e46bb9984bee3eefd86f9fb5e5211ee8b253d3c",
+      "file_name": "06_google_gradient_descent.txt",
+      "page": null,
+      "text": "bias that produce a better model.\n\nFigure 14. Loss curve and snapshot of model about midway through training.\n\nAnd at around the 1,000th-iteration, we can see that the model has converged,\nproducing a model with the lowest possible loss.\n\nFigure 15. Loss curve and snapshot of the model near the end of the training\nprocess.\n\nConvergence and convex functions\n\nThe loss functions for linear models always produce a\nconvex surface. As a result of\nthis property, when a linear regression model converges, we know the model has\nfound the weights and bias that produce the lowest loss.\n\nIf we graph the loss surface for a model with one feature, we can see its\nconvex shape. The following is the loss surface for a hypothetical miles per\ngallon dataset. Weight is on the x-axis, bias is on the y-axis, and loss is on\nthe z-axis:\n\nFigure 16. Loss surface that shows its convex shape.\n\nIn this example, a weight of -5.44 "
+    },
+    "C127": {
+      "chunk_id": "chunk_8bd9d979291165e81abf444c22104eaf3ecc99009875687cf5ddca6f432d3336",
+      "file_name": "12_google_roc_auc.txt",
+      "page": null,
+      "text": "Classification: ROC and AUC\nAuthor: Google for Developers / Machine Learning Crash Course\nSource: https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc\nLicense: CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/)\nChanges: HTML lesson converted to UTF-8 TXT; navigation, multiple-choice quizzes, figures, captions, code blocks and generated key takeaways omitted; attribution header added.\n\nThe previous section presented a set of model metrics, all calculated at a\nsingle classification threshold value. But if you want to evaluate a\nmodel's quality across all possible thresholds, you need different tools.\n\nReceiver-operating characteristic curve (ROC)\n\nThe ROC curve\nis a visual representation of model performance across all thresholds.\nThe long version of the name, receiver operating characteristic, is a holdover\nfrom WWII radar detection.\n\n"
+    },
+    "C128": {
+      "chunk_id": "chunk_8c4be2223ff0d80bc946ca042cc671ee75921ef7bf05e8b2ed00e881deeed2e2",
+      "file_name": "09_google_logistic_loss.txt",
+      "page": null,
+      "text": "prevent\noverfitting.\n\nThe following sections discuss these two considerations in more depth.\n\nLog Loss\n\nIn the Linear regression module,\nyou used squared loss (also called\nL2 loss) as the\nloss function.\nSquared loss works well for a linear\nmodel where the rate of change of the output values is constant. For example,\ngiven the linear model $y' = b + 3x_1$, each time you increment the input\nvalue $x_1$ by 1, the output value $y'$ increases by 3.\n\nHowever, the rate of change of a logistic regression model is not constant.\nAs you saw in Calculating a probability, the\nsigmoid curve is s-shaped\nrather than linear. When the log-odds ($z$) value is closer to 0, small\nincreases in $z$ result in much larger changes to $y$ than when $z$ is a large\npositive or negative number. The following table shows the sigmoid function's\noutput "
+    },
+    "C129": {
+      "chunk_id": "chunk_8d28d2793889c504ce6531d07698b5c50daeaa220be95d9292abaa6f9179d4f5",
+      "file_name": "09_google_logistic_loss.txt",
+      "page": null,
+      "text": "small\nincreases in $z$ result in much larger changes to $y$ than when $z$ is a large\npositive or negative number. The following table shows the sigmoid function's\noutput for input values from 5 to 10, as well as the corresponding precision\nrequired to capture the differences in the results.\n\ninput\nlogistic output\nrequired digits of precision\n\n5\n0.993\n3\n\n6\n0.997\n3\n\n7\n0.999\n3\n\n8\n0.9997\n4\n\n9\n0.9999\n4\n\n10\n0.99998\n5\n\nIf you used squared loss to calculate errors for the sigmoid function, as the\noutput got closer and closer to 0 and 1, you would need more memory to\npreserve the precision needed to track these values.\n\nInstead, the loss function for logistic regression is\nLog Loss. The\nLog Loss equation returns the logarithm of the magnitude of the change, rather\nthan just the distance from data to prediction. Log Loss is calculated as\nfollows:\n\n$\\text{"
+    },
+    "C131": {
+      "chunk_id": "chunk_8e03a7df3296db1a63570747c89087f03cecc49b11a06cc985b00801f3daf61b",
+      "file_name": "04_google_training_validation_test.txt",
+      "page": null,
+      "text": "the dataset as a whole. In other words, don't pick\na test set with different characteristics than the training set.\n\nRepresentative of the real-world data that the model will encounter\nas part of its business purpose.\n\nZero examples duplicated in the training set.\n\nKey terms:\n\nTest set\n\nTraining set\n\nValidation set"
+    },
+    "C132": {
+      "chunk_id": "chunk_8e4bf58d988f01d0ef1d5bc5e4d6bb7c7fac72ef957de3a2e47defef4ec34318",
+      "file_name": "12_google_roc_auc.txt",
+      "page": null,
+      "text": ",\nif given a randomly chosen positive and negative example, will rank the\npositive higher than the negative.\n\nThe perfect model above, containing a square with sides of length 1, has an\narea under the curve (AUC) of 1.0. This means there is a 100% probability that\nthe model will correctly rank a randomly chosen positive example higher than a\nrandomly chosen negative example. In other words, looking at the spread of\ndata points below, AUC gives the probability that the model will place a\nrandomly chosen square to the right of a randomly chosen circle, independent of\nwhere the threshold is set.\n\nIn more concrete terms, a spam classifier with AUC\nof 1.0 always assigns a random spam email a higher probability of being\nspam than a random legitimate email. The actual classification of each\nemail depends on the threshold that you choose.\n\nFor a binary classifier, a model that does exactly as well as random guesses or\ncoin flips has a ROC that is a diagonal line "
+    },
+    "C135": {
+      "chunk_id": "chunk_90094b94000a8505bea76cd9803a189a9537fc84c68a5b42aea502ed02b50a91",
+      "file_name": "06_google_gradient_descent.txt",
+      "page": null,
+      "text": "19. Model graphed using the weight and bias values that produce\nthe lowest loss.\n\nThis would be the best model for this dataset because no other weight and bias\nvalues produce a model with lower loss.\n\nKey terms:\n\nConvergence\n\nConvex function\n\nGradient descent\n\nIteration\n\nLoss curve"
+    },
+    "C137": {
+      "chunk_id": "chunk_9285c868f049149e7172839bd8270366adfaaf531598b8d599da256ad559c820",
+      "file_name": "02_mit_regularization_logistic_regression.pdf",
+      "page": 6,
+      "text": "probabilities. Taken together, these\northogonality conditions ensure that there\u2019s no further linearly available information in\nthe examples to improve the predicted probabilities (or mistake probabilities). This is\nperhaps a bit easier to see if we \ufb01rst map \u00b11 labels into 0/1 labels: \u02dcyt = (1 + yt)/2 so that\ny\u02dct \u2208{0, 1}. Then the above optimality conditions can be rewritten in terms of prediction\nerrors [\u02dcyt \u2212 P (y = 1|xt, \u03b8, \u03b80)] rather than mistake probabilities as\nn\n[\u02dcyt \u2212 P (y = 1|xt, \u03b8, \u03b80)] = 0 (21)\nt=1\nn\nxt[\u02dcyt \u2212 P (y = 1|xt, \u03b8, \u03b80)] = 0 (22)\nt=1\nand\nn n\n\u03b80\n\ufffd [\u02dcyt \u2212 P (y = 1|xt, \u03b8, \u03b80)"
+    },
+    "C138": {
+      "chunk_id": "chunk_947456c139904499e88e7db78eb82d01dea8340327714d4a55a04ffbc52cdd59",
+      "file_name": "05_google_linear_loss.txt",
+      "page": null,
+      "text": "of\nMSE often make optimization smoother. Root Mean Squared Error (RMSE) is\noften used to get the error back into the same units as the label.\n\nChoose MAE:\n\nIf your dataset has significant outliers that you don't want to overly\ninfluence the model. MAE is more robust.\n\nIf you prefer a loss function that is more directly interpretable as\nthe average error magnitude.\n\nIn practice, your metric choice can also depend on the specific business\nproblem and what kind of errors are more costly.\n\nCheck Your Understanding\n\nConsider the following two plots of a linear model fit to a dataset:\n\nKey terms:\n\nMean absolute error (MAE)\n\nMean squared error (MSE)\n\nL1\n\nL2\n\nLoss\n\nOutlier\n\nPrediction"
+    },
+    "C141": {
+      "chunk_id": "chunk_979076ad22e58cbbb6f7161bbd69173caa3d431d029ff1d44e972919dcc1c7df",
+      "file_name": "02_mit_regularization_logistic_regression.pdf",
+      "page": 4,
+      "text": "faster in the mean squared sense). But\nwhat if we do not have the right model class? Neither property may hold as a result. More\nrobust estimators can be found in a larger class of estimators called M-estimators that\nincludes maximum likelihood. We will nevertheless use the maximum likelihood principle\nto set the parameter values.\nThe product form of the conditional likelihood function is a bit di\ufb03cult to work with\ndirectly so we will maximize its logarithm instead:\nn\nl(\u03b8, \u03b80) = log P (yt|xt, \u03b8, \u03b80) (10)\nt=1\nAlternatively, we can minimize the negative logarithm\nlog-loss n\ufffd \ufffd \ufffd\ufffd \ufffd\n\u2212 l(\u03b8, \u03b80) = \u2212 log P (yt|xt, \u03b8, \u03b80) (11)\nt=1\nn\n= \u2212 log g yt(\u03b8T xt + \u03b80) (12)\nt=1\nn\ufffd \ufffd \ufffd \ufffd\ufffd\n= log 1 + exp \u2212"
+    },
+    "C142": {
+      "chunk_id": "chunk_9849655d44bf98e076491f6eeb641773d32eff4a668d5dc5ed7205b84955c629",
+      "file_name": "09_google_logistic_loss.txt",
+      "page": null,
+      "text": "Loss. The\nLog Loss equation returns the logarithm of the magnitude of the change, rather\nthan just the distance from data to prediction. Log Loss is calculated as\nfollows:\n\n$\\text{Log Loss} = -\\frac{1}{N}\\sum_{i=1}^{N} [y_i\\log(y_i') + (1 - y_i)\\log(1 - y_i')]$"
+    },
+    "C143": {
+      "chunk_id": "chunk_9ade9719f5f186a755e16482f4e90fe2d80023b42082b5759239626af7e2f745",
+      "file_name": "05_google_linear_loss.txt",
+      "page": null,
+      "text": "MAE and RMSE may be preferable to L2 loss or MSE in\nsome use cases because they tend to be more human-interpretable, as they measure\nerror using the same scale as the model's predicted value.\n\nNote: MAE and RMSE can differ quite widely. MAE represents the average\nprediction error, whereas RMSE represents the \"spread\" of the errors, and is\nmore skewed by larger errors.\n\nWhen processing multiple examples at once, we recommend averaging the losses\nacross all the examples, whether using MAE, MSE, or RMSE.\n\nCalculating loss example\n\nIn the previous section, we created the following\nmodel to predict fuel efficiency based on\ncar heaviness:\n\nModel: $ y' = 34 + (-4.6)(x_1) $\n\nWeight: $ \u20134.6 $\n\nBias: $ 34 $\n\nIf the model predicts that a 2,370-pound car gets 23.1 miles per gallon, but it\nactually gets 24 miles per gallon"
+    },
+    "C145": {
+      "chunk_id": "chunk_9bc5cd5eff05363cc9ccbbc94942bdfbb2b996a01003a3aaf997cf085c814fab",
+      "file_name": "02_mit_regularization_logistic_regression.pdf",
+      "page": 6,
+      "text": "the loss exactly zero). The resulting probability values, predicting each\ntraining label correctly with probability one, are hardly accurate in the sense of re\ufb02ecting\nCite as: Tommi Jaakkola, course materials for 6.867 Machine Learning, Fall 2006. MIT OpenCourseWare\n(http://ocw.mit.edu/), Massachusetts Institute of Technology. Downloaded on [DD Month YYYY]."
+    },
+    "C147": {
+      "chunk_id": "chunk_9f5b6ce1d952c34f9e496d16093806883ff0c23656520332ac8dab11d82e515b",
+      "file_name": "11_google_classification_metrics.txt",
+      "page": null,
+      "text": "ability of the model to correctly identify all positive instances.\nFor applications like disease prediction, correctly identifying the positive\ncases is crucial. A false negative typically has more serious consequences\nthan a false positive. For a concrete example comparing recall and accuracy\nmetrics, see the notes in the definition of\nrecall.\n\nFalse positive rate\n\nThe false positive rate (FPR)\nis the proportion of all actual negatives that were classified incorrectly\nas positives, also known as the probability of false alarm. It is\nmathematically defined as:\n\n\\[\\text{FPR} =\n\\frac{\\text{incorrectly classified actual negatives}}\n{\\text{all actual negatives}}\n= \\frac{FP}{FP+TN}\\]\n\nFalse positives are actual negatives that were misclassified, which is why they\nappear in the denominator. In the spam classification example, FPR measures the\nfraction of legitimate emails that were incorrectly classified as spam, or the\nmodel"
+    },
+    "C148": {
+      "chunk_id": "chunk_a013be79dca052da5dd1552a0c3a8fbee1fe1cf7384d8ae6bed284f44d10874d",
+      "file_name": "07_google_hyperparameters.txt",
+      "page": null,
+      "text": "s before beginning to converge:\n\nFigure 20. Loss graph showing a model trained with a learning rate that\nconverges quickly.\n\nIn contrast, a learning rate that's too small can take too many iterations to\nconverge. In Figure 21, the loss curve shows the model making only minor\nimprovements after each iteration:\n\nFigure 21. Loss graph showing a model trained with a small learning rate.\n\nA learning rate that's too large never converges because each iteration either\ncauses the loss to bounce around or continually increase. In Figure 22, the loss\ncurve shows the model decreasing and then increasing loss after each iteration,\nand in Figure 23 the loss increases at later iterations:\n\nFigure 22. Loss graph showing a model trained with a learning rate that's\ntoo big, where the loss curve fluctuates wildly, going up and down as the\niterations increase.\n\nFigure 23. Loss graph showing a model trained with a learning rate that's\ntoo big, where the loss curve drastically increases in later iteration"
+    },
+    "C149": {
+      "chunk_id": "chunk_a0671c2caf352c84c0eeff1622a030b46aae1e83b96a29939124d44583089047",
+      "file_name": "18_google_overfitting.txt",
+      "page": null,
+      "text": "new examples.\nFigure 13 shows what happens when that same model makes predictions on new\nexamples from the test set:\n\nSo, the complex model shown in Figure 12 did a great job on the training set\nbut a pretty bad job on the test set. This is a classic case of a model\noverfitting to the training set data.\n\nFitting, overfitting, and underfitting\n\nA model must make good predictions on new data.\nThat is, you're aiming to create a model that \"fits\" new data.\n\nAs you've seen, an overfit model makes excellent predictions on the training\nset but poor predictions on new data. An\nunderfit model\ndoesn't even make good predictions on the training data. If an overfit model is\nlike a product that performs well in the lab but poorly in the real world,\nthen an underfit model is like a product that doesn't even do well in\nthe lab.\n\nGeneralization is the\nopposite of overfitting. "
+    },
+    "C150": {
+      "chunk_id": "chunk_a1c7ea375a38affdb65586c90341cf7d118f47b5ce92a624716ff0301a1a715b",
+      "file_name": "10_google_thresholds.txt",
+      "page": null,
+      "text": "that the email is\nspam, a prediction of 0.75 signifies a 75% likelihood that the email is spam,\nand so on.\n\nYou'd like to deploy this model in an email application to filter spam into\na separate mail folder. But to do so, you need to convert the model's raw\nnumerical output (e.g., 0.75) into one of two categories: \"spam\" or \"not\nspam.\"\n\nTo make this conversion, you choose a threshold probability, called a\nclassification threshold.\nExamples with a probability above the threshold value are then assigned\nto the positive class,\nthe class you are testing for (here, spam). Examples with a lower\nprobability are assigned to the negative class,\nthe alternative class (here, not spam).\n\nClick here for more details on the classification threshold.\n\nYou may be wondering: what happens if the predicted score is equal to\nthe classification threshold (for instance, a score of 0.5 where\n"
+    },
+    "C151": {
+      "chunk_id": "chunk_a1cf4f8238513884a5cff1ff27a9e9ca836a9eb850638391c4d8c29f14f07d35",
+      "file_name": "19_google_l2_regularization.txt",
+      "page": null,
+      "text": "-dependent,\nso you must do some\n\ntuning.\n\nEarly stopping: an alternative to complexity-based regularization\n\nEarly stopping is a\nregularization method that doesn't involve a calculation of complexity.\nInstead, early stopping simply means ending training before the model\nfully converges. For example, you end training when the loss curve\nfor the validation set starts to increase (slope becomes positive).\n\nAlthough early stopping usually increases training loss, it can decrease\ntest loss.\n\nEarly stopping is a quick, but rarely optimal, form of regularization.\nThe resulting model is very unlikely to be as good as a model trained\nthoroughly on the ideal regularization rate.\n\nFinding equilibrium between learning rate and regularization rate\n\nLearning rate and\nregularization rate tend to move weights in opposite\ndirections. A high learning rate often pulls weights away from zero;\na high regularization rate pushes weights towards zero.\n\nIf the regularization rate is high with respect to the learning rate,\nthe weak weights tend to produce a model that makes poor predictions.\nConversely, "
+    },
+    "C153": {
+      "chunk_id": "chunk_a31fb39232a03f3b20783394df847d896c0be41b4a9b9029ab1b2dc98de405ff",
+      "file_name": "18_google_overfitting.txt",
+      "page": null,
+      "text": "their updates on a variety\nof factors but mainly on the current number of available seats. That is:\n\nIf a lot of seats are available, ticket prices are typically low.\n\nIf very few seats are available, ticket prices are typically high.\n\nYour model exhibits low\nloss on the validation set and the test set but sometimes makes\nterrible predictions on real-world data. Why?\n\nClick here to see the answer\n\nAnswer: The real world model is struggling with a\nfeedback loop.\n\nFor example, suppose the model recommends that users buy tickets on July 8.\nSome riders who use the model's recommendation buy their tickets at 8:30\nin the morning on July 8. At 9:00, the train company raises prices because\nfewer seats are now available. Riders using the model's recommendation have\naltered prices. By evening, ticket prices might be much higher than in the\nmorning.\n\nKey terms:\n\nFeedback loop\n\nGeneralization\n\nGeneralization curve\n\nIndependently and identically distributed (i.i.d)\n\nLoss curve\n\nOverfitting\n\nStation"
+    },
+    "C154": {
+      "chunk_id": "chunk_a60d3e8a9c2ddf46c123cecc2f17deb7c2ef4c2c64d143dd49bed7135b7d0d73",
+      "file_name": "11_google_classification_metrics.txt",
+      "page": null,
+      "text": "example, the\nformula for precision has 0 in the denominator, resulting in NaN. While\nin some cases NaN can indicate perfect performance and could be\nreplaced by a score of 1.0, it can also come from a model that is practically\nuseless. A model that never predicts positive, for example, would have 0 TPs\nand 0 FPs and thus a calculation of its precision would result in NaN.\n\nChoice of metric and tradeoffs\n\nThe metric(s) you choose to prioritize when evaluating the model and\nchoosing a threshold depend on the costs, benefits, and risks of the\nspecific problem. In the spam classification example, it often makes\nsense to prioritize recall, nabbing all the spam emails, or precision,\ntrying to ensure that spam-labeled emails are in fact spam, or some\nbalance of the two, above some minimum accuracy level.\n\nMetric\nGuidance\n\nAccuracy\n\nUse as a rough indicator of model\ntraining progress/convergence for balanced datasets.\n\nFor model "
+    },
+    "C158": {
+      "chunk_id": "chunk_aca818a22340aa35f440b5c0d6a44ad6af930ced476ac670195633441b0986f7",
+      "file_name": "05_google_linear_loss.txt",
+      "page": null,
+      "text": "-weight range, and\n40 miles per gallon is within the typical fuel-efficiency range. However, a\n3,000-pound car that gets 40 miles per gallon would be an outlier in terms of\nthe model's prediction because the model would predict that a 3,000-pound car\nwould get around 20 miles per gallon.\n\nWhen choosing the best loss function, consider how you want the model to treat\noutliers. For instance, MSE moves the model more toward the outliers, while MAE\ndoesn't. L2 loss incurs a much higher penalty for an outlier than\nL1 loss. For example, the following images show a model trained\nusing MAE and a model trained using MSE. The red line represents a fully\ntrained model that will be used to make predictions. The outliers are closer to\nthe model trained with MSE than to the model trained with MAE.\n\nFigure 9. MSE loss moves the model closer to the outliers.\n\nFigure 10"
+    },
+    "C159": {
+      "chunk_id": "chunk_ad8b706929f62b3ad744d26efaeccaa6ed3abd44a5af5946f9f27db6a2106ba5",
+      "file_name": "08_google_sigmoid.txt",
+      "page": null,
+      "text": "0.997\n\n7\n0.999\n\nTransforming linear output using the sigmoid function\n\nThe following equation represents the linear component of a logistic\nregression model:\n\n\\[z = b + w_1x_1 + w_2x_2 + \\ldots + w_Nx_N\\]\n\nwhere:\n\nz is the output of the linear equation, also called the\nlog odds.\n\nb is the bias.\n\nThe w values are the model's learned weights.\n\nThe x values are the feature values for a particular example.\n\nTo obtain the logistic regression prediction, the z value is then passed to\nthe sigmoid function, yielding a value (a probability) between 0 and 1:\n\n\\[y' = \\frac{1}{1 + e^{-z}}\\]\n\nwhere:\n\ny' is the output of the logistic regression model.\n\ne is Euler's number:\na mathematical constant \u2248 2.71828.\n\nz is the linear "
+    },
+    "C160": {
+      "chunk_id": "chunk_ae41ebf557a408878b4f4aee6c3c8dfeb61a4811e044c15d03f17777a569d392",
+      "file_name": "03_mit_linear_regression_bias_variance.pdf",
+      "page": 10,
+      "text": "or trying available experiments at random. Fewer responses means\nless human e\ufb00ort, less cost, or both.\nTo develop this further let\u2019s go back to the unregularized case where\nE\n2\n|\nX\n\u03b8\u02c6\n\u03b8\u2217\n= \u03c3\u22172T r\n(XT X)\u22121 (60)\n\u2212\n\u03b8\u02c60 \u03b80\n\u2217\nWe do not know the noise variance \u03c3\u22172 for the correct model but it only appears as a\nmultiplicative constant in the above expression and therefore won\u2019t a\ufb00ect how we should\nchoose the inputs. When the choice of inputs is indeed up to us (e.g., which experiments to\ncarry out) we can select them so as to minimize T r (XT X)\u22121 . One caveat of this approach\nis that it relies on the underlying relationship between the inputs and the responses to be\nlinear. When this is no longer the case we may end up with clearly suboptimal selections.\nWe will discuss next time how we can \ufb01nd "
+    },
+    "C163": {
+      "chunk_id": "chunk_b1953a54df3dd626df575ce670319d15c6192aca8080ef9c66305afd4cb8bb12",
+      "file_name": "02_mit_regularization_logistic_regression.pdf",
+      "page": 4,
+      "text": "of the prediction, i.e., how high P (yt|xt, \u03b8, \u03b80) is for any particular example.\nHaving a probabilistic interpretation does not, however, mean that the probability values\nare in any way sensible or calibrated. Predicted probabilities are calibrated when they\n1An estimator is a function that maps data to parameter values. An estimate is the value obtained in\nresponse to speci\ufb01c data.\nCite as: Tommi Jaakkola, course materials for 6.867 Machine Learning, Fall 2006. MIT OpenCourseWare\n(http://ocw.mit.edu/), Massachusetts Institute of Technology. Downloaded on [DD Month YYYY]."
+    },
+    "C164": {
+      "chunk_id": "chunk_b214e3db854c99136687901190f9191225d0ea02050b1230d623a65696bc4ac0",
+      "file_name": "02_mit_regularization_logistic_regression.pdf",
+      "page": 6,
+      "text": "\ufffd\n\ufffd\n\ufffd \ufffd\n\ufffd\n\ufffd \ufffd \ufffd\ufffd\n6 6.867 Machine learning, lecture 4 (Jaakkola)\nThe sum in Eq.(19) is the di\ufb00erence between mistake probabilities associated with positively\nand negatively labeled examples. The optimality of \u03b80 therefore ensures that the mistakes\nare balanced in this (soft) sense. Another way of understanding this is that the vector of\nmistake probabilities is orthogonal to the vector of labels. Similarly, the optimal setting\nof \u03b8 is characterized by mistake probabilities that are orthogonal to all rows of the label-\nexample matrix X\u02dc = [y1x1, . . . , ynxn]. In other words, for each dimension j of the example\nvectors, [y1x1j , . . . , ynxnj ] is orthogonal to the mistake probabilities. Taken together, these\northogonality conditions ensure that there\u2019s no further linearly available information in\nthe examples to improve the predicted probabilities (or mistake probabilities). "
+    },
+    "C166": {
+      "chunk_id": "chunk_b2e122cffdd56eae17ffe84b9da15a4a5ed70567d2112dddefc0109f9a8c0404",
+      "file_name": "04_google_training_validation_test.txt",
+      "page": null,
+      "text": "test a model against a different set of examples than those\nused to train the model. As you'll learn\na little later, testing\non different examples is stronger proof of your model's fitness than testing\non the same set of examples.\nWhere do you get those different examples? Traditionally in machine learning,\nyou get those different examples by splitting the original dataset. You might\nassume, therefore, that you should split the original dataset into two subsets:\n\nA training set\nthat the model trains on.\n\nA test set for evaluation of the\ntrained model.\n\nDividing the dataset into two sets is a decent idea, but\na better approach is to divide the dataset into three subsets.\nIn addition to the training set and the test set, the third subset is:\n\nA validation set\nperforms the initial testing on the model as it is being trained.\n\nUse the validation set to evaluate results from the training set.\nAfter repeated use of the validation set suggests that your model is\nmaking good predictions, use the "
+    },
+    "C167": {
+      "chunk_id": "chunk_b32991b010fa7e4aae94691bd1a1251455e593b9b1b2bc7223a409f9ed1cf0cc",
+      "file_name": "03_mit_linear_regression_bias_variance.pdf",
+      "page": 4,
+      "text": "\ufffd \ufffd\n\ufffd \ufffd \ufffd \ufffd\n\ufffd \ufffd\n\ufffd \ufffd\n\ufffd \ufffd \ufffd \ufffd \ufffd \ufffd\n6.867 Machine learning, lecture 5 (Jaakkola) 4\nwhere \ufffdt \u223c N (0, \u03c3\u22172). In a matrix form\n\u03b8\u2217\ny = X + e (17) \u03b80\n\u2217\nwhere e = [\ufffd1, . . . , \ufffdn]T , E{e} = 0 and E{eeT } = \u03c3\u22172 I. The noise vector e is also indepen\u00ad\ndent of the inputs or X. Plugging this form of responses into Eq.(14) we get\n\u03b8\u02c6 \u03b8\u2217\n\u03b8\u02c60\n= (XT X)\u22121XT (X \u03b80\n\u2217 + e) (18)\n= (XT X)\u22121XT X \u03b8\u2217\n+ (XT X)\u22121XT e (19) \u03b80\n\u2217\n= \u03b8\u2217\n+ (XT X)\u22121XT e (20) \u03b80\n\u2217\nIn other words, our parameter estimates can be decomposed into the sum of correct under\u00ad\nlying parameters and "
+    },
+    "C169": {
+      "chunk_id": "chunk_b478988d44e3306a06e7b339b1450c73fe4b63c53a98238b189ee17b06f5b07d",
+      "file_name": "02_mit_regularization_logistic_regression.pdf",
+      "page": 4,
+      "text": "\ufffd\n\ufffd \ufffd \ufffd\n4 6.867 Machine learning, lecture 4 (Jaakkola)\nL(\u03b8, \u03b80) is known as the (conditional) likelihood function and is interpreted as a function\nof the parameters for a \ufb01xed data (labels and examples). By maximizing this conditional\nlikelihood with respect to \u03b8 and \u03b80 we obtain maximum likelihood estimates of the param\u00ad\neters. Maximum likelihood estimators1 have many nice properties. For example, assuming\nwe have selected the right model class (logistic regression model) and certain regularity\nconditions hold, then the ML estimator is a) consistent (we will get the right parameter\nvalues in the limit of a large number of training examples), and b) e\ufb03cient (no other esti\u00ad\nmator will converge to the correct parameter values faster in the mean squared sense). But\nwhat if we do not have the right model class? Neither property may hold as a result. More\nrobust estimators can be found in a larger class "
+    },
+    "C171": {
+      "chunk_id": "chunk_b897e79564b896d4647dad4884921fe29866263db81f645e6640586f9cdb4ee8",
+      "file_name": "05_google_linear_loss.txt",
+      "page": null,
+      "text": "(MSE)\n\nThe average of L2 losses across a set of N examples.\n\n$ \\frac{1}{N} \u2211 (actual\\ value - predicted\\ value)^2 $\n\nRoot mean squared error (RMSE)\n\nThe square root of the mean squared error (MSE).\n\n$ \\sqrt{\\frac{1}{N} \u2211 (actual\\ value - predicted\\ value)^2} $\n\nThe functional difference between L1 loss and L2 loss\n(or between MAE/RMSE and MSE) is squaring. When the difference between the\nprediction and label is large, squaring makes the loss even larger. When the\ndifference is small (less than 1), squaring makes the loss even smaller.\n\nLoss metrics like MAE and RMSE may be preferable to L2 loss or MSE in\nsome use cases because they tend to be more human-interpretable, as they measure\nerror using the same scale as the "
+    },
+    "C172": {
+      "chunk_id": "chunk_b9284d28b2b4acc2c70eef6e34621726b2e75871dff9dea6d0b3c84317c9e94c",
+      "file_name": "09_google_logistic_loss.txt",
+      "page": null,
+      "text": "Logistic regression: Loss and regularization\nAuthor: Google for Developers / Machine Learning Crash Course\nSource: https://developers.google.com/machine-learning/crash-course/logistic-regression/loss-regularization\nLicense: CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/)\nChanges: HTML lesson converted to UTF-8 TXT; navigation, multiple-choice quizzes, figures, captions, code blocks and generated key takeaways omitted; attribution header added.\n\nLogistic regression\nmodels are trained using the same process as\nlinear regression\nmodels, with two key distinctions:\n\nLogistic regression models use\nLog Loss as the loss function\ninstead of squared loss.\n\nApplying regularization\nis critical to prevent\noverfitting.\n\nThe following sections discuss these two considerations in more depth.\n\nLog Loss\n\nIn the Linear regression module,\nyou used squared loss (also called\nL2 loss) as the\nloss function.\n"
+    },
+    "C173": {
+      "chunk_id": "chunk_baf408b3e1651fa0b1b79fa4b127f753d8b585462d5d3ba30be0e7ea047e9e62",
+      "file_name": "02_mit_regularization_logistic_regression.pdf",
+      "page": 1,
+      "text": "\ufffd\n1 6.867 Machine learning, lecture 4 (Jaakkola)\nThe Support Vector Machine and regularization\nWe proposed a simple relaxed optimization problem for \ufb01nding the maximum margin sep\u00ad\narator when some of the examples may be misclassi\ufb01ed:\nminimize 1\n2\ufffd\u03b8\ufffd2 + C\nn\ufffd\n\u03bet (1)\nt=1\nsubject to yt(\u03b8T xt + \u03b80) \u2265 1 \u2212 \u03bet and \u03bet \u2265 0 for all t = 1, . . . , n (2)\nwhere the remaining parameter C could be set by cross-validation, i.e., by minimizing the\nleave-one-out cross-validation error.\nThe goal here is to brie\ufb02y understand the relaxed optimization problem from the point of\nview of regularization. Regularization problems are typically formulated as optimization\nproblems involving the desired objective (classi\ufb01cation loss in our case) and a regularization\npenalty. The regularization penalty is used to help stabilize the "
+    },
+    "C176": {
+      "chunk_id": "chunk_bb8f5528383d229993139c0db3e47aacf2d4c0c43ad44689ecd5821e890150df",
+      "file_name": "06_google_gradient_descent.txt",
+      "page": null,
+      "text": ", bias is on the y-axis, and loss is on\nthe z-axis:\n\nFigure 16. Loss surface that shows its convex shape.\n\nIn this example, a weight of -5.44 and bias of 35.94 produce the lowest loss\nat 5.54:\n\nFigure 17. Loss surface showing the weight and bias values that produce\nthe lowest loss.\n\nA linear model converges when it's found the minimum loss. If we graphed the\nweights and bias points during gradient descent, the points would look like a\nball rolling down a hill, finally stopping at the point where there's no more\ndownward slope.\n\nNote: The model almost never finds the exact weight and bias\nvalues that minimize loss, but instead finds values very close to them.\n\nFigure 18. Loss graph showing gradient descent points stopping at the lowest\npoint on the graph.\n\nNotice that the black loss points create the exact shape of the loss curve: a\nsteep decline before gradually sloping down until they've reached the lowest\npoint on "
+    },
+    "C177": {
+      "chunk_id": "chunk_bbc34c1002e77bfd9f9ba08252d9d0c16c883f56b73434b1fc3e639f11bc611d",
+      "file_name": "14_google_normalization.txt",
+      "page": null,
+      "text": ". When a value in a model exceeds the\nfloating-point precision limit, the system sets the value to NaN instead\nof a number. When one number in the model becomes a NaN, other numbers in\nthe model also eventually become a NaN.\n\nHelps the model learn appropriate weights for each feature.\nWithout feature scaling, the model pays too much attention\nto features with wide ranges and not enough attention to features with\nnarrow ranges.\n\nWe recommend normalizing numeric features covering distinctly\ndifferent ranges (for example, age and income).\nWe also recommend normalizing a single numeric feature that covers a wide range,\nsuch as city population.\n\nWarning: If you normalize a feature during training, you must also normalize\nthat feature when making predictions.\n\nConsider the following two features:\n\nFeature A's lowest value is -0.5 and highest is +0.5.\n\nFeature B's lowest value is -5.0 and highest is +5.0.\n\nFeature A and Feature B have relatively narrow spans. "
+    },
+    "C178": {
+      "chunk_id": "chunk_bd3895477ba2a77175585bae401f5eab0bfb9c1e9a6f6912e9e744357bd5bc75",
+      "file_name": "14_google_normalization.txt",
+      "page": null,
+      "text": "every outlier value to some arbitrary upper\nthreshold? When training a model, yes.\n\nYou can also clip values after applying other forms of normalization.\nFor example, suppose you use Z-score scaling, but a few outliers have\nabsolute values far greater than 3. In this case, you could:\n\nClip Z-scores greater than 3 to become exactly 3.\n\nClip Z-scores less than -3 to become exactly -3.\n\nClipping prevents your model from overindexing on unimportant data. However,\nsome outliers are actually important, so clip values carefully.\n\nSummary of normalization techniques\n\nThe best normalization technique is one that\nworks well in practice, so try new ideas if you think they'll work well on\nyour feature distribution.\n\nNormalization techniqueFormulaWhen to use\nLinear scaling\n$$ x' = \\frac{x - x_{min}}{x_{max} - x_{min}} $$\nWhen the "
+    },
+    "C179": {
+      "chunk_id": "chunk_c391dd2299e093ebbb11e22fe6cb0ed3c91a2f9a2a7d046a022d13fe9a576db2",
+      "file_name": "05_google_linear_loss.txt",
+      "page": null,
+      "text": ".1)^2 }$\n\n$\\small{0.81}$\n\nIn this example, the L2 loss for that single data point is 0.81.\n\nChoosing a loss\n\nDeciding whether to use MAE or MSE can depend on the dataset and the way you\nwant to handle certain predictions. Most feature values in a dataset typically\nfall within a distinct range. For example, cars are normally between 2000 and\n5000 pounds and get between 8 to 50 miles per gallon. An 8,000-pound car,\nor a car that gets 100 miles per gallon, is outside the typical range and would\nbe considered an outlier.\n\nAn outlier can also refer to how far off a model's predictions are from the real\nvalues. For instance, 3,000 pounds is within the typical car-weight range, and\n40 miles per gallon is within the typical fuel-efficiency range. However, a\n3,000-pound car that gets 40 miles per gallon would be an outlier in terms "
+    },
+    "C180": {
+      "chunk_id": "chunk_c3dfb8e061579d68eefd0e2e93810a39864ddcc4acfea2520d4466ef7c154c2c",
+      "file_name": "01_mit_introduction_classification.pdf",
+      "page": 2,
+      "text": ").\nThese rules provide no sensible predictions for images that are not identical to those in the\ntraining set. The primary reason for why such trivial rules do not su\ufb03ce is that our task is\nnot to correctly classify the training images. Our task is to \ufb01nd a rule that works well for\nall new images we would encounter in the access control setting; the training set is merely\na helpful source of information to \ufb01nd such a function. To put it a bit more formally, we\nwould like to \ufb01nd classi\ufb01ers that generalize well, i.e., classi\ufb01ers whose performance on the\ntraining set is representative of how well it works for yet unseen images.\nModel selection\nSo how can we \ufb01nd classi\ufb01ers that generalize well? The key is to constrain the set of\npossible binary functions we can entertain. In other words, we would like to \ufb01nd a class of\nbinary functions such that if a function in this class works well on the training set, "
+    },
+    "C182": {
+      "chunk_id": "chunk_c5ad805dc6bf4aab0f7239b43b48ce0df9fd5dffa5801babe0a00f07a1472cc4",
+      "file_name": "01_mit_introduction_classification.pdf",
+      "page": 4,
+      "text": "; \u03b8)) (3)\nt=1 t=1\nwhere \u03b4(y, y\ufffd) = 1 if y = y\ufffd and 0 otherwise. The training error merely counts the average\nnumber of training images where the function predicts a label di\ufb00erent from the label\nprovided for that image. More generally, we could compare our predictions to labels in\nterms of a loss function Loss(yt, f (xt; \u03b8)). This is useful if errors of a particular kind are\nmore costly than others (e.g., letting a person enter the building when they shouldn\u2019t). For\nsimplicity, we use the zero-one loss that is 1 for mistakes and 0 otherwise.\nWhat would be a reasonable algorithm for setting the parameters \u03b8? Perhaps we can just\nincrementally adjust the parameters so as to correct any mistakes that the corresponding\nclassi\ufb01er makes. Such an algorithm would seem to reduce the training error that counts\nthe mistakes. Perhaps the simplest algorithm of this type is "
+    },
+    "C185": {
+      "chunk_id": "chunk_c9867c4c8e6cb273ec59e7aa72cfc6e3182381210d2e91c38d11ef16521657e4",
+      "file_name": "14_google_normalization.txt",
+      "page": null,
+      "text": "Numerical data: Normalization\nAuthor: Google for Developers / Machine Learning Crash Course\nSource: https://developers.google.com/machine-learning/crash-course/numerical-data/normalization\nLicense: CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/)\nChanges: HTML lesson converted to UTF-8 TXT; navigation, multiple-choice quizzes, figures, captions, code blocks and generated key takeaways omitted; attribution header added.\n\nAfter examining your data through statistical and visualization techniques,\nyou should transform your data in ways that will help your model train more\neffectively. The goal of\nnormalization is to transform\nfeatures to be on a similar scale. For example, consider the following two\nfeatures:\n\nFeature X spans the range 154 to 24,917,482.\n\nFeature Y spans the range 5 to 22.\n\nThese two features span very different ranges. Normalization might manipulate\n"
+    },
+    "C186": {
+      "chunk_id": "chunk_cba54b16337160e50dc26bab906a10046b9e8dd498ddb692ca70ecb2e8bb87ad",
+      "file_name": "11_google_classification_metrics.txt",
+      "page": null,
+      "text": "sets, where one class appears very rarely, say 1% of\nthe time, a model that predicts negative 100% of the time would score 99% on\naccuracy, despite being useless.\n\nNote: In machine learning (ML), words like\nrecall, precision, and accuracy have mathematical\ndefinitions that may differ from, or be more specific than, more commonly\nused meanings of the word.\n\nRecall, or true positive rate\n\nThe true positive rate (TPR), or the proportion of all actual positives that\nwere classified correctly as positives, is also known as\nrecall.\n\nRecall is mathematically defined as:\n\n\\[\\text{Recall (or TPR)} =\n\\frac{\\text{correctly classified actual positives}}{\\text{all actual positives}}\n= \\frac{TP}{TP+FN}\\]\n\nFalse negatives are actual positives that were misclassified as negatives, which\nis why they appear in the den"
+    },
+    "C188": {
+      "chunk_id": "chunk_cc65e6f72f1c1ffe20ebd7f3fad294ef6fab076c252571eb366289bc50d619e6",
+      "file_name": "11_google_classification_metrics.txt",
+      "page": null,
+      "text": "\\frac{TP}{TP+FN}\\]\n\nFalse negatives are actual positives that were misclassified as negatives, which\nis why they appear in the denominator. In the spam classification example,\nrecall measures the fraction of spam emails that were correctly classified as\nspam. This is why another name for recall is probability of detection: it\nanswers the question \"What fraction of spam emails are detected by this\nmodel?\"\n\nA hypothetical perfect model would have zero false negatives and therefore a\nrecall (TPR) of 1.0, which is to say, a 100% detection rate.\n\nIn an imbalanced dataset where the number of actual positives is very\nlow, recall is a more meaningful metric than accuracy because it\nmeasures the ability of the model to correctly identify all positive instances.\nFor applications like disease prediction, correctly identifying the positive\ncases is crucial. A false negative typically has more serious consequences\nthan a false positive. For a "
+    },
+    "C189": {
+      "chunk_id": "chunk_d0eee875a354b7457724b5bd8549202dfc03cd375b1c0e1be042e7581f467480",
+      "file_name": "07_google_hyperparameters.txt",
+      "page": null,
+      "text": "of the model itself. In\nother words, hyperparameters are values that you control; parameters are values\nthat the model calculates during training.\n\nLearning rate\n\nLearning rate is a\nfloating point number you set that influences how quickly the\nmodel converges. If the learning rate is too low, the model can take a long time\nto converge. However, if the learning rate is too high, the model never\nconverges, but instead bounces around the weights and bias that minimize the\nloss. The goal is to pick a learning rate that's not too high nor too low so\nthat the model converges quickly.\n\nThe learning rate determines the magnitude of the changes to make to the weights\nand bias during each step of the gradient descent process. The model multiplies\nthe gradient by the learning rate to determine the model's parameters (weight\nand bias values) for the next iteration. In the third step of gradient\ndescent, the \"small amount\" to move in the direction\nof negative slope refers to "
+    },
+    "C190": {
+      "chunk_id": "chunk_d14e94dc83474b16133d10a1ea2e43546129fe005135a7bf8e1e0251b868f772",
+      "file_name": "11_google_classification_metrics.txt",
+      "page": null,
+      "text": "and zero false negatives, and\ntherefore an accuracy of 1.0, or 100%.\n\nBecause it incorporates all four outcomes from the\nconfusion matrix\n(TP, FP, TN, FN), given a balanced\ndataset, with similar numbers of examples in both classes, accuracy can\nserve as a coarse-grained measure of model quality. For this reason, it is often\nthe default evaluation metric used for generic or unspecified models\ncarrying out generic or unspecified tasks.\n\nHowever, when the dataset is imbalanced,\nor where one kind of mistake (FN or FP) is more costly than the other, which is\nthe case in most real-world applications, it's better to optimize for one of\nthe other metrics instead.\n\nFor heavily imbalanced datasets, where one class appears very rarely, say 1% of\nthe time, a model that predicts negative 100% of the time would score 99% on\naccuracy, despite being useless.\n\nNote"
+    },
+    "C193": {
+      "chunk_id": "chunk_d3584c698d409e46edce5907482e535c3b12935d4c765698dd36ea78c4782cb2",
+      "file_name": "02_mit_regularization_logistic_regression.pdf",
+      "page": 3,
+      "text": "(6) P (y = \u22121|x, \u03b8, \u03b80)\nSo for example, when we predict the same probability (1/2) for both classes, the log-odds\nterm is zero and we recover the decision boundary \u03b8T x + \u03b80 = 0. The precise functional\nform of the logistic function, or, equivalently, the fact that we chose to model log-odds\nwith the linear prediction, may seem a little arbitrary (but perhaps not more so than the\nhinge loss used with the SVM classi\ufb01er). We will derive the form of the logistic function\nlater on in the course based on certain assumptions about class-conditional distributions\nP (x|y = 1) and P (x|y = \u22121).\nIn order to better compare the logistic regression model with the SVM we will write the\nconditional probability P (y|x, \u03b8, \u03b80) a bit more succinctly. Speci\ufb01"
+    },
+    "C194": {
+      "chunk_id": "chunk_d3ac5ad888bbbd1852892faeb3582936dd602a62bde3aa179aa6b1941b91cf27",
+      "file_name": "12_google_roc_auc.txt",
+      "page": null,
+      "text": "characteristic curve (ROC)\n\nThe ROC curve\nis a visual representation of model performance across all thresholds.\nThe long version of the name, receiver operating characteristic, is a holdover\nfrom WWII radar detection.\n\nThe ROC curve is drawn by calculating the true positive rate (TPR)\nand false positive rate (FPR) at every possible threshold (in practice, at\nselected intervals), then graphing TPR over FPR. A perfect model,\nwhich at some threshold has a TPR of 1.0 and a FPR of 0.0, can\nbe represented by either a point at\n(0, 1) if all other thresholds are ignored, or by the following:\n\nArea under the curve (AUC)\n\nThe area under the ROC curve (AUC)\nrepresents the probability that the model,\nif given a randomly chosen positive and negative example, will rank the\npositive higher than the negative.\n\nThe perfect model above, containing a square with sides of length 1, has an\narea under the curve "
+    },
+    "C196": {
+      "chunk_id": "chunk_d4fe10a1e503df74268d6f06ba6dc729c1c2e25ff2ef9dcbe5c7b91dc6a0db51",
+      "file_name": "03_mit_linear_regression_bias_variance.pdf",
+      "page": 1,
+      "text": "of the response variable, conditioned on\nx, is \u03b8T x + \u03b80. More succinctly, we say that E{y|x} = \u03b8T x + \u03b80. It remains to associate\na distribution over the responses around such mean prediction. The simplest symmetric\ndistribution is the normal (Gaussian) distribution. In other words, we say that the responses\ny follow the normal pdf\n1 1 N (y; \u00b5, \u03c32) = \u221a\n2\u03c0\u03c32\nexp \u22122\u03c32 (y \u2212 \u00b5)2 (1)\nwhere \u00b5 = \u03b8T x + \u03b80. Our response model is therefore de\ufb01ned as\nP (y|x, \u03b8, \u03b80) = N (y; \u03b8T x + \u03b80, \u03c32) (2)\nSo, when the input is 1-dimensional, we predict a mean response that is a line in (x, y)\nspace, and assume that noise in y is normally distributed with zero "
+    },
+    "C201": {
+      "chunk_id": "chunk_dfa555ede83fa3bce32ee552bec087cbe614285482f5419d39b727dca511e8a0",
+      "file_name": "02_mit_regularization_logistic_regression.pdf",
+      "page": 3,
+      "text": "labels.\nHow should we train such models? A sensible criterion would seem to be to maximize the\nprobability that we predict the correct label in response to each example. Assuming each\nexample is labeled independently from others, this probability of assigning correct labels\nto examples is given by the product\nn\nL(\u03b8, \u03b80) = P (yt|xt, \u03b8, \u03b80) (9)\nt=1\nCite as: Tommi Jaakkola, course materials for 6.867 Machine Learning, Fall 2006. MIT OpenCourseWare\n(http://ocw.mit.edu/), Massachusetts Institute of Technology. Downloaded on [DD Month YYYY]."
+    },
+    "C202": {
+      "chunk_id": "chunk_e05fe5da61708e8f30c6b41d06306d9d47cb963a2ac400ba323e75c7f2748f2a",
+      "file_name": "14_google_normalization.txt",
+      "page": null,
+      "text": "following two\nfeatures:\n\nFeature X spans the range 154 to 24,917,482.\n\nFeature Y spans the range 5 to 22.\n\nThese two features span very different ranges. Normalization might manipulate\nX and Y so that they span a similar range, perhaps 0 to 1.\n\nNormalization provides the following benefits:\n\nHelps models converge more quickly during training.\nWhen different features have different ranges, gradient descent can\n\"bounce\" and slow convergence. That said, more advanced optimizers like\nAdagrad\nand Adam protect against this problem by\nchanging the effective learning rate over time.\n\nHelps models infer better predictions.\nWhen different features have different ranges, the resulting\nmodel might make somewhat less useful predictions.\n\nHelps avoid the \"NaN trap\" when feature values are very high.\nNaN is an abbreviation for\nnot a number. When a value in a model exceeds the\nfloating-point precision limit, the system sets the value to NaN instead\nof a number. When one number in the model becomes a NaN, other numbers in\n"
+    },
+    "C203": {
+      "chunk_id": "chunk_e0ba968f56cae089f59f4dd771e887a50b51f1f101c72874d6d2a30a14955173",
+      "file_name": "06_google_gradient_descent.txt",
+      "page": null,
+      "text": "a prediction as:\n\n$ f_{w,b}(x) = (w*x)+b $.\n\nWe'll write the actual value as: $ y $.\n\nWe'll calculate MSE using:\n\n$ \\frac{1}{M} \\sum_{i=1}^{M} (f_{w,b}(x_{(i)}) - y_{(i)})^2 $\n\nwhere $i$ represents the $ith$ training example and $M$ represents\nthe number of examples.\n\nWeight derivative\n\nThe derivative of the loss function with respect to the weight is written as:\n\n$ \\frac{\\partial }{\\partial w} \\frac{1}{M} \\sum_{i=1}^{M} (f_{w,b}(x_{(i)}) - y_{(i)})^2 $\n\nand "
+    },
+    "C204": {
+      "chunk_id": "chunk_e3b125612c4562662a52e59cbe711b4cffb35f8ca7d229f621e76fd5b88d16f2",
+      "file_name": "11_google_classification_metrics.txt",
+      "page": null,
+      "text": "classified, which is why they\nappear in the denominator. In the spam classification example, FPR measures the\nfraction of legitimate emails that were incorrectly classified as spam, or the\nmodel's rate of false alarms.\n\nA perfect model would have zero false positives and therefore a FPR of 0.0,\nwhich is to say, a 0% false alarm rate.\n\nFor an imbalanced dataset, FPR is generally a more informative metric than\naccuracy. However, if the number of actual negatives is very low, FPR may not be\nan ideal choice, due to its volatility. For example, if there are only four\nactual negatives in a dataset, one misclassification results in an FPR of 25%,\nwhile a second misclassification causes the FPR to jump to 50%. In cases like\nthis, precision (described next) may be a more stable metric for\nevaluating the effects of false positives.\n\nPrecision\n\nPrecision\nis "
+    },
+    "C206": {
+      "chunk_id": "chunk_e52b8b24db888fcefcdf3878ced30728a504f9115b40d00449fb0bca0338b522",
+      "file_name": "11_google_classification_metrics.txt",
+      "page": null,
+      "text": "Classification: Accuracy, recall, precision, and related metrics\nAuthor: Google for Developers / Machine Learning Crash Course\nSource: https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall\nLicense: CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/)\nChanges: HTML lesson converted to UTF-8 TXT; navigation, multiple-choice quizzes, figures, captions, code blocks and generated key takeaways omitted; attribution header added.\n\nTrue and false positives and negatives are used to calculate several useful\nmetrics for evaluating models. Which evaluation metrics are most\nmeaningful depends on the specific model and the specific task, the cost\nof different misclassifications, and whether the dataset is balanced or\nimbalanced.\n\nAll of the metrics in this section are calculated at a single fixed threshold,\nand change when the threshold changes"
+    },
+    "C207": {
+      "chunk_id": "chunk_e5a0dc27b43d91f775dd96c7d29ea0f86f853662eb2ba4657c304466dcee5584",
+      "file_name": "05_google_linear_loss.txt",
+      "page": null,
+      "text": "Linear regression: Loss\nAuthor: Google for Developers / Machine Learning Crash Course\nSource: https://developers.google.com/machine-learning/crash-course/linear-regression/loss\nLicense: CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/)\nChanges: HTML lesson converted to UTF-8 TXT; navigation, multiple-choice quizzes, figures, captions, code blocks and generated key takeaways omitted; attribution header added.\n\nLoss is a numerical metric that describes\nhow wrong a model's predictions\nare. Loss measures the distance between the model's predictions and the actual\nlabels. The goal of training a model is to minimize the loss, reducing it to its\nlowest possible value.\n\nIn the following image, you can visualize loss as arrows drawn from the data\npoints to the model. The arrows show how far the model's predictions are from\nthe actual values.\n\nFigure 8"
+    },
+    "C211": {
+      "chunk_id": "chunk_ef59c06e2ac70ac3364701d8e14af6b5890c90d5ba5016e9d76c8af377d1312b",
+      "file_name": "11_google_classification_metrics.txt",
+      "page": null,
+      "text": "in fact spam, or some\nbalance of the two, above some minimum accuracy level.\n\nMetric\nGuidance\n\nAccuracy\n\nUse as a rough indicator of model\ntraining progress/convergence for balanced datasets.\n\nFor model performance, use only in combination with other metrics.\n\nAvoid for imbalanced datasets. Consider using another metric.\n\nRecall\n\n(True positive rate)\nUse when false negatives are more\nexpensive than false positives.\n\nFalse positive rate\nUse when false positives are\nmore expensive than false negatives.\n\nPrecision\nUse when it's very important for\npositive predictions to be accurate.\n\n(Optional, advanced) F1 score\n\nThe F1 score is the harmonic mean (a\nkind of average) of precision and recall.\n\nMathematically, it is given by:\n\n\\[\\text{F1}=2*\\frac{\\text{precision * recall}}{\\text{precision + recall}}\n= \\frac{2\\text{TP}}{2\\text{TP + "
+    },
+    "C215": {
+      "chunk_id": "chunk_f0dfe79ea0188190c324ec0335137e0ec8767593d2d5cb033713285e10cfe351",
+      "file_name": "05_google_linear_loss.txt",
+      "page": null,
+      "text": "the absolute value of the difference between the actual value and the\nprediction.\n\nSquare the difference between the actual value and the prediction.\n\nTypes of loss\n\nIn linear regression, there are five main types of loss, which are outlined in\nthe following table.\n\nLoss type\nDefinition\nEquation\n\nL1 loss\n\nThe sum of the absolute values of the difference\nbetween the predicted values and the actual values.\n\n$ \u2211 | actual\\ value - predicted\\ value | $\n\nMean absolute error (MAE)\n\nThe average of L1 losses across a set of N examples.\n\n$ \\frac{1}{N} \u2211 | actual\\ value - predicted\\ value | $\n\nL2 loss\n\nThe sum of the squared difference\nbetween the predicted values and the actual values.\n\n$ \u2211(actual\\ value - predicted\\ value)^2 $\n\nMean squared error (MSE)\n\nThe average of L2 losses across a set of N examples.\n\n$ \\frac{1}{N} \u2211 (actual\\ value - predicted\\ value)^2 $\n\n"
+    },
+    "C216": {
+      "chunk_id": "chunk_f17c7395bb0e76c4e8d5680809d151e5d2c62d0831ce0a95f70c843c9eb76b2a",
+      "file_name": "11_google_classification_metrics.txt",
+      "page": null,
+      "text": "where the number of actual positives is very, very\nlow, say 1-2 examples in total, precision is less meaningful and less useful\nas a metric.\n\nPrecision improves as false positives decrease, while recall improves when\nfalse negatives decrease. But as seen in the previous section, increasing the\nclassification threshold tends to decrease the number of false positives and\nincrease the number of false negatives, while decreasing the threshold has the\nopposite effects. As a result, precision and recall often show an inverse\nrelationship, where improving one of them worsens the other.\n\nTry it yourself:\n\nWhat does NaN mean in the metrics?\n\nNaN, or \"not a number,\" appears when dividing by 0, which can happen\nwith any of these metrics. When TP and FP are both 0, for example, the\nformula for precision has 0 in the denominator, resulting in NaN. While\nin some cases NaN can indicate perfect performance and could be\nreplaced by a score of 1.0, it "
+    },
+    "C219": {
+      "chunk_id": "chunk_f55a7c18024b23e555b8457734b66277fb374c603f4b2961d271047fb446622b",
+      "file_name": "10_google_thresholds.txt",
+      "page": null,
+      "text": "-spam.\nThese are the legitimate emails that are sent\ndirectly to the inbox.\n\nNotice that the total in each row gives all predicted positives (TP + FP) and\nall predicted negatives (FN + TN), regardless of validity. The total in each\ncolumn, meanwhile, gives all real positives (TP + FN) and all real negatives\n(FP + TN) regardless of model classification.\n\nWhen the total of actual positives is not close to the total of actual\nnegatives, the dataset is\nimbalanced. An instance\nof an imbalanced dataset might be a set of thousands of photos of clouds, where\nthe rare cloud type you are interested in, say, volutus clouds, only appears\na few times.\n\nEffect of threshold on true and false positives and negatives\n\nDifferent thresholds usually result in different numbers of true and false\npositives and true and false negatives. The following video explains why this is\nthe case.\n\n"
+    },
+    "C220": {
+      "chunk_id": "chunk_f5c5693133c97ad59725b4eb65e553d811d9ea023cbb9a9579f4a3f96c93952d",
+      "file_name": "02_mit_regularization_logistic_regression.pdf",
+      "page": 4,
+      "text": ", \u03b80) (11)\nt=1\nn\n= \u2212 log g yt(\u03b8T xt + \u03b80) (12)\nt=1\nn\ufffd \ufffd \ufffd \ufffd\ufffd\n= log 1 + exp \u2212yt(\u03b8T xt + \u03b80) (13)\nt=1\nWe can interpret this similarly to the sum of the hinge losses in the SVM approach. As\nbefore, we have a base loss function, here log[1 + exp(\u2212z)] (Figure 1b), similar to the hinge\nloss (Figure 1a), and this loss depends only on the value of the \u201cmargin\u201d yt(\u03b8T xt + \u03b80) for\neach example. The di\ufb00erence here is that we have a clear probabilistic interpretation of\nthe \u201cstrength\u201d of the prediction, i.e., how high P (yt|xt, \u03b8, \u03b80) is for any particular example.\nHaving a probabilistic interpretation does not, "
+    },
+    "C221": {
+      "chunk_id": "chunk_f83528495cb1c0fcf5cbbd19bde93b730cc242ddbb490696f5d30f35f8bcf4cc",
+      "file_name": "07_google_hyperparameters.txt",
+      "page": null,
+      "text": "is an undesirable\ncharacteristic that should be eliminated. However, a certain amount of noise can\nbe a good thing. In later modules, you'll learn how noise can help a model\ngeneralize better and find the\noptimal weights and bias in a neural\nnetwork.\n\nEpochs\n\nDuring training, an epoch means that the\nmodel has processed every example in the training set once. For example, given\na training set with 1,000 examples and a mini-batch size of 100 examples, it\nwill take the model 10 iterations to\ncomplete one epoch.\n\nTraining typically requires many epochs. That is, the system needs to process\nevery example in the training set multiple times.\n\nThe number of epochs is a hyperparameter you set before the model begins\ntraining. In many cases, you'll need to experiment with how many epochs it takes\nfor the model to converge. In general, more epochs produces a better model, but\nalso takes more time to train.\n\nFigure 26. Full batch versus "
+    },
+    "C223": {
+      "chunk_id": "chunk_fbdabda0591054eb0b0ad5eed22b3844384f8737c2dc44b9de7b5a40f2a92b18",
+      "file_name": "08_google_sigmoid.txt",
+      "page": null,
+      "text": ",\nalso known as the\nsigmoid function\n(sigmoid means \"s-shaped\"), has the\nformula:\n\n\\[f(x) = \\frac{1}{1 + e^{-x}}\\]\n\nwhere:\n\nf(x) is the output of the sigmoid function.\n\ne is Euler's number:\na mathematical constant \u2248 2.71828.\n\nx is the input to the sigmoid function.\n\nFigure 1 shows the corresponding graph of the sigmoid function.\n\nAs the input, x, increases, the output of the sigmoid function approaches\nbut never reaches 1. Similarly, as the input decreases, the sigmoid\nfunction's output approaches but never reaches 0.\n\nClick here for a deeper dive into the math\nbehind the sigmoid function\n\nThe table below shows the output values of the sigmoid function for\ninput values in the range \u20137 to 7. Note how quickly the sigmoid approaches\n0 for "
+    },
+    "C225": {
+      "chunk_id": "chunk_ff78edf77c3598c25fdcd69992500a18af5cad672ead2e4b28cc556fee6ba258",
+      "file_name": "14_google_normalization.txt",
+      "page": null,
+      "text": "sufficient examples of all ages.\n\nNote: Most real-world features do not meet all of the criteria for linear\nscaling. Z-score scaling is typically a better normalization choice than\nlinear scaling.\n\nSuppose your model has a feature named net_worth that holds the net\nworth of different people. Would linear scaling be a good normalization\ntechnique for net_worth? Why or why not?\n\nClick the icon to see the answer.\n\nAnswer: Linear scaling would be a poor choice for normalizing\nnet_worth. This feature contains many outliers, and the values\nare not uniformly distributed across its primary range. Most people would\nbe squeezed within a very narrow band of the overall range.\n\nZ-score scaling\n\nA Z-score is the number of standard deviations a value is from the mean.\nFor example, a value that is 2 standard deviations greater than the mean\nhas a Z-score of +2.0. A value that is 1.5 standard deviations less than\nthe mean has a "
+    }
+  }
+}

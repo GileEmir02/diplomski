@@ -1,0 +1,80 @@
+Logistic regression: Loss and regularization
+Author: Google for Developers / Machine Learning Crash Course
+Source: https://developers.google.com/machine-learning/crash-course/logistic-regression/loss-regularization
+License: CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/)
+Changes: HTML lesson converted to UTF-8 TXT; navigation, multiple-choice quizzes, figures, captions, code blocks and generated key takeaways omitted; attribution header added.
+
+Logistic regression
+models are trained using the same process as
+linear regression
+models, with two key distinctions:
+
+Logistic regression models use
+Log Loss as the loss function
+instead of squared loss.
+
+Applying regularization
+is critical to prevent
+overfitting.
+
+The following sections discuss these two considerations in more depth.
+
+Log Loss
+
+In the Linear regression module,
+you used squared loss (also called
+L2 loss) as the
+loss function.
+Squared loss works well for a linear
+model where the rate of change of the output values is constant. For example,
+given the linear model $y' = b + 3x_1$, each time you increment the input
+value $x_1$ by 1, the output value $y'$ increases by 3.
+
+However, the rate of change of a logistic regression model is not constant.
+As you saw in Calculating a probability, the
+sigmoid curve is s-shaped
+rather than linear. When the log-odds ($z$) value is closer to 0, small
+increases in $z$ result in much larger changes to $y$ than when $z$ is a large
+positive or negative number. The following table shows the sigmoid function's
+output for input values from 5 to 10, as well as the corresponding precision
+required to capture the differences in the results.
+
+input
+logistic output
+required digits of precision
+
+5
+0.993
+3
+
+6
+0.997
+3
+
+7
+0.999
+3
+
+8
+0.9997
+4
+
+9
+0.9999
+4
+
+10
+0.99998
+5
+
+If you used squared loss to calculate errors for the sigmoid function, as the
+output got closer and closer to 0 and 1, you would need more memory to
+preserve the precision needed to track these values.
+
+Instead, the loss function for logistic regression is
+Log Loss. The
+Log Loss equation returns the logarithm of the magnitude of the change, rather
+than just the distance from data to prediction. Log Loss is calculated as
+follows:
+
+$\text{Log Loss} = -\frac{1}{N}\sum_{i=1}^{N} [y_i\log(y_i') + (1 - y_i)\log(1 - y_i')]$

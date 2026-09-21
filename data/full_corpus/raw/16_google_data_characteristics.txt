@@ -1,0 +1,207 @@
+Datasets: Data characteristics
+Author: Google for Developers / Machine Learning Crash Course
+Source: https://developers.google.com/machine-learning/crash-course/overfitting/data-characteristics
+License: CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/)
+Changes: HTML lesson converted to UTF-8 TXT; navigation, multiple-choice quizzes, figures, captions, code blocks and generated key takeaways omitted; attribution header added.
+
+A dataset is a collection of
+examples.
+
+Many datasets store data in tables (grids), for example, as
+comma-separated values (CSV) or directly from spreadsheets or
+database tables. Tables are an intuitive input format for machine
+learning models.
+You can imagine each row of the table as an example
+and each column as a potential feature or label.
+That said, datasets may also be derived from other formats, including
+log files and protocol buffers.
+
+Regardless of the format, your ML model is only as good as the
+data it trains on. This section examines key data characteristics.
+
+Types of data
+
+A dataset could contain many kinds of datatypes, including but certainly
+not limited to:
+
+numerical data, which is covered in a separate
+unit
+
+categorical data, which is covered in a separate
+unit
+
+human language, including individual words and sentences, all the way up to
+entire text documents
+
+multimedia (such as images, videos, and audio files)
+
+outputs from other ML systems
+
+embedding vectors, which are
+covered in a later unit
+
+Quantity of data
+
+As a rough rule of thumb, your model should train on at least an order
+of magnitude (or two) more examples than trainable parameters. However, good
+models generally train on substantially more examples than that.
+
+Models trained on large datasets with few
+features
+generally outperform models trained on small datasets with
+a lot of features.
+Google has historically had great success training simple models on
+large datasets.
+
+Different datasets for different machine learning programs may require wildly
+different amounts of examples to build a useful model. For some relatively
+simple problems, a few dozen examples might be sufficient. For other problems,
+a trillion examples might be insufficient.
+
+It's possible to get good results from a small dataset if you are adapting
+an existing model already trained on large quantities of data from the
+same schema.
+
+Quality and reliability of data
+
+Everyone prefers high quality to low quality, but quality is such a vague
+concept that it could be defined many different ways. This course defines
+quality pragmatically:
+
+A high-quality dataset helps your model accomplish its goal.
+A low quality dataset inhibits your model from accomplishing its goal.
+
+A high-quality dataset is usually also reliable.
+Reliability refers to the degree to which you can trust your data.
+A model trained on a reliable dataset is more likely to yield useful
+predictions than a model trained on unreliable data.
+
+In measuring reliability, you must determine:
+
+How common are label errors? For example, if your data is
+labeled by humans, how often did your human raters make mistakes?
+
+Are your features noisy? That is, do the values in your features
+contain errors? Be realistic—you can't purge your dataset
+of all noise. Some noise is normal; for example, GPS measurements of any
+location always fluctuate a little, week to week.
+
+Is the data properly filtered for your problem? For example,
+should your dataset include search queries from bots? If you're
+building a spam-detection system, then likely the answer is yes.
+However, if you're trying to improve search results for humans, then no.
+
+The following are common causes of unreliable data in datasets:
+
+Omitted values. For example, a person forgot to enter a value for a
+house's age.
+
+Duplicate examples. For example, a server mistakenly uploaded the same
+log entries twice.
+
+Bad feature values. For example, someone typed an extra digit, or a
+thermometer was left out in the sun.
+
+Bad labels. For example, a person mistakenly labeled a picture of an
+oak tree as a maple tree.
+
+Bad sections of data. For example, a certain feature is very reliable,
+except for that one day when the network kept crashing.
+
+We recommend using automation to flag unreliable data. For example,
+unit tests that define or rely on an external formal data schema can
+flag values that fall outside of a defined range.
+
+Note: Any sufficiently large or diverse dataset almost certainly contains
+outliers that fall outside your
+data schema or unit test bands.
+Determining how to handle outliers is an important part of machine learning.
+The Numerical data
+unit
+details how to handle numeric outliers.
+
+Complete vs. incomplete examples
+
+In a perfect world, each example is complete; that is, each example contains
+a value for each feature.
+
+Unfortunately, real-world examples are often incomplete, meaning that at
+least one feature value is missing.
+
+Don't train a model on incomplete examples. Instead, fix or eliminate
+incomplete examples by doing one of the following:
+
+Delete incomplete examples.
+
+Impute missing values;
+that is, convert the incomplete example to a complete example by providing
+well-reasoned guesses for the missing values.
+
+If the dataset contains enough complete examples to train a useful model,
+then consider deleting the incomplete examples.
+Similarly, if only one feature is missing a significant amount of data and that
+one feature probably can't help the model much, then consider deleting
+that feature from the model inputs and seeing how much quality is lost by its
+removal. If the model works just or almost as well without it, that's great.
+Conversely, if you don't have enough complete examples to train a useful model,
+then you might consider imputing missing values.
+
+It's fine to delete useless or redundant examples, but it's bad to delete
+important examples. Unfortunately, it can be difficult to differentiate
+between useless and useful examples. If you can't decide whether
+to delete or impute, consider building two datasets: one formed by deleting
+incomplete examples and the other by imputing.
+Then, determine which dataset trains the better model.
+
+Click the icon to learn more about imputation handling.
+
+Clever algorithms can impute some pretty good missing values;
+however, imputed values are rarely as good as the actual values.
+Therefore, a good dataset tells the model which values are imputed and
+which are actual. One way to do this is to add an extra Boolean column
+to the dataset that indicates whether a particular feature's value
+is imputed. For example, given a feature named temperature,
+you could add an extra Boolean feature named something like
+temperature_is_imputed. Then, during training, the model will
+probably gradually learn to trust examples containing imputed values for
+feature temperature less than examples containing
+actual (non-imputed) values.
+
+Imputation is the process of generating well-reasoned data, not random or
+deceptive data. Be careful: good imputation can improve your model; bad
+imputation can hurt your model.
+
+One common algorithm is to use the mean or median as the imputed value.
+Consequently, when you represent a numerical feature with
+Z-scores, then
+the imputed value is typically 0 (because 0 is generally the mean Z-score).
+
+A sorted dataset, like the one in the
+following exercise, can sometimes simplify imputation. However,
+it is a bad idea to train on a sorted dataset. So, after
+imputation, randomize the order of examples in the training set.
+
+Here are two columns of a dataset sorted by Timestamp.
+
+Timestamp Temperature
+June 8, 2023 09:00 12
+June 8, 2023 10:00 18
+June 8, 2023 11:00 missing
+June 8, 2023 12:00 24
+June 8, 2023 13:00 38
+
+Key terms:
+
+Dataset
+
+Embedding vector
+
+Example
+
+Feature
+
+Model
+
+Value imputation
+
+Z-score normalization

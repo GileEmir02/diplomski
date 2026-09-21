@@ -1,0 +1,11 @@
+{
+    "model_name": "sentence-transformers/multi-qa-MiniLM-L6-cos-v1",
+    "revision": "b207367332321f8e44f96e224ef15bc607f4dbf0",
+    "source_url": "https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1",
+    "model_card_url": "https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1/blob/b207367332321f8e44f96e224ef15bc607f4dbf0/README.md",
+    "license_status": "No explicit license found in the pinned model card or repository file list.",
+    "license_verified": false,
+    "usage_scope": "Local non-commercial diploma research, as clarified by the user.",
+    "redistribute_weights": false,
+    "note": "Do not infer a model license from the Sentence Transformers library license. Non-commercial use does not automatically remove licensing obligations."
+}

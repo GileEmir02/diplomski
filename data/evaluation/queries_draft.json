@@ -1,0 +1,1333 @@
+{
+  "schema_version": 1,
+  "annotation_status": "draft",
+  "annotation_method": "AI-assisted source-grounded draft; not human-reviewed; no retrieval rankings used",
+  "corpus_fingerprint": "c676ae09b8169b86669afed1e881714cae78d5fd0f95a676c51ec0ae525c4dfa",
+  "config_fingerprint": "367370a1f551ff4533e171c4f512550296d6991c54ac5eaba5f61c5a14956b17",
+  "queries": [
+    {
+      "query_id": "dev-001",
+      "query": "Why is regularization considered critical when training logistic regression?",
+      "split": "dev",
+      "query_type": "direct",
+      "topic": "regularization",
+      "intent_group": "dev-logistic-regularization-purpose",
+      "relevant_chunk_ids": [
+        "chunk_b9284d28b2b4acc2c70eef6e34621726b2e75871dff9dea6d0b3c84317c9e94c",
+        "chunk_d6619e1e92d48eb34b864bca280c7977846841b812dc381bdb333be2f8819613",
+        "chunk_556ec26fcd954f62cf0390ca4f906fbcb9e4a8baa4369537993e2486f554036d"
+      ],
+      "answer_summary": "Regularization is used to reduce the risk that logistic regression overfits its training data.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_b9284d28b2b4acc2c70eef6e34621726b2e75871dff9dea6d0b3c84317c9e94c",
+          "quote": "Applying regularization is critical to prevent overfitting."
+        },
+        {
+          "chunk_id": "chunk_d6619e1e92d48eb34b864bca280c7977846841b812dc381bdb333be2f8819613",
+          "quote": "A high regularization rate: Strengthens the influence of regularization, thereby reducing the chances of overfitting."
+        },
+        {
+          "chunk_id": "chunk_556ec26fcd954f62cf0390ca4f906fbcb9e4a8baa4369537993e2486f554036d",
+          "quote": "Setting the regularization rate to zero removes regularization completely. In this case, training focuses exclusively on minimizing loss, which poses the highest possible overfitting risk."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "dev-002",
+      "query": "What fitting problem does a penalty term help guard a logistic classifier against?",
+      "split": "dev",
+      "query_type": "synonym",
+      "topic": "regularization",
+      "intent_group": "dev-logistic-regularization-purpose",
+      "relevant_chunk_ids": [
+        "chunk_b9284d28b2b4acc2c70eef6e34621726b2e75871dff9dea6d0b3c84317c9e94c",
+        "chunk_d6619e1e92d48eb34b864bca280c7977846841b812dc381bdb333be2f8819613",
+        "chunk_556ec26fcd954f62cf0390ca4f906fbcb9e4a8baa4369537993e2486f554036d"
+      ],
+      "answer_summary": "The penalty guards against overfitting the training examples.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_b9284d28b2b4acc2c70eef6e34621726b2e75871dff9dea6d0b3c84317c9e94c",
+          "quote": "Applying regularization is critical to prevent overfitting."
+        },
+        {
+          "chunk_id": "chunk_d6619e1e92d48eb34b864bca280c7977846841b812dc381bdb333be2f8819613",
+          "quote": "A high regularization rate: Strengthens the influence of regularization, thereby reducing the chances of overfitting."
+        },
+        {
+          "chunk_id": "chunk_556ec26fcd954f62cf0390ca4f906fbcb9e4a8baa4369537993e2486f554036d",
+          "quote": "Setting the regularization rate to zero removes regularization completely. In this case, training focuses exclusively on minimizing loss, which poses the highest possible overfitting risk."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "dev-003",
+      "query": "Without a complexity constraint, what failure is logistic-regression training especially meant to avoid?",
+      "split": "dev",
+      "query_type": "paraphrase",
+      "topic": "regularization",
+      "intent_group": "dev-logistic-regularization-purpose",
+      "relevant_chunk_ids": [
+        "chunk_b9284d28b2b4acc2c70eef6e34621726b2e75871dff9dea6d0b3c84317c9e94c",
+        "chunk_d6619e1e92d48eb34b864bca280c7977846841b812dc381bdb333be2f8819613",
+        "chunk_556ec26fcd954f62cf0390ca4f906fbcb9e4a8baa4369537993e2486f554036d"
+      ],
+      "answer_summary": "The intended safeguard is against overfitting.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_b9284d28b2b4acc2c70eef6e34621726b2e75871dff9dea6d0b3c84317c9e94c",
+          "quote": "Applying regularization is critical to prevent overfitting."
+        },
+        {
+          "chunk_id": "chunk_d6619e1e92d48eb34b864bca280c7977846841b812dc381bdb333be2f8819613",
+          "quote": "A high regularization rate: Strengthens the influence of regularization, thereby reducing the chances of overfitting."
+        },
+        {
+          "chunk_id": "chunk_556ec26fcd954f62cf0390ca4f906fbcb9e4a8baa4369537993e2486f554036d",
+          "quote": "Setting the regularization rate to zero removes regularization completely. In this case, training focuses exclusively on minimizing loss, which poses the highest possible overfitting risk."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "dev-004",
+      "query": "Why should an ML model be tested on examples different from its training examples?",
+      "split": "dev",
+      "query_type": "direct",
+      "topic": "dataset_splitting",
+      "intent_group": "dev-held-out-evaluation-purpose",
+      "relevant_chunk_ids": [
+        "chunk_0b412e02614ea3c8347c11bf7825845a2343e24dbb6834b8bb619b2125a58ce2",
+        "chunk_b2e122cffdd56eae17ffe84b9da15a4a5ed70567d2112dddefc0109f9a8c0404",
+        "chunk_5fcb302fa078e3843bf453a098d7d5619c747ece7f44d82d3a9537a098af6dff",
+        "chunk_05f404222f5fcb55fc4ee9d05d6f531ada06cd3120d4ccfe33655e25b60e31a0",
+        "chunk_a0671c2caf352c84c0eeff1622a030b46aae1e83b96a29939124d44583089047",
+        "chunk_0510ccd37a2f34f95215513381b6ceee70895f0036170fa60bbdd8af23aff56a",
+        "chunk_c3dfb8e061579d68eefd0e2e93810a39864ddcc4acfea2520d4466ef7c154c2c"
+      ],
+      "answer_summary": "Held-out, nonduplicate examples provide a fairer and stronger test of whether predictions transfer beyond training cases.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_0b412e02614ea3c8347c11bf7825845a2343e24dbb6834b8bb619b2125a58ce2",
+          "quote": "You should test a model against a different set of examples than those used to train the model."
+        },
+        {
+          "chunk_id": "chunk_b2e122cffdd56eae17ffe84b9da15a4a5ed70567d2112dddefc0109f9a8c0404",
+          "quote": "testing on different examples is stronger proof of your model's fitness than testing on the same set of examples."
+        },
+        {
+          "chunk_id": "chunk_5fcb302fa078e3843bf453a098d7d5619c747ece7f44d82d3a9537a098af6dff",
+          "quote": "The only fair test of a model is against new examples, not duplicates."
+        },
+        {
+          "chunk_id": "chunk_05f404222f5fcb55fc4ee9d05d6f531ada06cd3120d4ccfe33655e25b60e31a0",
+          "quote": "Overfitting means creating a model that matches (memorizes) the training set so closely that the model fails to make correct predictions on new data."
+        },
+        {
+          "chunk_id": "chunk_a0671c2caf352c84c0eeff1622a030b46aae1e83b96a29939124d44583089047",
+          "quote": "an overfit model makes excellent predictions on the training set but poor predictions on new data."
+        },
+        {
+          "chunk_id": "chunk_0510ccd37a2f34f95215513381b6ceee70895f0036170fa60bbdd8af23aff56a",
+          "quote": "A model trains on a training set, but the real test of a model's worth is how well it makes predictions on new examples, particularly on real-world data. While developing a model, your test set serves as a proxy for real-world data."
+        },
+        {
+          "chunk_id": "chunk_c3dfb8e061579d68eefd0e2e93810a39864ddcc4acfea2520d4466ef7c154c2c",
+          "quote": "Our task is to ﬁnd a rule that works well for all new images we would encounter in the access control setting; the training set is merely a helpful source of information to ﬁnd such a function."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "dev-005",
+      "query": "What makes unseen evaluation cases a stronger check than reusing the fitted cases?",
+      "split": "dev",
+      "query_type": "synonym",
+      "topic": "dataset_splitting",
+      "intent_group": "dev-held-out-evaluation-purpose",
+      "relevant_chunk_ids": [
+        "chunk_0b412e02614ea3c8347c11bf7825845a2343e24dbb6834b8bb619b2125a58ce2",
+        "chunk_b2e122cffdd56eae17ffe84b9da15a4a5ed70567d2112dddefc0109f9a8c0404",
+        "chunk_5fcb302fa078e3843bf453a098d7d5619c747ece7f44d82d3a9537a098af6dff",
+        "chunk_05f404222f5fcb55fc4ee9d05d6f531ada06cd3120d4ccfe33655e25b60e31a0",
+        "chunk_a0671c2caf352c84c0eeff1622a030b46aae1e83b96a29939124d44583089047",
+        "chunk_0510ccd37a2f34f95215513381b6ceee70895f0036170fa60bbdd8af23aff56a",
+        "chunk_c3dfb8e061579d68eefd0e2e93810a39864ddcc4acfea2520d4466ef7c154c2c"
+      ],
+      "answer_summary": "Unseen cases test fitness beyond the examples the model already learned.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_0b412e02614ea3c8347c11bf7825845a2343e24dbb6834b8bb619b2125a58ce2",
+          "quote": "You should test a model against a different set of examples than those used to train the model."
+        },
+        {
+          "chunk_id": "chunk_b2e122cffdd56eae17ffe84b9da15a4a5ed70567d2112dddefc0109f9a8c0404",
+          "quote": "testing on different examples is stronger proof of your model's fitness than testing on the same set of examples."
+        },
+        {
+          "chunk_id": "chunk_5fcb302fa078e3843bf453a098d7d5619c747ece7f44d82d3a9537a098af6dff",
+          "quote": "The only fair test of a model is against new examples, not duplicates."
+        },
+        {
+          "chunk_id": "chunk_05f404222f5fcb55fc4ee9d05d6f531ada06cd3120d4ccfe33655e25b60e31a0",
+          "quote": "Overfitting means creating a model that matches (memorizes) the training set so closely that the model fails to make correct predictions on new data."
+        },
+        {
+          "chunk_id": "chunk_a0671c2caf352c84c0eeff1622a030b46aae1e83b96a29939124d44583089047",
+          "quote": "an overfit model makes excellent predictions on the training set but poor predictions on new data."
+        },
+        {
+          "chunk_id": "chunk_0510ccd37a2f34f95215513381b6ceee70895f0036170fa60bbdd8af23aff56a",
+          "quote": "A model trains on a training set, but the real test of a model's worth is how well it makes predictions on new examples, particularly on real-world data. While developing a model, your test set serves as a proxy for real-world data."
+        },
+        {
+          "chunk_id": "chunk_c3dfb8e061579d68eefd0e2e93810a39864ddcc4acfea2520d4466ef7c154c2c",
+          "quote": "Our task is to ﬁnd a rule that works well for all new images we would encounter in the access control setting; the training set is merely a helpful source of information to ﬁnd such a function."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "dev-006",
+      "query": "Why is evaluating a model on the same records it learned from weak evidence of fitness?",
+      "split": "dev",
+      "query_type": "paraphrase",
+      "topic": "dataset_splitting",
+      "intent_group": "dev-held-out-evaluation-purpose",
+      "relevant_chunk_ids": [
+        "chunk_0b412e02614ea3c8347c11bf7825845a2343e24dbb6834b8bb619b2125a58ce2",
+        "chunk_b2e122cffdd56eae17ffe84b9da15a4a5ed70567d2112dddefc0109f9a8c0404",
+        "chunk_5fcb302fa078e3843bf453a098d7d5619c747ece7f44d82d3a9537a098af6dff",
+        "chunk_05f404222f5fcb55fc4ee9d05d6f531ada06cd3120d4ccfe33655e25b60e31a0",
+        "chunk_a0671c2caf352c84c0eeff1622a030b46aae1e83b96a29939124d44583089047",
+        "chunk_0510ccd37a2f34f95215513381b6ceee70895f0036170fa60bbdd8af23aff56a",
+        "chunk_c3dfb8e061579d68eefd0e2e93810a39864ddcc4acfea2520d4466ef7c154c2c"
+      ],
+      "answer_summary": "Reusing training records is not a fair test of performance on genuinely new examples.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_0b412e02614ea3c8347c11bf7825845a2343e24dbb6834b8bb619b2125a58ce2",
+          "quote": "You should test a model against a different set of examples than those used to train the model."
+        },
+        {
+          "chunk_id": "chunk_b2e122cffdd56eae17ffe84b9da15a4a5ed70567d2112dddefc0109f9a8c0404",
+          "quote": "testing on different examples is stronger proof of your model's fitness than testing on the same set of examples."
+        },
+        {
+          "chunk_id": "chunk_5fcb302fa078e3843bf453a098d7d5619c747ece7f44d82d3a9537a098af6dff",
+          "quote": "The only fair test of a model is against new examples, not duplicates."
+        },
+        {
+          "chunk_id": "chunk_05f404222f5fcb55fc4ee9d05d6f531ada06cd3120d4ccfe33655e25b60e31a0",
+          "quote": "Overfitting means creating a model that matches (memorizes) the training set so closely that the model fails to make correct predictions on new data."
+        },
+        {
+          "chunk_id": "chunk_a0671c2caf352c84c0eeff1622a030b46aae1e83b96a29939124d44583089047",
+          "quote": "an overfit model makes excellent predictions on the training set but poor predictions on new data."
+        },
+        {
+          "chunk_id": "chunk_0510ccd37a2f34f95215513381b6ceee70895f0036170fa60bbdd8af23aff56a",
+          "quote": "A model trains on a training set, but the real test of a model's worth is how well it makes predictions on new examples, particularly on real-world data. While developing a model, your test set serves as a proxy for real-world data."
+        },
+        {
+          "chunk_id": "chunk_c3dfb8e061579d68eefd0e2e93810a39864ddcc4acfea2520d4466ef7c154c2c",
+          "quote": "Our task is to ﬁnd a rule that works well for all new images we would encounter in the access control setting; the training set is merely a helpful source of information to ﬁnd such a function."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "dev-007",
+      "query": "What kind of response is regression intended to predict in the MIT lecture?",
+      "split": "dev",
+      "query_type": "direct",
+      "topic": "classification_vs_regression",
+      "intent_group": "dev-regression-continuous-target",
+      "relevant_chunk_ids": [
+        "chunk_ac5542cb088e933b2b00367503aec763c736878db6a1c47b89459a298d54d9ff"
+      ],
+      "answer_summary": "Regression predicts a real-valued continuous response for each example.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_ac5542cb088e933b2b00367503aec763c736878db6a1c47b89459a298d54d9ff",
+          "quote": "The simplest of them is regression where the goal is to predict a continuous response yt ∈ R to each example vector."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "dev-008",
+      "query": "What sort of target separates the regression setting described in the notes from label prediction?",
+      "split": "dev",
+      "query_type": "paraphrase",
+      "topic": "classification_vs_regression",
+      "intent_group": "dev-regression-continuous-target",
+      "relevant_chunk_ids": [
+        "chunk_ac5542cb088e933b2b00367503aec763c736878db6a1c47b89459a298d54d9ff"
+      ],
+      "answer_summary": "The regression target is a continuous real-valued response rather than a discrete label.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_ac5542cb088e933b2b00367503aec763c736878db6a1c47b89459a298d54d9ff",
+          "quote": "The simplest of them is regression where the goal is to predict a continuous response yt ∈ R to each example vector."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "dev-009",
+      "query": "What two training distinctions are stated for logistic regression versus linear regression?",
+      "split": "dev",
+      "query_type": "direct",
+      "topic": "classification_vs_regression",
+      "intent_group": "dev-logistic-vs-linear-training",
+      "relevant_chunk_ids": [
+        "chunk_b9284d28b2b4acc2c70eef6e34621726b2e75871dff9dea6d0b3c84317c9e94c"
+      ],
+      "answer_summary": "Logistic regression uses Log Loss instead of squared loss, and regularization is critical to control overfitting.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_b9284d28b2b4acc2c70eef6e34621726b2e75871dff9dea6d0b3c84317c9e94c",
+          "quote": "Logistic regression models use Log Loss as the loss function instead of squared loss. Applying regularization is critical to prevent overfitting."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "dev-010",
+      "query": "Compared with linear regression, which loss and anti-overfitting measure does logistic regression use?",
+      "split": "dev",
+      "query_type": "paraphrase",
+      "topic": "classification_vs_regression",
+      "intent_group": "dev-logistic-vs-linear-training",
+      "relevant_chunk_ids": [
+        "chunk_b9284d28b2b4acc2c70eef6e34621726b2e75871dff9dea6d0b3c84317c9e94c"
+      ],
+      "answer_summary": "It uses Log Loss and applies regularization to reduce overfitting.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_b9284d28b2b4acc2c70eef6e34621726b2e75871dff9dea6d0b3c84317c9e94c",
+          "quote": "Logistic regression models use Log Loss as the loss function instead of squared loss. Applying regularization is critical to prevent overfitting."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-001",
+      "query": "Why should a linear-regression loss care about how far off a prediction is rather than whether it overshoots or undershoots?",
+      "split": "test",
+      "query_type": "paraphrase",
+      "topic": "linear_regression_loss",
+      "intent_group": "test-loss-error-direction",
+      "relevant_chunk_ids": [
+        "chunk_860036e32ff6c774cb1fc728dae0a2dac36278ffa207baa17e661be140db05d0"
+      ],
+      "answer_summary": "Loss uses the magnitude of the prediction error, so the sign or direction of the error is removed.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_860036e32ff6c774cb1fc728dae0a2dac36278ffa207baa17e661be140db05d0",
+          "quote": "Loss focuses on the distance between the values, not the direction."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-002",
+      "query": "How do MSE and MAE differ in their sensitivity to outliers?",
+      "split": "test",
+      "query_type": "synonym",
+      "topic": "linear_regression_loss",
+      "intent_group": "test-mae-mse-outliers",
+      "relevant_chunk_ids": [
+        "chunk_b897e79564b896d4647dad4884921fe29866263db81f645e6640586f9cdb4ee8",
+        "chunk_aca818a22340aa35f440b5c0d6a44ad6af930ced476ac670195633441b0986f7",
+        "chunk_8355f409107e8ee27e7ea1ec3beeb26e8c2bcc29fe13b62fcde2cc620974734d",
+        "chunk_947456c139904499e88e7db78eb82d01dea8340327714d4a55a04ffbc52cdd59"
+      ],
+      "answer_summary": "MSE squares errors and therefore pulls the model more strongly toward outliers; MAE is more robust to them.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_b897e79564b896d4647dad4884921fe29866263db81f645e6640586f9cdb4ee8",
+          "quote": "When the difference between the prediction and label is large, squaring makes the loss even larger."
+        },
+        {
+          "chunk_id": "chunk_aca818a22340aa35f440b5c0d6a44ad6af930ced476ac670195633441b0986f7",
+          "quote": "MSE moves the model more toward the outliers, while MAE doesn't. L2 loss incurs a much higher penalty for an outlier than L1 loss."
+        },
+        {
+          "chunk_id": "chunk_8355f409107e8ee27e7ea1ec3beeb26e8c2bcc29fe13b62fcde2cc620974734d",
+          "quote": "MSE. The model is closer to the outliers but further away from most of the other data points. MAE. The model is further away from the outliers but closer to most of the other data points."
+        },
+        {
+          "chunk_id": "chunk_947456c139904499e88e7db78eb82d01dea8340327714d4a55a04ffbc52cdd59",
+          "quote": "Choose MAE: If your dataset has significant outliers that you don't want to overly influence the model. MAE is more robust."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-003",
+      "query": "What steps does gradient descent repeat to reduce a linear model’s loss?",
+      "split": "test",
+      "query_type": "direct",
+      "topic": "gradient_descent",
+      "intent_group": "test-gradient-descent-process",
+      "relevant_chunk_ids": [
+        "chunk_0f55d3d309cd34f3f8f8b2920aa3b89483a5d302beebcba684bfeb423f0c9d60",
+        "chunk_9c4585087574d4dacd3c19b80ad73f5f23297917c35736a2dedbca32f3760d87"
+      ],
+      "answer_summary": "It evaluates the current loss, finds a loss-reducing direction, and moves the weights and bias a small amount in that direction repeatedly.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_0f55d3d309cd34f3f8f8b2920aa3b89483a5d302beebcba684bfeb423f0c9d60",
+          "quote": "Gradient descent is a mathematical technique that iteratively finds the weights and bias that produce the model with the lowest loss."
+        },
+        {
+          "chunk_id": "chunk_9c4585087574d4dacd3c19b80ad73f5f23297917c35736a2dedbca32f3760d87",
+          "quote": "Calculate the loss with the current weight and bias. Determine the direction to move the weights and bias that reduce loss. Move the weight and bias values a small amount in the direction that reduces loss."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-004",
+      "query": "What shape in a training loss curve indicates that gradient descent has converged?",
+      "split": "test",
+      "query_type": "paraphrase",
+      "topic": "gradient_descent",
+      "intent_group": "test-convergence-loss-curve",
+      "relevant_chunk_ids": [
+        "chunk_883e3b22d36fe047d0832a6e26e0e7d3cd866b475b9d8b1637ed0268bae7154f",
+        "chunk_4ad4ebef6675c2a7eb7243b8f7d8a75db927c29bcdb845b5325fc42b3c660430"
+      ],
+      "answer_summary": "Convergence is indicated when loss stops materially decreasing and the curve stabilizes or flattens.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_883e3b22d36fe047d0832a6e26e0e7d3cd866b475b9d8b1637ed0268bae7154f",
+          "quote": "When a model converges, additional iterations don't reduce loss more because gradient descent has found the weights and bias that nearly minimize the loss."
+        },
+        {
+          "chunk_id": "chunk_4ad4ebef6675c2a7eb7243b8f7d8a75db927c29bcdb845b5325fc42b3c660430",
+          "quote": "You can see that loss dramatically decreases during the first few iterations, then gradually decreases before flattening out around the 1,000th-iteration mark."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-005",
+      "query": "How do hyperparameters differ from model parameters?",
+      "split": "test",
+      "query_type": "direct",
+      "topic": "hyperparameters",
+      "intent_group": "test-hyperparameters-vs-parameters",
+      "relevant_chunk_ids": [
+        "chunk_3ee80117e47830337770aa0e74237afefd9de26aef823098a8a26907d05731cc",
+        "chunk_d0eee875a354b7457724b5bd8549202dfc03cd375b1c0e1be042e7581f467480"
+      ],
+      "answer_summary": "A developer controls hyperparameters, while training calculates model parameters such as weights and bias.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_3ee80117e47830337770aa0e74237afefd9de26aef823098a8a26907d05731cc",
+          "quote": "hyperparameters are values that you control; parameters are values that the model calculates during training."
+        },
+        {
+          "chunk_id": "chunk_d0eee875a354b7457724b5bd8549202dfc03cd375b1c0e1be042e7581f467480",
+          "quote": "hyperparameters are values that you control; parameters are values that the model calculates during training."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-006",
+      "query": "What training behavior suggests that the step size is too large?",
+      "split": "test",
+      "query_type": "synonym",
+      "topic": "hyperparameters",
+      "intent_group": "test-learning-rate-too-high",
+      "relevant_chunk_ids": [
+        "chunk_d0eee875a354b7457724b5bd8549202dfc03cd375b1c0e1be042e7581f467480",
+        "chunk_a013be79dca052da5dd1552a0c3a8fbee1fe1cf7384d8ae6bed284f44d10874d",
+        "chunk_1d053eec0678c682b4a5cd070add26b1f31e7b44a267b855212a98e4897da24f"
+      ],
+      "answer_summary": "An excessively high learning rate prevents convergence and makes loss bounce, fluctuate, or increase.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_d0eee875a354b7457724b5bd8549202dfc03cd375b1c0e1be042e7581f467480",
+          "quote": "if the learning rate is too high, the model never converges, but instead bounces around the weights and bias that minimize the loss."
+        },
+        {
+          "chunk_id": "chunk_a013be79dca052da5dd1552a0c3a8fbee1fe1cf7384d8ae6bed284f44d10874d",
+          "quote": "A learning rate that's too large never converges because each iteration either causes the loss to bounce around or continually increase."
+        },
+        {
+          "chunk_id": "chunk_1d053eec0678c682b4a5cd070add26b1f31e7b44a267b855212a98e4897da24f",
+          "quote": "Loss graph showing a model trained with a learning rate that's too big, where the loss curve drastically increases in later iterations."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-007",
+      "query": "What does one epoch mean during model training?",
+      "split": "test",
+      "query_type": "direct",
+      "topic": "hyperparameters",
+      "intent_group": "test-epoch-definition",
+      "relevant_chunk_ids": [
+        "chunk_f83528495cb1c0fcf5cbbd19bde93b730cc242ddbb490696f5d30f35f8bcf4cc"
+      ],
+      "answer_summary": "One epoch is completed when the model has processed every training example once.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_f83528495cb1c0fcf5cbbd19bde93b730cc242ddbb490696f5d30f35f8bcf4cc",
+          "quote": "During training, an epoch means that the model has processed every example in the training set once."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-008",
+      "query": "As the sigmoid input becomes extremely positive or negative, can its output ever reach either endpoint?",
+      "split": "test",
+      "query_type": "paraphrase",
+      "topic": "sigmoid",
+      "intent_group": "test-sigmoid-asymptotes",
+      "relevant_chunk_ids": [
+        "chunk_fbdabda0591054eb0b0ad5eed22b3844384f8737c2dc44b9de7b5a40f2a92b18",
+        "chunk_66b464583602b53b28bd66b250bc0547341c467fa10ecaa669cfacbe1c697777",
+        "chunk_6285de3066e6b39dc64504f722776c2be0c5cbc9546889c006d192ecca4c67bf"
+      ],
+      "answer_summary": "The sigmoid approaches 1 for large positive inputs and 0 for large negative inputs, but never reaches either endpoint.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_fbdabda0591054eb0b0ad5eed22b3844384f8737c2dc44b9de7b5a40f2a92b18",
+          "quote": "As the input, x, increases, the output of the sigmoid function approaches but never reaches 1. Similarly, as the input decreases, the sigmoid function's output approaches but never reaches 0."
+        },
+        {
+          "chunk_id": "chunk_66b464583602b53b28bd66b250bc0547341c467fa10ecaa669cfacbe1c697777",
+          "quote": "no matter how large or how small the input value, the output will always be greater than 0 and less than 1."
+        },
+        {
+          "chunk_id": "chunk_6285de3066e6b39dc64504f722776c2be0c5cbc9546889c006d192ecca4c67bf",
+          "quote": "the output of the sigmoid function, y', is always between 0 and 1, exclusive."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-009",
+      "query": "Why can squared loss be awkward for logistic-regression outputs close to zero or one?",
+      "split": "test",
+      "query_type": "direct",
+      "topic": "logistic_regression_loss",
+      "intent_group": "test-logistic-squared-loss-precision",
+      "relevant_chunk_ids": [
+        "chunk_8d28d2793889c504ce6531d07698b5c50daeaa220be95d9292abaa6f9179d4f5"
+      ],
+      "answer_summary": "Near 0 or 1, squared loss would require increasing numerical precision and memory to track small output differences.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_8d28d2793889c504ce6531d07698b5c50daeaa220be95d9292abaa6f9179d4f5",
+          "quote": "If you used squared loss to calculate errors for the sigmoid function, as the output got closer and closer to 0 and 1, you would need more memory to preserve the precision needed to track these values."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-010",
+      "query": "How does a classification threshold turn a probability score into a positive or negative class?",
+      "split": "test",
+      "query_type": "direct",
+      "topic": "classification_thresholds",
+      "intent_group": "test-threshold-class-assignment",
+      "relevant_chunk_ids": [
+        "chunk_a1c7ea375a38affdb65586c90341cf7d118f47b5ce92a624716ff0301a1a715b",
+        "chunk_39fab453d03c2abfea6495873d74fd790fa76b9e7a6307cbbf4196ee210e47ed"
+      ],
+      "answer_summary": "Scores above the threshold are assigned to the positive class and scores below it to the negative class.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_a1c7ea375a38affdb65586c90341cf7d118f47b5ce92a624716ff0301a1a715b",
+          "quote": "Examples with a probability above the threshold value are then assigned to the positive class, the class you are testing for (here, spam). Examples with a lower probability are assigned to the negative class, the alternative class (here, not spam)."
+        },
+        {
+          "chunk_id": "chunk_39fab453d03c2abfea6495873d74fd790fa76b9e7a6307cbbf4196ee210e47ed",
+          "quote": "If you set the classification threshold to 0.5, the model will classify both emails as spam. If you set the threshold to 0.95, only the email scoring 0.99 will be classified as spam."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-011",
+      "query": "Why is 0.5 not automatically a sensible decision cutoff for every binary classifier?",
+      "split": "test",
+      "query_type": "paraphrase",
+      "topic": "classification_thresholds",
+      "intent_group": "test-threshold-cost-and-imbalance",
+      "relevant_chunk_ids": [
+        "chunk_33cb1e7efc46062ce3f0573c9e5fb407dbe56de46701899faa9d496d6e71fb6d"
+      ],
+      "answer_summary": "A 0.5 cutoff can be inappropriate when classes are imbalanced or the two kinds of classification error have unequal costs.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_33cb1e7efc46062ce3f0573c9e5fb407dbe56de46701899faa9d496d6e71fb6d",
+          "quote": "While 0.5 might seem like an intuitive threshold, it's not a good idea if the cost of one type of wrong classification is greater than the other, or if the classes are imbalanced."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-012",
+      "query": "Why can accuracy be misleading on a heavily imbalanced dataset?",
+      "split": "test",
+      "query_type": "direct",
+      "topic": "classification_metrics",
+      "intent_group": "test-accuracy-class-imbalance",
+      "relevant_chunk_ids": [
+        "chunk_d14e94dc83474b16133d10a1ea2e43546129fe005135a7bf8e1e0251b868f772",
+        "chunk_cba54b16337160e50dc26bab906a10046b9e8dd498ddb692ca70ecb2e8bb87ad"
+      ],
+      "answer_summary": "A model can predict only the majority class and earn very high accuracy while failing to identify the rare class at all.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_d14e94dc83474b16133d10a1ea2e43546129fe005135a7bf8e1e0251b868f772",
+          "quote": "For heavily imbalanced datasets, where one class appears very rarely, say 1% of the time, a model that predicts negative 100% of the time would score 99% on accuracy, despite being useless."
+        },
+        {
+          "chunk_id": "chunk_cba54b16337160e50dc26bab906a10046b9e8dd498ddb692ca70ecb2e8bb87ad",
+          "quote": "a model that predicts negative 100% of the time would score 99% on accuracy, despite being useless."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-013",
+      "query": "How could a useless always-negative classifier still report 99% correct predictions?",
+      "split": "test",
+      "query_type": "paraphrase",
+      "topic": "classification_metrics",
+      "intent_group": "test-accuracy-class-imbalance",
+      "relevant_chunk_ids": [
+        "chunk_d14e94dc83474b16133d10a1ea2e43546129fe005135a7bf8e1e0251b868f772",
+        "chunk_cba54b16337160e50dc26bab906a10046b9e8dd498ddb692ca70ecb2e8bb87ad"
+      ],
+      "answer_summary": "If positives are only 1% of examples, always predicting the majority negative class yields 99% accuracy despite no useful detection.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_d14e94dc83474b16133d10a1ea2e43546129fe005135a7bf8e1e0251b868f772",
+          "quote": "For heavily imbalanced datasets, where one class appears very rarely, say 1% of the time, a model that predicts negative 100% of the time would score 99% on accuracy, despite being useless."
+        },
+        {
+          "chunk_id": "chunk_cba54b16337160e50dc26bab906a10046b9e8dd498ddb692ca70ecb2e8bb87ad",
+          "quote": "a model that predicts negative 100% of the time would score 99% on accuracy, despite being useless."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-014",
+      "query": "What share of cases does recall measure?",
+      "split": "test",
+      "query_type": "synonym",
+      "topic": "classification_metrics",
+      "intent_group": "test-recall-definition",
+      "relevant_chunk_ids": [
+        "chunk_cba54b16337160e50dc26bab906a10046b9e8dd498ddb692ca70ecb2e8bb87ad",
+        "chunk_cc65e6f72f1c1ffe20ebd7f3fad294ef6fab076c252571eb366289bc50d619e6"
+      ],
+      "answer_summary": "Recall is the fraction of all actual positives that the model correctly classifies as positive.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_cba54b16337160e50dc26bab906a10046b9e8dd498ddb692ca70ecb2e8bb87ad",
+          "quote": "The true positive rate (TPR), or the proportion of all actual positives that were classified correctly as positives, is also known as recall."
+        },
+        {
+          "chunk_id": "chunk_cc65e6f72f1c1ffe20ebd7f3fad294ef6fab076c252571eb366289bc50d619e6",
+          "quote": "recall measures the fraction of spam emails that were correctly classified as spam."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-015",
+      "query": "What is precision in a binary classification evaluation?",
+      "split": "test",
+      "query_type": "direct",
+      "topic": "classification_metrics",
+      "intent_group": "test-precision-definition",
+      "relevant_chunk_ids": [
+        "chunk_7c3e4def6916eb437d2ae8b9fac9044b0d97007dd2657ac4716a2a86c36477d3"
+      ],
+      "answer_summary": "Precision is the proportion of predicted positives that are actually positive.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_7c3e4def6916eb437d2ae8b9fac9044b0d97007dd2657ac4716a2a86c36477d3",
+          "quote": "Precision is the proportion of all the model's positive classifications that are actually positive."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-016",
+      "query": "Why does raising a classification cutoff often improve precision while hurting recall?",
+      "split": "test",
+      "query_type": "paraphrase",
+      "topic": "classification_metrics",
+      "intent_group": "test-threshold-precision-recall-tradeoff",
+      "relevant_chunk_ids": [
+        "chunk_f17c7395bb0e76c4e8d5680809d151e5d2c62d0831ce0a95f70c843c9eb76b2a"
+      ],
+      "answer_summary": "A higher threshold usually reduces false positives but increases false negatives, so precision and recall tend to move in opposite directions.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_f17c7395bb0e76c4e8d5680809d151e5d2c62d0831ce0a95f70c843c9eb76b2a",
+          "quote": "increasing the classification threshold tends to decrease the number of false positives and increase the number of false negatives, while decreasing the threshold has the opposite effects. As a result, precision and recall often show an inverse relationship, where improving one of them worsens the other."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-017",
+      "query": "How is an ROC curve constructed?",
+      "split": "test",
+      "query_type": "direct",
+      "topic": "roc_auc",
+      "intent_group": "test-roc-construction",
+      "relevant_chunk_ids": [
+        "chunk_8bd9d979291165e81abf444c22104eaf3ecc99009875687cf5ddca6f432d3336",
+        "chunk_d3ac5ad888bbbd1852892faeb3582936dd602a62bde3aa179aa6b1941b91cf27"
+      ],
+      "answer_summary": "An ROC curve plots true-positive rate against false-positive rate across threshold choices.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_8bd9d979291165e81abf444c22104eaf3ecc99009875687cf5ddca6f432d3336",
+          "quote": "The ROC curve is a visual representation of model performance across all thresholds."
+        },
+        {
+          "chunk_id": "chunk_d3ac5ad888bbbd1852892faeb3582936dd602a62bde3aa179aa6b1941b91cf27",
+          "quote": "The ROC curve is drawn by calculating the true positive rate (TPR) and false positive rate (FPR) at every possible threshold (in practice, at selected intervals), then graphing TPR over FPR."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-018",
+      "query": "What probability does AUC represent for a randomly selected positive-negative pair?",
+      "split": "test",
+      "query_type": "direct",
+      "topic": "roc_auc",
+      "intent_group": "test-auc-ranking-interpretation",
+      "relevant_chunk_ids": [
+        "chunk_d3ac5ad888bbbd1852892faeb3582936dd602a62bde3aa179aa6b1941b91cf27",
+        "chunk_8e4bf58d988f01d0ef1d5bc5e4d6bb7c7fac72ef957de3a2e47defef4ec34318"
+      ],
+      "answer_summary": "AUC is the probability that the model ranks the randomly selected positive example above the randomly selected negative example.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_d3ac5ad888bbbd1852892faeb3582936dd602a62bde3aa179aa6b1941b91cf27",
+          "quote": "The area under the ROC curve (AUC) represents the probability that the model, if given a randomly chosen positive and negative example, will rank the positive higher than the negative."
+        },
+        {
+          "chunk_id": "chunk_8e4bf58d988f01d0ef1d5bc5e4d6bb7c7fac72ef957de3a2e47defef4ec34318",
+          "quote": "a spam classifier with AUC of 1.0 always assigns a random spam email a higher probability of being spam than a random legitimate email."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-019",
+      "query": "In pairwise ranking terms, how should an AUC score be interpreted?",
+      "split": "test",
+      "query_type": "paraphrase",
+      "topic": "roc_auc",
+      "intent_group": "test-auc-ranking-interpretation",
+      "relevant_chunk_ids": [
+        "chunk_d3ac5ad888bbbd1852892faeb3582936dd602a62bde3aa179aa6b1941b91cf27",
+        "chunk_8e4bf58d988f01d0ef1d5bc5e4d6bb7c7fac72ef957de3a2e47defef4ec34318"
+      ],
+      "answer_summary": "It measures how often a random positive receives a higher score than a random negative.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_d3ac5ad888bbbd1852892faeb3582936dd602a62bde3aa179aa6b1941b91cf27",
+          "quote": "The area under the ROC curve (AUC) represents the probability that the model, if given a randomly chosen positive and negative example, will rank the positive higher than the negative."
+        },
+        {
+          "chunk_id": "chunk_8e4bf58d988f01d0ef1d5bc5e4d6bb7c7fac72ef957de3a2e47defef4ec34318",
+          "quote": "a spam classifier with AUC of 1.0 always assigns a random spam email a higher probability of being spam than a random legitimate email."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-020",
+      "query": "What numerical structure does a model actually ingest for one example?",
+      "split": "test",
+      "query_type": "synonym",
+      "topic": "feature_vectors",
+      "intent_group": "test-feature-vector-ingestion",
+      "relevant_chunk_ids": [
+        "chunk_28d4351d721e867d5aba2cb70c81ead8b011152cade1f13a6a8912c74bdf266b"
+      ],
+      "answer_summary": "A model ingests a feature vector: an array of floating-point values representing one example.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_28d4351d721e867d5aba2cb70c81ead8b011152cade1f13a6a8912c74bdf266b",
+          "quote": "the model actually ingests an array of floating-point values called a feature vector. You can think of a feature vector as the floating-point values comprising one example."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-021",
+      "query": "What is feature engineering in the context of feature vectors?",
+      "split": "test",
+      "query_type": "direct",
+      "topic": "feature_vectors",
+      "intent_group": "test-feature-engineering-definition",
+      "relevant_chunk_ids": [
+        "chunk_28d4351d721e867d5aba2cb70c81ead8b011152cade1f13a6a8912c74bdf266b",
+        "chunk_4584c1a2d39e9d8688b6d47044e806c770cb481573ef53c164cbfc32eef7a144"
+      ],
+      "answer_summary": "Feature engineering is the process of turning raw dataset values into representations that a model can learn from.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_28d4351d721e867d5aba2cb70c81ead8b011152cade1f13a6a8912c74bdf266b",
+          "quote": "You must determine the best way to represent raw dataset values as trainable values in the feature vector. This process is called feature engineering"
+        },
+        {
+          "chunk_id": "chunk_4584c1a2d39e9d8688b6d47044e806c770cb481573ef53c164cbfc32eef7a144",
+          "quote": "You must determine the best way to represent raw dataset values as trainable values in the feature vector. This process is called feature engineering"
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-022",
+      "query": "Why can a wide-range feature dominate a narrow-range feature unless both are normalized?",
+      "split": "test",
+      "query_type": "direct",
+      "topic": "normalization",
+      "intent_group": "test-normalization-scale-dominance",
+      "relevant_chunk_ids": [
+        "chunk_bbc34c1002e77bfd9f9ba08252d9d0c16c883f56b73434b1fc3e639f11bc611d",
+        "chunk_27df03a77b14bc519cfb6af0ff8ba6b41983be49580841217b743245b435b8fc"
+      ],
+      "answer_summary": "Scaling prevents wide-range features from receiving disproportionate attention relative to narrow-range features.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_bbc34c1002e77bfd9f9ba08252d9d0c16c883f56b73434b1fc3e639f11bc611d",
+          "quote": "Without feature scaling, the model pays too much attention to features with wide ranges and not enough attention to features with narrow ranges."
+        },
+        {
+          "chunk_id": "chunk_27df03a77b14bc519cfb6af0ff8ba6b41983be49580841217b743245b435b8fc",
+          "quote": "At the start of training, the model assumes that Feature B is ten times more \"important\" than Feature A."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-023",
+      "query": "What mistaken importance can a model assign when one input scale is much wider than another?",
+      "split": "test",
+      "query_type": "paraphrase",
+      "topic": "normalization",
+      "intent_group": "test-normalization-scale-dominance",
+      "relevant_chunk_ids": [
+        "chunk_bbc34c1002e77bfd9f9ba08252d9d0c16c883f56b73434b1fc3e639f11bc611d",
+        "chunk_27df03a77b14bc519cfb6af0ff8ba6b41983be49580841217b743245b435b8fc"
+      ],
+      "answer_summary": "Without normalization, the model may treat the wider-range feature as more important solely because of its scale.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_bbc34c1002e77bfd9f9ba08252d9d0c16c883f56b73434b1fc3e639f11bc611d",
+          "quote": "Without feature scaling, the model pays too much attention to features with wide ranges and not enough attention to features with narrow ranges."
+        },
+        {
+          "chunk_id": "chunk_27df03a77b14bc519cfb6af0ff8ba6b41983be49580841217b743245b435b8fc",
+          "quote": "At the start of training, the model assumes that Feature B is ten times more \"important\" than Feature A."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-024",
+      "query": "When is Z-score scaling a good normalization choice?",
+      "split": "test",
+      "query_type": "direct",
+      "topic": "normalization",
+      "intent_group": "test-z-score-use-case",
+      "relevant_chunk_ids": [
+        "chunk_0b34e9db3e590531d3fe155954e27397d7240f270369fd3cc14a6ed30fd8763c",
+        "chunk_8d759a50ac6df9ba3dc8125c11c7f3290ec29f4217502e0745b3d0848d3fa856",
+        "chunk_0509722044067df6c0e9a914fde2739a87f78f292287c48e1be9a9120e49d696"
+      ],
+      "answer_summary": "Z-score scaling is well suited to normally or approximately normally distributed features.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_0b34e9db3e590531d3fe155954e27397d7240f270369fd3cc14a6ed30fd8763c",
+          "quote": "Z-score is a good choice when the data follows a normal distribution or a distribution somewhat like a normal distribution."
+        },
+        {
+          "chunk_id": "chunk_8d759a50ac6df9ba3dc8125c11c7f3290ec29f4217502e0745b3d0848d3fa856",
+          "quote": "When the feature is normally distributed (peak close to mean)."
+        },
+        {
+          "chunk_id": "chunk_0509722044067df6c0e9a914fde2739a87f78f292287c48e1be9a9120e49d696",
+          "quote": "Z-score scaling is also a good choice for data like that shown in the following figure, which has only a vaguely normal distribution."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-025",
+      "query": "For what kind of distribution is log scaling helpful?",
+      "split": "test",
+      "query_type": "direct",
+      "topic": "normalization",
+      "intent_group": "test-log-scaling-use-case",
+      "relevant_chunk_ids": [
+        "chunk_45066ee44dbab8ed9ad46654563fbd8604c52a2a2a06bd45d891951abff8a37d",
+        "chunk_2e209f062408bc65300dda82d1ffd768d76a5ced9d707ccabbdd867207c87df8",
+        "chunk_8d759a50ac6df9ba3dc8125c11c7f3290ec29f4217502e0745b3d0848d3fa856",
+        "chunk_115d70faa7e028b461306c206c54ef4c2e548e29481c64d2b85fcd50003341d4"
+      ],
+      "answer_summary": "Log scaling is helpful for power-law or otherwise heavily skewed feature distributions.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_45066ee44dbab8ed9ad46654563fbd8604c52a2a2a06bd45d891951abff8a37d",
+          "quote": "Log scaling is helpful when the data conforms to a power law distribution."
+        },
+        {
+          "chunk_id": "chunk_2e209f062408bc65300dda82d1ffd768d76a5ced9d707ccabbdd867207c87df8",
+          "quote": "Log scaling is helpful when the data conforms to a power law distribution."
+        },
+        {
+          "chunk_id": "chunk_8d759a50ac6df9ba3dc8125c11c7f3290ec29f4217502e0745b3d0848d3fa856",
+          "quote": "Log scaling $$ x' = log(x)$$ When the feature distribution is heavy skewed on at least either side of tail."
+        },
+        {
+          "chunk_id": "chunk_115d70faa7e028b461306c206c54ef4c2e548e29481c64d2b85fcd50003341d4",
+          "quote": "As a second example, book sales conform to a power law distribution because:"
+        },
+        {
+          "chunk_id": "chunk_115d70faa7e028b461306c206c54ef4c2e548e29481c64d2b85fcd50003341d4",
+          "quote": "However, log scaling all the sales figures makes the task far more feasible."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-026",
+      "query": "How does clipping tame extreme numerical values?",
+      "split": "test",
+      "query_type": "synonym",
+      "topic": "normalization",
+      "intent_group": "test-clipping-mechanics",
+      "relevant_chunk_ids": [
+        "chunk_72524cebeaa2ba3dd64e6ca0c5d7411216be29821447bcf2e25b2f8706672492",
+        "chunk_84386418c9c67d31e1cb41b3f01daa9e88e3b7bc48d28275e244aabb0e09d8d9",
+        "chunk_8d759a50ac6df9ba3dc8125c11c7f3290ec29f4217502e0745b3d0848d3fa856",
+        "chunk_bd3895477ba2a77175585bae401f5eab0bfb9c1e9a6f6912e9e744357bd5bc75"
+      ],
+      "answer_summary": "Clipping replaces values beyond chosen bounds with the corresponding boundary value, limiting extreme outlier influence.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_72524cebeaa2ba3dd64e6ca0c5d7411216be29821447bcf2e25b2f8706672492",
+          "quote": "Clipping is a technique to minimize the influence of extreme outliers. In brief, clipping usually caps (reduces) the value of outliers to a specific maximum value."
+        },
+        {
+          "chunk_id": "chunk_84386418c9c67d31e1cb41b3f01daa9e88e3b7bc48d28275e244aabb0e09d8d9",
+          "quote": "Clipping the feature value at 4.0 doesn't mean that your model ignores all values greater than 4.0. Rather, it means that all values that were greater than 4.0 now become 4.0."
+        },
+        {
+          "chunk_id": "chunk_8d759a50ac6df9ba3dc8125c11c7f3290ec29f4217502e0745b3d0848d3fa856",
+          "quote": "Clipping If $x > max$, set $x' = max$ If $x < min$, set $x' = min$ When the feature contains extreme outliers."
+        },
+        {
+          "chunk_id": "chunk_bd3895477ba2a77175585bae401f5eab0bfb9c1e9a6f6912e9e744357bd5bc75",
+          "quote": "Clip Z-scores greater than 3 to become exactly 3. Clip Z-scores less than -3 to become exactly -3."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-027",
+      "query": "For N categories, what length and value pattern does a true one-hot vector use?",
+      "split": "test",
+      "query_type": "direct",
+      "topic": "one_hot_encoding",
+      "intent_group": "test-one-hot-vector-structure",
+      "relevant_chunk_ids": [
+        "chunk_c7878f73834f7d7d5be6eba597574b5cb344d18daff94f375c5546001a8fdfc9",
+        "chunk_091cbb3fae627f0760e9165cd17699f931207cc3e4213277f10be10f46a47c98",
+        "chunk_66a28d84c3cdd569b36704d2776f876670c21c262113427193ace616699f09b9"
+      ],
+      "answer_summary": "The vector has N elements, exactly one set to 1.0 and all others set to 0.0.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_c7878f73834f7d7d5be6eba597574b5cb344d18daff94f375c5546001a8fdfc9",
+          "quote": "Each category is represented by a vector (array) of N elements, where N is the number of categories."
+        },
+        {
+          "chunk_id": "chunk_091cbb3fae627f0760e9165cd17699f931207cc3e4213277f10be10f46a47c98",
+          "quote": "Exactly one of the elements in a one-hot vector has the value 1.0; all the remaining elements have the value 0.0."
+        },
+        {
+          "chunk_id": "chunk_66a28d84c3cdd569b36704d2776f876670c21c262113427193ace616699f09b9",
+          "quote": "In a true one-hot encoding, only one element has the value 1.0. In a variant known as multi-hot encoding, multiple values can be 1.0."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-028",
+      "query": "How is a single category marked inside its categorical indicator array?",
+      "split": "test",
+      "query_type": "paraphrase",
+      "topic": "one_hot_encoding",
+      "intent_group": "test-one-hot-vector-structure",
+      "relevant_chunk_ids": [
+        "chunk_c7878f73834f7d7d5be6eba597574b5cb344d18daff94f375c5546001a8fdfc9",
+        "chunk_091cbb3fae627f0760e9165cd17699f931207cc3e4213277f10be10f46a47c98",
+        "chunk_66a28d84c3cdd569b36704d2776f876670c21c262113427193ace616699f09b9"
+      ],
+      "answer_summary": "A single 1.0 marks that category in an N-element vector; every other position is 0.0.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_c7878f73834f7d7d5be6eba597574b5cb344d18daff94f375c5546001a8fdfc9",
+          "quote": "Each category is represented by a vector (array) of N elements, where N is the number of categories."
+        },
+        {
+          "chunk_id": "chunk_091cbb3fae627f0760e9165cd17699f931207cc3e4213277f10be10f46a47c98",
+          "quote": "Exactly one of the elements in a one-hot vector has the value 1.0; all the remaining elements have the value 0.0."
+        },
+        {
+          "chunk_id": "chunk_66a28d84c3cdd569b36704d2776f876670c21c262113427193ace616699f09b9",
+          "quote": "In a true one-hot encoding, only one element has the value 1.0. In a variant known as multi-hot encoding, multiple values can be 1.0."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-029",
+      "query": "Why is feeding category index numbers directly into a model misleading?",
+      "split": "test",
+      "query_type": "paraphrase",
+      "topic": "one_hot_encoding",
+      "intent_group": "test-category-index-false-order",
+      "relevant_chunk_ids": [
+        "chunk_c7878f73834f7d7d5be6eba597574b5cb344d18daff94f375c5546001a8fdfc9"
+      ],
+      "answer_summary": "The model treats indexes as continuous numbers and can infer meaningless numeric or ordinal relationships between categories.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_c7878f73834f7d7d5be6eba597574b5cb344d18daff94f375c5546001a8fdfc9",
+          "quote": "If the categorical feature data is left as indexed integers and loaded into a model, the model would treat the indexed values as continuous floating-point numbers. The model would then consider \"purple\" six times more likely than \"orange.\""
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-030",
+      "query": "How can rare categorical values be handled with an OOV bucket?",
+      "split": "test",
+      "query_type": "synonym",
+      "topic": "one_hot_encoding",
+      "intent_group": "test-oov-catch-all-bucket",
+      "relevant_chunk_ids": [
+        "chunk_decb8f443cd968b104dee18e62357e32ac3200d7ecd13cc80ad07d5e7ec3c012"
+      ],
+      "answer_summary": "Rare categories can be grouped into one catch-all out-of-vocabulary category that receives a shared weight.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_decb8f443cd968b104dee18e62357e32ac3200d7ecd13cc80ad07d5e7ec3c012",
+          "quote": "Rather than giving each of these outlier colors a separate category, you can lump them into a single \"catch-all\" category called out-of-vocabulary (OOV)."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-031",
+      "query": "What representation is usually preferred over one-hot encoding for a feature with hundreds of thousands of categories, and why?",
+      "split": "test",
+      "query_type": "paraphrase",
+      "topic": "one_hot_encoding",
+      "intent_group": "test-high-dimensional-embeddings",
+      "relevant_chunk_ids": [
+        "chunk_79787aa42f8c49871c40dc748770687926ab35e1ee413d4799a24984fdca4d87"
+      ],
+      "answer_summary": "Embeddings are usually preferred because they reduce dimensionality, which speeds training and lowers inference latency.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_79787aa42f8c49871c40dc748770687926ab35e1ee413d4799a24984fdca4d87",
+          "quote": "Embeddings, detailed in a separate Embeddings module, are usually a much better choice. Embeddings substantially reduce the number of dimensions, which benefits models in two important ways: The model typically trains faster. The built model typically infers predictions more quickly."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-032",
+      "query": "What rough data-quantity rule relates training examples to trainable parameters?",
+      "split": "test",
+      "query_type": "synonym",
+      "topic": "data_characteristics",
+      "intent_group": "test-examples-to-parameters-rule",
+      "relevant_chunk_ids": [
+        "chunk_42d89c312f6f0425bfca59c0bdd4c1d0419bd292ec64eb0f60a65b48749fadf2",
+        "chunk_6faf16839929d637c54fd4de1acdc7deb8dfbcf654b63810f3d55a314f49f1f2"
+      ],
+      "answer_summary": "As a rough rule, training examples should outnumber trainable parameters by one or two orders of magnitude, and often by more.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_42d89c312f6f0425bfca59c0bdd4c1d0419bd292ec64eb0f60a65b48749fadf2",
+          "quote": "As a rough rule of thumb, your model should train on at least an order of magnitude (or two) more examples than trainable parameters."
+        },
+        {
+          "chunk_id": "chunk_6faf16839929d637c54fd4de1acdc7deb8dfbcf654b63810f3d55a314f49f1f2",
+          "quote": "As a rough rule of thumb, your model should train on at least an order of magnitude (or two) more examples than trainable parameters."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-033",
+      "query": "What are the two main ways to handle examples with missing feature values before training?",
+      "split": "test",
+      "query_type": "direct",
+      "topic": "data_characteristics",
+      "intent_group": "test-incomplete-example-handling",
+      "relevant_chunk_ids": [
+        "chunk_1ce9ba6aa3075ca17e896217c57932a0b07e55e44f2ff20ad0207b19b7e782d7",
+        "chunk_3c5ad4265aba2381fd02bcc2c7e476202821c01e36ca810a91fd3380436815b0"
+      ],
+      "answer_summary": "Either remove incomplete examples or impute well-reasoned values so the examples become complete.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_1ce9ba6aa3075ca17e896217c57932a0b07e55e44f2ff20ad0207b19b7e782d7",
+          "quote": "Don't train a model on incomplete examples. Instead, fix or eliminate incomplete examples by doing one of the following: Delete incomplete examples. Impute missing values"
+        },
+        {
+          "chunk_id": "chunk_3c5ad4265aba2381fd02bcc2c7e476202821c01e36ca810a91fd3380436815b0",
+          "quote": "If you can't decide whether to delete or impute, consider building two datasets: one formed by deleting incomplete examples and the other by imputing."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-034",
+      "query": "Why are proxy targets generally less desirable than direct targets?",
+      "split": "test",
+      "query_type": "synonym",
+      "topic": "labels",
+      "intent_group": "test-direct-vs-proxy-labels",
+      "relevant_chunk_ids": [
+        "chunk_d4e27901d1d4188033f3d76e142103822fd7802ef3efabc5b4c6c18a15460113"
+      ],
+      "answer_summary": "A proxy label is only an imperfect approximation, and its usefulness is limited by how strongly it connects to the prediction of interest.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_d4e27901d1d4188033f3d76e142103822fd7802ef3efabc5b4c6c18a15460113",
+          "quote": "Proxy labels are always a compromise—an imperfect approximation of a direct label. However, some proxy labels are close enough approximations to be useful."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-035",
+      "query": "What pattern between training and validation loss suggests overfitting?",
+      "split": "test",
+      "query_type": "direct",
+      "topic": "overfitting",
+      "intent_group": "test-overfitting-loss-divergence",
+      "relevant_chunk_ids": [
+        "chunk_f3bde971557eb7c3c851183b4c5b26e65785e07dd17ab938e3bc0f97e472a231",
+        "chunk_0510ccd37a2f34f95215513381b6ceee70895f0036170fa60bbdd8af23aff56a"
+      ],
+      "answer_summary": "Overfitting is suggested when training loss keeps falling or stabilizing while validation loss begins to rise.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_f3bde971557eb7c3c851183b4c5b26e65785e07dd17ab938e3bc0f97e472a231",
+          "quote": "loss declines or holds steady (converges) for the training set, but increases for the validation set. This suggests overfitting."
+        },
+        {
+          "chunk_id": "chunk_0510ccd37a2f34f95215513381b6ceee70895f0036170fa60bbdd8af23aff56a",
+          "quote": "declines or holds steady (converges) for the training set, but increases for the validation set. This suggests overfitting."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-036",
+      "query": "How should training, validation, test, and real-world examples relate statistically for good generalization?",
+      "split": "test",
+      "query_type": "paraphrase",
+      "topic": "overfitting",
+      "intent_group": "test-partition-distribution-alignment",
+      "relevant_chunk_ids": [
+        "chunk_12c02df9402829a13c1c0bfbb829b9b26c8accf4271c7b24db5f9ab7d93134cd",
+        "chunk_8e03a7df3296db1a63570747c89087f03cecc49b11a06cc985b00801f3daf61b",
+        "chunk_841299f6a4808fd977d42fe355a4d96b4a05c5092da67eac66de33be334f8d62"
+      ],
+      "answer_summary": "The partitions should have the same distribution, with evaluation examples representative of both training data and the real-world population.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_12c02df9402829a13c1c0bfbb829b9b26c8accf4271c7b24db5f9ab7d93134cd",
+          "quote": "Representative of the dataset as a whole. In other words, don't pick a test set with different characteristics than the training set."
+        },
+        {
+          "chunk_id": "chunk_8e03a7df3296db1a63570747c89087f03cecc49b11a06cc985b00801f3daf61b",
+          "quote": "Representative of the real-world data that the model will encounter as part of its business purpose."
+        },
+        {
+          "chunk_id": "chunk_841299f6a4808fd977d42fe355a4d96b4a05c5092da67eac66de33be334f8d62",
+          "quote": "The dataset partitions have the same distribution. That is, the examples in the training set are statistically similar to the examples in the validation set, test set, and real-world data."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-037",
+      "query": "How do high and low regularization rates affect overfitting risk?",
+      "split": "test",
+      "query_type": "direct",
+      "topic": "l2_regularization",
+      "intent_group": "test-regularization-rate-risk",
+      "relevant_chunk_ids": [
+        "chunk_d6619e1e92d48eb34b864bca280c7977846841b812dc381bdb333be2f8819613",
+        "chunk_556ec26fcd954f62cf0390ca4f906fbcb9e4a8baa4369537993e2486f554036d"
+      ],
+      "answer_summary": "A high rate strengthens regularization and lowers overfitting risk; a low rate weakens it and raises that risk.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_d6619e1e92d48eb34b864bca280c7977846841b812dc381bdb333be2f8819613",
+          "quote": "A high regularization rate: Strengthens the influence of regularization, thereby reducing the chances of overfitting."
+        },
+        {
+          "chunk_id": "chunk_556ec26fcd954f62cf0390ca4f906fbcb9e4a8baa4369537993e2486f554036d",
+          "quote": "A low regularization rate: Lowers the influence of regularization, thereby increasing the chances of overfitting."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-038",
+      "query": "What is early stopping, and what validation-loss signal can trigger it?",
+      "split": "test",
+      "query_type": "direct",
+      "topic": "l2_regularization",
+      "intent_group": "test-early-stopping-trigger",
+      "relevant_chunk_ids": [
+        "chunk_a1cf4f8238513884a5cff1ff27a9e9ca836a9eb850638391c4d8c29f14f07d35"
+      ],
+      "answer_summary": "Early stopping ends training before full convergence, commonly when validation loss begins to increase.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_a1cf4f8238513884a5cff1ff27a9e9ca836a9eb850638391c4d8c29f14f07d35",
+          "quote": "early stopping simply means ending training before the model fully converges. For example, you end training when the loss curve for the validation set starts to increase (slope becomes positive)."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-039",
+      "query": "When does the perceptron algorithm cease updating its parameters?",
+      "split": "test",
+      "query_type": "direct",
+      "topic": "perceptron",
+      "intent_group": "test-perceptron-stop-condition",
+      "relevant_chunk_ids": [
+        "chunk_d92219a91c913d96fa864dcf03687b9e39e1b173fa8c6f646cb97ac4980ff5f6"
+      ],
+      "answer_summary": "It stops updating only when every training example is classified correctly and no mistakes remain.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_d92219a91c913d96fa864dcf03687b9e39e1b173fa8c6f646cb97ac4980ff5f6",
+          "quote": "The perceptron algorithm ceases to update the parameters only when all the training images are classiﬁed correctly (no mistakes, no updates)."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "test-040",
+      "query": "What condition ends the perceptron’s sequence of mistake-driven updates?",
+      "split": "test",
+      "query_type": "paraphrase",
+      "topic": "perceptron",
+      "intent_group": "test-perceptron-stop-condition",
+      "relevant_chunk_ids": [
+        "chunk_d92219a91c913d96fa864dcf03687b9e39e1b173fa8c6f646cb97ac4980ff5f6"
+      ],
+      "answer_summary": "The update sequence ends once all training images receive correct classifications.",
+      "evidence": [
+        {
+          "chunk_id": "chunk_d92219a91c913d96fa864dcf03687b9e39e1b173fa8c6f646cb97ac4980ff5f6",
+          "quote": "The perceptron algorithm ceases to update the parameters only when all the training images are classiﬁed correctly (no mistakes, no updates)."
+        }
+      ],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "none-001",
+      "query": "How should a sourdough starter be fed before baking a loaf?",
+      "split": "no_answer",
+      "query_type": "out_of_scope",
+      "topic": "culinary_fermentation",
+      "intent_group": "none-sourdough-feeding",
+      "relevant_chunk_ids": [],
+      "answer_summary": "The corpus does not cover sourdough preparation or culinary fermentation.",
+      "evidence": [],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "none-002",
+      "query": "What distinguishes a Baroque fugue from a sonata?",
+      "split": "no_answer",
+      "query_type": "out_of_scope",
+      "topic": "music_theory",
+      "intent_group": "none-baroque-forms",
+      "relevant_chunk_ids": [],
+      "answer_summary": "The corpus does not cover Baroque music or musical forms.",
+      "evidence": [],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "none-003",
+      "query": "How do I knit a basic cable stitch?",
+      "split": "no_answer",
+      "query_type": "out_of_scope",
+      "topic": "knitting",
+      "intent_group": "none-cable-knitting",
+      "relevant_chunk_ids": [],
+      "answer_summary": "The corpus does not cover knitting or textile crafts.",
+      "evidence": [],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "none-004",
+      "query": "Which layers make up Earth’s atmosphere?",
+      "split": "no_answer",
+      "query_type": "out_of_scope",
+      "topic": "earth_science",
+      "intent_group": "none-atmospheric-layers",
+      "relevant_chunk_ids": [],
+      "answer_summary": "The corpus does not cover atmospheric science or the layers of Earth’s atmosphere.",
+      "evidence": [],
+      "review_status": "draft"
+    },
+    {
+      "query_id": "none-005",
+      "query": "Why do lunar eclipses turn the Moon red?",
+      "split": "no_answer",
+      "query_type": "out_of_scope",
+      "topic": "astronomy",
+      "intent_group": "none-lunar-eclipse-color",
+      "relevant_chunk_ids": [],
+      "answer_summary": "The corpus does not cover astronomy or lunar eclipses.",
+      "evidence": [],
+      "review_status": "draft"
+    }
+  ]
+}

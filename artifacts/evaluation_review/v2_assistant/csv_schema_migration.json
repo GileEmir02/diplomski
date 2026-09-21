@@ -1,0 +1,21 @@
+{
+  "converted_at_utc": "2026-09-20T18:59:03.152758+00:00",
+  "csv_schema_version": 2,
+  "removed_column": "reviewer_kind",
+  "source_content_and_existing_decisions_unchanged": true,
+  "review_source_for_upcoming_freeze": "assistant",
+  "human_review_complete": false,
+  "files": {
+    "questions.csv": {
+      "rows": 115,
+      "old_sha256": "a38da24d2e1f38090faca91a37aabfe2baf32f94abd134e1e42b9ca5aca0648d",
+      "new_sha256": "53aec893e448db36f82cc557525bf7f6abf598aa5d382e319df76fc0ee0bad03"
+    },
+    "judgments.csv": {
+      "rows": 1039,
+      "old_sha256": "f059920aeaebdd57ac4f224d8779fad39b3a49684c4aee6a20cc2364c78873b6",
+      "new_sha256": "73ff2f4caceba76f992bbcbe27606013b32137c4da89a5e304b9a5daeb18a9ab"
+    }
+  },
+  "original_packet_snapshot": "artifacts\\evaluation_review\\v2_assistant\\input_snapshot"
+}

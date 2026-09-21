@@ -1,0 +1,8 @@
+Additional Google Machine Learning Crash Course lessons
+Author: Google for Developers. Content: CC BY 4.0 unless otherwise noted.
+License: https://creativecommons.org/licenses/by/4.0/
+Site policies: https://developers.google.com/site-policies
+TXT files are attributed adaptations, not newly authored lessons.
+Quizzes, navigation, figures, captions and code blocks are omitted.
+Original HTML snapshots are retained for provenance, not indexing.
+No Google endorsement is implied. See full_corpus_manifest.csv for every source.
